@@ -4,7 +4,6 @@ import { sass } from "@stencil/sass";
 export const config: Config = {
   namespace: "k-ui-kit",
   taskQueue: "async",
-  globalStyle: "src/global/global-styles.scss",
   outputTargets: [
     {
       type: "dist",
@@ -18,5 +17,9 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  plugins: [sass()],
+  plugins: [
+    sass({
+      injectGlobalPaths: ["src/global/variables.scss"],
+    }),
+  ],
 };

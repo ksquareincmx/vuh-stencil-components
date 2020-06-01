@@ -4,7 +4,7 @@ import { Component, Prop, h } from "@stencil/core";
   tag: "k-label",
   styleUrl: "k-label.scss",
 })
-export class Label {
+export class KLabel {
   @Prop() htmlfor: string;
 
   render() {
