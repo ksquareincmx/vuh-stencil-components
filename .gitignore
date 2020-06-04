@@ -18,6 +18,7 @@ log.txt
 .sass-cache/
 .versions/
 node_modules/
+package-lock.json
 $RECYCLE.BIN/
 
 .DS_Store
