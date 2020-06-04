@@ -1,0 +1,42 @@
+{
+  "name": "k-ui-kit",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/k-ui-kit/k-ui-kit.js",
+  "files": [
+    "dist/",
+    "loader/",
+    "css/"
+  ],
+  "scripts": {
+    "start": "npm run build.css && stencil build --dev --watch --serve",
+    "build": "npm run clean && npm run build.css && npm run build.stencil && npm run build.stencil -- --docs",
+    "build.css": "npm run css.sass && npm run css.minify",
+    "build.stencil": "stencil build --docs",
+    "clean": "rm -rf dist && rm -rf css",
+    "css.minify": "cleancss -O2 -o ./css/global.bundle.css ./css/global.bundle.css",
+    "css.sass": "sass src/css:./css",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.14.0",
+    "@stencil/sass": "^1.3.1",
+    "@types/jest": "^25.2.3",
+    "@types/puppeteer": "2.0.1",
+    "clean-css-cli": "^4.3.0",
+    "jest": "26.0.1",
+    "jest-cli": "26.0.1",
+    "puppeteer": "2.1.1",
+    "sass": "^1.26.7"
+  },
+  "license": "MIT"
+}
