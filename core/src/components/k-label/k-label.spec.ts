@@ -1,11 +1,11 @@
-import { newSpecPage } from "@stencil/core/testing";
-import { KLabel } from "./k-label";
+import { newSpecPage } from '@stencil/core/testing';
+import { KLabel } from './k-label';
 
-describe("k-label", () => {
-  it("renders", async () => {
+describe('k-label', () => {
+  it('renders', async () => {
     const { root } = await newSpecPage({
       components: [KLabel],
-      html: "<k-label></k-label>",
+      html: '<k-label></k-label>'
     });
     expect(root).toEqualHtml(`
       <k-label>
@@ -16,10 +16,10 @@ describe("k-label", () => {
     `);
   });
 
-  it("renders with htmlfor", async () => {
+  it('renders with htmlfor', async () => {
     const { root } = await newSpecPage({
       components: [KLabel],
-      html: `<k-label htmlfor="input"></k-label>`,
+      html: `<k-label htmlfor="input"></k-label>`
     });
     expect(root).toEqualHtml(`
     <k-label htmlfor="input">

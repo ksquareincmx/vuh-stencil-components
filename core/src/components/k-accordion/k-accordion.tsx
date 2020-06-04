@@ -1,9 +1,9 @@
-import { Component, State, EventEmitter, Event, Prop, h } from "@stencil/core";
+import { Component, State, EventEmitter, Event, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: "k-accordion",
-  styleUrl: "k-accordion.scss",
-  shadow: true,
+  tag: 'k-accordion',
+  styleUrl: 'k-accordion.scss',
+  shadow: true
 })
 export class MyComponent {
   @State() toggle: boolean = false;
@@ -30,7 +30,7 @@ export class MyComponent {
           class="accordion"
           style={{
             width: this.width,
-            backgroundColor: this.color,
+            backgroundColor: this.color
           }}
           onClick={() => this.toggleComponent()}
         >
@@ -38,7 +38,7 @@ export class MyComponent {
           {this.toggle ? <span>&#9650;</span> : <span>&#9660;</span>}
         </button>
         <div
-          class={`content-box ${this.toggle ? "open" : "close"}`}
+          class={`content-box ${this.toggle ? 'open' : 'close'}`}
           style={{ width: this.width }}
         >
           <p>{this.description}</p>
