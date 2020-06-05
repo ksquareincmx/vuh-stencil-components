@@ -12,7 +12,7 @@ export interface ReactProps {
   className?: string;
 }
 
-interface DevToReactInternalProps<ElementType> {
+interface ReactInternalProps<ElementType> {
   forwardedRef?: React.Ref<ElementType>;
   children?: React.ReactNode;
   href?: string;
@@ -27,19 +27,22 @@ export const createReactComponent = <PropType, ElementType>(
 ) => {
   const displayName = dashToPascalCase(tagName);
   const ReactComponent = class extends React.Component<
-    DevToReactInternalProps<ElementType>
+    ReactInternalProps<ElementType>
   > {
-    constructor(props: DevToReactInternalProps<ElementType>) {
+    constructor(props: ReactInternalProps<ElementType>) {
       super(props);
     }
 
     componentDidMount() {
-      this.componentDidUpdate(this.props);
+      const node = ReactDom.findDOMNode(this) as HTMLElement;
+      attachEventProps(node, this.props, this.props);
     }
 
-    componentDidUpdate(prevProps: DevToReactInternalProps<ElementType>) {
-      const node = ReactDom.findDOMNode(this) as HTMLElement;
-      attachEventProps(node, this.props, prevProps);
+    componentDidUpdate(prevProps: ReactInternalProps<ElementType>) {
+      if (prevProps !== this.props) {
+        const node = ReactDom.findDOMNode(this) as HTMLElement;
+        attachEventProps(node, this.props, prevProps);
+      }
     }
 
     render() {
