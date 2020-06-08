@@ -1,0 +1,18 @@
+<svg id="flip_camera_ios-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Bounding_Box">
+    <rect id="Rectangle_912" data-name="Rectangle 912" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Master">
+    <g id="Group_229" data-name="Group 229">
+      <g id="Group_226" data-name="Group 226">
+        <path id="Path_55" data-name="Path 55" d="M20,5H16.83L15,3H9L7.17,5H4A2.006,2.006,0,0,0,2,7V19a2.006,2.006,0,0,0,2,2H20a2.006,2.006,0,0,0,2-2V7A2.006,2.006,0,0,0,20,5Zm0,14H4V7H8.05l.59-.65L9.88,5h4.24l1.24,1.35.59.65H20Z"/>
+      </g>
+      <g id="Group_227" data-name="Group 227">
+        <path id="Path_56" data-name="Path 56" d="M12,17a4,4,0,0,1-4-4h2L7.5,10.5,5,13H7a4.959,4.959,0,0,0,7.36,4.38l-.74-.74A3.806,3.806,0,0,1,12,17Z"/>
+      </g>
+      <g id="Group_228" data-name="Group 228">
+        <path id="Path_57" data-name="Path 57" d="M12,8a4.968,4.968,0,0,0-2.36.62l.74.73A3.955,3.955,0,0,1,12,9a4,4,0,0,1,4,4H14l2.5,2.5L19,13H17A5,5,0,0,0,12,8Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
