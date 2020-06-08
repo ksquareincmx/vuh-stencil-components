@@ -1,0 +1,58 @@
+::slotted(h1) {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 1.33;
+  font-weight: $normal;
+
+  @include desktop {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+::slotted(h2) {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 1.33;
+  font-weight: $normal;
+
+  @include desktop {
+    font-size: 40px;
+    letter-spacing: 0.25;
+    line-height: 1.25;
+  }
+}
+
+::slotted(h3) {
+  font-size: 24px;
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 1.33;
+  font-weight: $bold;
+}
+
+::slotted(h4) {
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 0.25;
+  line-height: 1.3;
+  font-weight: $semi-bold;
+}
+
+::slotted(h5) {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 0.25;
+  line-height: 1.2;
+  font-weight: $normal;
+}
+
+::slotted(a) {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1.25;
+  line-height: 1.37;
+  font-weight: $semi-bold;
+}

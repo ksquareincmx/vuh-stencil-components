@@ -21,7 +21,7 @@
     "build.css": "npm run css.sass && npm run css.minify",
     "build.stencil": "stencil build --docs",
     "clean": "rm -rf dist && rm -rf css",
-    "css.minify": "cleancss -O2 -o ./styles/global.bundle.css ./styles/global.bundle.css",
+    "css.minify": "cleancss -O2 -o ./css/global.bundle.css ./css/global.bundle.css",
     "css.sass": "sass src/styles:./css",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
