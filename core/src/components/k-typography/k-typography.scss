@@ -149,6 +149,31 @@
   letter-spacing: 1.25px;
   line-height: 1.37;
   font-weight: $semi-bold;
+  color: $primary-800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+::slotted(a:hover),
+:host(.link:hover)  {
+  color: $primary-300;
+}
+
+::slotted(a:focus),
+:host(.link:focus)  {
+  color: $primary-300;
+}
+
+::slotted(a:active),
+:host(.link:active)  {
+  color: $primary-600;
+}
+
+:host(.body1) {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.37;
+  font-weight: $semi-bold;
   color: $primary-color;
   text-decoration: underline;
   cursor: pointer;
@@ -169,6 +194,27 @@
   letter-spacing: 0.5px;
   line-height: 1.37;
   font-weight: $semi-bold;
+}
+
+:host(.body2) {
+  font-size: 14px;
+  letter-spacing: 0.25;
+  line-height: 1.42;
+  font-weight: $regular;
+}
+
+:host(.button) {
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  line-height: 1.37;
+  font-weight: $semi-bold;
+}
+
+:host(.caption) {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  line-height: 1.42;
+  font-weight: $bold;
 }
 
 :host(.body2) {
