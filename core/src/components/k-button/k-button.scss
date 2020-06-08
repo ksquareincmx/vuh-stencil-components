@@ -1,0 +1,78 @@
+:host {
+  button {
+    padding: 4px;
+    width: 100%;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  & > .primary {
+    background: $primary-700 0% 0% no-repeat padding-box;
+    border: none;
+    color: white;
+
+    &:active {
+      background-color: $primary-700;
+      box-shadow: 3px 4px 6px $gray-100;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $primary-300;
+      box-shadow: 3px 4px 6px $gray-100;
+    }
+
+    &:disabled {
+      background-color: $gray-100;
+      color: $gray-200;
+    }
+  }
+
+  & > .secondary {
+    background: white 0% 0% no-repeat padding-box;
+    border: 1px solid $primary-500;
+    border-radius: 4px;
+    opacity: 1;
+    color: $primary-500;
+
+    &:active {
+      background-color: $primary-200;
+      color: $primary-300;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $primary-100;
+      color: $primary-300;
+    }
+
+    &:disabled {
+      border-color: $gray-100;
+      background-color: $gray-50;
+      color: $gray-100;
+    }
+  }
+
+  & > .terciary {
+    background: $primary-300 0% 0% no-repeat padding-box;
+    border: 1px solid $primary-500;
+    border: none;
+    color: $primary-800;
+
+    &:active {
+      background-color: $primary-200;
+      color: $primary-300;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $primary-100;
+      color: $primary-300;
+    }
+
+    &:disabled {
+      background-color: $gray-50;
+      color: $gray-100;
+    }
+  }
+}
