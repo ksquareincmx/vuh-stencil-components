@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+css/
 
 *~
 *.sw[mnpcod]
@@ -25,3 +26,6 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
+
+# Stencil files auto-generated
+components.d.ts
