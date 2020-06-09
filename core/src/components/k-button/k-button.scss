@@ -1,6 +1,5 @@
 :host {
   button {
-    padding: 8px;
     width: 100%;
     opacity: 1;
   }
@@ -20,6 +19,22 @@
 
   & > .smooth {
     border-radius: 4px;
+  }
+
+  /**
+  * Size
+  **/
+
+  & > .large {
+    padding: 12px;
+  }
+
+  & > .medium {
+    padding: 8px;
+  }
+
+  & > .small {
+    padding: 4px;
   }
 
   /**
@@ -94,9 +109,5 @@
       background-color: $gray-50;
       color: $gray-100;
     }
-  }
-
-  & > .KButton {
-    display: block;
   }
 }
