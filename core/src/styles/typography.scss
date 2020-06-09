@@ -25,3 +25,11 @@ $bold: 700;
   font-weight: $bold;
   font-style: normal;
 }
+
+/* Vuh Icons */
+@font-face {
+  font-family: 'Vuh Icons';
+  src: url('../fonts/VuhIcons/VuhIcons.ttf') format('truetype');
+  font-weight: $regular;
+  font-style: normal;
+}
