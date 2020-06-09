@@ -29,7 +29,9 @@ $bold: 700;
 /* Vuh Icons */
 @font-face {
   font-family: 'Vuh Icons';
-  src: url('../fonts/VuhIcons/VuhIcons.ttf') format('truetype');
+  src: url('../fonts/VuhIcons/VuhIcons.ttf') format('truetype'),
+    url('../fonts/VuhIcons/VuhIcons.woff') format('woff'),
+    url('../fonts/VuhIcons/VuhIcons.woff2') format('woff2');
   font-weight: $regular;
   font-style: normal;
 }
