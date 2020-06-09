@@ -169,16 +169,6 @@
   color: $primary-600;
 }
 
-:host(.body1) {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  line-height: 1.37;
-  font-weight: $semi-bold;
-  color: $primary-color;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 ::slotted(a:hover),
 :host(.link:hover)  {
   color: $primary-100;

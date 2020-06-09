@@ -4,6 +4,7 @@ import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: 'k-ui-kit',
   taskQueue: 'async',
+  globalStyle: 'css/global.bundle.css',
   outputTargets: [
     {
       type: 'dist',
@@ -20,12 +21,15 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null // disable service workers
+    },
+    {
+      type: 'www',
+      copy: [{ src: 'fonts', dest: 'fonts' }]
     }
   ],
   plugins: [
     sass({
       injectGlobalPaths: ['src/styles/global.bundle.scss']
     })
-  ],
-  copy: [{ src: 'fonts', dest: 'fonts' }]
+  ]
 };
