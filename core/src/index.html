@@ -105,14 +105,47 @@
 
     <br />
 
-    Primary button
-    <k-button color="primary"></k-button>
-    <k-button color="primary" disabled></k-button>
-    Secondary button
-    <k-button color="secondary"></k-button>
-    <k-button color="secondary" disabled></k-button>
-    Terciary button
-    <k-button color="terciary"></k-button>
-    <k-button color="terciary" disabled></k-button>
+    <div style="display: flex; flex-wrap: wrap;">
+      <k-typography>
+        <h1>Buttons</h1>
+      </k-typography>
+      <k-typography style="width: 100%;">
+        <h3>Colors</h3>
+      </k-typography>
+      <section style="margin: 24px;">
+        Primary
+        <k-button color="primary"></k-button>
+        <k-button color="primary" disabled></k-button>
+      </section>
+      <section style="margin: 24px;">
+        Secondary
+        <k-button color="secondary"></k-button>
+        <k-button color="secondary" disabled></k-button>
+      </section>
+      <section style="margin: 24px;">
+        Terciary
+        <k-button color="terciary"></k-button>
+        <k-button color="terciary" disabled></k-button>
+      </section>
+
+      <k-typography style="width: 100%;">
+        <h3>Shape</h3>
+      </k-typography>
+      <section style="margin: 24px;">
+        Full
+        <k-button style="width: 100%; color: red;" shape="full"></k-button>
+      </section>
+      <section style="margin: 24px;">
+        Round
+        <k-button shape="round"></k-button>
+        <k-button shape="round"
+          ><div style="width: 16px; height: 16px;">A</div></k-button
+        >
+      </section>
+      <section style="margin: 24px;">
+        Smooth (default)
+        <k-button shape="smooth"></k-button>
+      </section>
+    </div>
   </body>
 </html>
