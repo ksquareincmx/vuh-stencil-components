@@ -1,0 +1,112 @@
+:host(.KSwitch) {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+
+  // Checked State
+  .KSwitch-state:checked ~ .KSwitch-action::before {
+    background-color: $primary-color;
+    transform: translateX(18px);
+  }
+
+  .KSwitch-state:checked ~ .KSwitch-action::after {
+    transform: translateX(18px);
+    background-color: rgba($color: $primary-100, $alpha: 0.2);
+  }
+
+  .KSwitch-state:checked ~ .KSwitch-action:active::after {
+    background-color: rgba($color: $primary-color, $alpha: 0.2);
+  }
+
+  .KSwitch-state:checked ~ .KSwitch-action  {
+    background-color: $primary-100;
+  }
+
+  // Disabled state
+  .KSwitch-state:disabled ~ .KSwitch-action {
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
+    cursor: not-allowed;
+  }
+
+  .KSwitch-state:disabled ~ .KSwitch-action::before {
+    background-color: $gray-50;
+  }
+
+  .KSwitch-state:disabled ~ .KSwitch-action::after {
+    opacity: 0;
+  }
+
+  .KSwitch-state:checked:disabled ~ .KSwitch-action {
+    background-color: rgba($color: $primary-color, $alpha: 0.3);
+    cursor: not-allowed;
+  }
+
+  .KSwitch-state:checked:disabled ~ .KSwitch-action::before {
+    background-color: $primary-100;
+  }
+
+  .KSwitch-state:checked:disabled ~ .KSwitch-action::after {
+    opacity: 0;
+  }
+
+  // Base state
+  .KSwitch-state {
+    display: none;
+  }
+
+  .KSwitch-action {
+    position: relative;
+    height: 10px;
+    width: 32px;
+    display: block;
+    border-radius: 6px;
+    background-color: $gray-200;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .KSwitch-action::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $gray-50;
+    border-radius: 50%;
+    top: -3px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    transition: transform 0.3s;
+    will-change: transform;
+    z-index: 1;
+  }
+
+  .KSwitch-action::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: rgba($color: $gray-100, $alpha: 0.2);
+    border-radius: 50%;
+    top: -7px;
+    left: -4px;
+    transition: 0.3s;
+    opacity: 0;
+    will-change: transform;
+  }
+
+  .KSwitch-text {
+    margin-left: 8px;
+    color: $gray-300;
+  }
+
+  // Hover
+  .KSwitch-action:hover::after {
+    opacity: 1;
+  }
+
+  // Active
+  .KSwitch-action:active:after {
+    background-color: rgba($color: $gray-200, $alpha: 0.2);
+  }
+}
