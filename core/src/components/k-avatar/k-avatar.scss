@@ -1,0 +1,23 @@
+:host {
+  & > .KAvatar {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 16px;
+  }
+
+  & > .small {
+    height: 40px;
+    width: 40px;
+  }
+
+  & > .medium {
+    height: 72px;
+    width: 72px;
+  }
+
+  & > .large {
+    height: 120px;
+    width: 120px;
+  }
+}
