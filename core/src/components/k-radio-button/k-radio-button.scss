@@ -1,0 +1,88 @@
+:host {
+  .KRadioButton {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      .checkmark {
+        border-color: $primary-500;
+      }
+
+      .k-radio-label {
+        color: $gray-300;
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      background-color: white;
+      border: 0.125em solid $gray-200;
+      height: 1em;
+      width: 1em;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+
+      .dot {
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        height: 0.625em;
+        width: 0.625em;
+        left: 0.1875em;
+        top: 0.1875em;
+      }
+    }
+
+    .k-radio-input {
+      opacity: 0;
+      &:checked {
+        & ~ .checkmark {
+          .dot {
+            background-color: $primary-500;
+          }
+        }
+        & ~ .k-radio-label {
+          color: $gray-300;
+        }
+      }
+
+      &:disabled {
+        & ~ .checkmark {
+          background-color: $gray-50;
+          border-color: $gray-100;
+
+          .dot {
+            background-color: $gray-50;
+          }
+        }
+        & ~ .k-radio-label {
+          color: $gray-100;
+        }
+      }
+
+      &:disabled:checked {
+        & ~ .checkmark {
+          background-color: $gray-50;
+          border-color: $gray-100;
+
+          .dot {
+            background-color: $gray-200;
+          }
+        }
+
+        & ~ .k-radio-label {
+          color: $gray-100;
+        }
+      }
+    }
+
+    .k-radio-label {
+      margin-left: 8px;
+      color: $gray-200;
+    }
+  }
+}
