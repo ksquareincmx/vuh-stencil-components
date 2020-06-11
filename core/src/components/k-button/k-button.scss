@@ -1,7 +1,9 @@
 :host {
   button {
     width: 100%;
-    opacity: 1;
+    font-weight: $semi-bold;
+    cursor: pointer;
+    outline: none;
   }
 
   /**
@@ -45,11 +47,7 @@
     background: $primary-700 0% 0% no-repeat padding-box;
     border: none;
     color: white;
-
-    &:active {
-      background-color: $primary-700;
-      box-shadow: 3px 4px 6px $gray-100;
-    }
+    transition: 0.3s;
 
     &:hover,
     &:focus {
@@ -57,9 +55,19 @@
       box-shadow: 3px 4px 6px $gray-100;
     }
 
+    &:active {
+      background-color: $primary-700;
+      box-shadow: 3px 4px 6px $gray-100;
+    }
+
     &:disabled {
       background-color: $gray-100;
       color: $gray-200;
+      cursor: not-allowed;
+    }
+
+    &:disabled:hover {
+      box-shadow: none;
     }
   }
 
@@ -67,17 +75,17 @@
     background: white 0% 0% no-repeat padding-box;
     border: 1px solid $primary-500;
     border-radius: 4px;
-    opacity: 1;
     color: $primary-500;
-
-    &:active {
-      background-color: $primary-200;
-      color: $primary-300;
-    }
+    transition: 0.3s;
 
     &:hover,
     &:focus {
-      background-color: $primary-100;
+      background-color: rgba($color: $primary-100, $alpha: 0.2);
+      color: $primary-300;
+    }
+
+    &:active {
+      background-color: rgba($color: $primary-100, $alpha: 0.3);
       color: $primary-300;
     }
 
@@ -85,29 +93,31 @@
       border-color: $gray-100;
       background-color: $gray-50;
       color: $gray-100;
+      cursor: not-allowed;
     }
   }
 
   & > .terciary {
-    background: $primary-300 0% 0% no-repeat padding-box;
-    border: 1px solid $primary-500;
+    background: transparent no-repeat padding-box;
     border: none;
     color: $primary-800;
-
-    &:active {
-      background-color: $primary-200;
-      color: $primary-300;
-    }
+    transition: 0.3s;
 
     &:hover,
     &:focus {
-      background-color: $primary-100;
-      color: $primary-300;
+      background-color: rgba($color: $primary-100, $alpha: 0.2);
+      color: $primary-800;
+    }
+
+    &:active {
+      background-color: rgba($color: $primary-200, $alpha: 0.3);
+      color: $primary-800;
     }
 
     &:disabled {
       background-color: $gray-50;
       color: $gray-100;
+      cursor: not-allowed;
     }
   }
 }
