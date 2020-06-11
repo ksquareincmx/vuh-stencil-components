@@ -1,0 +1,29 @@
+/** 
+* @function get-font
+*
+* @param $font-map: Map where font will be searched
+* @param $font: Font that will be searched
+*
+* @returns Returns the specified font or an error
+* */
+
+@function get-font($font-map, $font) {
+  @return map-get-strict($font-map, $font);
+}
+
+/** 
+* @function map-get-strict
+*
+* @param $map: Map where key will be searched
+* @param $font: Font that will be searched
+*
+* @returns Returns the specified key or an error
+* */
+
+@function map-get-strict($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @error 'ERROR: Specified key does not exist in the mapping';
+  }
+}

@@ -1,6 +1,11 @@
 @import './variables.scss';
-@import './typography.scss';
-@import './breakpoints.scss';
+@import './partials/typography.scss';
+@import './partials/breakpoints.scss';
+
+// Icons
+@import './modules/functions';
+@import './modules/locations';
+@import './partials/vuh-icons';
 
 * {
   font-family: 'Nunito Sans';
