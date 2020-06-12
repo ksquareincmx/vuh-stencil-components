@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'k-tag',
@@ -6,13 +6,10 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true
 })
 export class KTag {
-  @Prop() icon: string = '';
-
   render() {
     return (
       <Host class="KTag">
-        <slot />
-        <i class={`KTag-icon ${this.icon}`}></i>
+        <slot></slot>
       </Host>
     );
   }

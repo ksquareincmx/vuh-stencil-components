@@ -1,4 +1,7 @@
 :host {
+  display: flex;
+  align-items: center;
+
   & > .small {
     font-size: 16px;
   }
