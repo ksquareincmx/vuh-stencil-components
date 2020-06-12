@@ -1,0 +1,191 @@
+@import '../../../styles/partials/breakpoints';
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  word-break: break-word;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 8px;
+
+  @include mobile {
+    padding: 0 12px;
+  }
+
+  @include tablet {
+    padding: 0 14px;
+  }
+
+  @include desktop-full {
+    padding: 0 16px;
+  }
+}
+
+:host(.col-1) {
+  width: calc(100% / 4);
+  max-width: calc(100% / 4);
+
+  @include small-tablet {
+    width: calc(100% / 8);
+    max-width: calc(100% / 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12);
+    max-width: calc(100% / 12);
+  }
+}
+:host(.col-2) {
+  width: calc(100% / 4 * 2);
+  max-width: calc(100% / 4 * 2);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 2);
+    max-width: calc(100% / 8 * 2);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+  }
+}
+:host(.col-3) {
+  width: calc(100% / 4 * 3);
+  max-width: calc(100% / 4 * 3);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 3);
+    max-width: calc(100% / 8 * 3);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 3);
+    max-width: calc(100% / 12 * 3);
+  }
+}
+:host(.col-4) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 4);
+    max-width: calc(100% / 8 * 4);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+  }
+}
+:host(.col-5) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 5);
+    max-width: calc(100% / 8 * 5);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+}
+:host(.col-6) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 6);
+    max-width: calc(100% / 8 * 6);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+}
+:host(.col-7) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 7);
+    max-width: calc(100% / 8 * 7);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+:host(.col-8) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 8);
+    max-width: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+  }
+}
+:host(.col-9) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 8);
+    max-width: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * 9);
+  }
+}
+:host(.col-10) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 8);
+    max-width: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 10);
+    max-width: calc(100% / 12 * 10);
+  }
+}
+:host(.col-11) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 8);
+    max-width: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 11);
+    max-width: calc(100% / 12 * 11);
+  }
+}
+:host(.col-12) {
+  width: calc(100% / 4 * 4);
+  max-width: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    width: calc(100% / 8 * 8);
+    max-width: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    width: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * 12);
+  }
+}

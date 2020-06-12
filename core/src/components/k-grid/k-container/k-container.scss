@@ -1,0 +1,23 @@
+@import '../../../styles/partials/breakpoints';
+
+:host {
+  display: block;
+  max-width: 100%;
+  padding: 0 16px;
+
+  @include mobile {
+    padding: 0 24px;
+  }
+
+  @include tablet {
+    padding: 0 28px;
+  }
+
+  @include desktop-full {
+    padding: 0 64px;
+  }
+}
+
+:host(.fluid) {
+  padding: unset;
+}
