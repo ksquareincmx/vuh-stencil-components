@@ -1,0 +1,28 @@
+:host(.KTag) {
+  display: flex;
+  align-items: center;
+  background-color: rgba($color: $gray-100, $alpha: 0.4);
+  padding: 4px;
+  border-radius: 4px;
+  color: $primary-color;
+  font-weight: $semi-bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+}
+
+:host(:hover) {
+  background-color: rgba($color: $gray-100, $alpha: 1);
+}
+
+:host(:active) {
+  background-color: rgba($color: $gray-100, $alpha: 0.4);
+}
+
+::slotted(:first-child) {
+  margin: 0;
+}
+
+.KTag-icon {
+  margin-left: 8px;
+}
