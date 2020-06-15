@@ -1,0 +1,218 @@
+.KSpinner {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  .KSpinner-before {
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    height: 50px;
+    width: 50%;
+    border-top: 6px solid $primary-color;
+    border-left: 6px solid $primary-color;
+    border-bottom: 6px solid $primary-color;
+    border-radius: 10.2em 0 0 10.2em;
+
+    animation-name: load;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    transform-origin: center right;
+
+    &.primary {
+      border-color: $primary-color !important;
+    }
+
+    &.primary800 {
+      border-color: $primary-800 !important;
+    }
+
+    &.primary700 {
+      border-color: $primary-700 !important;
+    }
+
+    &.primary600 {
+      border-color: $primary-600 !important;
+    }
+
+    &.primary500 {
+      border-color: $primary-500 !important;
+    }
+
+    &.primary400 {
+      border-color: $primary-400 !important;
+    }
+
+    &.primary300 {
+      border-color: $primary-300 !important;
+    }
+
+    &.primary200 {
+      border-color: $primary-200 !important;
+    }
+
+    &.primary100 {
+      border-color: $primary-100 !important;
+    }
+
+    &.gray500 {
+      border-color: $gray-500 !important;
+    }
+
+    &.gray400 {
+      border-color: $gray-400 !important;
+    }
+
+    &.gray300 {
+      border-color: $gray-300 !important;
+    }
+
+    &.gray200 {
+      border-color: $gray-200 !important;
+    }
+
+    &.gray100 {
+      border-color: $gray-100 !important;
+    }
+
+    &.gray50 {
+      border-color: $gray-50 !important;
+    }
+
+    &.error200 {
+      border-color: $error-200 !important;
+    }
+
+    &.error100 {
+      border-color: $error-100 !important;
+    }
+
+    &.warning200 {
+      border-color: $warning-200 !important;
+    }
+
+    &.warning100 {
+      border-color: $warning-100 !important;
+    }
+
+    &.success200 {
+      border-color: $success-200 !important;
+    }
+
+    &.success100 {
+      border-color: $success-100 !important;
+    }
+  }
+
+  .KSpinner-after {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    height: 50px;
+    width: 50%;
+    border-top: 6px solid $primary-color;
+    border-right: 6px solid $primary-color;
+    border-bottom: 6px solid $primary-color;
+    border-radius: 0 10.2em 10.2em 0;
+
+    animation-name: load;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center left;
+
+    &.primary {
+      border-color: $primary-color !important;
+    }
+
+    &.primary800 {
+      border-color: $primary-800 !important;
+    }
+
+    &.primary700 {
+      border-color: $primary-700 !important;
+    }
+
+    &.primary600 {
+      border-color: $primary-600 !important;
+    }
+
+    &.primary500 {
+      border-color: $primary-500 !important;
+    }
+
+    &.primary400 {
+      border-color: $primary-400 !important;
+    }
+
+    &.primary300 {
+      border-color: $primary-300 !important;
+    }
+
+    &.primary200 {
+      border-color: $primary-200 !important;
+    }
+
+    &.primary100 {
+      border-color: $primary-100 !important;
+    }
+
+    &.gray500 {
+      border-color: $gray-500 !important;
+    }
+
+    &.gray400 {
+      border-color: $gray-400 !important;
+    }
+
+    &.gray300 {
+      border-color: $gray-300 !important;
+    }
+
+    &.gray200 {
+      border-color: $gray-200 !important;
+    }
+
+    &.gray100 {
+      border-color: $gray-100 !important;
+    }
+
+    &.gray50 {
+      border-color: $gray-50 !important;
+    }
+
+    &.error200 {
+      border-color: $error-200 !important;
+    }
+
+    &.error100 {
+      border-color: $error-100 !important;
+    }
+
+    &.warning200 {
+      border-color: $warning-200 !important;
+    }
+
+    &.warning100 {
+      border-color: $warning-100 !important;
+    }
+
+    &.success200 {
+      border-color: $success-200 !important;
+    }
+
+    &.success100 {
+      border-color: $success-100 !important;
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
