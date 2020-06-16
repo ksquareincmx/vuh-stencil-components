@@ -3,18 +3,18 @@
 :host {
   display: block;
   max-width: 100%;
-  padding: 0 16px;
+  padding: 0 8px;
 
   @include mobile {
-    padding: 0 24px;
+    padding: 0 12px;
   }
 
   @include tablet {
-    padding: 0 28px;
+    padding: 0 14px;
   }
 
   @include desktop-full {
-    padding: 0 64px;
+    padding: 0 48px;
   }
 }
 
