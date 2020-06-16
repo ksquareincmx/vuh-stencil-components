@@ -1,0 +1,93 @@
+.KContent {
+  font-size: 14px;
+  font-weight: $regular;
+
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 1.33;
+    font-weight: $regular;
+
+    @include desktop {
+      font-size: 48px;
+      line-height: 1.2;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 1.33;
+    font-weight: $regular;
+
+    @include desktop {
+      font-size: 40px;
+      letter-spacing: 0.25px;
+      line-height: 1.25;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 0;
+    line-height: 1.33;
+    font-weight: $bold;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 0.25px;
+    line-height: 1.3;
+    font-weight: $semi-bold;
+  }
+
+  h5 {
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 0.25px;
+    line-height: 1.2;
+    font-weight: $regular;
+  }
+
+  a {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    line-height: 1.37;
+    font-weight: $semi-bold;
+    color: $primary-800;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $primary-300;
+  }
+
+  a:focus {
+    color: $primary-300;
+  }
+
+  a:active {
+    color: $primary-600;
+  }
+
+  a:hover {
+    color: $primary-100;
+  }
+
+  a:active {
+    color: $primary-300;
+  }
+
+  button {
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    line-height: 1.37;
+    font-weight: $semi-bold;
+  }
+}
