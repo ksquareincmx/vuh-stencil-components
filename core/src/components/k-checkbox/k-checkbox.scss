@@ -1,0 +1,36 @@
+:host {
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    // margin-bottom: 12px;
+    // font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  // HIDES DEFAULT INPUT
+  .container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  // CUSTOM CHECKMARK
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    height: 12px;
+    width: 12px;
+    border: 2px solid $gray-200;
+    cursor: pointer;
+  }
+
+  .checkmark:hover {
+    border: 2px solid $primary-color;
+  }
+}
