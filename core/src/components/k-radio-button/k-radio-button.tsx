@@ -6,11 +6,10 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class KRadioButton {
-  private buttonEl?: HTMLElement;
+  private buttonEl: HTMLElement;
 
   @Prop() name: string;
   @Prop() value: string;
-  @Prop() label?: string;
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ mutable: true }) checked?: boolean = false;
 
@@ -25,23 +24,25 @@ export class KRadioButton {
   render() {
     return (
       <label
-        htmlFor="k-radio"
+        htmlFor="KRadioButton-input"
         class={`KRadioButton ${this.disabled ? 'disabled' : ''}`}
         onClick={this.checkedClicked}
       >
         <input
           ref={(el: HTMLElement) => (this.buttonEl = el)}
-          id="k-radio"
-          class="k-radio-input"
+          id="KRadioButton-input"
+          class="KRadioButton-input"
           type="radio"
           value={this.value}
           checked={this.checked}
           disabled={this.disabled}
         ></input>
-        <span class="checkmark">
-          <span class="dot"></span>
+        <span class="KRadioButton-checkmark">
+          <span class="KRadioButton-dot"></span>
         </span>
-        <span class="k-radio-label">{this.label}</span>
+        <span class="KRadioButton-label">
+          <slot>Default</slot>
+        </span>
       </label>
     );
   }

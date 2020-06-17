@@ -112,11 +112,14 @@ const createReactComponent = (tagName) => {
             super(props);
         }
         componentDidMount() {
-            this.componentDidUpdate(this.props);
+            const node = ReactDom.findDOMNode(this);
+            attachEventProps(node, this.props, this.props);
         }
         componentDidUpdate(prevProps) {
-            const node = ReactDom.findDOMNode(this);
-            attachEventProps(node, this.props, prevProps);
+            if (prevProps !== this.props) {
+                const node = ReactDom.findDOMNode(this);
+                attachEventProps(node, this.props, prevProps);
+            }
         }
         render() {
             const _a = this.props, { children, forwardedRef, style, className, ref } = _a, cProps = tslib.__rest(_a, ["children", "forwardedRef", "style", "className", "ref"]);
@@ -140,7 +143,11 @@ const createReactComponent = (tagName) => {
 };
 
 const MyComponent = /*@\__PURE_\_*/ createReactComponent("my-component");
+const KButton = /*@\__PURE_\_*/ createReactComponent("k-button");
+const KSpinner = /*@\__PURE_\_*/ createReactComponent("k-spinner");
 loader.defineCustomElements(window);
 
+exports.KButton = KButton;
+exports.KSpinner = KSpinner;
 exports.MyComponent = MyComponent;
 //# sourceMappingURL=index.js.map

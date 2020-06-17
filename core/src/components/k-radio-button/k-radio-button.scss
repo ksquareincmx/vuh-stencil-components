@@ -12,16 +12,16 @@
 
     &:hover,
     &:focus {
-      .checkmark {
+      .KRadioButton-checkmark {
         border-color: $primary-500;
       }
 
-      .k-radio-label {
+      .KRadioButton-label {
         color: $gray-300;
       }
     }
 
-    .checkmark {
+    .KRadioButton-checkmark {
       position: absolute;
       background-color: white;
       border: 0.125em solid $gray-200;
@@ -31,7 +31,7 @@
       top: 0;
       border-radius: 50%;
 
-      .dot {
+      .KRadioButton-dot {
         position: absolute;
         border-radius: 50%;
         background-color: white;
@@ -42,50 +42,50 @@
       }
     }
 
-    .k-radio-input {
+    .KRadioButton-input {
       opacity: 0;
       &:checked {
-        & ~ .checkmark {
-          .dot {
+        & ~ .KRadioButton-checkmark {
+          .KRadioButton-dot {
             background-color: $primary-500;
           }
         }
-        & ~ .k-radio-label {
+        & ~ .KRadioButton-label {
           color: $gray-300;
         }
       }
 
       &:disabled {
-        & ~ .checkmark {
+        & ~ .KRadioButton-checkmark {
           background-color: $gray-50;
           border-color: $gray-100;
 
-          .dot {
+          .KRadioButton-dot {
             background-color: $gray-50;
           }
         }
-        & ~ .k-radio-label {
+        & ~ .KRadioButton-label {
           color: $gray-100;
         }
       }
 
       &:disabled:checked {
-        & ~ .checkmark {
+        & ~ .KRadioButton-checkmark {
           background-color: $gray-50;
           border-color: $gray-100;
 
-          .dot {
+          .KRadioButton-dot {
             background-color: $gray-200;
           }
         }
 
-        & ~ .k-radio-label {
+        & ~ .KRadioButton-label {
           color: $gray-100;
         }
       }
     }
 
-    .k-radio-label {
+    .KRadioButton-label {
       margin-left: 8px;
       color: $gray-200;
     }

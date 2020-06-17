@@ -45,7 +45,8 @@
     "lint-staged": "^10.2.9",
     "prettier": "^2.0.5",
     "puppeteer": "2.1.1",
-    "sass": "^1.26.7"
+    "sass": "^1.26.7",
+    "workbox-build": "4.3.1"
   },
   "license": "MIT",
   "lint-staged": {
