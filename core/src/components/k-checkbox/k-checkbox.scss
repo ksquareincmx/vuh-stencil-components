@@ -35,8 +35,13 @@
         & ~  .checkmark {
           border-color: $gray-100;
           background-color: $gray-50;
-          .icon {
-            color: $gray-100;
+        }
+        &:checked {
+          & ~  .checkmark {
+            background-color: $gray-100;
+            .icon {
+              color: $gray-50;
+            }
           }
         }
         & ~  .text {
