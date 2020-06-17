@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class KCheckbox {
-  private inputEl?: HTMLElement;
+  private inputEl: HTMLElement;
 
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ mutable: true }) checked?: boolean = false;
