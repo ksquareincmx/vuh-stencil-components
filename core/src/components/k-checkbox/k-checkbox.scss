@@ -1,36 +1,83 @@
 :host {
+  display: block;
+  padding: 8px 0;
+
   .container {
-    display: block;
+    cursor: pointer;
+    display: inline-block;
     position: relative;
     padding-left: 24px;
-    // margin-bottom: 12px;
-    // font-size: 22px;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+
+    .k-checkbox-input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        & ~ .checkmark {
+          border: 2px solid $primary-color;
+          background-color: $primary-color;
+          .icon {
+            opacity: 100;
+          }
+        }
+        & ~ .text {
+          color: $gray-300;
+        }
+      }
+
+      &:disabled {
+        & ~  .checkmark {
+          border-color: $gray-100;
+          background-color: $gray-50;
+          .icon {
+            color: $gray-100;
+          }
+        }
+        & ~  .text {
+          color: $gray-100;
+        }
+      }
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      height: 12px;
+      width: 12px;
+      border: 2px solid $gray-200;
+
+      .icon {
+        opacity: 0;
+        position: relative;
+        bottom: 3px;
+        right: 2px;
+        color: white;
+      }
+    }
+
+    .text {
+      color: $gray-200;
+    }
+
+    &:hover,
+    &:focus {
+      .checkmark {
+        border: 2px solid $primary-color;
+      }
+      .text {
+        color: $gray-300;
+      }
+    }
   }
 
-  // HIDES DEFAULT INPUT
-  .container input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-
-  // CUSTOM CHECKMARK
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 1px;
-    height: 12px;
-    width: 12px;
-    border: 2px solid $gray-200;
-    cursor: pointer;
-  }
-
-  .checkmark:hover {
-    border: 2px solid $primary-color;
+  .disabled {
+    cursor: not-allowed;
   }
 }
