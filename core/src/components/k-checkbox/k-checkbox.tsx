@@ -11,7 +11,7 @@ export class KCheckbox {
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ mutable: true }) checked?: boolean = false;
 
-  private onCheckboxClicked = (e: any) => {
+  private onCheckboxClick = (e: any) => {
     e.stopPropagation();
     if (!this.disabled) {
       this.inputEl.click();
@@ -23,7 +23,7 @@ export class KCheckbox {
     return (
       <label
         class={`container ${this.disabled ? 'disabled' : ''}`}
-        onClick={this.onCheckboxClicked}
+        onClick={this.onCheckboxClick}
       >
         <input
           ref={(el: HTMLElement) => (this.inputEl = el)}
