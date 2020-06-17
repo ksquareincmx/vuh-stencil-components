@@ -4,6 +4,11 @@
     align-items: center;
     width: fit-content;
     position: relative;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 
     &:hover,
     &:focus {
@@ -84,5 +89,9 @@
       margin-left: 8px;
       color: $gray-200;
     }
+  }
+
+  .disabled {
+    cursor: not-allowed;
   }
 }

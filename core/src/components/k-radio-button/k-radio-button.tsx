@@ -26,7 +26,7 @@ export class KRadioButton {
     return (
       <label
         htmlFor="k-radio"
-        class="KRadioButton"
+        class={`KRadioButton ${this.disabled ? 'disabled' : ''}`}
         onClick={this.checkedClicked}
       >
         <input
