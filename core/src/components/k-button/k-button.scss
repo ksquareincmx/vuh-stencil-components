@@ -1,5 +1,5 @@
 :host {
-  button {
+  .KButton {
     width: 100%;
     font-weight: $semi-bold;
     cursor: pointer;
@@ -40,6 +40,14 @@
   }
 
   /**
+  * Elevation
+  **/
+
+  & > .elevation {
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
+  }
+
+  /**
   * Colors
   **/
 
@@ -52,18 +60,17 @@
     &:hover,
     &:focus {
       background-color: $primary-300;
-      box-shadow: 3px 4px 6px $gray-100;
     }
 
     &:active {
       background-color: $primary-700;
-      box-shadow: 3px 4px 6px $gray-100;
     }
 
     &:disabled {
       background-color: $gray-100;
       color: $gray-200;
       cursor: not-allowed;
+      box-shadow: none;
     }
 
     &:disabled:hover {
@@ -98,10 +105,10 @@
   }
 
   & > .terciary {
-    background: transparent no-repeat padding-box;
+    background: white 0% 0% no-repeat padding-box;
     border: none;
     color: $primary-800;
-    transition: 0.3s;
+    transition: 0.4s;
 
     &:hover,
     &:focus {

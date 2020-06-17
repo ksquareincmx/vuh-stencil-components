@@ -168,19 +168,12 @@
       <k-typography>
         <h1>Radio button</h1>
       </k-typography>
-      <k-radio-button label="default" name="default"></k-radio-button>
-      <k-radio-button label="checked" name="checked" checked></k-radio-button>
-      <k-radio-button
-        label="disabled"
-        name="disabled"
-        disabled
-      ></k-radio-button>
-      <k-radio-button
-        label="disabled/checked"
-        name="disabled/checked"
-        checked
-        disabled
-      ></k-radio-button>
+      <k-radio-button name="default"></k-radio-button>
+      <k-radio-button name="checked" checked>Checked</k-radio-button>
+      <k-radio-button name="disabled" disabled>Disabled</k-radio-button>
+      <k-radio-button name="disabled/checked" checked disabled
+        >Disabled/Checked</k-radio-button
+      >
     </section>
 
     <br />
@@ -241,6 +234,22 @@
       <section style="margin: 24px;">
         Small
         <k-button size="small"></k-button>
+      </section>
+
+      <k-typography style="width: 100%;">
+        <h3>Elevation</h3>
+      </k-typography>
+      <section style="margin: 24px;">
+        With elevation
+        <k-button color="primary" elevation></k-button>
+      </section>
+      <section style="margin: 24px;">
+        Without elevation
+        <k-button color="primary"></k-button>
+      </section>
+      <section style="margin: 24px;">
+        Disabled
+        <k-button color="primary" elevation disabled></k-button>
       </section>
     </div>
 
