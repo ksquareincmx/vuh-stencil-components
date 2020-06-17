@@ -1,0 +1,43 @@
+.KTooltip {
+  position: relative;
+
+  .KTooltip-text {
+    width: 158px;
+    background-color: $gray-300;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 9999;
+    word-break: break-all;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.top {
+      left: 0;
+      bottom: 110%;
+    }
+
+    &.bottom {
+      left: 0;
+      top: 110%;
+    }
+
+    &.left {
+      bottom: 0;
+      right: 110%;
+    }
+
+    &.right {
+      left: 110%;
+      bottom: 0;
+    }
+  }
+
+  &:hover .KTooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
