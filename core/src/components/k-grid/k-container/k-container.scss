@@ -1,6 +1,6 @@
 @import '../../../styles/partials/breakpoints';
 
-:host {
+:host(.KContainer) {
   display: block;
   max-width: 100%;
   padding: 0 8px;
@@ -18,6 +18,6 @@
   }
 }
 
-:host(.fluid) {
+:host(.KContainer--fluid) {
   padding: unset;
 }

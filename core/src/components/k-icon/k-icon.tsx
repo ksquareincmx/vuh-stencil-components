@@ -55,6 +55,8 @@ export class KIcon {
     | 'visibility_off';
 
   render() {
-    return <i class={`vuh-${this.name} ${this.size}`} />;
+    return (
+      <i class={`vuh-${this.name} ${this.size ? 'KIcon--' + this.size : ''}`} />
+    );
   }
 }

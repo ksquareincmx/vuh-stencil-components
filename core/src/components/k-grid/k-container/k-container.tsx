@@ -10,7 +10,7 @@ export class KContainer {
 
   render() {
     return (
-      <Host class={`${this.fluid ? 'fluid' : ''}`}>
+      <Host class={`KContainer ${this.fluid ? 'KContainer--fluid' : ''}`}>
         <slot />
       </Host>
     );
