@@ -20,11 +20,11 @@ export class KColumn {
     | '11'
     | '12';
 
-  @Prop() sizeSm?: '1' | '2' | '3' | '4';
+  @Prop() sizesm?: '1' | '2' | '3' | '4';
 
-  @Prop() sizeMd?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
+  @Prop() sizemd?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
 
-  @Prop() sizeLg?:
+  @Prop() sizelg?:
     | '1'
     | '2'
     | '3'
@@ -44,9 +44,9 @@ export class KColumn {
     return (
       <Host
         class={`KColumn ${this.size ? 'KColumn--col-' + this.size : ''} ${
-          this.sizeSm ? 'KColumn--col-sm-' + this.sizeSm : ''
-        } ${this.sizeMd ? 'KColumn--col-md-' + this.sizeMd : ''} ${
-          this.sizeLg ? 'KColumn--col-lg-' + this.sizeLg : ''
+          this.sizesm ? 'KColumn--col-sm-' + this.sizesm : ''
+        } ${this.sizemd ? 'KColumn--col-md-' + this.sizemd : ''} ${
+          this.sizelg ? 'KColumn--col-lg-' + this.sizelg : ''
         }`}
       >
         <div class={`KColumn-content`}>
