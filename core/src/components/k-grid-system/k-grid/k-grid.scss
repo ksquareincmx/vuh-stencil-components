@@ -1,6 +1,6 @@
 @import '../../../styles/partials/breakpoints';
 
-:host(.KContainer) {
+:host(.KGrid) {
   display: block;
   max-width: 100%;
   padding: 0 8px;
@@ -18,6 +18,6 @@
   }
 }
 
-:host(.KContainer--fluid) {
+:host(.KGrid--fluid) {
   padding: unset;
 }

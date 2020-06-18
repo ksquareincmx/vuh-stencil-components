@@ -49,9 +49,9 @@ export class KColumn {
           this.sizeLg ? 'KColumn--col-lg-' + this.sizeLg : ''
         }`}
       >
-        <p class={`KColumn-content`}>
+        <div class={`KColumn-content`}>
           <slot />
-        </p>
+        </div>
       </Host>
     );
   }

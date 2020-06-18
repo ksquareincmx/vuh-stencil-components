@@ -1,9 +1,6 @@
-# k-container
-
-
+# k-grid
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -11,7 +8,6 @@
 | -------- | --------- | ----------- | --------- | ------- |
 | `fluid`  | `fluid`   |             | `boolean` | `false` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
