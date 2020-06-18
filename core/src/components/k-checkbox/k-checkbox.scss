@@ -2,7 +2,7 @@
   display: block;
   padding: 8px 0;
 
-  .container {
+  .KCheckbox {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -12,45 +12,45 @@
     -moz-user-select: none;
     -ms-user-select: none;
 
-    .checkbox-input {
+    .KCheckbox-input {
       position: absolute;
       opacity: 0;
       height: 0;
       width: 0;
 
       &:checked {
-        & ~ .checkmark {
+        & ~ .KCheckbox-checkmark {
           border: 2px solid $primary-color;
           background-color: $primary-color;
-          .icon {
+          .KCheckbox-icon {
             opacity: 100;
           }
         }
-        & ~ .text {
+        & ~ .KCheckbox-label {
           color: $gray-300;
         }
       }
 
       &:disabled {
-        & ~  .checkmark {
+        & ~  .KCheckbox-checkmark {
           border-color: $gray-100;
           background-color: $gray-50;
         }
         &:checked {
-          & ~  .checkmark {
+          & ~  .KCheckbox-checkmark {
             background-color: $gray-100;
-            .icon {
+            .KCheckbox-icon {
               color: $gray-50;
             }
           }
         }
-        & ~  .text {
+        & ~  .KCheckbox-label {
           color: $gray-100;
         }
       }
     }
 
-    .checkmark {
+    .KCheckbox-checkmark {
       position: absolute;
       top: 0;
       left: 1px;
@@ -59,7 +59,7 @@
       border: 2px solid $gray-200;
       background-color: white;
 
-      .icon {
+      .KCheckbox-icon {
         opacity: 0;
         position: relative;
         bottom: 3px;
@@ -68,22 +68,22 @@
       }
     }
 
-    .text {
+    .KCheckbox-label {
       color: $gray-200;
     }
 
     &:hover,
     &:focus {
-      .checkmark {
+      .KCheckbox-checkmark {
         border: 2px solid $primary-color;
       }
-      .text {
+      .KCheckbox-label {
         color: $gray-300;
       }
     }
   }
 
-  .disabled {
+  .KCheckbox--disabled {
     cursor: not-allowed;
   }
 }
