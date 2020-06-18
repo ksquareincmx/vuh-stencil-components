@@ -1,4 +1,13 @@
-import { Component, h, Prop } from '@stencil/core';
+import {
+  Component,
+  h,
+  Prop,
+  Event,
+  EventEmitter,
+  Watch,
+  Host,
+  Element
+} from '@stencil/core';
 
 @Component({
   tag: 'k-radio-button',
@@ -7,43 +16,62 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class KRadioButton {
   private buttonEl: HTMLElement;
+  private inputId = `rb-${radioButtonIds++}`; // we need an identifier for each radio button
 
-  @Prop() name: string;
-  @Prop() value: string;
+  @Element() el: HTMLElement;
+
+  @Prop() name: string = this.inputId;
+  @Prop({ reflect: true }) value: string = this.inputId;
   @Prop({ reflect: true }) disabled?: boolean = false;
-  @Prop({ mutable: true }) checked?: boolean = false;
+  @Prop({ reflect: true }) checked: boolean = false;
 
-  private checkedClicked = (e: any) => {
+  @Event() valueChanged: EventEmitter<{ value: any; id: String }>;
+
+  @Watch('checked')
+  checkedChange() {
+    this.valueChanged.emit({ value: this.value, id: this.inputId });
+  }
+
+  componentDidLoad() {
+    this.el.id = this.inputId;
+  }
+
+  private checkedClicked = (e: Event) => {
     e.stopPropagation();
     if (!this.disabled) {
-      this.buttonEl.click(); // Force click on hidden input to update its value
+      this.buttonEl.click(); // Force click on hidden input to update its checked state
+      this.el.click(); // will propagate only the click for the complete element
       this.checked = !this.checked;
     }
   };
 
   render() {
     return (
-      <label
-        htmlFor="KRadioButton-input"
-        class={`KRadioButton ${this.disabled ? 'disabled' : ''}`}
-        onClick={this.checkedClicked}
-      >
-        <input
-          ref={(el: HTMLElement) => (this.buttonEl = el)}
-          id="KRadioButton-input"
-          class="KRadioButton-input"
-          type="radio"
-          value={this.value}
-          checked={this.checked}
-          disabled={this.disabled}
-        ></input>
-        <span class="KRadioButton-checkmark">
-          <span class="KRadioButton-dot"></span>
-        </span>
-        <span class="KRadioButton-label">
-          <slot>Default</slot>
-        </span>
-      </label>
+      <Host>
+        <label
+          htmlFor={`${this.inputId}-input`}
+          class={`KRadioButton ${this.disabled ? 'KRadioButton-disabled' : ''}`}
+          onClick={this.checkedClicked}
+        >
+          <input
+            ref={(el: HTMLElement) => (this.buttonEl = el)}
+            id={`${this.inputId}-input`}
+            class="KRadioButton-input"
+            type="radio"
+            value={this.value}
+            checked={this.checked}
+            disabled={this.disabled}
+          ></input>
+          <span class="KRadioButton-checkmark">
+            <span class="KRadioButton-dot"></span>
+          </span>
+          <span class="KRadioButton-label">
+            <slot>Default</slot>
+          </span>
+        </label>
+      </Host>
     );
   }
 }
+
+let radioButtonIds = 0;
