@@ -1,17 +1,16 @@
 :host {
-  display: flex;
-  align-items: center;
+  display: inline-block;
 
-  & > .small {
+  & > .KIcon--small {
     font-size: 16px;
   }
-  & > .medium {
+  & > .KIcon--medium {
     font-size: 24px;
   }
-  & > .large {
+  & > .KIcon--large {
     font-size: 32px;
   }
-  & > .extra-large {
+  & > .KIcon--extra-large {
     font-size: 48px;
   }
 }

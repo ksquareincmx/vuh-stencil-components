@@ -367,100 +367,141 @@
         <h3>Empty Container</h3>
       </k-typography>
 
-      <k-container style="height: 50px; background-color: #d6d6d6;">
+      <k-grid style="height: 50px; background-color: #d6d6d6;">
         <p>This is a regular container.</p>
-      </k-container>
+      </k-grid>
 
       <br />
       <k-typography style="margin-bottom: 16px;">
         <h3>Empty Fluid Container</h3>
       </k-typography>
 
-      <k-container
-        fluid="true"
-        style="height: 50px; background-color: #d6d6d6;"
-      >
+      <k-grid fluid="true" style="height: 50px; background-color: #d6d6d6;">
         <p>This container is fluid and has no padding on its sides.</p>
-      </k-container>
+      </k-grid>
 
       <br />
       <k-typography style="margin-bottom: 16px;">
         <h3>Empty Row</h3>
       </k-typography>
 
-      <k-container style="background-color: #d6d6d6;">
+      <k-grid style="background-color: #d6d6d6;">
         <k-row style="height: 50px; background-color: #f7f7f7;"> </k-row>
-      </k-container>
+      </k-grid>
 
       <br />
       <k-typography style="margin-bottom: 16px;">
         <h3>Columns</h3>
       </k-typography>
 
-      <k-container style="background-color: #f7f7f7;">
+      <k-grid style="background-color: #f7f7f7;">
         <k-row>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 1
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 2
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 3
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 4
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 5
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 6
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 7
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 8
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 9
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 10
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 11
+              Column (size 1)
             </p>
           </k-column>
-          <k-column size="col-1">
+          <k-column size="1">
             <p style="background-color: #42e3ad; margin: 0;">
-              This is column 12
+              Column (size 1)
             </p>
           </k-column>
         </k-row>
-      </k-container>
+      </k-grid>
+
+      <br />
+
+      <k-grid style="background-color: #f7f7f7;">
+        <k-row>
+          <k-column size="1" sizesm="4" sizemd="8" sizelg="12">
+            <p style="background-color: #42e3ad; margin: 0;">
+              Column (size 1, sizeSm 4, sizeMd 8, sizeLg 12). This means this
+              column will take 100% of its row's width regardless of the
+              viewports's size.
+            </p>
+          </k-column>
+        </k-row>
+      </k-grid>
+
+      <br />
+
+      <k-grid style="background-color: #f7f7f7;">
+        <k-row>
+          <k-column size="2">
+            <p style="background-color: #42e3ad; margin: 0;">
+              Column (size 2)
+            </p>
+          </k-column>
+          <k-column sizesm="3">
+            <p style="background-color: #42e3ad; margin: 0;">
+              Column (sizeSm 3)
+            </p>
+          </k-column>
+          <k-column sizemd="5" sizelg="7">
+            <p style="background-color: #42e3ad; margin: 0;">
+              Column (sizeMd 5, sizeLg 7; since sizeLg is explicity declared, it
+              will take precedence over sizeMd)
+            </p>
+          </k-column>
+          <k-column sizemd="6">
+            <p style="background-color: #42e3ad; margin: 0;">
+              Column (sizeMd 6; on small screens that can only handle 4 columns,
+              this column will take 100% of its row's width and won't cause
+              overflow.)
+            </p>
+          </k-column>
+        </k-row>
+      </k-grid>
     </section>
 
     <br />
@@ -475,30 +516,30 @@
       </k-typography>
 
       <k-row>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="done" size="small"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="done" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="done" size="large"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="done" size="extra-large"></k-icon>
         </k-column>
       </k-row>
       <k-row>
-        <k-column size="col-1">
+        <k-column size="1">
           16 x 16 px
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           24 x 24 px
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           32 x 32 px
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           48 x 48 px
         </k-column>
       </k-row>
@@ -510,139 +551,139 @@
       </k-typography>
 
       <k-row>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="alert_circle" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="assistant" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="attachment" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="bookmark_border" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="bookmark" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="cached" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="check_circle" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="close" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="cloud_upload" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="colorize" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="delete" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="done" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="drag_indicator" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="edit" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="event" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="file_copy" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="finish_1" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="finish_2" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="finish_3" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="flip_camera_ios" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="graduate_cap" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="highlight_off" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="info" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="insert_drive_file" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="keyboard_arrow_down" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="keyboard_arrow_left" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="keyboard_arrow_right" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="keyboard_arrow_up" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="menu" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="network_wired" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="notifications_active" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="notifications" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="person" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="photo_camera" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="playlist_add_check" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="question_answer" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="remove_red_eye" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="ribbon" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="search" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="settings" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="supervised_user_circle" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="swap_vert" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="tune" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="view_week" size="medium"></k-icon>
         </k-column>
-        <k-column size="col-1">
+        <k-column size="1">
           <k-icon name="visibility_off" size="medium"></k-icon>
         </k-column>
       </k-row>

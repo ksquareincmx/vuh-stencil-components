@@ -8,7 +8,7 @@ import { Component, Host, h } from '@stencil/core';
 export class KRow {
   render() {
     return (
-      <Host class={`k-row`}>
+      <Host class={`KRow`}>
         <slot />
       </Host>
     );

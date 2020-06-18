@@ -1,16 +1,16 @@
 import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'k-container',
-  styleUrl: 'k-container.scss',
+  tag: 'k-grid',
+  styleUrl: 'k-grid.scss',
   shadow: true
 })
-export class KContainer {
+export class KGrid {
   @Prop() fluid?: boolean = false;
 
   render() {
     return (
-      <Host class={`${this.fluid ? 'fluid' : ''}`}>
+      <Host class={`KGrid ${this.fluid ? 'KGrid--fluid' : ''}`}>
         <slot />
       </Host>
     );

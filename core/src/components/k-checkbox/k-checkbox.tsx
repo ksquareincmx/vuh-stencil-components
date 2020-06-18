@@ -22,20 +22,20 @@ export class KCheckbox {
   render() {
     return (
       <label
-        class={`container ${this.disabled ? 'disabled' : ''}`}
+        class={`KCheckbox ${this.disabled ? 'KCheckbox--disabled' : ''}`}
         onClick={this.onCheckboxClick}
       >
         <input
           ref={(el: HTMLElement) => (this.inputEl = el)}
           type="checkbox"
-          class="checkbox-input"
+          class="KCheckbox-input"
           disabled={this.disabled}
           checked={this.checked}
         />
-        <span class="checkmark">
-          <span class="icon vuh-done"></span>
+        <span class="KCheckbox-checkmark">
+          <span class="KCheckbox-icon vuh-done"></span>
         </span>
-        <span class="text">
+        <span class="KCheckbox-label">
           <slot>Default</slot>
         </span>
       </label>
