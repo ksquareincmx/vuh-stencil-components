@@ -1,0 +1,15 @@
+:host(.KTab) {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.KTab--selected {
+  position: absolute;
+  height: 2px;
+  background-color: $primary-color;
+  bottom: 0;
+  transition: 0.3s;
+  will-change: transform;
+}

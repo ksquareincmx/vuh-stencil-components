@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-checkbox',
@@ -22,7 +23,7 @@ export class KCheckbox {
   render() {
     return (
       <label
-        class={`KCheckbox ${this.disabled ? 'KCheckbox--disabled' : ''}`}
+        class={clsx('KCheckbox', { 'KCheckbox--disabled': this.disabled })}
         onClick={this.onCheckboxClick}
       >
         <input

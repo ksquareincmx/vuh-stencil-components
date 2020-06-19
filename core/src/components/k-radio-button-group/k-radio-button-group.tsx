@@ -1,12 +1,4 @@
-import {
-  Component,
-  h,
-  Prop,
-  Host,
-  Listen,
-  Element,
-  State
-} from '@stencil/core';
+import { Component, h, Host, Listen, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'k-radio-button-group',

@@ -1,4 +1,5 @@
 import { Component, h, Host, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-grid',
@@ -10,7 +11,11 @@ export class KGrid {
 
   render() {
     return (
-      <Host class={`KGrid ${this.fluid ? 'KGrid--fluid' : ''}`}>
+      <Host
+        class={clsx('KGrid', {
+          'KGrid--fluid': this.fluid
+        })}
+      >
         <slot />
       </Host>
     );

@@ -8,6 +8,7 @@ import {
   Host,
   Element
 } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-radio-button',
@@ -50,7 +51,9 @@ export class KRadioButton {
       <Host>
         <label
           htmlFor={`${this.inputId}-input`}
-          class={`KRadioButton ${this.disabled ? 'KRadioButton-disabled' : ''}`}
+          class={clsx('KRadioButton', {
+            'KRadioButton-disabled': this.disabled
+          })}
           onClick={this.checkedClicked}
         >
           <input

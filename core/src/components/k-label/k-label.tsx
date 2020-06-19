@@ -8,7 +8,7 @@ import { Component, h } from '@stencil/core';
 export class KTagLabel {
   render() {
     return (
-      <label>
+      <label class="KLabel">
         <slot></slot>
       </label>
     );

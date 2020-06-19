@@ -6,8 +6,8 @@
 
   .KSpinner-before {
     position: absolute;
-    left: -6px;
-    top: -6px;
+    left: 0;
+    top: 0;
     height: 50px;
     width: 50%;
     border-top: 6px solid $primary-color;
@@ -108,8 +108,8 @@
 
   .KSpinner-after {
     position: absolute;
-    right: -6px;
-    top: -6px;
+    right: 0;
+    top: 0;
     height: 50px;
     width: 50%;
     border-top: 6px solid $primary-color;

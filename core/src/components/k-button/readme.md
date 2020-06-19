@@ -5,12 +5,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                             | Default     |
-| ---------- | ---------- | ----------- | -------------------------------- | ----------- |
-| `color`    | `color`    |             | `string`                         | `'primary'` |
-| `disabled` | `disabled` |             | `boolean`                        | `false`     |
-| `shape`    | `shape`    |             | `"full" \| "round" \| "smooth"`  | `'smooth'`  |
-| `size`     | `size`     |             | `"large" \| "medium" \| "small"` | `'medium'`  |
+| Property    | Attribute   | Description | Type                             | Default     |
+| ----------- | ----------- | ----------- | -------------------------------- | ----------- |
+| `color`     | `color`     |             | `string`                         | `'primary'` |
+| `disabled`  | `disabled`  |             | `boolean`                        | `false`     |
+| `elevation` | `elevation` |             | `boolean`                        | `false`     |
+| `shape`     | `shape`     |             | `"full" \| "round" \| "smooth"`  | `'smooth'`  |
+| `size`      | `size`      |             | `"large" \| "medium" \| "small"` | `'medium'`  |
 
 
 ----------------------------------------------
