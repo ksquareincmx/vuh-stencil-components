@@ -4,3 +4,23 @@
   width: 100%;
   max-width: 100%;
 }
+
+:host(.KRow--spacing-xs) {
+  margin-bottom: 4px;
+}
+
+:host(.KRow--spacing-sm) {
+  margin-bottom: 8px;
+}
+
+:host(.KRow--spacing-md) {
+  margin-bottom: 16px;
+}
+
+:host(.KRow--spacing-lg) {
+  margin-bottom: 24px;
+}
+
+:host(.KRow--spacing-xl) {
+  margin-bottom: 32px;
+}
