@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-button',
@@ -15,9 +16,9 @@ export class KButton {
   render() {
     return (
       <button
-        class={`KButton ${this.color} ${this.shape} ${this.size} ${
-          this.elevation ? 'elevation' : ''
-        }`}
+        class={clsx(`KButton ${this.color} ${this.shape} ${this.size}`, {
+          elevation: this.elevation
+        })}
         disabled={this.disabled}
       >
         <slot>Default</slot>

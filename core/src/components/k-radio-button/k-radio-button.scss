@@ -30,15 +30,16 @@
       left: 0;
       top: 0;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .KRadioButton-dot {
         position: absolute;
         border-radius: 50%;
         background-color: white;
-        height: 0.625em;
-        width: 0.625em;
-        left: 0.1875em;
-        top: 0.1875em;
+        height: 0.5em;
+        width: 0.5em;
       }
     }
 

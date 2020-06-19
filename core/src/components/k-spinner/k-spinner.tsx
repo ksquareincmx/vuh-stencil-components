@@ -43,18 +43,14 @@ export class KSpinner {
           class={`KSpinner-before ${this.color ?? ''}`}
           style={{
             height: `${this.size}px`,
-            borderWidth: `${this.strong}px 0 ${this.strong}px ${this.strong}px`,
-            left: `-${this.strong}px`,
-            top: `-${this.strong}px`
+            borderWidth: `${this.strong}px 0 ${this.strong}px ${this.strong}px`
           }}
         ></div>
         <div
           class={`KSpinner-after ${this.color ?? ''}`}
           style={{
             height: `${this.size}px`,
-            borderWidth: `${this.strong}px ${this.strong}px ${this.strong}px 0`,
-            right: `-${this.strong}px`,
-            top: `-${this.strong}px`
+            borderWidth: `${this.strong}px ${this.strong}px ${this.strong}px 0`
           }}
         ></div>
       </div>
