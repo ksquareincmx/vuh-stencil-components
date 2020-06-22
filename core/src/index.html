@@ -541,9 +541,7 @@
         <k-row>
           <k-column size="1" sizesm="4" sizemd="8" sizelg="12">
             <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1, sizeSm 4, sizeMd 8, sizeLg 12). This means this
-              column will take 100% of its row's width regardless of the
-              viewports's size.
+              Column (size 1, sizeSm 4, sizeMd 8, sizeLg 12).
             </p>
           </k-column>
         </k-row>
@@ -565,15 +563,12 @@
           </k-column>
           <k-column sizemd="5" sizelg="7">
             <p style="background-color: #42e3ad; margin: 0;">
-              Column (sizeMd 5, sizeLg 7; since sizeLg is explicity declared, it
-              will take precedence over sizeMd)
+              Column (sizeMd 5, sizeLg 7)
             </p>
           </k-column>
           <k-column sizemd="6">
             <p style="background-color: #42e3ad; margin: 0;">
-              Column (sizeMd 6; on small screens that can only handle 4 columns,
-              this column will take 100% of its row's width and won't cause
-              overflow.)
+              Column (sizeMd 6)
             </p>
           </k-column>
         </k-row>
@@ -591,7 +586,7 @@
         <h3>Min & Max Sizes</h3>
       </k-typography>
 
-      <k-row spacing='sm'>
+      <k-row spacing="sm">
         <k-column size="1">
           <k-icon name="done" size="small"></k-icon>
         </k-column>
