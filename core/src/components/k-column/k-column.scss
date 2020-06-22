@@ -124,3 +124,339 @@
   width: calc(100% / 12 * 12);
   max-width: calc(100% / 12 * 12);
 }
+
+:host(.KColumn--col-sm-1) {
+  @include small-tablet {
+    width: calc(100% / 12 * 1);
+    max-width: calc(100% / 12 * 1);
+  }
+}
+
+:host(.KColumn--col-sm-2) {
+  @include small-tablet {
+    width: calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+  }
+}
+
+:host(.KColumn--col-sm-3) {
+  @include small-tablet {
+    width: calc(100% / 12 * 3);
+    max-width: calc(100% / 12 * 3);
+  }
+}
+
+:host(.KColumn--col-sm-4) {
+  @include small-tablet {
+    width: calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+  }
+}
+
+:host(.KColumn--col-sm-5) {
+  @include small-tablet {
+    width: calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+}
+
+:host(.KColumn--col-sm-6) {
+  @include small-tablet {
+    width: calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+}
+
+:host(.KColumn--col-sm-7) {
+  @include small-tablet {
+    width: calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+
+:host(.KColumn--col-sm-8) {
+  @include small-tablet {
+    width: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+  }
+}
+
+:host(.KColumn--col-sm-9) {
+  @include small-tablet {
+    width: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * 9);
+  }
+}
+
+:host(.KColumn--col-sm-10) {
+  @include small-tablet {
+    width: calc(100% / 12 * 10);
+    max-width: calc(100% / 12 * 10);
+  }
+}
+
+:host(.KColumn--col-sm-11) {
+  @include small-tablet {
+    width: calc(100% / 12 * 11);
+    max-width: calc(100% / 12 * 11);
+  }
+}
+
+:host(.KColumn--col-sm-12) {
+  @include small-tablet {
+    width: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * 12);
+  }
+}
+
+:host(.KColumn--col-md-1) {
+  @include tablet {
+    width: calc(100% / 12 * 1);
+    max-width: calc(100% / 12 * 1);
+  }
+}
+
+:host(.KColumn--col-md-2) {
+  @include tablet {
+    width: calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+  }
+}
+
+:host(.KColumn--col-md-3) {
+  @include tablet {
+    width: calc(100% / 12 * 3);
+    max-width: calc(100% / 12 * 3);
+  }
+}
+
+:host(.KColumn--col-md-4) {
+  @include tablet {
+    width: calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+  }
+}
+
+:host(.KColumn--col-md-5) {
+  @include tablet {
+    width: calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+}
+
+:host(.KColumn--col-md-6) {
+  @include tablet {
+    width: calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+}
+
+:host(.KColumn--col-md-7) {
+  @include tablet {
+    width: calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+
+:host(.KColumn--col-md-8) {
+  @include tablet {
+    width: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+  }
+}
+
+:host(.KColumn--col-md-9) {
+  @include tablet {
+    width: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * 9);
+  }
+}
+
+:host(.KColumn--col-md-10) {
+  @include tablet {
+    width: calc(100% / 12 * 10);
+    max-width: calc(100% / 12 * 10);
+  }
+}
+
+:host(.KColumn--col-md-11) {
+  @include tablet {
+    width: calc(100% / 12 * 11);
+    max-width: calc(100% / 12 * 11);
+  }
+}
+
+:host(.KColumn--col-md-12) {
+  @include tablet {
+    width: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * 12);
+  }
+}
+
+:host(.KColumn--col-lg-1) {
+  @include desktop {
+    width: calc(100% / 12 * 1);
+    max-width: calc(100% / 12 * 1);
+  }
+}
+
+:host(.KColumn--col-lg-2) {
+  @include desktop {
+    width: calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+  }
+}
+
+:host(.KColumn--col-lg-3) {
+  @include desktop {
+    width: calc(100% / 12 * 3);
+    max-width: calc(100% / 12 * 3);
+  }
+}
+
+:host(.KColumn--col-lg-4) {
+  @include desktop {
+    width: calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+  }
+}
+
+:host(.KColumn--col-lg-5) {
+  @include desktop {
+    width: calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+}
+
+:host(.KColumn--col-lg-6) {
+  @include desktop {
+    width: calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+}
+
+:host(.KColumn--col-lg-7) {
+  @include desktop {
+    width: calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+
+:host(.KColumn--col-lg-8) {
+  @include desktop {
+    width: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+  }
+}
+
+:host(.KColumn--col-lg-9) {
+  @include desktop {
+    width: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * 9);
+  }
+}
+
+:host(.KColumn--col-lg-10) {
+  @include desktop {
+    width: calc(100% / 12 * 10);
+    max-width: calc(100% / 12 * 10);
+  }
+}
+
+:host(.KColumn--col-lg-11) {
+  @include desktop {
+    width: calc(100% / 12 * 11);
+    max-width: calc(100% / 12 * 11);
+  }
+}
+
+:host(.KColumn--col-lg-12) {
+  @include desktop {
+    width: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * 12);
+  }
+}
+
+:host(.KColumn--col-xl-1) {
+  @include desktop-full {
+    width: calc(100% / 12 * 1);
+    max-width: calc(100% / 12 * 1);
+  }
+}
+
+:host(.KColumn--col-xl-2) {
+  @include desktop-full {
+    width: calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+  }
+}
+
+:host(.KColumn--col-xl-3) {
+  @include desktop-full {
+    width: calc(100% / 12 * 3);
+    max-width: calc(100% / 12 * 3);
+  }
+}
+
+:host(.KColumn--col-xl-4) {
+  @include desktop-full {
+    width: calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+  }
+}
+
+:host(.KColumn--col-xl-5) {
+  @include desktop-full {
+    width: calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+}
+
+:host(.KColumn--col-xl-6) {
+  @include desktop-full {
+    width: calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+}
+
+:host(.KColumn--col-xl-7) {
+  @include desktop-full {
+    width: calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+
+:host(.KColumn--col-xl-8) {
+  @include desktop-full {
+    width: calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+  }
+}
+
+:host(.KColumn--col-xl-9) {
+  @include desktop-full {
+    width: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * 9);
+  }
+}
+
+:host(.KColumn--col-xl-10) {
+  @include desktop-full {
+    width: calc(100% / 12 * 10);
+    max-width: calc(100% / 12 * 10);
+  }
+}
+
+:host(.KColumn--col-xl-11) {
+  @include desktop-full {
+    width: calc(100% / 12 * 11);
+    max-width: calc(100% / 12 * 11);
+  }
+}
+
+:host(.KColumn--col-xl-12) {
+  @include desktop-full {
+    width: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * 12);
+  }
+}
