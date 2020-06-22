@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'k-row',
@@ -6,9 +6,13 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true
 })
 export class KRow {
+  @Prop() spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
   render() {
     return (
-      <Host class={`KRow`}>
+      <Host
+        class={`KRow ${this.spacing ? 'KRow--spacing-' + this.spacing : ''} `}
+      >
         <slot />
       </Host>
     );
