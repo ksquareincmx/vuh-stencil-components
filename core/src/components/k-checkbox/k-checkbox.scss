@@ -1,11 +1,13 @@
 :host {
   display: block;
+  height: 32px;
   padding: 8px 0;
 
   .KCheckbox {
     cursor: pointer;
     display: inline-block;
     position: relative;
+    height: 16px;
     padding-left: 24px;
     user-select: none;
     -webkit-user-select: none;
@@ -53,23 +55,25 @@
     .KCheckbox-checkmark {
       position: absolute;
       top: 0;
-      left: 1px;
-      height: 12px;
-      width: 12px;
+      left: 0px;
+      height: 16px;
+      width: 16px;
       border: 2px solid $gray-200;
       background-color: white;
 
       .KCheckbox-icon {
         opacity: 0;
         position: relative;
-        bottom: 5px;
-        right: 4px;
+        font-size: 16px;
+        bottom: 2px;
+        right: 2px;
         color: white;
       }
     }
 
     .KCheckbox-label {
       color: $gray-200;
+      font-size: 16px;
     }
 
     &:hover,
