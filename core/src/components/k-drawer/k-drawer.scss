@@ -1,19 +1,33 @@
 .KDrawer {
+  display: none;
   height: 100%;
   width: 100vw;
   background-color: rgba($color: #000000, $alpha: 0.6);
   position: fixed;
-  z-index: 999999;
+  z-index: 9999;
   top: 0;
   left: 0;
   right: 0;
+
+  &.--is-opened {
+    display: block;
+
+    @include desktop {
+      display: none;
+    }
+  }
 
   .KDrawer-sidenav {
     height: 100vh;
     width: 70%;
     background-color: white;
-    transition: 0.3s;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
     transform: translateX(-100%);
+    transition: transform 0.5s;
+
+    &.--is-opened {
+      transform: translateX(0);
+    }
 
     @include small-tablet {
       width: 40%;

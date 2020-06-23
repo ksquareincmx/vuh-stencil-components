@@ -1,4 +1,12 @@
-import { Component, h, Prop, Watch, State } from '@stencil/core';
+import {
+  Component,
+  h,
+  Prop,
+  Watch,
+  State,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -9,6 +17,8 @@ import clsx from 'clsx';
 export class KMenu {
   @State() bell?: HTMLElement;
   @Prop() notificationNumber?: number = 0;
+  @Prop() userOptions?: boolean = true;
+  @Prop() key: string = '';
 
   @Watch('notificationNumber')
   notificationHandler(newValue: number, oldValue: number) {
@@ -23,19 +33,28 @@ export class KMenu {
     });
   }
 
+  @Event() toggleMenu: EventEmitter<string>;
+  openMenu() {
+    this.toggleMenu.emit(this.key);
+  }
+
   render() {
     return (
       <div class="KMenu">
-        <div class="KMenu-burger-button">
+        <button class="KMenu-burger-button" onClick={() => this.openMenu()}>
           <k-icon name="menu" size="medium"></k-icon>
-        </div>
+        </button>
         <figure class="KMenu-logo">
           <k-img
             src="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png"
             height={32}
           ></k-img>
         </figure>
-        <div class="KMenu-user">
+        <div
+          class={clsx('KMenu-user', {
+            'KMenu-user--is-disabled': !this.userOptions
+          })}
+        >
           <div
             class={clsx('KMenu-user-notification', {
               'KMenu--is-notified': this.notificationNumber > 0
@@ -56,6 +75,7 @@ export class KMenu {
             ></k-img>
           </k-avatar>
         </div>
+        <slot></slot>
       </div>
     );
   }

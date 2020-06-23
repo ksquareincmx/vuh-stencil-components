@@ -15,6 +15,9 @@
     transition: 0.3s;
     padding: 8px;
     border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    outline: none;
     will-change: transform, background-color;
 
     &:hover {
@@ -35,6 +38,10 @@
     display: flex;
     align-items: center;
     color: $primary-color;
+
+    &.KMenu-user--is-disabled {
+      display: none;
+    }
 
     .KMenu-user-notification {
       font-weight: normal;
