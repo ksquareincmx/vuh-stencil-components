@@ -13,15 +13,33 @@
     <link rel="stylesheet" href="/build/k-ui-kit.css" />
   </head>
   <body>
-    <k-menu menu-key="k-menu" notification-number="4">
+    <k-menu
+      menu-key="k-menu"
+      notification-number="4"
+      user-picture="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
+      user-name="Abraham Berzunza"
+      logo="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png"
+    >
       <k-tab>
-        <k-tab-item current="true"><span>Tab 1</span></k-tab-item>
-        <k-tab-item current="false">Tab 2</k-tab-item>
-        <k-tab-item current="false">Tab 3</k-tab-item>
-        <k-tab-item disabled>Tab 3</k-tab-item>
+        <k-tab-item current="true">
+          <a>Tab 1</a>
+        </k-tab-item>
+        <k-tab-item current="false">
+          <a>Tab 2</a>
+        </k-tab-item>
+        <k-tab-item current="false">
+          <a>Tab 3</a>
+        </k-tab-item>
+        <k-tab-item disabled>
+          <a>Tab 4</a>
+        </k-tab-item>
       </k-tab>
     </k-menu>
-    <k-drawer for-key="k-menu">
+    <k-drawer
+      for-key="k-menu"
+      user-picture="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
+      user-name="Abraham Berzunza"
+    >
       <k-list-group>
         <k-list-item>Home</k-list-item>
         <k-list-item>Courses</k-list-item>
