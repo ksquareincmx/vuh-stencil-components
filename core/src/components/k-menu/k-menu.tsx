@@ -6,7 +6,8 @@ import {
   State,
   Event,
   EventEmitter,
-  Host
+  Host,
+  Element
 } from '@stencil/core';
 import clsx from 'clsx';
 
@@ -17,9 +18,11 @@ import clsx from 'clsx';
 })
 export class KMenu {
   @State() bell?: HTMLElement;
+  @State() hasChildren?: boolean;
   @Prop() notificationNumber?: number = 0;
   @Prop() userOptions?: boolean = true;
   @Prop() menuKey: string = '';
+  @Element() host: HTMLElement;
 
   @Watch('notificationNumber')
   notificationHandler(newValue: number, oldValue: number) {
@@ -32,6 +35,11 @@ export class KMenu {
     this.bell.addEventListener('animationend', () => {
       this.bell.classList.remove('animate');
     });
+    console.log(this.hasChildren);
+  }
+
+  componentWillRender() {
+    this.hasChildren = this.host.children.length > 0;
   }
 
   @Event() toggleMenu: EventEmitter<string>;
@@ -42,7 +50,11 @@ export class KMenu {
   render() {
     return (
       <Host>
-        <div class="KMenu">
+        <div
+          class={clsx('KMenu', {
+            'KMenu--is-shadowed': !this.hasChildren
+          })}
+        >
           <button class="KMenu-burger-button" onClick={() => this.openMenu()}>
             <k-icon name="menu" size="medium"></k-icon>
           </button>
