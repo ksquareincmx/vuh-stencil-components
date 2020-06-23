@@ -18,7 +18,6 @@ import clsx from 'clsx';
 })
 export class KMenu {
   @Element() host: HTMLElement;
-  @State() bell?: HTMLElement;
   @State() hasChildren?: boolean;
 
   @Prop() menuKey: string = '';
@@ -33,19 +32,6 @@ export class KMenu {
 
   // logo properties
   @Prop() logo: string = '';
-
-  @Watch('notificationNumber')
-  notificationHandler(newValue: number, oldValue: number) {
-    if (newValue !== oldValue && this.notificationNumber > 0) {
-      this.bell.classList.add('animate');
-    }
-  }
-
-  componentDidRender() {
-    this.bell.addEventListener('animationend', () => {
-      this.bell.classList.remove('animate');
-    });
-  }
 
   componentWillRender() {
     this.hasChildren = this.host.children.length > 0;
@@ -75,19 +61,9 @@ export class KMenu {
               'KMenu-user--is-disabled': !this.userOptions
             })}
           >
-            <div
-              class={clsx('KMenu-user-notification', {
-                'KMenu--is-notified': this.notificationNumber > 0
-              })}
-              data-count={this.notificationNumber}
-            >
-              <k-icon
-                ref={(el) => (this.bell = el)}
-                name="notifications"
-                size="medium"
-                class="KMenu-user-bell"
-              ></k-icon>
-            </div>
+            <k-notification
+              notificationNumber={this.notificationNumber}
+            ></k-notification>
             <k-avatar class="KMenu-user-avatar">
               <k-img alt="Profile" src={this.userPicture}></k-img>
             </k-avatar>
