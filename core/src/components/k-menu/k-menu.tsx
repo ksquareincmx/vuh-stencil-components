@@ -78,6 +78,9 @@ export class KMenu {
             </k-avatar>
           </div>
         </div>
+        <div class="KMenu-nav">
+          <slot></slot>
+        </div>
       </Host>
     );
   }

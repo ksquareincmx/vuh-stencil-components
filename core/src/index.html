@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="/build/k-ui-kit.css" />
   </head>
   <body>
-    <k-menu menu-key="k-menu" notification-number="4"></k-menu>
+    <k-menu menu-key="k-menu" notification-number="4">
+      <k-tab>
+        <k-tab-item current="true"><span>Tab 1</span></k-tab-item>
+        <k-tab-item current="false">Tab 2</k-tab-item>
+        <k-tab-item current="false">Tab 3</k-tab-item>
+        <k-tab-item disabled>Tab 3</k-tab-item>
+      </k-tab>
+    </k-menu>
     <k-drawer for-key="k-menu">
       <k-list-group>
         <k-list-item>Home</k-list-item>
@@ -61,15 +68,6 @@
       </k-list-group>
     </k-drawer>
 
-    <k-typography>
-      <h1>Tabs</h1>
-    </k-typography>
-    <k-tab>
-      <k-tab-item current="true">Tab 1</k-tab-item>
-      <k-tab-item current="false">Tab 2</k-tab-item>
-      <k-tab-item current="false">Tab 3</k-tab-item>
-      <k-tab-item disabled>Tab 3</k-tab-item>
-    </k-tab>
     <k-typography>
       <h1>Heading 1</h1>
     </k-typography>
