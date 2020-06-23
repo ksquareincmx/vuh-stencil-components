@@ -36,6 +36,10 @@
     }
 
     .KDrawer-user {
+      &.KDrawer-user--is-disabled {
+        display: none;
+      }
+
       .KDrawer-user-avatar {
         display: flex;
         align-items: center;
@@ -50,6 +54,11 @@
           color: rgba($color: $gray-500, $alpha: 0.7);
         }
       }
+    }
+
+    .KDrawer-space {
+      height: 16px;
+      width: 100%;
     }
   }
 }

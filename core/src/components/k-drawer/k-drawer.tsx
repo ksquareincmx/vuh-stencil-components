@@ -11,6 +11,7 @@ export class KDrawer {
   @State() isOpen: boolean = false;
   @State() showSidenav: boolean = false;
   @Prop() forKey: string = 'key-menu';
+  @Prop() userOptions?: boolean = true;
 
   componentWillRender() {
     this.body = document.querySelector('body');
@@ -47,7 +48,11 @@ export class KDrawer {
             'KDrawer-sidenav--is-opened': this.showSidenav
           })}
         >
-          <div class={clsx('KDrawer-user')}>
+          <div
+            class={clsx('KDrawer-user', {
+              'KDrawer-user--is-disabled': !this.userOptions
+            })}
+          >
             <div class="KDrawer-user-avatar">
               <k-avatar class="KMenu-user-avatar">
                 <k-img
@@ -57,9 +62,10 @@ export class KDrawer {
               </k-avatar>
               <span>Eduardo Monforte</span>
             </div>
-            <div class="KDrawer-user-items">
-              <slot></slot>
-            </div>
+          </div>
+          {!this.userOptions && <div class="KDrawer-space"></div>}
+          <div class="KDrawer-items">
+            <slot></slot>
           </div>
         </div>
       </div>
