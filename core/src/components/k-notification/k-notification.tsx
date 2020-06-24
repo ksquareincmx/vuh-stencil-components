@@ -8,11 +8,11 @@ import clsx from 'clsx';
 })
 export class KNotification {
   @State() bell?: HTMLElement;
-  @Prop() notificationNumber: number = 0;
+  @Prop() notificationCount: number = 0;
 
-  @Watch('notificationNumber')
+  @Watch('notificationCount')
   notificationHandler(newValue: number, oldValue: number) {
-    if (newValue !== oldValue && this.notificationNumber > 0) {
+    if (newValue !== oldValue && this.notificationCount > 0) {
       this.bell.classList.add('animate');
     }
   }
@@ -27,9 +27,9 @@ export class KNotification {
     return (
       <div
         class={clsx('KNotification', {
-          'KNotification--is-notified': this.notificationNumber > 0
+          'KNotification--is-notified': this.notificationCount > 0
         })}
-        data-count={this.notificationNumber}
+        data-count={this.notificationCount}
       >
         <k-icon
           ref={(el) => (this.bell = el)}

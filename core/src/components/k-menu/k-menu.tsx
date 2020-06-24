@@ -23,7 +23,7 @@ export class KMenu {
   @Prop() menuKey: string = '';
 
   // notification properties
-  @Prop() notificationNumber?: number = 0;
+  @Prop() notificationCount?: number = 0;
 
   // user-properties
   @Prop() userOptions?: boolean = true;
@@ -62,7 +62,7 @@ export class KMenu {
             })}
           >
             <k-notification
-              notificationNumber={this.notificationNumber}
+              notificationCount={this.notificationCount}
             ></k-notification>
             <k-avatar class="KMenu-user-avatar">
               <k-img alt="Profile" src={this.userPicture}></k-img>
