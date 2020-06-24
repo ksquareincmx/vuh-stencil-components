@@ -1,0 +1,14 @@
+.KListItem {
+  list-style: none;
+  cursor: pointer;
+  color: rgba($color: $gray-500, $alpha: 0.7);
+  padding: 16px;
+
+  &:hover  {
+    background-color: rgba($color: $primary-100, $alpha: 0.3);
+  }
+
+  &:active {
+    background-color: rgba($color: $primary-100, $alpha: 0.6);
+  }
+}
