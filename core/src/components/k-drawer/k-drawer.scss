@@ -11,8 +11,48 @@
 
   &.KDrawer--is-opened {
     display: block;
+  }
+
+  &.KDrawer--is-hidden-xs {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-sm {
+    @include mobile {
+      display: none;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-md {
+    @include tablet {
+      display: none;
+    }
 
     @include desktop {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-lg {
+    @include desktop {
+      display: none;
+    }
+
+    @include desktop-full {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-xl {
+    @include desktop-full {
       display: none;
     }
   }
@@ -35,6 +75,10 @@
 
     @include small-tablet {
       width: 40%;
+    }
+
+    @include tablet {
+      width: 30%;
     }
 
     .KDrawer-user {

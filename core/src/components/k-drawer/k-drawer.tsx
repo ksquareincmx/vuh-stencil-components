@@ -10,13 +10,14 @@ export class KDrawer {
   @State() body?: HTMLElement;
   @State() isOpen: boolean = false;
   @State() showSidenav: boolean = false;
+  @State() drawer: any = {};
 
   @Prop() forKey: string = 'key-menu';
 
   // user-properties
-  @Prop() userOptions?: boolean = true;
-  @Prop() userPicture: string = '';
-  @Prop() userName: string = '';
+  // @Prop() userOptions?: boolean = true;
+  // @Prop() userPicture: string = '';
+  // @Prop() userName: string = '';
 
   componentWillRender() {
     this.body = document.querySelector('body');
@@ -25,7 +26,14 @@ export class KDrawer {
   @Listen('toggleMenu', { target: 'window' })
   toggleMenuHandler(event) {
     const { detail } = event;
-    if (detail === this.forKey) {
+
+    this.drawer = {
+      ...detail
+    };
+
+    delete this.drawer.id;
+
+    if (detail.id === this.forKey) {
       this.isOpen = true;
       setTimeout(() => {
         this.showSidenav = true;
@@ -44,16 +52,32 @@ export class KDrawer {
   render() {
     return (
       <div
-        class={clsx('KDrawer', {
-          'KDrawer--is-opened': this.isOpen
-        })}
+        class={clsx(
+          'KDrawer',
+          {
+            'KDrawer--is-opened': this.isOpen
+          },
+          [this.drawer.hideDrawerXs && 'KDrawer--is-hidden-xs'],
+          [this.drawer.hideDrawerSm && 'KDrawer--is-hidden-sm'],
+          [this.drawer.hideDrawerMd && 'KDrawer--is-hidden-md'],
+          [this.drawer.hideDrawerLg && 'KDrawer--is-hidden-lg'],
+          [this.drawer.hideDrawerXl && 'KDrawer--is-hidden-xl']
+        )}
       >
         <div
-          class={clsx('KDrawer-sidenav', {
-            'KDrawer-sidenav--is-opened': this.showSidenav
-          })}
+          class={clsx(
+            'KDrawer-sidenav',
+            {
+              'KDrawer-sidenav--is-opened': this.showSidenav
+            },
+            [this.drawer.hideDrawerXs && 'KDrawer--is-hidden-xs'],
+            [this.drawer.hideDrawerSm && 'KDrawer--is-hidden-sm'],
+            [this.drawer.hideDrawerMd && 'KDrawer--is-hidden-md'],
+            [this.drawer.hideDrawerLg && 'KDrawer--is-hidden-lg'],
+            [this.drawer.hideDrawerXl && 'KDrawer--is-hidden-xl']
+          )}
         >
-          <div
+          {/* <div
             class={clsx('KDrawer-user', {
               'KDrawer-user--is-disabled': !this.userOptions
             })}
@@ -64,8 +88,8 @@ export class KDrawer {
               </k-avatar>
               <span>{this.userName}</span>
             </div>
-          </div>
-          {!this.userOptions && <div class="KDrawer-space"></div>}
+          </div> */}
+          {/* {!this.userOptions && <div class="KDrawer-space"></div>} */}
           <div class="KDrawer-items">
             <slot></slot>
           </div>

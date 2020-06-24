@@ -1,9 +1,9 @@
-.KMenu-nav {
-  display: none;
-  @include desktop {
-    display: block;
-  }
-}
+// .KMenu-nav {
+//   display: none;
+//   @include desktop {
+//     display: block;
+//   }
+// }
 
 .KMenu {
   height: 56px;
@@ -15,13 +15,12 @@
   align-items: center;
   transition: 0.3s;
   opacity: 1;
-  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
   will-change: opacity;
 
-  @include desktop {
-    box-shadow: none;
-    border-bottom: 1px solid $gray-100;
-  }
+  // @include desktop {
+  //   box-shadow: none;
+  //   border-bottom: 1px solid $gray-100;
+  // }
 
   &.KMenu--is-shadowed {
     box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
@@ -36,6 +35,7 @@
     background-color: transparent;
     outline: none;
     will-change: transform, background-color;
+    opacity: 1;
 
     &:hover {
       background-color: rgba($color: $gray-100, $alpha: 0.2);
@@ -46,8 +46,52 @@
       transform: scale(0.9);
     }
 
-    @include desktop {
+    &.KMenu-burger-hide-xs {
       opacity: 0;
+
+      @include mobile {
+        opacity: 1;
+      }
+    }
+
+    &.KMenu-burger-hide-sm {
+      @include mobile {
+        opacity: 0;
+      }
+
+      @include small-tablet {
+        opacity: 1;
+      }
+    }
+
+    &.KMenu-burger-hide-md {
+      @include tablet {
+        opacity: 0;
+      }
+
+      @include desktop {
+        opacity: 1;
+      }
+    }
+
+    &.KMenu-burger-hide-lg {
+      @include desktop {
+        opacity: 0;
+      }
+
+      @include desktop-full {
+        opacity: 1;
+      }
+    }
+
+    &.KMenu-burger-hide-xl {
+      @include desktop-full {
+        opacity: 0;
+      }
+    }
+
+    &.KMenu-burger-disable {
+      display: none;
     }
   }
 
@@ -75,9 +119,9 @@
         transform: scale(1);
       }
 
-      @include desktop {
-        display: block;
-      }
+      // @include desktop {
+      //   display: block;
+      // }
     }
   }
 }
