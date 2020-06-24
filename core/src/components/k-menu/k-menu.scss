@@ -86,36 +86,6 @@
       display: none;
     }
   }
-
-  // .KMenu-user {
-  //   display: flex;
-  //   align-items: center;
-  //   color: $primary-color;
-
-  //   &.KMenu-user--is-disabled {
-  //     display: none;
-  //   }
-
-  //   .KMenu-user-avatar {
-  //     display: none;
-  //     font-weight: normal;
-  //     cursor: pointer;
-  //     transition: 0.3s;
-  //     will-change: transform;
-
-  //     &:hover {
-  //       transform: scale(1.1);
-  //     }
-
-  //     &:active {
-  //       transform: scale(1);
-  //     }
-
-  //     @include desktop {
-  //       display: block;
-  //     }
-  //   }
-  // }
 }
 
 .KMenuContent {

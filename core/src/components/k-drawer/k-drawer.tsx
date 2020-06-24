@@ -14,11 +14,6 @@ export class KDrawer {
 
   @Prop() forKey: string = 'key-menu';
 
-  // user-properties
-  // @Prop() userOptions?: boolean = true;
-  // @Prop() userPicture: string = '';
-  // @Prop() userName: string = '';
-
   componentWillRender() {
     this.body = document.querySelector('body');
   }
@@ -77,22 +72,7 @@ export class KDrawer {
             [this.drawer.hideDrawerXl && 'KDrawer--is-hidden-xl']
           )}
         >
-          {/* <div
-            class={clsx('KDrawer-user', {
-              'KDrawer-user--is-disabled': !this.userOptions
-            })}
-          >
-            <div class="KDrawer-user-avatar">
-              <k-avatar class="KMenu-user-avatar">
-                <k-img alt="Profile" src={this.userPicture}></k-img>
-              </k-avatar>
-              <span>{this.userName}</span>
-            </div>
-          </div> */}
-          {/* {!this.userOptions && <div class="KDrawer-space"></div>} */}
-          <div class="KDrawer-items">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
       </div>
     );
