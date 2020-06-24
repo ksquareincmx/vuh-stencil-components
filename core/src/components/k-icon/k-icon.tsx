@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-icon',
@@ -56,7 +57,9 @@ export class KIcon {
 
   render() {
     return (
-      <i class={`vuh-${this.name} ${this.size ? 'KIcon--' + this.size : ''}`} />
+      <i
+        class={clsx(`vuh-${this.name}`, [this.size && `KIcon--${this.size}`])}
+      />
     );
   }
 }

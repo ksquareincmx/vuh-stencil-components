@@ -1,4 +1,5 @@
 import { Component, h, Host, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-column',
@@ -83,13 +84,15 @@ export class KColumn {
   render() {
     return (
       <Host
-        class={`KColumn ${this.fluid ? 'KColumn--fluid' : ''} ${
-          this.size ? 'KColumn--col-' + this.size : ''
-        } ${this.sizesm ? 'KColumn--col-sm-' + this.sizesm : ''} ${
-          this.sizemd ? 'KColumn--col-md-' + this.sizemd : ''
-        } ${this.sizelg ? 'KColumn--col-lg-' + this.sizelg : ''} ${
-          this.sizexl ? 'KColumn--col-xl-' + this.sizexl : ''
-        }`}
+        class={clsx(
+          `KColumn`,
+          [this.fluid && `KColumn--fluid`],
+          [this.size && `KColumn--col-${this.size}`],
+          [this.sizesm && `KColumn--col-sm-${this.sizesm}`],
+          [this.sizemd && `KColumn--col-md-${this.sizemd}`],
+          [this.sizelg && `KColumn--col-lg-${this.sizelg}`],
+          [this.sizexl && `KColumn--col-xl-${this.sizexl}`]
+        )}
       >
         <div class={`KColumn-content`}>
           <slot />
