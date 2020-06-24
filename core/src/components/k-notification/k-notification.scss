@@ -6,6 +6,7 @@
   transition: 0.3s;
   will-change: transform, background-color;
   position: relative;
+  color: $primary-color;
 
   &:hover {
     background-color: rgba($color: $primary-100, $alpha: 0.2);

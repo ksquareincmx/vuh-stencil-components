@@ -18,6 +18,7 @@ import clsx from 'clsx';
 export class KMenu {
   @Element() host: HTMLElement;
   @State() hasChildren?: boolean;
+  @State() children?: any;
 
   @Prop() menuKey: string = '';
   @Prop() hideDrawerXs: boolean = false;
@@ -27,19 +28,8 @@ export class KMenu {
   @Prop() hideDrawerXl: boolean = false;
   @Prop() disableDrawer: boolean = false;
 
-  // notification properties
-  // @Prop() notificationCount?: number = 0;
-
-  // user-properties
-  // @Prop() userOptions?: boolean = true;
-  // @Prop() userPicture: string = '';
-  // @Prop() userName: string = '';
-
-  // logo properties
-  // @Prop() logo: string = '';
-
   componentWillRender() {
-    this.hasChildren = this.host.children.length > 0;
+    this.children = this.host.children;
   }
 
   @Event() toggleMenu: EventEmitter<{
@@ -59,6 +49,28 @@ export class KMenu {
       hideDrawerLg: this.hideDrawerLg,
       hideDrawerXl: this.hideDrawerXl
     });
+  }
+
+  componentDidRender() {
+    this.hasChildren = this.children.namedItem('kMenuNav') !== null;
+  }
+
+  renderMenuContent() {
+    return (
+      <div
+        class="KMenuContent"
+        innerHTML={this.children.namedItem('kMenuContent')?.innerHTML}
+      ></div>
+    );
+  }
+
+  renderMenuNav() {
+    return (
+      <div
+        class="KMenuNav"
+        innerHTML={this.children.namedItem('kMenuNav')?.innerHTML}
+      ></div>
+    );
   }
 
   render() {
@@ -83,25 +95,9 @@ export class KMenu {
           >
             <k-icon name="menu" size="medium"></k-icon>
           </button>
-          {/* <figure class="KMenu-logo">
-            <k-img src={this.logo} alt="Logo" height={32}></k-img>
-          </figure>
-          <div
-            class={clsx('KMenu-user', {
-              'KMenu-user--is-disabled': !this.userOptions
-            })}
-          >
-            <k-notification
-              notificationCount={this.notificationCount}
-            ></k-notification>
-            <k-avatar class="KMenu-user-avatar">
-              <k-img alt="Profile" src={this.userPicture}></k-img>
-            </k-avatar>
-          </div> */}
+          {this.renderMenuContent()}
         </div>
-        {/* <div class="KMenu-nav">
-          <slot></slot>
-        </div> */}
+        {this.renderMenuNav()}
       </Host>
     );
   }
