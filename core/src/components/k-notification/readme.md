@@ -1,0 +1,30 @@
+# k-notification
+
+
+
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property            | Attribute            | Description | Type     | Default |
+| ------------------- | -------------------- | ----------- | -------- | ------- |
+| `notificationCount` | `notification-count` |             | `number` | `0`     |
+
+
+## Dependencies
+
+### Depends on
+
+- [k-icon](../k-icon)
+
+### Graph
+```mermaid
+graph TD;
+  k-notification --> k-icon
+  style k-notification fill:#f9f,stroke:#333,stroke-width:4px
+```
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

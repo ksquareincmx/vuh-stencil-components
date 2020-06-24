@@ -13,6 +13,21 @@
 | `size`   | `size`    |             | `"extra-large" \| "large" \| "medium" \| "small"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `'small'`   |
 
 
+## Dependencies
+
+### Used by
+
+ - [k-menu](../k-menu)
+ - [k-notification](../k-notification)
+
+### Graph
+```mermaid
+graph TD;
+  k-menu --> k-icon
+  k-notification --> k-icon
+  style k-icon fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
