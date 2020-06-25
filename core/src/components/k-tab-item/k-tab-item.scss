@@ -21,12 +21,12 @@
   }
 
   &:disabled {
-    background-color: none;
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
     cursor: not-allowed;
   }
 
   &:disabled:hover {
-    background-color: transparent;
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
   }
 
   &.is-active {

@@ -1,0 +1,79 @@
+.KNotificationItem {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 1px;
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  .KNotificationItem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .KNotificationItem-header-left {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .KNotificationItem-header-left-label {
+        margin-left: 8px;
+      }
+
+      .KNotificationItem-header-left-dot {
+        margin: 0 8px;
+        color: $gray-500;
+      }
+
+      .KNotificationItem-header-left-time {
+        color: $gray-200;
+        font-weight: $semi-bold;
+      }
+    }
+
+    .KNotificationItem-header-right {
+      display: flex;
+
+      .KNotificationItem-header-right-icon {
+        &.--read {
+          color: $success-100;
+        }
+
+        &.--unread {
+          color: $gray-200;
+        }
+      }
+
+      .KNotificationItem-header-right-status {
+        margin-left: 4px;
+        font-size: 14px;
+        font-weight: $semi-bold;
+
+        &.--read {
+          color: $success-200;
+        }
+
+        &.--unread {
+          color: $gray-300;
+        }
+      }
+    }
+  }
+
+  .KNotificationItem-divider {
+    height: 1px;
+    background-color: $gray-100;
+    position: absolute;
+    bottom: -1px;
+    left: 16px;
+    right: 16px;
+  }
+}

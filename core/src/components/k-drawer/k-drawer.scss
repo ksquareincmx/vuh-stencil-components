@@ -1,0 +1,84 @@
+.KDrawer {
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.KDrawer--is-opened {
+    display: block;
+  }
+
+  &.KDrawer--is-hidden-xs {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-sm {
+    @include mobile {
+      display: none;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-md {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-lg {
+    @include desktop {
+      display: none;
+    }
+
+    @include desktop-full {
+      display: block;
+    }
+  }
+
+  &.KDrawer--is-hidden-xl {
+    @include desktop-full {
+      display: none;
+    }
+  }
+
+  .KDrawer-sidenav {
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+
+    &.KDrawer-sidenav--is-opened {
+      transform: translateX(0);
+    }
+
+    @include small-tablet {
+      width: 40%;
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+  }
+}

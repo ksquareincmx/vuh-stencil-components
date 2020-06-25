@@ -13,15 +13,97 @@
     <link rel="stylesheet" href="/build/k-ui-kit.css" />
   </head>
   <body>
-    <k-typography>
-      <h1>Tabs</h1>
-    </k-typography>
-    <k-tab>
-      <k-tab-item current="true">Tab 1</k-tab-item>
-      <k-tab-item current="false">Tab 2</k-tab-item>
-      <k-tab-item current="false">Tab 3</k-tab-item>
-      <k-tab-item disabled>Tab 3</k-tab-item>
-    </k-tab>
+    <k-menu menu-key="k-menu">
+      <k-menu-content>
+        <figure>
+          <k-img
+            src="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png"
+            height="32"
+          ></k-img>
+        </figure>
+        <div style="display: flex; align-items: center;">
+          <k-notification notification-count="6"></k-notification>
+          <k-avatar>
+            <k-img
+              alt="Abraham Berzunza"
+              src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
+            ></k-img>
+          </k-avatar>
+        </div>
+      </k-menu-content>
+
+      <k-menu-nav>
+        <k-tab>
+          <k-tab-item current="true">
+            <a>Tab 1</a>
+          </k-tab-item>
+          <k-tab-item current="false">
+            <a>Tab 2</a>
+          </k-tab-item>
+          <k-tab-item current="false">
+            <a>Tab 3</a>
+          </k-tab-item>
+          <k-tab-item disabled>
+            <a>Tab 4</a>
+          </k-tab-item>
+        </k-tab>
+      </k-menu-nav>
+    </k-menu>
+    <k-drawer for-key="k-menu">
+      <div style="display: flex; align-items: center;">
+        <k-avatar>
+          <k-img
+            alt="Abraham Berzunza"
+            src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
+          ></k-img>
+        </k-avatar>
+        <span>Abraham Berzunza</span>
+      </div>
+      <k-list-group>
+        <k-list-item>Home</k-list-item>
+        <k-list-item>Courses</k-list-item>
+        <k-list-item>Learning Plan</k-list-item>
+      </k-list-group>
+      <k-divider></k-divider>
+      <k-list-group>
+        <k-list-item>Home</k-list-item>
+        <k-list-item>Courses</k-list-item>
+        <k-list-item>Learning Plan</k-list-item>
+      </k-list-group>
+    </k-drawer>
+
+    <section>
+      <k-typography>
+        <h1>Notification List</h1>
+      </k-typography>
+      <k-notification notification-count="2">
+        <k-notification-group style="width: 40%;">
+          <k-notification-item
+            alert-color="orange"
+            label="Course"
+            time="30m ago"
+            is-read="false"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+          <k-notification-item
+            alert-color="purple"
+            label="Course"
+            time="30m ago"
+            is-read="true"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+        </k-notification-group>
+      </k-notification>
+    </section>
+
     <k-typography>
       <h1>Heading 1</h1>
     </k-typography>
