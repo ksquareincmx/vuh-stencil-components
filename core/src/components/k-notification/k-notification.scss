@@ -7,6 +7,7 @@
   will-change: transform, background-color;
   position: relative;
   color: $primary-color;
+  width: max-content;
 
   &:hover {
     background-color: rgba($color: $primary-100, $alpha: 0.2);
