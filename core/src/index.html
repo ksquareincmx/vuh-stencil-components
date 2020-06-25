@@ -72,6 +72,38 @@
       </k-list-group>
     </k-drawer>
 
+    <section>
+      <k-typography>
+        <h1>Notification List</h1>
+      </k-typography>
+      <k-notification notification-count="2">
+        <k-notification-group style="width: 40%;">
+          <k-notification-item
+            alert-color="orange"
+            label="Course"
+            time="30m ago"
+            is-read="false"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+          <k-notification-item
+            alert-color="purple"
+            label="Course"
+            time="30m ago"
+            is-read="true"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+        </k-notification-group>
+      </k-notification>
+    </section>
+
     <k-typography>
       <h1>Heading 1</h1>
     </k-typography>

@@ -1,4 +1,4 @@
-import { Component, h, State, Prop, Watch } from '@stencil/core';
+import { Component, h, State, Prop, Watch, Host } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -25,19 +25,22 @@ export class KNotification {
 
   render() {
     return (
-      <div
-        class={clsx('KNotification', {
-          'KNotification--is-notified': this.notificationCount > 0
-        })}
-        data-count={this.notificationCount}
-      >
-        <k-icon
-          ref={(el) => (this.bell = el)}
-          name="notifications"
-          size="medium"
-          class="KNotification-bell"
-        ></k-icon>
-      </div>
+      <Host>
+        <div
+          class={clsx('KNotification', {
+            'KNotification--is-notified': this.notificationCount > 0
+          })}
+          data-count={this.notificationCount}
+        >
+          <k-icon
+            ref={(el) => (this.bell = el)}
+            name="notifications"
+            size="medium"
+            class="KNotification-bell"
+          ></k-icon>
+        </div>
+        <slot></slot>
+      </Host>
     );
   }
 }
