@@ -1,4 +1,4 @@
-import { Component, h, State, Prop, Watch, Host } from '@stencil/core';
+import { Component, h, State, Prop, Watch } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -8,6 +8,7 @@ import clsx from 'clsx';
 })
 export class KNotification {
   @State() bell?: HTMLElement;
+  @State() showNotificationList: boolean = false;
   @Prop() notificationCount: number = 0;
 
   @Watch('notificationCount')
@@ -23,12 +24,22 @@ export class KNotification {
     });
   }
 
+  handleNotificationList = () => {
+    if (this.showNotificationList) {
+      this.showNotificationList = false;
+    } else {
+      this.showNotificationList = true;
+    }
+  };
+
   render() {
     return (
-      <Host>
-        <div
-          class={clsx('KNotification', {
-            'KNotification--is-notified': this.notificationCount > 0
+      <div class="KNotification">
+        <button
+          onClick={this.handleNotificationList}
+          class={clsx('KNotification-button', {
+            'KNotification--is-notified': this.notificationCount > 0,
+            'KNotification-opened': this.showNotificationList
           })}
           data-count={this.notificationCount}
         >
@@ -38,9 +49,15 @@ export class KNotification {
             size="medium"
             class="KNotification-bell"
           ></k-icon>
+        </button>
+        <div
+          class={clsx('KNotification-content', {
+            'KNotification-content--is-open': this.showNotificationList
+          })}
+        >
+          <slot></slot>
         </div>
-        <slot></slot>
-      </Host>
+      </div>
     );
   }
 }

@@ -1,65 +1,93 @@
 .KNotification {
-  font-weight: normal;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 8px;
-  transition: 0.3s;
-  will-change: transform, background-color;
   position: relative;
-  color: $primary-color;
-  width: max-content;
+  display: inline-block;
 
-  &:hover {
-    background-color: rgba($color: $primary-100, $alpha: 0.2);
+  &:hover .KNotification-content {
+    display: block;
   }
 
-  &:active {
-    transform: scale(0.9);
-    background-color: rgba($color: $primary-100, $alpha: 0.4);
-  }
+  .KNotification-button {
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+    transition: 0.3s;
+    will-change: transform, background-color;
+    position: relative;
+    color: $primary-color;
+    width: max-content;
+    border: none;
+    background-color: transparent;
+    outline: none;
 
-  &::before {
-    transform: rotate(45deg);
-  }
+    &.KNotification-opened {
+      background-color: rgba($color: $primary-100, $alpha: 0.4);
+    }
 
-  .KNotification-bell {
-    &.animate {
-      animation-name: notification;
-      animation-duration: 0.3s;
-      animation-timing-function: ease-out;
-      animation-iteration-count: 4;
-      animation-direction: alternate;
-      transform-origin: center top;
+    &:hover {
+      background-color: rgba($color: $primary-100, $alpha: 0.2);
+    }
+
+    &:active {
+      transform: scale(0.9);
+      background-color: rgba($color: $primary-100, $alpha: 0.4);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    .KNotification-bell {
+      &.animate {
+        animation-name: notification;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 4;
+        animation-direction: alternate;
+        transform-origin: center top;
+      }
+    }
+
+    &::after {
+      content: attr(data-count);
+      min-width: 14px;
+      height: 14px;
+      color: white;
+      background-color: $primary-color;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: -6px;
+
+      opacity: 0;
+      transition: 0.3s;
+      transform: scale(0.5);
+      will-change: opacity, transform;
+    }
+
+    &.KNotification--is-notified {
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 
-  &::after {
-    content: attr(data-count);
-    min-width: 14px;
-    height: 14px;
-    color: white;
-    background-color: $primary-color;
-    font-size: 10px;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .KNotification-content {
     position: absolute;
-    top: 0;
-    right: -6px;
+    display: none;
+    min-width: 300px;
+    z-index: $z-index-medium;
+    right: -180%;
 
-    opacity: 0;
-    transition: 0.3s;
-    transform: scale(0.5);
-    will-change: opacity, transform;
-  }
-
-  &.KNotification--is-notified {
-    &::after {
-      opacity: 1;
-      transform: scale(1);
+    &.KNotification-content--is-open {
+      display: block;
     }
   }
 }
