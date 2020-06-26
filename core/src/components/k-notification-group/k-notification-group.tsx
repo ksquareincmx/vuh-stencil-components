@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'k-notification-group',
@@ -8,9 +8,9 @@ import { Component, h } from '@stencil/core';
 export class KNotificationGroup {
   render() {
     return (
-      <div class="KNotificationGroup">
+      <Host class="KNotificationGroup">
         <slot></slot>
-      </div>
+      </Host>
     );
   }
 }
