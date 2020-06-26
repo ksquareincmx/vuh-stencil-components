@@ -75,9 +75,9 @@ export class KMenu {
 
   render() {
     return (
-      <Host>
+      <Host class="KMenu">
         <div
-          class={clsx('KMenu', {
+          class={clsx('KMenu-toolbar', {
             'KMenu--is-shadowed': !this.hasChildren
           })}
         >
