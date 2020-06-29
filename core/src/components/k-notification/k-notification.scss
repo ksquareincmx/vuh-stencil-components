@@ -1,7 +1,4 @@
 .KNotification {
-  position: relative;
-  display: inline-block;
-
   &:hover .KNotification-content {
     display: block;
   }
@@ -82,9 +79,15 @@
   .KNotification-content {
     position: absolute;
     display: none;
-    min-width: 300px;
+    min-width: 350px;
+    width: 100%;
     z-index: $z-index-medium;
-    right: -180%;
+    right: 0;
+
+    @include small-tablet {
+      width: 30%;
+      right: 2%;
+    }
 
     &.KNotification-content--is-open {
       display: block;
