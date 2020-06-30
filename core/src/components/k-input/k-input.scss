@@ -4,6 +4,7 @@
   width: 100%;
   padding-top: 8px;
   font-size: 14px;
+  overflow: hidden;
 
   input {
     width: 100%;
@@ -14,6 +15,18 @@
     border-top-color: transparent;
     caret-color: $primary-300;
     transition: border 0.2s;
+
+    &.--is-valid {
+      border: 1px solid $success-100;
+      border-top-color: transparent;
+      caret-color: $success-200;
+    }
+
+    &.--is-invalid {
+      border: 1px solid $error-100;
+      border-top-color: transparent;
+      caret-color: $error-200;
+    }
 
     // placeholder-shown
     &:not(:focus):placeholder-shown + label {
@@ -31,6 +44,18 @@
       border-top-color: transparent;
     }
 
+    // valid placeholder-shown
+
+    &.--is-valid:not(:focus):placeholder-shown {
+      border-top-color: $success-100;
+    }
+
+    // invalid placeholder-shown
+
+    &.--is-invalid:not(:focus):placeholder-shown {
+      border-top-color: $error-100;
+    }
+
     // focus
     &:focus {
       border-color: $primary-100;
@@ -45,6 +70,38 @@
     &:focus + label::before,
     &:focus + label::after {
       border-top-color: $primary-100;
+    }
+
+    // valid focus
+    &.--is-valid:focus {
+      border-color: $success-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &.--is-valid:focus + label {
+      color: $success-200;
+    }
+
+    &.--is-valid:focus + label::before,
+    &.--is-valid:focus + label::after {
+      border-top-color: $success-100;
+    }
+
+    // invalid focus
+    &.--is-invalid:focus {
+      border-color: $error-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &.--is-invalid:focus + label {
+      color: $error-200;
+    }
+
+    &.--is-invalid:focus + label::before,
+    &.--is-invalid:focus + label::after {
+      border-top-color: $error-100;
     }
 
     // disabled
@@ -66,9 +123,16 @@
     font-weight: $bold;
     line-height: 15px;
     cursor: text;
-
     display: flex;
     transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+
+    &.--is-valid  {
+      color: $success-200;
+    }
+
+    &.--is-invalid  {
+      color: $error-200;
+    }
 
     &::before,
     &::after {
@@ -81,6 +145,16 @@
       transition: border-color 0.2s;
     }
 
+    &.--is-valid::before,
+    &.--is-valid::after {
+      border-top-color: $success-100;
+    }
+
+    &.--is-invalid::before,
+    &.--is-invalid::after {
+      border-top-color: $error-100;
+    }
+
     &::before  {
       margin-right: 4px;
       border-radius: 4px 0;
@@ -90,6 +164,25 @@
       margin-left: 4px;
       flex-grow: 1;
       border-radius: 0 4px;
+    }
+  }
+
+  .KInput-icon {
+    position: absolute;
+    height: 86%;
+    right: 8px;
+    top: 8px;
+    bottom: 0;
+    font-weight: $bold;
+    display: flex;
+    align-items: center;
+
+    &.--is-valid {
+      color: $success-200;
+    }
+
+    &.--is-invalid {
+      color: $error-200;
     }
   }
 }
