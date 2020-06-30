@@ -12,11 +12,7 @@
     border-radius: 4px;
     color: $gray-400;
     border-top-color: transparent;
-    // caret-color: blue;
-    // height: inherit;
-    // background-color: transparent;
-    // box-shadow: none; /* Firefox */
-    // border: solid 1px; /* Safari */
+    caret-color: $primary-300;
     transition: border 0.2s;
 
     // placeholder-shown
@@ -49,6 +45,13 @@
     &:focus + label::before,
     &:focus + label::after {
       border-top-color: $primary-100;
+    }
+
+    // disabled
+    &:disabled,
+    &:disabled + label {
+      color: $gray-200;
+      cursor: not-allowed;
     }
   }
 
@@ -96,44 +99,3 @@
     }
   }
 }
-
-/* Disabled */
-// .KInput > input:disabled,
-// .KInput > input:disabled + span,
-// .KInput > textarea:disabled,
-// .KInput > textarea:disabled + span {
-//   border-color: rgba(
-//     var(--pure-material-onsurface-rgb, 0, 0, 0),
-//     0.38
-//   ) !important;
-//   border-top-color: transparent !important;
-//   color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
-//   pointer-events: none;
-// }
-
-// .KInput > input:disabled + span::before,
-// .KInput > input:disabled + span::after,
-// .KInput > textarea:disabled + span::before,
-// .KInput > textarea:disabled + span::after {
-//   border-top-color: rgba(
-//     var(--pure-material-onsurface-rgb, 0, 0, 0),
-//     0.38
-//   ) !important;
-// }
-
-// .KInput > input:disabled:placeholder-shown,
-// .KInput > input:disabled:placeholder-shown + span,
-// .KInput > textarea:disabled:placeholder-shown,
-// .KInput > textarea:disabled:placeholder-shown + span {
-//   border-top-color: rgba(
-//     var(--pure-material-onsurface-rgb, 0, 0, 0),
-//     0.38
-//   ) !important;
-// }
-
-// .KInput > input:disabled:placeholder-shown + span::before,
-// .KInput > input:disabled:placeholder-shown + span::after,
-// .KInput > textarea:disabled:placeholder-shown + span::before,
-// .KInput > textarea:disabled:placeholder-shown + span::after {
-//   border-top-color: transparent !important;
-// }
