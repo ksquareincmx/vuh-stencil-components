@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'k-input',
@@ -6,12 +6,23 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class KInput {
+  @Prop() type: string = 'text';
+  @Prop() label: string = 'Default';
+  @Prop() value: string = '';
+  @Prop() disabled: boolean = false;
+
   render() {
     return (
-      <label class="KInput">
-        <input placeholder=" " />
-        <span>Name</span>
-      </label>
+      <div class="KInput">
+        <input
+          id="k-input"
+          placeholder=" "
+          value={this.value}
+          disabled={this.disabled}
+          type={this.type}
+        />
+        <label htmlFor="k-input">{this.label}</label>
+      </div>
     );
   }
 }

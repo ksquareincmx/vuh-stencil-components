@@ -1,43 +1,70 @@
 .KInput {
-  --pure-material-safari-helper1: rgb(
-    var(--pure-material-primary-rgb, 33, 150, 243)
-  );
   position: relative;
   display: inline-block;
-  padding-top: 6px;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
+  width: 100%;
+  padding-top: 8px;
+  font-size: 14px;
 
   input {
-    padding: 16px 8px;
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-    border-top-color: transparent;
-    border-radius: 4px;
     width: 100%;
-    height: inherit;
-    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-    background-color: transparent;
-    font-size: inherit;
-    line-height: inherit;
-    caret-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-    transition: border 0.2s, box-shadow 0.2s;
+    border: 1px solid $gray-200;
+    padding: 16px 8px;
+    border-radius: 4px;
+    color: $gray-400;
+    border-top-color: transparent;
+    // caret-color: blue;
+    // height: inherit;
+    // background-color: transparent;
     // box-shadow: none; /* Firefox */
     // border: solid 1px; /* Safari */
+    transition: border 0.2s;
+
+    // placeholder-shown
+    &:not(:focus):placeholder-shown + label {
+      font-size: inherit;
+      line-height: 68px;
+      font-weight: $regular;
+    }
+
+    &:not(:focus):placeholder-shown {
+      border-top-color: $gray-200;
+    }
+
+    &:not(:focus):placeholder-shown + label::before,
+    &:not(:focus):placeholder-shown + label::after {
+      border-top-color: transparent;
+    }
+
+    // focus
+    &:focus {
+      border-color: $primary-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &:focus + label {
+      color: $primary-300;
+    }
+
+    &:focus + label::before,
+    &:focus + label::after {
+      border-top-color: $primary-100;
+    }
   }
 
-  span {
-    font-size: 14px;
-    color: $gray-200;
+  label {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
     width: 100%;
     max-height: 100%;
+    color: $gray-200;
+    font-size: 12px;
+    font-weight: $bold;
     line-height: 15px;
     cursor: text;
+
+    display: flex;
     transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 
     &::before,
@@ -45,9 +72,9 @@
       content: '';
       display: block;
       box-sizing: border-box;
-      margin-top: 6px;
+      margin-top: 8px;
       border-top: solid 1px;
-      border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+      border-top-color: $gray-200;
       min-width: 10px;
       height: 8px;
       pointer-events: none;
@@ -57,79 +84,17 @@
 
     &::before  {
       margin-right: 4px;
-      border-left: solid 1px transparent;
+      border-left: 1px solid transparent;
       border-radius: 4px 0;
     }
 
     &::after {
       flex-grow: 1;
       margin-left: 4px;
-      border-right: solid 1px transparent;
+      border-right: 1px solid transparent;
       border-radius: 0 4px;
     }
   }
-}
-
-/* Hover */
-.KInput:hover > input,
-.KInput:hover > textarea {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-  border-top-color: transparent;
-}
-
-.KInput:hover > input + span::before,
-.KInput:hover > textarea + span::before,
-.KInput:hover > input + span::after,
-.KInput:hover > textarea + span::after {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
-.KInput:hover > input:not(:focus):placeholder-shown,
-.KInput:hover > textarea:not(:focus):placeholder-shown {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
-/* Placeholder-shown */
-.KInput > input:not(:focus):placeholder-shown,
-.KInput > textarea:not(:focus):placeholder-shown {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-}
-
-.KInput > input:not(:focus):placeholder-shown + span,
-.KInput > textarea:not(:focus):placeholder-shown + span {
-  font-size: inherit;
-  line-height: 68px;
-}
-
-.KInput > input:not(:focus):placeholder-shown + span::before,
-.KInput > textarea:not(:focus):placeholder-shown + span::before,
-.KInput > input:not(:focus):placeholder-shown + span::after,
-.KInput > textarea:not(:focus):placeholder-shown + span::after {
-  border-top-color: transparent;
-}
-
-/* Focus */
-.KInput > input:focus,
-.KInput > textarea:focus {
-  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  border-top-color: transparent;
-  box-shadow: inset 1px 0 var(--pure-material-safari-helper1),
-    inset -1px 0 var(--pure-material-safari-helper1),
-    inset 0 -1px var(--pure-material-safari-helper1);
-  outline: none;
-}
-
-.KInput > input:focus + span,
-.KInput > textarea:focus + span {
-  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-}
-
-.KInput > input:focus + span::before,
-.KInput > input:focus + span::after,
-.KInput > textarea:focus + span::before,
-.KInput > textarea:focus + span::after {
-  border-top-color: var(--pure-material-safari-helper1) !important;
-  box-shadow: inset 0 1px var(--pure-material-safari-helper1);
 }
 
 /* Disabled */
@@ -171,20 +136,4 @@
 // .KInput > textarea:disabled:placeholder-shown + span::before,
 // .KInput > textarea:disabled:placeholder-shown + span::after {
 //   border-top-color: transparent !important;
-// }
-
-/* Faster transition in Safari for less noticable fractional font-size issue */
-// @media not all and (min-resolution: 0.001dpcm) {
-//   @supports (-webkit-appearance: none) {
-//     .KInput > input,
-//     .KInput > input + span,
-//     .KInput > textarea,
-//     .KInput > textarea + span,
-//     .KInput > input + span::before,
-//     .KInput > input + span::after,
-//     .KInput > textarea + span::before,
-//     .KInput > textarea + span::after {
-//       transition-duration: 0.1s;
-//     }
-//   }
 // }
