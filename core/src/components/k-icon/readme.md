@@ -19,12 +19,14 @@
 
  - [k-menu](../k-menu)
  - [k-notification](../k-notification)
+ - [k-notification-item](../k-notification-item)
 
 ### Graph
 ```mermaid
 graph TD;
   k-menu --> k-icon
   k-notification --> k-icon
+  k-notification-item --> k-icon
   style k-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
