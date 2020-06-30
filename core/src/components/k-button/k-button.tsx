@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Host } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -15,14 +15,16 @@ export class KButton {
 
   render() {
     return (
-      <button
-        class={clsx(`KButton ${this.color} ${this.shape} ${this.size}`, {
-          elevation: this.elevation
-        })}
-        disabled={this.disabled}
-      >
-        <slot>Default</slot>
-      </button>
+      <Host>
+        <button
+          class={clsx(`KButton ${this.color} ${this.shape} ${this.size}`, {
+            elevation: this.elevation
+          })}
+          disabled={this.disabled}
+        >
+          <slot>Default</slot>
+        </button>
+      </Host>
     );
   }
 }
