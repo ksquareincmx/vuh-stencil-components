@@ -29,7 +29,7 @@ export class KIcon {
     | 'finish_2'
     | 'finish_3'
     | 'flip_camera_ios'
-    | 'graduate_cap'
+    | 'school'
     | 'highlight_off'
     | 'info'
     | 'insert_drive_file'
@@ -53,7 +53,10 @@ export class KIcon {
     | 'swap_vert'
     | 'tune'
     | 'view_week'
-    | 'visibility_off';
+    | 'visibility_off'
+    | 'add_circle'
+    | 'bookmarks'
+    | 'dashboard';
 
   render() {
     return (
