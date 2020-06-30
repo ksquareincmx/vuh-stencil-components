@@ -10,6 +10,7 @@ export class KInput {
   @Prop() label: string = 'Default';
   @Prop() value: string = '';
   @Prop() disabled: boolean = false;
+  @Prop() validationState: '' | 'success' | 'error' = '';
 
   render() {
     return (
