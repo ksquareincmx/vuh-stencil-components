@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 1px;
 
   &:hover {
     background-color: $gray-50;
@@ -72,8 +71,8 @@
     height: 1px;
     background-color: $gray-100;
     position: absolute;
-    bottom: -1px;
     left: 16px;
     right: 16px;
+    top: -2px;
   }
 }

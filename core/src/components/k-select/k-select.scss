@@ -1,0 +1,122 @@
+:host(.KSelect) {
+  position: relative;
+
+  & > .KSelect-select {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border: 0;
+  }
+
+  & > .KSelect-selected {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: $semi-bold;
+    min-height: 8px;
+    min-width: 8px;
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+
+    // Optional width limit handler
+
+    // max-width: 400px;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
+    & > .KSelect-icon {
+      position: relative;
+      top: 2px;
+      padding-left: 8px;
+    }
+
+    &.primary {
+      background: $primary-500 0% 0% no-repeat padding-box;
+      color: white;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $primary-300;
+        box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
+      }
+
+      &:focus {
+        background-color: $primary-700;
+        box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
+        outline: none;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: $gray-100;
+        color: $gray-200;
+        box-shadow: none;
+      }
+    }
+
+    &.secondary {
+      background: white 0% 0% no-repeat padding-box;
+      color: $primary-500;
+      border: 1px solid $primary-500;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba($color: $primary-100, $alpha: 0.2);
+        color: $primary-300;
+      }
+
+      &:focus {
+        background-color: rgba($color: $primary-300, $alpha: 0.3);
+        color: $primary-300;
+        outline: none;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        border-color: $gray-100;
+        color: $gray-200;
+        background-color: $gray-50;
+        box-shadow: none;
+      }
+    }
+
+    &.terciary {
+      background: white 0% 0% no-repeat padding-box;
+      color: $primary-800;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba($color: $primary-100, $alpha: 0.2);
+      }
+
+      &:focus {
+        background-color: rgba($color: $primary-300, $alpha: 0.3);
+        outline: none;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        color: $gray-100;
+        background-color: $gray-50;
+      }
+    }
+  }
+
+  & > .KSelect-options {
+    display: none;
+    position: absolute;
+    top: 36px;
+    z-index: $z-index-medium;
+
+    & > .KSelect-options-wrapper {
+      display: inline-block;
+      min-height: 8px;
+      min-width: 8px;
+      background-color: $gray-50;
+      border-radius: 4px;
+      box-shadow: 0px 3px 6px #00000029;
+      overflow: hidden;
+    }
+  }
+}

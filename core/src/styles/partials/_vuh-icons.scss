@@ -12,7 +12,7 @@
 [class*=' vuh-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'vuh-icons' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.vuh-add_circle:before {
+  content: '\e914';
+}
+.vuh-bookmarks:before {
+  content: '\e92d';
+}
+.vuh-dashboard:before {
+  content: '\e92e';
+}
 .vuh-alert_circle:before {
   content: '\e900';
 }
@@ -84,8 +93,8 @@
 .vuh-flip_camera_ios:before {
   content: '\e913';
 }
-.vuh-graduate_cap:before {
-  content: '\e914';
+.vuh-school:before {
+  content: '\e92f';
 }
 .vuh-highlight_off:before {
   content: '\e915';
