@@ -167,6 +167,21 @@
     }
   }
 
+  .KInput-helper-text {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    color: $gray-400;
+
+    &.--is-valid {
+      color: $success-200;
+    }
+
+    &.--is-invalid {
+      color: $error-200;
+    }
+  }
+
   .KInput-icon {
     position: absolute;
     height: 86%;

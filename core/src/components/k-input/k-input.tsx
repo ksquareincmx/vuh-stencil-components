@@ -13,6 +13,7 @@ export class KInput {
   @Prop() disabled?: boolean = false;
   @Prop() validationState?: '' | 'success' | 'error' = '';
   @Prop() name?: string = '';
+  @Prop() helperText?: string = '';
 
   private isSuccess = () => {
     return this.validationState === 'success';
@@ -46,6 +47,16 @@ export class KInput {
         >
           {this.label}
         </label>
+        {this.helperText && (
+          <span
+            class={clsx('KInput-helper-text', {
+              '--is-valid': this.isSuccess(),
+              '--is-invalid': this.isError()
+            })}
+          >
+            {this.helperText}
+          </span>
+        )}
         <div
           class={clsx('KInput-icon', {
             '--is-valid': this.isSuccess(),
