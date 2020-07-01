@@ -1,13 +1,12 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
-  tag: 'k-input',
-  styleUrl: 'k-input.scss',
+  tag: 'k-text-field',
+  styleUrl: 'k-text-field.scss',
   shadow: true
 })
-export class KInput {
-  @Prop() type: string = 'text';
+export class KTextField {
   @Prop() label: string = 'Default';
   @Prop() value?: string = '';
   @Prop() disabled?: boolean = false;
@@ -15,6 +14,8 @@ export class KInput {
   @Prop() name?: string = '';
   @Prop() helperText?: string = '';
   @Prop() maxLength?: number = 0;
+
+  @State() typingCount: number = 0;
 
   private isSuccess = () => {
     return this.validationState === 'success';
@@ -24,24 +25,29 @@ export class KInput {
     return this.validationState === 'error';
   };
 
+  handleChange(e) {
+    const chars = e.target.value;
+    this.typingCount = chars.length;
+  }
+
   render() {
     return (
-      <div class="KInput">
-        <input
+      <div class="KTextField">
+        <textarea
+          onInput={(event) => this.handleChange(event)}
           class={clsx({
             '--is-valid': this.isSuccess(),
             '--is-invalid': this.isError()
           })}
-          id="k-input"
           placeholder=" "
+          id="k-text-field"
           value={this.value}
-          disabled={this.disabled}
-          type={this.type}
           name={this.name}
+          disabled={this.disabled}
           maxLength={this.maxLength > 0 ? this.maxLength : null}
-        />
+        ></textarea>
         <label
-          htmlFor="k-input"
+          htmlFor="k-text-field"
           class={clsx({
             '--is-valid': this.isSuccess(),
             '--is-invalid': this.isError()
@@ -49,28 +55,19 @@ export class KInput {
         >
           {this.label}
         </label>
-        {this.helperText && (
-          <span
-            class={clsx('KInput-helper-text', {
-              '--is-valid': this.isSuccess(),
-              '--is-invalid': this.isError()
-            })}
-          >
-            {this.helperText}
-          </span>
-        )}
         <div
-          class={clsx('KInput-icon', {
+          class={clsx('KTextField-footer', {
             '--is-valid': this.isSuccess(),
             '--is-invalid': this.isError()
           })}
         >
-          {this.isSuccess() && (
-            <k-icon size="medium" name="check_circle"></k-icon>
+          {this.helperText && (
+            <span class="KInput-helper-text">{this.helperText}</span>
           )}
-
-          {this.isError() && (
-            <k-icon size="medium" name="alert_circle"></k-icon>
+          {this.maxLength > 0 && (
+            <span class="KInput-typing-count">
+              {this.typingCount} / {this.maxLength}
+            </span>
           )}
         </div>
       </div>
