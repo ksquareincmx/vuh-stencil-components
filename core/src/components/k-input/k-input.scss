@@ -1,0 +1,205 @@
+.KInput {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 8px;
+  font-size: 14px;
+  overflow: hidden;
+
+  input {
+    width: 100%;
+    border: 1px solid $gray-200;
+    padding: 16px 8px;
+    border-radius: 4px;
+    color: $gray-400;
+    border-top-color: transparent;
+    caret-color: $primary-300;
+    transition: border 0.2s;
+
+    &.--is-valid {
+      border: 1px solid $success-100;
+      border-top-color: transparent;
+      caret-color: $success-200;
+    }
+
+    &.--is-invalid {
+      border: 1px solid $error-100;
+      border-top-color: transparent;
+      caret-color: $error-200;
+    }
+
+    // placeholder-shown
+    &:not(:focus):placeholder-shown + label {
+      line-height: 68px;
+      font-weight: $regular;
+      font-size: inherit;
+    }
+
+    &:not(:focus):placeholder-shown {
+      border-top-color: $gray-200;
+    }
+
+    &:not(:focus):placeholder-shown + label::before,
+    &:not(:focus):placeholder-shown + label::after {
+      border-top-color: transparent;
+    }
+
+    // valid placeholder-shown
+
+    &.--is-valid:not(:focus):placeholder-shown {
+      border-top-color: $success-100;
+    }
+
+    // invalid placeholder-shown
+
+    &.--is-invalid:not(:focus):placeholder-shown {
+      border-top-color: $error-100;
+    }
+
+    // focus
+    &:focus {
+      border-color: $primary-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &:focus + label {
+      color: $primary-300;
+    }
+
+    &:focus + label::before,
+    &:focus + label::after {
+      border-top-color: $primary-100;
+    }
+
+    // valid focus
+    &.--is-valid:focus {
+      border-color: $success-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &.--is-valid:focus + label {
+      color: $success-200;
+    }
+
+    &.--is-valid:focus + label::before,
+    &.--is-valid:focus + label::after {
+      border-top-color: $success-100;
+    }
+
+    // invalid focus
+    &.--is-invalid:focus {
+      border-color: $error-100;
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &.--is-invalid:focus + label {
+      color: $error-200;
+    }
+
+    &.--is-invalid:focus + label::before,
+    &.--is-invalid:focus + label::after {
+      border-top-color: $error-100;
+    }
+
+    // disabled
+    &:disabled,
+    &:disabled + label {
+      color: $gray-200;
+      cursor: not-allowed;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    color: $gray-200;
+    font-size: 12px;
+    font-weight: $bold;
+    line-height: 15px;
+    cursor: text;
+    display: flex;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+
+    &.--is-valid  {
+      color: $success-200;
+    }
+
+    &.--is-invalid  {
+      color: $error-200;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      margin-top: 8px;
+      border-top: 1px solid;
+      border-top-color: $gray-200;
+      min-width: 8px;
+      height: 8px;
+      transition: border-color 0.2s;
+    }
+
+    &.--is-valid::before,
+    &.--is-valid::after {
+      border-top-color: $success-100;
+    }
+
+    &.--is-invalid::before,
+    &.--is-invalid::after {
+      border-top-color: $error-100;
+    }
+
+    &::before  {
+      margin-right: 4px;
+      border-radius: 4px 0;
+    }
+
+    &::after {
+      margin-left: 4px;
+      flex-grow: 1;
+      border-radius: 0 4px;
+    }
+  }
+
+  .KInput-helper-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 8px;
+    color: $gray-400;
+    padding: 0 4px;
+    &.--is-valid {
+      color: $success-200;
+    }
+
+    &.--is-invalid {
+      color: $error-200;
+    }
+  }
+
+  .KInput-icon {
+    position: absolute;
+    height: 86%;
+    right: 8px;
+    top: 8px;
+    bottom: 0;
+    font-weight: $bold;
+    display: flex;
+    align-items: center;
+
+    &.--is-valid {
+      color: $success-200;
+    }
+
+    &.--is-invalid {
+      height: 64%;
+      color: $error-200;
+    }
+  }
+}

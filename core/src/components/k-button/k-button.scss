@@ -16,7 +16,7 @@
       **/
 
   &.primary {
-    background: $primary-700 0% 0% no-repeat padding-box;
+    background: $primary-500 0% 0% no-repeat padding-box;
     border: none;
     color: white;
     transition: 0.3s;
@@ -24,20 +24,18 @@
     &:hover,
     &:focus {
       background-color: $primary-300;
+      box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
     &:active {
       background-color: $primary-700;
+      box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
     &:disabled {
       background-color: $gray-100;
       color: $gray-200;
       cursor: not-allowed;
-      box-shadow: none;
-    }
-
-    &:disabled:hover {
       box-shadow: none;
     }
   }
@@ -56,14 +54,14 @@
     }
 
     &:active {
-      background-color: rgba($color: $primary-100, $alpha: 0.3);
+      background-color: rgba($color: $primary-300, $alpha: 0.3);
       color: $primary-300;
     }
 
     &:disabled {
       border-color: $gray-100;
+      color: $gray-200;
       background-color: $gray-50;
-      color: $gray-100;
       cursor: not-allowed;
     }
   }
@@ -81,7 +79,7 @@
     }
 
     &:active {
-      background-color: rgba($color: $primary-200, $alpha: 0.3);
+      background-color: rgba($color: $primary-300, $alpha: 0.3);
       color: $primary-800;
     }
 

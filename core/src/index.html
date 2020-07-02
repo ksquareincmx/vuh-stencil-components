@@ -164,793 +164,842 @@
       </k-list-group>
     </k-drawer>
 
-    <section>
+    <div style="margin: 0 32px;">
+    
+      <section>
+        <k-typography>
+          <h1>Input Fields</h1>
+          <k-input label="Name"></k-input>
+          <k-input label="Last Name" disabled value="Berzunza"></k-input>
+          <k-input label="Second Last Name" disabled></k-input>
+          <k-input type="email" label="Email Address" validation-state="success" value="jesus.berzunza@ksquareinc.com"></k-input>
+          <k-input type="tel" label="Phone Number" validation-state="error" value="00000" helper-text="Phone number should have 10 digits"></k-input>
+        </k-typography>
+      </section>
+  
+      <section>
+        <k-typography>
+          <h1>Text Fields</h1>
+          <div style="display: flex; justify-content: space-between;">
+            <k-text-field style="width: 48%; height: 300px;" max-length="30" label="Description" helper-text="This is a helper text"></k-text-field>
+            <k-text-field style="width: 48%;" label="Biography" disabled value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
+          </div>
+          <k-text-field label="Biography" disabled></k-text-field>
+          <k-text-field label="Biography" validation-state="success" max-length="100" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
+          <k-text-field label="Biography" validation-state="error" max-length="100" helper-text="this is a text helper" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
+        </k-typography>
+      </section>
+  
+      <section>
+        <k-typography>
+          <h1>Notification List</h1>
+        </k-typography>
+        <k-notification-group>
+          <k-notification-item
+            alert-color="orange"
+            label="Course"
+            time="30m ago"
+            is-read="false"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+          <k-notification-item
+            alert-color="purple"
+            label="Course"
+            time="30m ago"
+            is-read="true"
+          >
+            <p>
+              You are been assigned to the course
+              <strong>“The best Course of the world”</strong>
+            </p>
+          </k-notification-item>
+        </k-notification-group>
+      </section>
+  
       <k-typography>
-        <h1>Notification List</h1>
+        <h1>Heading 1</h1>
       </k-typography>
-      <k-notification-group>
-        <k-notification-item
-          alert-color="orange"
-          label="Course"
-          time="30m ago"
-          is-read="false"
-        >
-          <p>
-            You are been assigned to the course
-            <strong>“The best Course of the world”</strong>
-          </p>
-        </k-notification-item>
-        <k-notification-item
-          alert-color="purple"
-          label="Course"
-          time="30m ago"
-          is-read="true"
-        >
-          <p>
-            You are been assigned to the course
-            <strong>“The best Course of the world”</strong>
-          </p>
-        </k-notification-item>
-      </k-notification-group>
-    </section>
-
-    <k-typography>
-      <h1>Heading 1</h1>
-    </k-typography>
-    <k-typography>
-      <h2>Heading 2</h2>
-    </k-typography>
-    <k-typography>
-      <h3>Heading 3</h3>
-    </k-typography>
-    <k-typography>
-      <h4>Heading 4</h4>
-    </k-typography>
-    <k-typography>
-      <h5>Heading 5</h5>
-    </k-typography>
-    <k-typography>
-      <a href="#">Links</a>
-    </k-typography>
-    <k-typography variant="body1">
-      <p>
-        Body 1
-      </p>
-    </k-typography>
-    <k-typography variant="body2">
-      <p>
-        Body 2
-      </p>
-    </k-typography>
-    <k-typography variant="button">
-      <p>
-        Button
-      </p>
-    </k-typography>
-    <k-typography variant="caption">
-      <p>
-        Caption
-      </p>
-    </k-typography>
-    <k-typography variant="h1">
-      H1.Variant
-    </k-typography>
-    <k-typography variant="h2">
-      H2.Variant
-    </k-typography>
-    <k-typography variant="h3">
-      H3.Variant
-    </k-typography>
-    <k-typography variant="h4">
-      H4.Variant
-    </k-typography>
-    <k-typography variant="h5">
-      H5.Variant
-    </k-typography>
-    <k-typography variant="link">
-      Ancle.Variant
-    </k-typography>
-
-    <br />
-
-    <k-elevation radius="8px">
-      <div
-        class="elevation-modal"
-        style="
-          height: 200px;
-          width: 200px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        Elevation
-      </div>
-    </k-elevation>
-    <br />
-
-    <k-elevation radius="50%">
-      <div
-        class="elevation-modal"
-        style="
-          height: 200px;
-          width: 200px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        Elevation
-      </div>
-    </k-elevation>
-
-    <br />
-
-    <section>
       <k-typography>
-        <h1>Images</h1>
+        <h2>Heading 2</h2>
       </k-typography>
-      <k-img
-        src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
-        alt="the-ksquare-group"
-        height="300"
-      ></k-img>
+      <k-typography>
+        <h3>Heading 3</h3>
+      </k-typography>
+      <k-typography>
+        <h4>Heading 4</h4>
+      </k-typography>
+      <k-typography>
+        <h5>Heading 5</h5>
+      </k-typography>
+      <k-typography>
+        <a href="#">Links</a>
+      </k-typography>
+      <k-typography variant="body1">
+        <p>
+          Body 1
+        </p>
+      </k-typography>
+      <k-typography variant="body2">
+        <p>
+          Body 2
+        </p>
+      </k-typography>
+      <k-typography variant="button">
+        <p>
+          Button
+        </p>
+      </k-typography>
+      <k-typography variant="caption">
+        <p>
+          Caption
+        </p>
+      </k-typography>
+      <k-typography variant="h1">
+        H1.Variant
+      </k-typography>
+      <k-typography variant="h2">
+        H2.Variant
+      </k-typography>
+      <k-typography variant="h3">
+        H3.Variant
+      </k-typography>
+      <k-typography variant="h4">
+        H4.Variant
+      </k-typography>
+      <k-typography variant="h5">
+        H5.Variant
+      </k-typography>
+      <k-typography variant="link">
+        Ancle.Variant
+      </k-typography>
+  
       <br />
-      <k-img
-        src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
-        alt="the-ksquare-group"
-        height="600"
-        fit="cover"
-      ></k-img>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography>
-        <h1>Switch</h1>
-      </k-typography>
-      <k-switch label="on/off"> </k-switch>
-      <k-switch label="disabled" disabled="true"> </k-switch>
-      <k-switch label="disabled" checked="true" disabled="true"> </k-switch>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography>
-        <h1>Profile Picture</h1>
-      </k-typography>
-      <div style="display: flex;">
-        <k-avatar>
-          <k-img
-            alt="Magaly Muñoz"
-            src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90"
-          ></k-img>
-        </k-avatar>
-        <k-avatar size="medium">
-          <k-img
-            alt="Abraham Berzunza"
-            src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
-          ></k-img>
-        </k-avatar>
-        <k-avatar size="large">
-          <k-img
-            alt="Eduardo Monforte"
-            src="data:image/jpeg;base64,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"
-          ></k-img>
-        </k-avatar>
-      </div>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography>
-        <h1>Radio button</h1>
-      </k-typography>
-      <k-radio-button name="default"></k-radio-button>
-      <k-radio-button name="checked" checked>Checked</k-radio-button>
-      <k-radio-button name="disabled" disabled>Disabled</k-radio-button>
-      <k-radio-button name="disabled/checked" checked disabled
-        >Disabled/Checked</k-radio-button
-      >
-      <br />
-      <k-typography>
-        <h1>Radio button group</h1>
-      </k-typography>
-      <k-radio-button-group>
-        <k-radio-button name="default" value="3"></k-radio-button>
-        <k-radio-button name="checked" checked value="5"
-          >Checked</k-radio-button
+  
+      <k-elevation radius="8px">
+        <div
+          class="elevation-modal"
+          style="
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
         >
+          Elevation
+        </div>
+      </k-elevation>
+      <br />
+  
+      <k-elevation radius="50%">
+        <div
+          class="elevation-modal"
+          style="
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          Elevation
+        </div>
+      </k-elevation>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Images</h1>
+        </k-typography>
+        <k-img
+          src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
+          alt="the-ksquare-group"
+          height="300"
+        ></k-img>
+        <br />
+        <k-img
+          src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
+          alt="the-ksquare-group"
+          height="600"
+          fit="cover"
+        ></k-img>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Switch</h1>
+        </k-typography>
+        <k-switch label="on/off"> </k-switch>
+        <k-switch label="disabled" disabled="true"> </k-switch>
+        <k-switch label="disabled" checked="true" disabled="true"> </k-switch>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Profile Picture</h1>
+        </k-typography>
+        <div style="display: flex;">
+          <k-avatar>
+            <k-img
+              alt="Magaly Muñoz"
+              src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/3112753/avatar.png?width=90"
+            ></k-img>
+          </k-avatar>
+          <k-avatar size="medium">
+            <k-img
+              alt="Abraham Berzunza"
+              src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"
+            ></k-img>
+          </k-avatar>
+          <k-avatar size="large">
+            <k-img
+              alt="Eduardo Monforte"
+              src="data:image/jpeg;base64,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"
+            ></k-img>
+          </k-avatar>
+        </div>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Radio button</h1>
+        </k-typography>
+        <k-radio-button name="default"></k-radio-button>
+        <k-radio-button name="checked" checked>Checked</k-radio-button>
         <k-radio-button name="disabled" disabled>Disabled</k-radio-button>
-      </k-radio-button-group>
-    </section>
-
-    <br />
-
-    <div style="display: flex; flex-wrap: wrap;">
-      <k-typography>
-        <h1>Buttons</h1>
-      </k-typography>
-      <k-typography style="width: 100%;">
-        <h3>Colors</h3>
-      </k-typography>
-      <section style="margin: 24px;">
-        Primary
-        <k-button color="primary"></k-button>
-        <k-button color="primary" disabled></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Secondary
-        <k-button color="secondary"></k-button>
-        <k-button color="secondary" disabled></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Terciary
-        <k-button color="terciary"></k-button>
-        <k-button color="terciary" disabled></k-button>
-      </section>
-
-      <k-typography style="width: 100%;">
-        <h3>Shape</h3>
-      </k-typography>
-      <section style="margin: 24px;">
-        Full
-        <k-button style="width: 100%; color: red;" shape="full"></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Round
-        <k-button shape="round"></k-button>
-        <k-button color="secondary" shape="round">A</k-button>
-        <k-button color="terciary" shape="round"
-          ><div style="width: 16px; height: 16px;">A</div></k-button
+        <k-radio-button name="disabled/checked" checked disabled
+          >Disabled/Checked</k-radio-button
         >
+        <br />
+        <k-typography>
+          <h1>Radio button group</h1>
+        </k-typography>
+        <k-radio-button-group>
+          <k-radio-button name="default" value="3"></k-radio-button>
+          <k-radio-button name="checked" checked value="5"
+            >Checked</k-radio-button
+          >
+          <k-radio-button name="disabled" disabled>Disabled</k-radio-button>
+        </k-radio-button-group>
       </section>
-      <section style="margin: 24px;">
-        Smooth (default)
-        <k-button shape="smooth"></k-button>
+  
+      <br />
+  
+      <div style="display: flex; flex-wrap: wrap;">
+        <k-typography>
+          <h1>Buttons</h1>
+        </k-typography>
+        <k-typography style="width: 100%;">
+          <h3>Colors</h3>
+        </k-typography>
+        <section style="margin: 24px;">
+          Primary
+          <k-button color="primary"></k-button>
+          <k-button color="primary" disabled></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Secondary
+          <k-button color="secondary"></k-button>
+          <k-button color="secondary" disabled></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Terciary
+          <k-button color="terciary"></k-button>
+          <k-button color="terciary" disabled></k-button>
+        </section>
+  
+        <k-typography style="width: 100%;">
+          <h3>Shape</h3>
+        </k-typography>
+        <section style="margin: 24px;">
+          Full
+          <k-button style="width: 100%; color: red;" shape="full"></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Round
+          <k-button shape="round"></k-button>
+          <k-button color="secondary" shape="round">A</k-button>
+          <k-button color="terciary" shape="round"
+            ><div style="width: 16px; height: 16px;">A</div></k-button
+          >
+        </section>
+        <section style="margin: 24px;">
+          Smooth (default)
+          <k-button shape="smooth"></k-button>
+        </section>
+  
+        <k-typography style="width: 100%;">
+          <h3>Size</h3>
+        </k-typography>
+        <section style="margin: 24px;">
+          Large
+          <k-button size="large"></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Medium
+          <k-button size="medium"></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Small
+          <k-button size="small"></k-button>
+        </section>
+  
+        <k-typography style="width: 100%;">
+          <h3>Elevation</h3>
+        </k-typography>
+        <section style="margin: 24px;">
+          With elevation
+          <k-button color="primary" elevation></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Without elevation
+          <k-button color="primary"></k-button>
+        </section>
+        <section style="margin: 24px;">
+          Disabled
+          <k-button color="primary" elevation disabled></k-button>
+        </section>
+  
+        <k-typography style="width: 100%;">
+          <h3>Dropdown Button</h3>
+        </k-typography>
+        <section style="margin: 24px;">
+          <k-select>
+            <k-select-option value="01">Item 1</k-select-option>
+            <k-select-option value="02">Item 2</k-select-option>
+            <k-select-option value="03">Item 3</k-select-option>
+          </k-select>
+        </section>
+      </div>
+  
+      <section>
+        <k-typography>
+          <h1>Tags</h1>
+        </k-typography>
+        <div style="display: flex;">
+          <k-tag style="margin-right: 8px;">
+            <k-label>Tag 1</k-label>
+            <k-icon name="close"></k-icon>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>React Integration</k-label>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>StencilJS</k-label>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>Tag 1</k-label>
+            <k-icon name="close"></k-icon>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>React Integration</k-label>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>StencilJS</k-label>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>Tag 1</k-label>
+            <k-icon name="close"></k-icon>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>React Integration</k-label>
+          </k-tag>
+          <k-tag style="margin-right: 8px;">
+            <k-label>StencilJS</k-label>
+          </k-tag>
+        </div>
       </section>
-
-      <k-typography style="width: 100%;">
-        <h3>Size</h3>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Tooltip</h1>
+        </k-typography>
+        <div style="display: flex;">
+          <k-tooltip text="KTooltip example text" position="top">
+            <k-button style="margin-right: 16px; display: block;">Top</k-button>
+          </k-tooltip>
+          <k-tooltip text="KTooltip example text" position="bottom">
+            <k-button style="margin-right: 16px; display: block;">
+              Bottom
+            </k-button>
+          </k-tooltip>
+          <k-tooltip text="KTooltip example text" position="left">
+            <k-button style="margin-right: 16px; display: block;">Left</k-button>
+          </k-tooltip>
+          <k-tooltip text="KTooltip example text" position="right">
+            <k-button>Right</k-button>
+          </k-tooltip>
+        </div>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Progress Bar</h1>
+        </k-typography>
+        <k-progress-bar value="10"></k-progress-bar>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography>
+          <h1>Loading Spinner</h1>
+        </k-typography>
+        <div style="display: flex; align-items: center;">
+          <k-spinner style="margin-right: 24px;"></k-spinner>
+          <k-spinner size="24" strong="4" style="margin-right: 24px;"></k-spinner>
+          <k-spinner size="12" strong="2" style="margin-right: 24px;"></k-spinner>
+          <k-spinner style="margin-right: 24px;" color="success200"></k-spinner>
+          <k-spinner
+            size="24"
+            strong="4"
+            style="margin-right: 24px;"
+            color="success200"
+          ></k-spinner>
+          <k-spinner size="12" strong="2" color="success200"></k-spinner>
+        </div>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography style="margin-bottom: 16px;">
+          <h1>Grid System</h1>
+        </k-typography>
+  
+        <k-typography style="margin-bottom: 16px;">
+          <h3>Empty Container</h3>
+        </k-typography>
+  
+        <k-grid style="height: 50px; background-color: #d6d6d6;">
+          <p>This is a regular container.</p>
+        </k-grid>
+  
+        <br />
+        <k-typography style="margin-bottom: 16px;">
+          <h3>Empty Fluid Container</h3>
+        </k-typography>
+  
+        <k-grid fluid style="height: 50px; background-color: #d6d6d6;">
+          <p>This container is fluid and has no padding on its sides.</p>
+        </k-grid>
+  
+        <br />
+        <k-typography style="margin-bottom: 16px;">
+          <h3>Empty Row</h3>
+        </k-typography>
+  
+        <k-grid style="background-color: #d6d6d6;">
+          <k-row style="height: 50px; background-color: #f7f7f7;"> </k-row>
+        </k-grid>
+  
+        <br />
+        <k-typography style="margin-bottom: 16px;">
+          <h3>Columns</h3>
+        </k-typography>
+  
+        <k-grid style="background-color: #f7f7f7;">
+          <k-row>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+            <k-column fluid size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Fluid Column (size 1)
+              </p>
+            </k-column>
+          </k-row>
+        </k-grid>
+  
+        <br />
+  
+        <k-grid style="background-color: #f7f7f7;">
+          <k-row>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+            <k-column size="1">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1)
+              </p>
+            </k-column>
+          </k-row>
+        </k-grid>
+  
+        <br />
+  
+        <k-grid style="background-color: #f7f7f7;">
+          <k-row>
+            <k-column size="1" sizesm="4" sizemd="8" sizelg="12">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 1, sizeSm 4, sizeMd 8, sizeLg 12).
+              </p>
+            </k-column>
+          </k-row>
+        </k-grid>
+  
+        <br />
+  
+        <k-grid style="background-color: #f7f7f7;">
+          <k-row>
+            <k-column size="2">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (size 2)
+              </p>
+            </k-column>
+            <k-column sizesm="3">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (sizeSm 3)
+              </p>
+            </k-column>
+            <k-column sizemd="5" sizelg="7">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (sizeMd 5, sizeLg 7)
+              </p>
+            </k-column>
+            <k-column sizemd="6">
+              <p style="background-color: #42e3ad; margin: 0;">
+                Column (sizeMd 6)
+              </p>
+            </k-column>
+          </k-row>
+        </k-grid>
+      </section>
+  
+      <br />
+  
+      <section>
+        <k-typography style="margin-bottom: 16px;">
+          <h1>Icons</h1>
+        </k-typography>
+  
+        <k-typography style="margin-bottom: 16px;">
+          <h3>Min & Max Sizes</h3>
+        </k-typography>
+  
+        <k-row spacing="sm">
+          <k-column size="1">
+            <k-icon name="done" size="small"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="done" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="done" size="large"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="done" size="extra-large"></k-icon>
+          </k-column>
+        </k-row>
+        <k-row>
+          <k-column size="1">
+            16 x 16 px
+          </k-column>
+          <k-column size="1">
+            24 x 24 px
+          </k-column>
+          <k-column size="1">
+            32 x 32 px
+          </k-column>
+          <k-column size="1">
+            48 x 48 px
+          </k-column>
+        </k-row>
+  
+        <br />
+  
+        <k-typography style="margin-bottom: 16px;">
+          <h3>List</h3>
+        </k-typography>
+  
+        <k-row>
+          <k-column size="1">
+            <k-icon name="alert_circle" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="assistant" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="attachment" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="bookmark_border" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="bookmark" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="cached" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="check_circle" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="close" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="cloud_upload" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="colorize" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="delete" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="done" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="drag_indicator" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="edit" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="event" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="file_copy" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="finish_1" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="finish_2" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="finish_3" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="flip_camera_ios" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="school" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="highlight_off" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="info" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="insert_drive_file" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="keyboard_arrow_down" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="keyboard_arrow_left" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="keyboard_arrow_right" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="keyboard_arrow_up" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="menu" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="network_wired" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="notifications_active" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="notifications" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="person" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="photo_camera" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="playlist_add_check" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="question_answer" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="remove_red_eye" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="ribbon" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="search" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="settings" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="supervised_user_circle" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="swap_vert" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="tune" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="view_week" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="visibility_off" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="add_circle" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="bookmarks" size="medium"></k-icon>
+          </k-column>
+          <k-column size="1">
+            <k-icon name="dashboard" size="medium"></k-icon>
+          </k-column>
+        </k-row>
+      </section>
+      <br />
+  
+      <k-typography style="margin-bottom: 16px;">
+        <h1>Checkbox</h1>
       </k-typography>
-      <section style="margin: 24px;">
-        Large
-        <k-button size="large"></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Medium
-        <k-button size="medium"></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Small
-        <k-button size="small"></k-button>
-      </section>
-
-      <k-typography style="width: 100%;">
-        <h3>Elevation</h3>
-      </k-typography>
-      <section style="margin: 24px;">
-        With elevation
-        <k-button color="primary" elevation></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Without elevation
-        <k-button color="primary"></k-button>
-      </section>
-      <section style="margin: 24px;">
-        Disabled
-        <k-button color="primary" elevation disabled></k-button>
+  
+      <section>
+        <k-checkbox>
+          Default
+        </k-checkbox>
+        <k-checkbox checked>
+          Checked
+        </k-checkbox>
+        <k-checkbox disabled>
+          Disabled
+        </k-checkbox>
+        <k-checkbox disabled checked>
+          Disabled & Checked
+        </k-checkbox>
       </section>
     </div>
 
-    <section>
-      <k-typography>
-        <h1>Tags</h1>
-      </k-typography>
-      <div style="display: flex;">
-        <k-tag style="margin-right: 8px;">
-          <k-label>Tag 1</k-label>
-          <k-icon name="close"></k-icon>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>React Integration</k-label>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>StencilJS</k-label>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>Tag 1</k-label>
-          <k-icon name="close"></k-icon>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>React Integration</k-label>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>StencilJS</k-label>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>Tag 1</k-label>
-          <k-icon name="close"></k-icon>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>React Integration</k-label>
-        </k-tag>
-        <k-tag style="margin-right: 8px;">
-          <k-label>StencilJS</k-label>
-        </k-tag>
-      </div>
-    </section>
-
     <br />
-
-    <section>
-      <k-typography>
-        <h1>Tooltip</h1>
-      </k-typography>
-      <div style="display: flex;">
-        <k-tooltip text="KTooltip example text" position="top">
-          <k-button style="margin-right: 16px; display: block;">Top</k-button>
-        </k-tooltip>
-        <k-tooltip text="KTooltip example text" position="bottom">
-          <k-button style="margin-right: 16px; display: block;">
-            Bottom
-          </k-button>
-        </k-tooltip>
-        <k-tooltip text="KTooltip example text" position="left">
-          <k-button style="margin-right: 16px; display: block;">Left</k-button>
-        </k-tooltip>
-        <k-tooltip text="KTooltip example text" position="right">
-          <k-button>Right</k-button>
-        </k-tooltip>
-      </div>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography>
-        <h1>Progress Bar</h1>
-      </k-typography>
-      <k-progress-bar value="10"></k-progress-bar>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography>
-        <h1>Loading Spinner</h1>
-      </k-typography>
-      <div style="display: flex; align-items: center;">
-        <k-spinner style="margin-right: 24px;"></k-spinner>
-        <k-spinner size="24" strong="4" style="margin-right: 24px;"></k-spinner>
-        <k-spinner size="12" strong="2" style="margin-right: 24px;"></k-spinner>
-        <k-spinner style="margin-right: 24px;" color="success200"></k-spinner>
-        <k-spinner
-          size="24"
-          strong="4"
-          style="margin-right: 24px;"
-          color="success200"
-        ></k-spinner>
-        <k-spinner size="12" strong="2" color="success200"></k-spinner>
-      </div>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography style="margin-bottom: 16px;">
-        <h1>Grid System</h1>
-      </k-typography>
-
-      <k-typography style="margin-bottom: 16px;">
-        <h3>Empty Container</h3>
-      </k-typography>
-
-      <k-grid style="height: 50px; background-color: #d6d6d6;">
-        <p>This is a regular container.</p>
-      </k-grid>
-
-      <br />
-      <k-typography style="margin-bottom: 16px;">
-        <h3>Empty Fluid Container</h3>
-      </k-typography>
-
-      <k-grid fluid style="height: 50px; background-color: #d6d6d6;">
-        <p>This container is fluid and has no padding on its sides.</p>
-      </k-grid>
-
-      <br />
-      <k-typography style="margin-bottom: 16px;">
-        <h3>Empty Row</h3>
-      </k-typography>
-
-      <k-grid style="background-color: #d6d6d6;">
-        <k-row style="height: 50px; background-color: #f7f7f7;"> </k-row>
-      </k-grid>
-
-      <br />
-      <k-typography style="margin-bottom: 16px;">
-        <h3>Columns</h3>
-      </k-typography>
-
-      <k-grid style="background-color: #f7f7f7;">
-        <k-row>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-          <k-column fluid size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Fluid Column (size 1)
-            </p>
-          </k-column>
-        </k-row>
-      </k-grid>
-
-      <br />
-
-      <k-grid style="background-color: #f7f7f7;">
-        <k-row>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-          <k-column size="1">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1)
-            </p>
-          </k-column>
-        </k-row>
-      </k-grid>
-
-      <br />
-
-      <k-grid style="background-color: #f7f7f7;">
-        <k-row>
-          <k-column size="1" sizesm="4" sizemd="8" sizelg="12">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 1, sizeSm 4, sizeMd 8, sizeLg 12).
-            </p>
-          </k-column>
-        </k-row>
-      </k-grid>
-
-      <br />
-
-      <k-grid style="background-color: #f7f7f7;">
-        <k-row>
-          <k-column size="2">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (size 2)
-            </p>
-          </k-column>
-          <k-column sizesm="3">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (sizeSm 3)
-            </p>
-          </k-column>
-          <k-column sizemd="5" sizelg="7">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (sizeMd 5, sizeLg 7)
-            </p>
-          </k-column>
-          <k-column sizemd="6">
-            <p style="background-color: #42e3ad; margin: 0;">
-              Column (sizeMd 6)
-            </p>
-          </k-column>
-        </k-row>
-      </k-grid>
-    </section>
-
-    <br />
-
-    <section>
-      <k-typography style="margin-bottom: 16px;">
-        <h1>Icons</h1>
-      </k-typography>
-
-      <k-typography style="margin-bottom: 16px;">
-        <h3>Min & Max Sizes</h3>
-      </k-typography>
-
-      <k-row spacing="sm">
-        <k-column size="1">
-          <k-icon name="done" size="small"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="done" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="done" size="large"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="done" size="extra-large"></k-icon>
-        </k-column>
-      </k-row>
-      <k-row>
-        <k-column size="1">
-          16 x 16 px
-        </k-column>
-        <k-column size="1">
-          24 x 24 px
-        </k-column>
-        <k-column size="1">
-          32 x 32 px
-        </k-column>
-        <k-column size="1">
-          48 x 48 px
-        </k-column>
-      </k-row>
-
-      <br />
-
-      <k-typography style="margin-bottom: 16px;">
-        <h3>List</h3>
-      </k-typography>
-
-      <k-row>
-        <k-column size="1">
-          <k-icon name="alert_circle" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="assistant" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="attachment" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="bookmark_border" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="bookmark" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="cached" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="check_circle" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="close" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="cloud_upload" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="colorize" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="delete" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="done" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="drag_indicator" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="edit" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="event" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="file_copy" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="finish_1" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="finish_2" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="finish_3" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="flip_camera_ios" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="graduate_cap" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="highlight_off" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="info" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="insert_drive_file" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="keyboard_arrow_down" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="keyboard_arrow_left" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="keyboard_arrow_right" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="keyboard_arrow_up" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="menu" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="network_wired" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="notifications_active" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="notifications" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="person" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="photo_camera" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="playlist_add_check" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="question_answer" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="remove_red_eye" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="ribbon" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="search" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="settings" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="supervised_user_circle" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="swap_vert" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="tune" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="view_week" size="medium"></k-icon>
-        </k-column>
-        <k-column size="1">
-          <k-icon name="visibility_off" size="medium"></k-icon>
-        </k-column>
-      </k-row>
-    </section>
-    <br />
-
-    <k-typography style="margin-bottom: 16px;">
-      <h1>Checkbox</h1>
-    </k-typography>
-
-    <section>
-      <k-checkbox>
-        Default
-      </k-checkbox>
-      <k-checkbox checked>
-        Checked
-      </k-checkbox>
-      <k-checkbox disabled>
-        Disabled
-      </k-checkbox>
-      <k-checkbox disabled checked>
-        Disabled & Checked
-      </k-checkbox>
-    </section>
   </body>
 </html>
