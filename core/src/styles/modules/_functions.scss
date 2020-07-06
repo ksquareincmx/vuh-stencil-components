@@ -27,3 +27,7 @@
     @error 'ERROR: Specified key does not exist in the mapping';
   }
 }
+
+@function color($color-name) {
+  @return var(--vuh-#{$color-name});
+}

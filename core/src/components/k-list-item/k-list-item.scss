@@ -5,10 +5,10 @@
   padding: 16px;
 
   &:hover  {
-    background-color: rgba($color: $primary-100, $alpha: 0.3);
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.3);
   }
 
   &:active {
-    background-color: rgba($color: $primary-100, $alpha: 0.6);
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.6);
   }
 }

@@ -3,87 +3,87 @@
 }
 
 :host(.primary) {
-  color: $primary-color !important;
+  color: color(primary-color) !important;
 }
 
 :host(.primary800) {
-  color: $primary-800 !important;
+  color: color(primary-800) !important;
 }
 
 :host(.primary700) {
-  color: $primary-700 !important;
+  color: color(primary-700) !important;
 }
 
 :host(.primary600) {
-  color: $primary-600 !important;
+  color: color(primary-600) !important;
 }
 
 :host(.primary500) {
-  color: $primary-500 !important;
+  color: color(primary-500) !important;
 }
 
 :host(.primary400) {
-  color: $primary-400 !important;
+  color: color(primary-400) !important;
 }
 
 :host(.primary300) {
-  color: $primary-300 !important;
+  color: color(primary-300) !important;
 }
 
 :host(.primary200) {
-  color: $primary-200 !important;
+  color: color(primary-200) !important;
 }
 
 :host(.primary100) {
-  color: $primary-100 !important;
+  color: color(primary-100) !important;
 }
 
 :host(.gray500) {
-  color: $gray-500 !important;
+  color: color(gray-500) !important;
 }
 
 :host(.gray400) {
-  color: $gray-400 !important;
+  color: color(gray-400) !important;
 }
 
 :host(.gray300) {
-  color: $gray-300 !important;
+  color: color(gray-300) !important;
 }
 
 :host(.gray200) {
-  color: $gray-200 !important;
+  color: color(gray-200) !important;
 }
 
 :host(.gray100) {
-  color: $gray-100 !important;
+  color: color(gray-100) !important;
 }
 
 :host(.gray50) {
-  color: $gray-50 !important;
+  color: color(gray-50) !important;
 }
 
 :host(.error200) {
-  color: $error-200 !important;
+  color: color(error-200) !important;
 }
 
 :host(.error100) {
-  color: $error-100 !important;
+  color: color(error-100) !important;
 }
 
 :host(.warning200) {
-  color: $warning-200 !important;
+  color: color(warning-200) !important;
 }
 
 :host(.warning100) {
-  color: $warning-100 !important;
+  color: color(warning-100) !important;
 }
 
 :host(.success200) {
-  color: $success-200 !important;
+  color: color(success-200) !important;
 }
 
 :host(.success100) {
-  color: $success-100 !important;
+  color: color(success-100) !important;
 }
 
 ::slotted(h1),
@@ -149,34 +149,34 @@
   letter-spacing: 1.25px;
   line-height: 1.37;
   font-weight: $semi-bold;
-  color: $primary-800;
+  color: color(primary-800);
   text-decoration: underline;
   cursor: pointer;
 }
 
 ::slotted(a:hover),
 :host(.link:hover)  {
-  color: $primary-300;
+  color: color(primary-300);
 }
 
 ::slotted(a:focus),
 :host(.link:focus)  {
-  color: $primary-300;
+  color: color(primary-300);
 }
 
 ::slotted(a:active),
 :host(.link:active)  {
-  color: $primary-600;
+  color: color(primary-600);
 }
 
 ::slotted(a:hover),
 :host(.link:hover)  {
-  color: $primary-100;
+  color: color(primary-100);
 }
 
 ::slotted(a:active),
 :host(.link:active)  {
-  color: $primary-300;
+  color: color(primary-300);
 }
 
 :host(.body1) {

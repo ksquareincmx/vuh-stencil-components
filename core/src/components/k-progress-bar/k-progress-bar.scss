@@ -20,6 +20,6 @@
 }
 
 .KProgressBar-load::-webkit-progress-value {
-  background-color: $primary-color;
+  background-color: color(primary-color);
   transition: 0.7s;
 }

@@ -1,4 +1,4 @@
-# k-input
+# k-text-field
 
 
 
@@ -14,23 +14,9 @@
 | `label`           | `label`            |             | `string`                     | `'Default'` |
 | `maxLength`       | `max-length`       |             | `number`                     | `0`         |
 | `name`            | `name`             |             | `string`                     | `''`        |
-| `type`            | `type`             |             | `string`                     | `'text'`    |
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |
 
-
-## Dependencies
-
-### Depends on
-
-- [k-icon](../k-icon)
-
-### Graph
-```mermaid
-graph TD;
-  k-input --> k-icon
-  style k-input fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 
