@@ -11,23 +11,23 @@
     transition: 0.3s;
     will-change: transform, background-color;
     position: relative;
-    color: $primary-color;
+    color: color(primary-color);
     width: max-content;
     border: none;
     background-color: transparent;
     outline: none;
 
     &.KNotification-opened {
-      background-color: rgba($color: $primary-100, $alpha: 0.4);
+      background-color: rgba($color: color(primary-100-rgb), $alpha: 0.4);
     }
 
     &:hover {
-      background-color: rgba($color: $primary-100, $alpha: 0.2);
+      background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
     }
 
     &:active {
       transform: scale(0.9);
-      background-color: rgba($color: $primary-100, $alpha: 0.4);
+      background-color: rgba($color: color(primary-100-rgb), $alpha: 0.4);
     }
 
     &::before {
@@ -50,7 +50,7 @@
       min-width: 14px;
       height: 14px;
       color: white;
-      background-color: $primary-color;
+      background-color: color(primary-color);
       font-size: 10px;
       font-weight: bold;
       border-radius: 50%;

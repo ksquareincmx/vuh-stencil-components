@@ -16,25 +16,25 @@
       **/
 
   &.primary {
-    background: $primary-500 0% 0% no-repeat padding-box;
+    background: color(primary-color) 0% 0% no-repeat padding-box;
     border: none;
     color: white;
     transition: 0.3s;
 
     &:hover,
     &:focus {
-      background-color: $primary-300;
+      background-color: color(primary-300);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
     &:active {
-      background-color: $primary-700;
+      background-color: color(primary-700);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
     &:disabled {
-      background-color: $gray-100;
-      color: $gray-200;
+      background-color: color(gray-100);
+      color: color(gray-200);
       cursor: not-allowed;
       box-shadow: none;
     }
@@ -42,26 +42,26 @@
 
   &.secondary {
     background: white 0% 0% no-repeat padding-box;
-    border: 1px solid $primary-500;
+    border: 1px solid color(primary-color);
     border-radius: 4px;
-    color: $primary-500;
+    color: color(primary-color);
     transition: 0.3s;
 
     &:hover,
     &:focus {
-      background-color: rgba($color: $primary-100, $alpha: 0.2);
-      color: $primary-300;
+      background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
+      color: color(primary-300);
     }
 
     &:active {
-      background-color: rgba($color: $primary-300, $alpha: 0.3);
-      color: $primary-300;
+      background-color: rgba($color: color(primary-300-rgb), $alpha: 0.2);
+      color: color(primary-300);
     }
 
     &:disabled {
-      border-color: $gray-100;
-      color: $gray-200;
-      background-color: $gray-50;
+      border-color: color(gray-100);
+      color: color(gray-200);
+      background-color: color(gray-50);
       cursor: not-allowed;
     }
   }
@@ -69,23 +69,23 @@
   &.terciary {
     background: white 0% 0% no-repeat padding-box;
     border: none;
-    color: $primary-800;
+    color: color(primary-800);
     transition: 0.4s;
 
     &:hover,
     &:focus {
-      background-color: rgba($color: $primary-100, $alpha: 0.2);
-      color: $primary-800;
+      background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
+      color: color(primary-800);
     }
 
     &:active {
-      background-color: rgba($color: $primary-300, $alpha: 0.3);
-      color: $primary-800;
+      background-color: rgba($color: color(primary-300-rgb), $alpha: 0.3);
+      color: color(primary-800);
     }
 
     &:disabled {
-      background-color: $gray-50;
-      color: $gray-100;
+      background-color: color(gray-50);
+      color: color(gray-100);
       cursor: not-allowed;
     }
   }

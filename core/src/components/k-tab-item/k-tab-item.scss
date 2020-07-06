@@ -17,7 +17,7 @@
   border-bottom: 2px solid $gray-100;
 
   &:hover {
-    background-color: rgba($color: $primary-100, $alpha: 0.1);
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.1);
   }
 
   &:disabled {
@@ -30,7 +30,7 @@
   }
 
   &.is-active {
-    color: $primary-800;
+    color: color(primary-800);
   }
 
   & > ::slotted(:first-child) {

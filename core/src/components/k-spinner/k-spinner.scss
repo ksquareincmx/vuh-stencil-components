@@ -10,9 +10,9 @@
     top: 0;
     height: 50px;
     width: 50%;
-    border-top: 6px solid $primary-color;
-    border-left: 6px solid $primary-color;
-    border-bottom: 6px solid $primary-color;
+    border-top: 6px solid color(primary-color);
+    border-left: 6px solid color(primary-color);
+    border-bottom: 6px solid color(primary-color);
     border-radius: 10.2em 0 0 10.2em;
 
     animation-name: load;
@@ -22,39 +22,39 @@
     transform-origin: center right;
 
     &.primary {
-      border-color: $primary-color !important;
+      border-color: color(primary-color) !important;
     }
 
     &.primary800 {
-      border-color: $primary-800 !important;
+      border-color: color(primary-800) !important;
     }
 
     &.primary700 {
-      border-color: $primary-700 !important;
+      border-color: color(primary-700) !important;
     }
 
     &.primary600 {
-      border-color: $primary-600 !important;
+      border-color: color(primary-600) !important;
     }
 
     &.primary500 {
-      border-color: $primary-500 !important;
+      border-color: color(primary-color) !important;
     }
 
     &.primary400 {
-      border-color: $primary-400 !important;
+      border-color: color(primary-400) !important;
     }
 
     &.primary300 {
-      border-color: $primary-300 !important;
+      border-color: color(primary-300) !important;
     }
 
     &.primary200 {
-      border-color: $primary-200 !important;
+      border-color: color(primary-200) !important;
     }
 
     &.primary100 {
-      border-color: $primary-100 !important;
+      border-color: color(primary-100) !important;
     }
 
     &.gray500 {
@@ -112,9 +112,9 @@
     top: 0;
     height: 50px;
     width: 50%;
-    border-top: 6px solid $primary-color;
-    border-right: 6px solid $primary-color;
-    border-bottom: 6px solid $primary-color;
+    border-top: 6px solid color(primary-color);
+    border-right: 6px solid color(primary-color);
+    border-bottom: 6px solid color(primary-color);
     border-radius: 0 10.2em 10.2em 0;
 
     animation-name: load;
@@ -123,39 +123,39 @@
     transform-origin: center left;
 
     &.primary {
-      border-color: $primary-color !important;
+      border-color: color(primary-color) !important;
     }
 
     &.primary800 {
-      border-color: $primary-800 !important;
+      border-color: color(primary-800) !important;
     }
 
     &.primary700 {
-      border-color: $primary-700 !important;
+      border-color: color(primary-700) !important;
     }
 
     &.primary600 {
-      border-color: $primary-600 !important;
+      border-color: color(primary-600) !important;
     }
 
     &.primary500 {
-      border-color: $primary-500 !important;
+      border-color: color(primary-500) !important;
     }
 
     &.primary400 {
-      border-color: $primary-400 !important;
+      border-color: color(primary-400) !important;
     }
 
     &.primary300 {
-      border-color: $primary-300 !important;
+      border-color: color(primary-300) !important;
     }
 
     &.primary200 {
-      border-color: $primary-200 !important;
+      border-color: color(primary-200) !important;
     }
 
     &.primary100 {
-      border-color: $primary-100 !important;
+      border-color: color(primary-100) !important;
     }
 
     &.gray500 {

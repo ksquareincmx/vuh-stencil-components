@@ -5,21 +5,21 @@
 
   // Checked State
   .KSwitch-state:checked ~ .KSwitch-action::before {
-    background-color: $primary-color;
+    background-color: color(primary-color);
     transform: translateX(18px);
   }
 
   .KSwitch-state:checked ~ .KSwitch-action::after {
     transform: translateX(18px);
-    background-color: rgba($color: $primary-100, $alpha: 0.2);
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
   }
 
   .KSwitch-state:checked ~ .KSwitch-action:active::after {
-    background-color: rgba($color: $primary-color, $alpha: 0.2);
+    background-color: rgba($color: color(primary-color-rgb), $alpha: 0.2);
   }
 
   .KSwitch-state:checked ~ .KSwitch-action  {
-    background-color: $primary-100;
+    background-color: color(primary-100);
   }
 
   // Disabled state
@@ -37,12 +37,12 @@
   }
 
   .KSwitch-state:checked:disabled ~ .KSwitch-action {
-    background-color: rgba($color: $primary-color, $alpha: 0.3);
+    background-color: rgba($color: color(primary-color-rgb), $alpha: 0.3);
     cursor: not-allowed;
   }
 
   .KSwitch-state:checked:disabled ~ .KSwitch-action::before {
-    background-color: $primary-100;
+    background-color: color(primary-100);
   }
 
   .KSwitch-state:checked:disabled ~ .KSwitch-action::after {

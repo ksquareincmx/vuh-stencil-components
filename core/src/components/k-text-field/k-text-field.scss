@@ -17,7 +17,7 @@
     border-radius: 4px;
     color: $gray-400;
     border-top-color: transparent;
-    caret-color: $primary-300;
+    caret-color: color(primary-300);
     transition: border 0.2s;
 
     &.--is-valid {
@@ -62,18 +62,18 @@
 
     // focus
     &:focus {
-      border-color: $primary-100;
+      border-color: color(primary-100);
       border-top-color: transparent;
       outline: none;
     }
 
     &:focus + label {
-      color: $primary-300;
+      color: color(primary-300);
     }
 
     &:focus + label::before,
     &:focus + label::after {
-      border-top-color: $primary-100;
+      border-top-color: color(primary-100);
     }
 
     // valid focus
