@@ -4,6 +4,7 @@
 
 .KDropdown-button {
   display: inline-block;
+  width: 100%;
   align-items: center;
   cursor: pointer;
   font-weight: $semi-bold;
@@ -96,7 +97,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: $z-index-medium;
+  z-index: inherit;
   max-height: 200px;
   border-radius: 4px;
   background-color: $gray-50;
