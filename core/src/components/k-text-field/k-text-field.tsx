@@ -1,4 +1,12 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import {
+  Component,
+  h,
+  Prop,
+  State,
+  Event,
+  EventEmitter,
+  Watch
+} from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -8,7 +16,7 @@ import clsx from 'clsx';
 })
 export class KTextField {
   @Prop() label: string = 'Default';
-  @Prop() value?: string = '';
+  @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;
   @Prop() validationState?: '' | 'success' | 'error' = '';
   @Prop() name?: string = '';
@@ -16,6 +24,8 @@ export class KTextField {
   @Prop() maxLength?: number = 0;
 
   @State() typingCount: number = 0;
+  @State() textAreaEl: HTMLElement;
+  @Event() valueChange: EventEmitter;
 
   private isSuccess = () => {
     return this.validationState === 'success';
@@ -25,26 +35,37 @@ export class KTextField {
     return this.validationState === 'error';
   };
 
-  handleChange(e) {
-    const chars = e.target.value;
+  @Watch('value')
+  valueChanged(newValue: string, oldValue: string) {
+    if (newValue !== oldValue) {
+      this.textAreaEl['value'] = newValue;
+    }
+  }
+
+  handleChange(ev) {
+    const chars = ev?.target?.value;
     this.typingCount = chars.length;
+
+    this.value = chars;
+    this.valueChange.emit(this.value);
   }
 
   render() {
     return (
       <div class="KTextField">
         <textarea
-          onInput={(event) => this.handleChange(event)}
+          ref={(el: HTMLElement) => (this.textAreaEl = el)}
           class={clsx({
             '--is-valid': this.isSuccess(),
             '--is-invalid': this.isError()
           })}
           placeholder=" "
           id="k-text-field"
-          value={this.value}
           name={this.name}
           disabled={this.disabled}
           maxLength={this.maxLength > 0 ? this.maxLength : null}
+          value={this.value}
+          onInput={(event) => this.handleChange(event)}
         ></textarea>
         <label
           htmlFor="k-text-field"

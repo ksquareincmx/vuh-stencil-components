@@ -1,134 +1,107 @@
-:host {
-  display: block;
+:host(.KDropdown) {
+  position: relative;
 }
 
-.KButton {
-  width: 100%;
-  font-weight: $semi-bold;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  justify-content: center;
+.KDropdown-button {
+  display: inline-block;
   align-items: center;
+  cursor: pointer;
+  font-weight: $semi-bold;
+  border-radius: 4px;
+  padding: 8px;
+  border: none;
 
-  /**
-      * Colors
-      **/
+  & > .KDropdown-icon {
+    position: relative;
+    top: 2px;
+    padding-left: 8px;
+  }
 
   &.primary {
     background: color(primary-color) 0% 0% no-repeat padding-box;
-    border: none;
     color: white;
     transition: 0.3s;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: color(primary-300);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
-    &:active {
+    &:focus {
       background-color: color(primary-700);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
+      outline: none;
     }
 
     &:disabled {
+      cursor: not-allowed;
       background-color: $gray-100;
       color: $gray-200;
-      cursor: not-allowed;
       box-shadow: none;
     }
   }
 
   &.secondary {
     background: white 0% 0% no-repeat padding-box;
-    border: 1px solid color(primary-color);
-    border-radius: 4px;
     color: color(primary-color);
+    border: 1px solid color(primary-color);
     transition: 0.3s;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
       color: color(primary-300);
     }
 
-    &:active {
-      background-color: rgba($color: color(primary-300-rgb), $alpha: 0.2);
+    &:focus {
+      background-color: rgba($color: color(primary-300-rgb), $alpha: 0.3);
       color: color(primary-300);
+      outline: none;
     }
 
     &:disabled {
+      cursor: not-allowed;
       border-color: $gray-100;
       color: $gray-200;
       background-color: $gray-50;
-      cursor: not-allowed;
+      box-shadow: none;
     }
   }
 
   &.terciary {
     background: white 0% 0% no-repeat padding-box;
-    border: none;
     color: color(primary-800);
-    transition: 0.4s;
+    transition: 0.3s;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
-      color: color(primary-800);
     }
 
-    &:active {
+    &:focus {
       background-color: rgba($color: color(primary-300-rgb), $alpha: 0.3);
-      color: color(primary-800);
+      outline: none;
     }
 
     &:disabled {
-      background-color: $gray-50;
-      color: $gray-100;
       cursor: not-allowed;
+      color: $gray-100;
+      background-color: $gray-50;
     }
   }
+}
 
-  /**
-      * Shape
-      **/
-
-  &.full {
-    border-radius: none;
-  }
-
-  &.round {
-    border-radius: 5rem;
-    overflow: hidden;
-    min-width: 56px;
-  }
-
-  &.smooth {
-    border-radius: 4px;
-  }
-
-  /**
-      * Size
-      **/
-
-  &.large {
-    padding: 12px;
-  }
-
-  &.medium {
-    padding: 8px;
-  }
-
-  &.small {
-    padding: 4px;
-  }
-
-  /**
-      * Elevation
-      **/
-
-  &.elevation {
-    box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
-  }
+.KDropdown-options {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: $z-index-medium;
+  max-height: 200px;
+  border-radius: 4px;
+  background-color: $gray-50;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+  width: 100%;
+  overflow-y: auto;
 }

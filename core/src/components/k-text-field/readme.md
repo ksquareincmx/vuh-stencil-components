@@ -1,7 +1,5 @@
 # k-text-field
 
-
-
 <!-- Auto Generated Below -->
 
 
@@ -16,6 +14,13 @@
 | `name`            | `name`             |             | `string`                     | `''`        |
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |
+
+
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `valueChange` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------
