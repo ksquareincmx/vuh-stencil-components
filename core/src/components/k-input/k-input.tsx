@@ -1,4 +1,12 @@
-import { Component, h, Prop } from '@stencil/core';
+import {
+  Component,
+  h,
+  Prop,
+  Event,
+  EventEmitter,
+  Watch,
+  State
+} from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -9,12 +17,15 @@ import clsx from 'clsx';
 export class KInput {
   @Prop() type: string = 'text';
   @Prop() label: string = 'Default';
-  @Prop() value?: string = '';
+  @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;
   @Prop() validationState?: '' | 'success' | 'error' = '';
   @Prop() name?: string = '';
   @Prop() helperText?: string = '';
   @Prop() maxLength?: number = 0;
+
+  @State() inputEl: HTMLElement;
+  @Event() valueChange: EventEmitter;
 
   private isSuccess = () => {
     return this.validationState === 'success';
@@ -24,21 +35,36 @@ export class KInput {
     return this.validationState === 'error';
   };
 
+  @Watch('value')
+  valueChanged(newValue: string, oldValue: string) {
+    if (newValue !== oldValue) {
+      this.inputEl['value'] = newValue;
+    }
+  }
+
+  inputChanged(ev: any) {
+    const chars = ev?.target?.value;
+    this.value = chars;
+    this.valueChange.emit(this.value);
+  }
+
   render() {
     return (
       <div class="KInput">
         <input
+          ref={(el: HTMLElement) => (this.inputEl = el)}
           class={clsx({
             '--is-valid': this.isSuccess(),
             '--is-invalid': this.isError()
           })}
           id="k-input"
           placeholder=" "
-          value={this.value}
           disabled={this.disabled}
           type={this.type}
           name={this.name}
           maxLength={this.maxLength > 0 ? this.maxLength : null}
+          value={this.value}
+          onInput={this.inputChanged.bind(this)}
         />
         <label
           htmlFor="k-input"

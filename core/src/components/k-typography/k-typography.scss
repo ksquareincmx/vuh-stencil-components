@@ -39,51 +39,51 @@
 }
 
 :host(.gray500) {
-  color: color(gray-500) !important;
+  color: $gray-500 !important;
 }
 
 :host(.gray400) {
-  color: color(gray-400) !important;
+  color: $gray-400 !important;
 }
 
 :host(.gray300) {
-  color: color(gray-300) !important;
+  color: $gray-300 !important;
 }
 
 :host(.gray200) {
-  color: color(gray-200) !important;
+  color: $gray-200 !important;
 }
 
 :host(.gray100) {
-  color: color(gray-100) !important;
+  color: $gray-100 !important;
 }
 
 :host(.gray50) {
-  color: color(gray-50) !important;
+  color: $gray-50 !important;
 }
 
 :host(.error200) {
-  color: color(error-200) !important;
+  color: $error-200 !important;
 }
 
 :host(.error100) {
-  color: color(error-100) !important;
+  color: $error-100 !important;
 }
 
 :host(.warning200) {
-  color: color(warning-200) !important;
+  color: $warning-200 !important;
 }
 
 :host(.warning100) {
-  color: color(warning-100) !important;
+  color: $warning-100 !important;
 }
 
 :host(.success200) {
-  color: color(success-200) !important;
+  color: $success-200 !important;
 }
 
 :host(.success100) {
-  color: color(success-100) !important;
+  color: $success-100 !important;
 }
 
 ::slotted(h1),

@@ -19,6 +19,13 @@
 | `value`           | `value`            |             | `string`                     | `''`        |
 
 
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `valueChange` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Depends on

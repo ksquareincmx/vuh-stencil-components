@@ -1,0 +1,21 @@
+.KDropdownItem {
+  display: block;
+  cursor: pointer;
+  border-bottom: 1px solid $gray-100;
+  padding: 8px;
+  min-width: max-content;
+  user-select: none;
+
+  .KDropdownItem-input {
+    display: none;
+  }
+
+  .KDropdownItem-label {
+    font-weight: $semi-bold;
+    color: $gray-400;
+  }
+}
+
+.KDropdownItem-disabled {
+  cursor: not-allowed;
+}

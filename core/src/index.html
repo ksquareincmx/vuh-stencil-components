@@ -165,7 +165,6 @@
     </k-drawer>
 
     <div style="margin: 0 32px;">
-    
       <section>
         <k-typography>
           <h1>Input Fields</h1>
@@ -422,8 +421,6 @@
           Disabled & Checked
         </k-checkbox>
       </section>
-    </div>
-  
       <br />
   
       <div style="display: flex; flex-wrap: wrap;">
@@ -500,16 +497,17 @@
           Disabled
           <k-button color="primary" elevation disabled></k-button>
         </section>
-  
+
         <k-typography style="width: 100%;">
           <h3>Dropdown Button</h3>
         </k-typography>
         <section style="margin: 24px;">
-          <k-select>
-            <k-select-option value="01">Item 1</k-select-option>
-            <k-select-option value="02">Item 2</k-select-option>
-            <k-select-option value="03">Item 3</k-select-option>
-          </k-select>
+          <k-dropdown>
+            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
+            <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
+            <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
+          </k-dropdown>
         </section>
       </div>
   
@@ -1008,7 +1006,9 @@
           </k-column>
         </k-row>
       </section>
-
-    <br />
+  
+      <br />
+    </div>
+  
   </body>
 </html>
