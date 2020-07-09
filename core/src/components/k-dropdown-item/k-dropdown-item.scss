@@ -6,6 +6,10 @@
   min-width: max-content;
   user-select: none;
 
+  &:hover  {
+    background-color: rgba($color: $gray-100, $alpha: 0.3);
+  }
+
   .KDropdownItem-input {
     display: none;
   }
