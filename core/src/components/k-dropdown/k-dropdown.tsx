@@ -7,6 +7,7 @@ import {
   State,
   Prop
 } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'k-dropdown',
@@ -23,8 +24,13 @@ export class KDropdown {
   @State() label: string = 'Default';
   @State() currentChecked: string = '';
 
-  @Prop() color: 'primary' | 'secondary' | 'terciary' = 'primary';
   @Prop() disabled: boolean = false;
+  @Prop() type?: 'button' | 'input' = 'button';
+  // prop button
+  @Prop() color: 'primary' | 'secondary' | 'terciary' = 'primary';
+  // prop input
+  @Prop() validationState?: '' | 'success' | 'error' = '';
+  @Prop() helperText?: string = '';
 
   componentWillLoad() {
     this.slotted = this.el.children;
@@ -77,17 +83,52 @@ export class KDropdown {
     }
   }
 
+  private isTypeButton = () => {
+    return this.type === 'button';
+  };
+
+  private isTypeInput = () => {
+    return this.type === 'input';
+  };
+
+  private isSuccess = () => {
+    return this.validationState === 'success';
+  };
+
+  private isError = () => {
+    return this.validationState === 'error';
+  };
+
   render() {
     return (
       <Host class="KDropdown">
         <button
-          class={`KDropdown-button ${this.color}`}
+          class={clsx(
+            'KDropdown-dispatcher',
+            {
+              'KDropdown-input': this.isTypeInput(),
+              'KDropdown-button': this.isTypeButton(),
+              '--is-valid': this.isTypeInput() && this.isSuccess(),
+              '--is-invalid': this.isTypeInput() && this.isError()
+            },
+            [this.isTypeButton() && this.color]
+          )}
           disabled={this.disabled}
           onClick={this.toggleShowOptions.bind(this)}
         >
-          {this.label}
-          <span class="KDropdown-icon vuh-keyboard_arrow_down" />
+          <span>{this.label}</span>
+          <i class="KDropdown-icon vuh-keyboard_arrow_down"></i>
         </button>
+        {this.helperText && this.isTypeInput() && (
+          <span
+            class={clsx('KDropdown-input-helper-text', {
+              '--is-valid': this.isSuccess(),
+              '--is-invalid': this.isError()
+            })}
+          >
+            {this.helperText}
+          </span>
+        )}
         <div
           ref={(el: HTMLElement) => (this.optionsEl = el)}
           class="KDropdown-options"

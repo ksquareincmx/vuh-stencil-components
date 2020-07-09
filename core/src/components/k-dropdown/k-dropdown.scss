@@ -1,22 +1,70 @@
 :host(.KDropdown) {
   position: relative;
+  width: 100%;
 }
 
-.KDropdown-button {
+.KDropdown-dispatcher {
   display: inline-block;
-  width: 100%;
-  align-items: center;
-  cursor: pointer;
-  font-weight: $semi-bold;
   border-radius: 4px;
   padding: 8px;
+  cursor: pointer;
+  outline: none;
   border: none;
+  width: 100%;
 
   & > .KDropdown-icon {
     position: relative;
     top: 2px;
     padding-left: 8px;
   }
+}
+
+.KDropdown-input {
+  background-color: transparent;
+  border: 1px solid $gray-200;
+  color: $gray-200;
+
+  & > .KDropdown-icon {
+    color: color(primary-color);
+    font-weight: bold;
+  }
+
+  &:active {
+    border: 1px solid color(primary-color);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray-50;
+    color: $gray-200;
+    box-shadow: none;
+
+    & > .KDropdown-icon {
+      color: $gray-200;
+    }
+  }
+
+  &.--is-valid {
+    border: 1px solid $success-200;
+    color: $success-100;
+
+    & > .KDropdown-icon {
+      color: $success-100;
+    }
+  }
+
+  &.--is-invalid {
+    border: 1px solid $error-200;
+    color: $error-100;
+
+    & > .KDropdown-icon {
+      color: $error-100;
+    }
+  }
+}
+
+.KDropdown-button {
+  font-weight: $semi-bold;
 
   &.primary {
     background: color(primary-color) 0% 0% no-repeat padding-box;
@@ -90,19 +138,32 @@
   }
 }
 
+.KDropdown-input-helper-text {
+  font-size: 12px;
+  color: $gray-400;
+  margin-top: 8px;
+
+  &.--is-valid {
+    color: $success-200;
+  }
+
+  &.--is-invalid {
+    color: $error-200;
+  }
+}
+
 .KDropdown-options {
   display: none;
   position: absolute;
   top: 36px;
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: inherit;
-  max-height: 200px;
-  border-radius: 4px;
-  background-color: $gray-50;
-  box-shadow: 0px 3px 6px #00000029;
   border-radius: 4px;
   width: 100%;
   overflow-y: auto;
+  z-index: $z-index-high;
+  max-height: 200px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: $gray-50;
 }
