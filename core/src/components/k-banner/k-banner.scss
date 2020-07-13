@@ -1,0 +1,44 @@
+:host(.KBanner) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: $gray-50;
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.KBanner-icon {
+  flex-basis: 10%;
+  font-size: 32px;
+  text-align: center;
+
+  &.--is-success {
+    color: $success-200;
+  }
+
+  &.--is-error {
+    color: $error-200;
+  }
+}
+
+.KBanner-text {
+  color: $gray-500;
+  font-weight: $semi-bold;
+  flex-basis: 90%;
+
+  @include desktop {
+    flex-basis: 80%;
+  }
+}
+
+.KBanner-action {
+  display: none;
+
+  @include desktop {
+    display: block;
+    flex-basis: 10%;
+    background-color: transparent;
+  }
+}
