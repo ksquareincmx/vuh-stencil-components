@@ -41,7 +41,7 @@
   }
 
   &.secondary {
-    background: white 0% 0% no-repeat padding-box;
+    background: transparent;
     border: 1px solid color(primary-color);
     border-radius: 4px;
     color: color(primary-color);
@@ -67,7 +67,7 @@
   }
 
   &.terciary {
-    background: white 0% 0% no-repeat padding-box;
+    background: transparent;
     border: none;
     color: color(primary-800);
     transition: 0.4s;
