@@ -19,7 +19,7 @@ export class KBanner {
   };
 
   private renderP = () => {
-    if (this.el.children.item(0)?.tagName === 'P') {
+    if (this.el.children.item(0)?.tagName === 'K-BANNER-TEXT') {
       return this.el.children.item(0)?.innerHTML;
     } else {
       return this.el.children.item(1)?.innerHTML;
