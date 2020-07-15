@@ -1,0 +1,25 @@
+:host(.KCollapseItem) {
+  display: block;
+  width: 100%;
+}
+
+.KCollapseItem-button {
+  border: none;
+  background-color: $gray-50;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  &:hover  {
+    background-color: color(primary-400);
+    color: white;
+  }
+
+  &:disabled {
+    color: white;
+    cursor: not-allowed;
+    background-color: $gray-100;
+  }
+}

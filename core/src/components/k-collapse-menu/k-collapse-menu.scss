@@ -1,0 +1,41 @@
+:host(.KCollapseMenu) {
+  position: relative;
+  display: inline-block;
+}
+
+:host(.KCollapseMenu:hover) {
+  > .KCollapseMenu-list {
+    display: block;
+  }
+}
+
+.KCollapseMenu-parent {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.KCollapseMenu-list {
+  display: none;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.3);
+  min-width: 150px;
+  width: max-content;
+  position: absolute;
+  z-index: $z-index-high;
+  transition: 0.3s;
+  max-height: 200px;
+  overflow-y: scroll;
+
+  &.KCollapseMenu-list-left {
+    right: 0;
+  }
+
+  &.KCollapseMenu-list-right {
+    left: 0;
+  }
+
+  &.KCollapseMenu-list--is-opened {
+    display: block;
+  }
+}
