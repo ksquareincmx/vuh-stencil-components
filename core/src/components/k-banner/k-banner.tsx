@@ -45,7 +45,7 @@ export class KBanner {
             '--is-error': this.isError()
           })}
         ></i>
-        <p class="KBanner-text">{this.renderP()}</p>
+        <label class="KBanner-text">{this.renderP()}</label>
         <div class="KBanner-action" innerHTML={this.renderButton()}></div>
       </Host>
     );
