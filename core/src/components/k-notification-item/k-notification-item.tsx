@@ -18,7 +18,7 @@ export class KNotificationItem {
         <div class="KNotificationItem-header">
           <div class="KNotificationItem-header-left">
             <k-icon
-              name="notifications_active"
+              name="notifications-active"
               size="medium"
               style={{ color: this.alertColor }}
             ></k-icon>
@@ -34,7 +34,7 @@ export class KNotificationItem {
                 '--read': this.isRead,
                 '--unread': !this.isRead
               })}
-              name={this.isRead ? 'remove_red_eye' : 'visibility_off'}
+              name={this.isRead ? 'remove-red-eye' : 'visibility-off'}
             ></k-icon>
             <span
               class={clsx('KNotificationItem-header-right-status', {

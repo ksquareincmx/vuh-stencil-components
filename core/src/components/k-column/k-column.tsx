@@ -79,8 +79,6 @@ export class KColumn {
     | '11'
     | '12';
 
-  @Prop() color?: string;
-
   render() {
     return (
       <Host

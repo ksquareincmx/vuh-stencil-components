@@ -1,0 +1,20 @@
+:host(.KTable) {
+  display: block;
+  overflow: auto;
+  padding: 24px 0;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.3);
+}
+
+.KTable-wrapper {
+  min-width: calc((100% / 4) * var(--data-count));
+
+  @include tablet {
+    min-width: calc((100% / 8) * var(--data-count));
+  }
+
+  @include desktop {
+    min-width: calc((100% / 10) * var(--data-count));
+  }
+}

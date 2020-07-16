@@ -1,0 +1,224 @@
+@import '../../styles/partials/breakpoints';
+
+:host(.KTableHeaderColumn) {
+  padding: 16px 8px;
+  height: 52px; // Used so the floating text is displayed correctly.
+
+  .KTableHeaderColumn-content {
+    display: flex;
+    align-items: center;
+    color: rgba($color: #000000, $alpha: 0.6);
+    font-size: 16px;
+    font-weight: $semi-bold;
+
+    &:hover {
+      + .KTableHeaderColumn-floating-text {
+        display: table;
+        transition: 0.3s;
+      }
+    }
+
+    .KTableHeaderColumn-text {
+      overflow: hidden;
+      white-space: nowrap;
+      word-break: break-word;
+      text-overflow: ellipsis;
+    }
+
+    .KTableHeaderColumn-icon {
+      cursor: pointer;
+      color: $primary-100;
+      padding-left: 4px;
+
+      :last-child {
+        position: relative;
+        right: 16px;
+      }
+    }
+
+    .--is-disabled {
+      cursor: not-allowed;
+      color: $gray-200;
+    }
+
+    .--is-active {
+      color: $primary-600;
+    }
+
+    .--is-sorted-asc {
+      :first-child {
+        color: $primary-600;
+      }
+    }
+
+    .--is-sorted-desc {
+      :last-child {
+        color: $primary-600;
+      }
+    }
+  }
+
+  .KTableHeaderColumn-floating-text {
+    display: none;
+    font-size: 14px;
+    padding: 8px;
+    background-color: $gray-300;
+    border-radius: 4px;
+    color: white;
+    position: relative;
+    top: 4px;
+    z-index: $z-index-medium;
+    width: fit-content;
+  }
+}
+
+:host(.KTableHeaderColumn--col-1) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 1);
+  flex-basis: calc(100% / 4 * 1);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 1);
+    flex-basis: calc(100% / 8 * 1);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 1);
+    flex-basis: calc(100% / 10 * 1);
+  }
+}
+:host(.KTableHeaderColumn--col-2) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 2);
+  flex-basis: calc(100% / 4 * 2);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 2);
+    flex-basis: calc(100% / 8 * 2);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 2);
+    flex-basis: calc(100% / 10 * 2);
+  }
+}
+:host(.KTableHeaderColumn--col-3) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 3);
+  flex-basis: calc(100% / 4 * 3);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 3);
+    flex-basis: calc(100% / 8 * 3);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 3);
+    flex-basis: calc(100% / 10 * 3);
+  }
+}
+:host(.KTableHeaderColumn--col-4) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 4);
+    flex-basis: calc(100% / 8 * 4);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 4);
+    flex-basis: calc(100% / 10 * 4);
+  }
+}
+:host(.KTableHeaderColumn--col-5) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 5);
+    flex-basis: calc(100% / 8 * 5);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 5);
+    flex-basis: calc(100% / 10 * 5);
+  }
+}
+:host(.KTableHeaderColumn--col-6) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 6);
+    flex-basis: calc(100% / 8 * 6);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 6);
+    flex-basis: calc(100% / 10 * 6);
+  }
+}
+:host(.KTableHeaderColumn--col-7) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 7);
+    flex-basis: calc(100% / 8 * 7);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 7);
+    flex-basis: calc(100% / 10 * 7);
+  }
+}
+:host(.KTableHeaderColumn--col-8) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 8);
+    flex-basis: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 8);
+    flex-basis: calc(100% / 10 * 8);
+  }
+}
+:host(.KTableHeaderColumn--col-9) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 8);
+    flex-basis: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 9);
+    flex-basis: calc(100% / 10 * 9);
+  }
+}
+:host(.KTableHeaderColumn--col-10) {
+  min-width: 0;
+  max-width: calc(100% / 4 * 4);
+  flex-basis: calc(100% / 4 * 4);
+
+  @include small-tablet {
+    max-width: calc(100% / 8 * 8);
+    flex-basis: calc(100% / 8 * 8);
+  }
+
+  @include desktop {
+    max-width: calc(100% / 10 * 10);
+    flex-basis: calc(100% / 10 * 10);
+  }
+}

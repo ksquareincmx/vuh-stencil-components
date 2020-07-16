@@ -1,0 +1,16 @@
+:host(.KTableRow) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  padding-left: 8px;
+
+  @include tablet {
+    padding-left: 16px;
+  }
+}
+
+:host(.KTableRow-border) {
+  border-top: 1px solid $gray-100;
+  border-bottom: 1px solid $gray-100;
+}
