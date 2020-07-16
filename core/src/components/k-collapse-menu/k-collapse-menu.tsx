@@ -9,8 +9,10 @@ import clsx from 'clsx';
 export class KCollapseMenu {
   @Element() el?: HTMLElement;
   @State() children?: any;
+  @State() menuEl?: HTMLElement;
   @State() hasContent: boolean = false;
   @State() showMenuList: boolean = false;
+  @State() isOpenByClick: boolean = false;
 
   @Prop() position: 'right' | 'left' = 'right';
 
@@ -22,11 +24,27 @@ export class KCollapseMenu {
     this.hasContent =
       this.children.namedItem('kCollapseParent') !== null &&
       this.children.namedItem('kCollapseList') !== null;
+
+    this.menuEl.addEventListener('mouseover', () => {
+      this.showMenuList = true;
+    });
+
+    this.menuEl.addEventListener('mouseout', () => {
+      if (!this.isOpenByClick) {
+        this.showMenuList = false;
+      }
+    });
+  }
+
+  disconnectedCallback() {
+    this.menuEl.removeEventListener('mouseover', null);
+    this.menuEl.removeEventListener('mouseout', null);
   }
 
   renderParent() {
     return (
       <div
+        onClick={this.handleOpenMenu.bind(this)}
         class="KCollapseMenu-parent"
         innerHTML={this.children.namedItem('kCollapseParent')?.innerHTML}
       ></div>
@@ -35,8 +53,10 @@ export class KCollapseMenu {
   renderList() {
     return (
       <div
+        onClick={this.handleCloseMenu.bind(this)}
         class={clsx(`KCollapseMenu-list KCollapseMenu-list-${this.position}`, {
-          'KCollapseMenu-list--is-opened': this.showMenuList
+          'KCollapseMenu-list--is-opened':
+            this.showMenuList || this.isOpenByClick
         })}
         innerHTML={this.children.namedItem('kCollapseList')?.innerHTML}
       ></div>
@@ -44,14 +64,19 @@ export class KCollapseMenu {
   }
 
   handleOpenMenu() {
-    this.showMenuList = !this.showMenuList;
+    this.isOpenByClick = !this.isOpenByClick;
+  }
+
+  handleCloseMenu() {
+    this.showMenuList = false;
+    this.isOpenByClick = false;
   }
 
   render() {
     return (
       <Host
+        ref={(el) => (this.menuEl = el)}
         class={clsx('KCollapseMenu', [!this.hasContent])}
-        onClick={this.handleOpenMenu.bind(this)}
       >
         {this.renderParent()}
         {this.renderList()}
