@@ -3,12 +3,6 @@
   display: inline-block;
 }
 
-:host(.KCollapseMenu:hover) {
-  > .KCollapseMenu-list {
-    display: block;
-  }
-}
-
 .KCollapseMenu-parent {
   display: inline-block;
   cursor: pointer;
