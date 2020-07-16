@@ -92,11 +92,11 @@ export class KInput {
           })}
         >
           {this.isSuccess() && (
-            <k-icon size="medium" name="check_circle"></k-icon>
+            <k-icon size="medium" name="check-circle"></k-icon>
           )}
 
           {this.isError() && (
-            <k-icon size="medium" name="alert_circle"></k-icon>
+            <k-icon size="medium" name="alert-circle"></k-icon>
           )}
         </div>
       </div>

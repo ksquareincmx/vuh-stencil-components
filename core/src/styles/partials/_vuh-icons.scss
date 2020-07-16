@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'vuh-icons';
+  font-family: 'VuhIcons';
   src: url("#{get-font($vuh-icons-font, 'vuh-icons-woff2')}") format('woff2'),
     url("#{get-font($vuh-icons-font, 'vuh-icons-woff')}") format('woff'),
     url("#{get-font($vuh-icons-font, 'vuh-icons-ttf')}") format('truetype');
@@ -11,7 +11,7 @@
 [class^='vuh-'],
 [class*=' vuh-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'vuh-icons' !important;
+  font-family: 'VuhIcons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -24,147 +24,153 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.vuh-add_circle:before {
-  content: '\e914';
-}
-.vuh-bookmarks:before {
-  content: '\e92d';
-}
-.vuh-dashboard:before {
-  content: '\e92e';
-}
-.vuh-alert_circle:before {
+.vuh-add-circle:before {
   content: '\e900';
 }
-.vuh-assistant:before {
+.vuh-alert-circle:before {
   content: '\e901';
 }
-.vuh-attachment:before {
+.vuh-assistant:before {
   content: '\e902';
 }
-.vuh-bookmark_border:before {
+.vuh-attachment:before {
   content: '\e903';
 }
-.vuh-bookmark:before {
+.vuh-bookmark-border:before {
   content: '\e904';
 }
-.vuh-cached:before {
+.vuh-bookmark:before {
   content: '\e905';
 }
-.vuh-check_circle:before {
+.vuh-bookmarks:before {
   content: '\e906';
 }
-.vuh-close:before {
+.vuh-cached:before {
   content: '\e907';
 }
-.vuh-cloud_upload:before {
+.vuh-check-circle:before {
   content: '\e908';
 }
-.vuh-colorize:before {
+.vuh-close:before {
   content: '\e909';
 }
-.vuh-delete:before {
+.vuh-cloud-upload:before {
   content: '\e90a';
 }
-.vuh-done:before {
+.vuh-colorize:before {
   content: '\e90b';
 }
-.vuh-drag_indicator:before {
+.vuh-dashboard:before {
   content: '\e90c';
 }
-.vuh-edit:before {
+.vuh-delete:before {
   content: '\e90d';
 }
-.vuh-event:before {
+.vuh-done:before {
   content: '\e90e';
 }
-.vuh-file_copy:before {
+.vuh-drag-indicator:before {
   content: '\e90f';
 }
-.vuh-finish_1:before {
+.vuh-edit:before {
   content: '\e910';
 }
-.vuh-finish_2:before {
+.vuh-event:before {
   content: '\e911';
 }
-.vuh-finish_3:before {
+.vuh-file-copy:before {
   content: '\e912';
 }
-.vuh-flip_camera_ios:before {
+.vuh-finish-1:before {
   content: '\e913';
 }
-.vuh-school:before {
-  content: '\e92f';
+.vuh-finish-2:before {
+  content: '\e914';
 }
-.vuh-highlight_off:before {
+.vuh-finish-3:before {
   content: '\e915';
 }
-.vuh-info:before {
+.vuh-flip-camera-ios:before {
   content: '\e916';
 }
-.vuh-insert_drive_file:before {
+.vuh-highlight-off:before {
   content: '\e917';
 }
-.vuh-keyboard_arrow_down:before {
+.vuh-info:before {
   content: '\e918';
 }
-.vuh-keyboard_arrow_left:before {
+.vuh-insert-drive-file:before {
   content: '\e919';
 }
-.vuh-keyboard_arrow_right:before {
+.vuh-keyboard-arrow-down:before {
   content: '\e91a';
 }
-.vuh-keyboard_arrow_up:before {
+.vuh-keyboard-arrow-left:before {
   content: '\e91b';
 }
-.vuh-menu:before {
+.vuh-keyboard-arrow-right:before {
   content: '\e91c';
 }
-.vuh-network_wired:before {
+.vuh-keyboard-arrow-up:before {
   content: '\e91d';
 }
-.vuh-notifications_active:before {
+.vuh-menu:before {
   content: '\e91e';
 }
-.vuh-notifications:before {
+.vuh-network-wired:before {
   content: '\e91f';
 }
-.vuh-person:before {
+.vuh-notifications-active:before {
   content: '\e920';
 }
-.vuh-photo_camera:before {
+.vuh-notifications:before {
   content: '\e921';
 }
-.vuh-playlist_add_check:before {
+.vuh-person:before {
   content: '\e922';
 }
-.vuh-question_answer:before {
+.vuh-photo-camera:before {
   content: '\e923';
 }
-.vuh-remove_red_eye:before {
+.vuh-playlist-add-check:before {
   content: '\e924';
 }
-.vuh-ribbon:before {
+.vuh-question-answer:before {
   content: '\e925';
 }
-.vuh-search:before {
+.vuh-remove-red-eye:before {
   content: '\e926';
 }
-.vuh-settings:before {
+.vuh-ribbon:before {
   content: '\e927';
 }
-.vuh-supervised_user_circle:before {
+.vuh-school:before {
   content: '\e928';
 }
-.vuh-swap_vert:before {
+.vuh-search:before {
   content: '\e929';
 }
-.vuh-tune:before {
+.vuh-settings:before {
   content: '\e92a';
 }
-.vuh-view_week:before {
+.vuh-supervised-user-circle:before {
   content: '\e92b';
 }
-.vuh-visibility_off:before {
+.vuh-swap-vert-down:before {
   content: '\e92c';
+}
+.vuh-swap-vert-up:before {
+  content: '\e92d';
+}
+.vuh-swap-vert:before {
+  content: '\e92e';
+}
+.vuh-tune:before {
+  content: '\e92f';
+}
+.vuh-view-week:before {
+  content: '\e930';
+}
+.vuh-visibility-off:before {
+  content: '\e931';
 }

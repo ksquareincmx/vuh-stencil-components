@@ -117,7 +117,7 @@ export class KDropdown {
           onClick={this.toggleShowOptions.bind(this)}
         >
           <span>{this.label}</span>
-          <i class="KDropdown-icon vuh-keyboard_arrow_down"></i>
+          <i class="KDropdown-icon vuh-keyboard-arrow-down"></i>
         </button>
         {this.helperText && this.isTypeInput() && (
           <span
