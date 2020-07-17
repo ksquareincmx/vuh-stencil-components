@@ -28,25 +28,33 @@ export class KBanner {
 
   private renderButton = () => {
     if (this.el.children.item(0)?.tagName === 'K-BUTTON') {
+      this.el.children.item(0)?.setAttribute('slot', 'button');
       return this.el.children.item(0)?.outerHTML;
     } else {
+      this.el.children.item(1)?.setAttribute('slot', 'button');
       return this.el.children.item(1)?.outerHTML;
     }
   };
+
+  componentWillRender() {
+    this.renderButton();
+  }
 
   render() {
     return (
       <Host class="KBanner">
         <i
           class={clsx('KBanner-icon', {
-            'vuh-check_circle': this.isSuccess(),
-            'vuh-alert_circle': this.isError(),
+            'vuh-check-circle': this.isSuccess(),
+            'vuh-alert-circle': this.isError(),
             '--is-success': this.isSuccess(),
             '--is-error': this.isError()
           })}
         ></i>
         <label class="KBanner-text">{this.renderP()}</label>
-        <div class="KBanner-action" innerHTML={this.renderButton()}></div>
+        <div class="KBanner-action">
+          <slot name="button"></slot>
+        </div>
       </Host>
     );
   }
