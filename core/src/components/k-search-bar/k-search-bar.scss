@@ -1,0 +1,190 @@
+.KSearchBar-solid {
+  position: relative;
+
+  .KSearchBar-left {
+    position: absolute;
+    color: color(primary-100);
+    font-weight: $bold;
+    font-size: 32px;
+    left: 4px;
+    bottom: 20%;
+
+    &.KSearchBar-left--is-disabled {
+      color: $gray-200;
+    }
+
+    &.KSearchBar-left--is-highlighted {
+      color: color(primary-color);
+    }
+  }
+
+  .KSearchBar-input {
+    width: 100%;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 4px;
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.1);
+    color: $gray-400;
+    font-weight: $semi-bold;
+    caret-color: color(primary-200);
+    outline: none;
+
+    &:disabled {
+      background-color: $gray-50;
+      cursor: not-allowed;
+    }
+
+    &:disabled:active,
+    &:disabled:focus {
+      border: none;
+    }
+
+    &:disabled:active + .KSearchBar-left,
+    &:disabled:focus + .KSearchBar-left {
+      color: $gray-200;
+    }
+
+    &::placeholder {
+      color: $gray-200;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid color(primary-200);
+    }
+
+    &:focus + .KSearchBar-left,
+    &:active + .KSearchBar-left {
+      color: color(primary-color);
+    }
+  }
+
+  .KSearchBar-right {
+    display: none;
+    position: absolute;
+    color: $gray-400;
+    font-weight: $bold;
+    right: 8px;
+    font-size: 24px;
+    bottom: 25%;
+    cursor: pointer;
+
+    &.KSearchBar-right--is-highlighted {
+      display: block;
+    }
+  }
+}
+
+.KSearchBar-outlined {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 8px;
+  font-size: 14px;
+  overflow: hidden;
+
+  input {
+    width: 100%;
+    border: 1px solid $gray-200;
+    padding: 16px 40px 16px 8px;
+    border-radius: 4px;
+    color: $gray-400;
+    border-top-color: transparent;
+    caret-color: color(primary-300);
+    transition: border 0.2s;
+
+    // placeholder-shown
+    &:not(:focus):placeholder-shown + label {
+      line-height: 68px;
+      font-weight: $regular;
+      font-size: inherit;
+    }
+
+    &:not(:focus):placeholder-shown {
+      border-top-color: $gray-200;
+    }
+
+    &:not(:focus):placeholder-shown + label::before,
+    &:not(:focus):placeholder-shown + label::after {
+      border-top-color: transparent;
+    }
+
+    // focus
+    &:focus {
+      border-color: color(primary-100);
+      border-top-color: transparent;
+      outline: none;
+    }
+
+    &:focus + label {
+      color: color(primary-300);
+    }
+
+    &:focus + label::before,
+    &:focus + label::after {
+      border-top-color: color(primary-100);
+    }
+
+    // disabled
+    &:disabled,
+    &:disabled + label {
+      color: $gray-200;
+      cursor: not-allowed;
+    }
+
+    // focus & active icon
+    &:focus ~ .KSearchBar-icon,
+    &:active ~ .KSearchBar-icon {
+      color: color(primary-color);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    color: $gray-200;
+    font-size: 12px;
+    font-weight: $bold;
+    line-height: 15px;
+    cursor: text;
+    display: flex;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+
+    &::before,
+    &::after {
+      content: '';
+      margin-top: 8px;
+      border-top: 1px solid;
+      border-top-color: $gray-200;
+      min-width: 8px;
+      height: 8px;
+      transition: border-color 0.2s;
+    }
+
+    &::before  {
+      margin-right: 4px;
+      border-radius: 4px 0;
+    }
+
+    &::after {
+      margin-left: 4px;
+      flex-grow: 1;
+      border-radius: 0 4px;
+    }
+  }
+
+  .KSearchBar-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 16%;
+    font-size: 32px;
+    color: color(primary-100);
+
+    &.vuh-close {
+      cursor: pointer;
+    }
+  }
+}
