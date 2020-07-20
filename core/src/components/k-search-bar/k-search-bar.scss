@@ -1,0 +1,76 @@
+.KSearchBar {
+  position: relative;
+
+  .KSearchBar-left {
+    position: absolute;
+    color: color(primary-100);
+    font-weight: $bold;
+    font-size: 32px;
+    left: 4px;
+    bottom: 20%;
+
+    &.KSearchBar-left--is-disabled {
+      color: $gray-200;
+    }
+
+    &.KSearchBar-left--is-highlighted {
+      color: color(primary-color);
+    }
+  }
+
+  .KSearchBar-input {
+    width: 100%;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 4px;
+    background-color: rgba($color: color(primary-100-rgb), $alpha: 0.1);
+    color: $gray-400;
+    font-weight: $semi-bold;
+    caret-color: color(primary-200);
+    outline: none;
+
+    &:disabled {
+      background-color: $gray-50;
+      cursor: not-allowed;
+    }
+
+    &:disabled:active,
+    &:disabled:focus {
+      border: none;
+    }
+
+    &:disabled:active + .KSearchBar-left,
+    &:disabled:focus + .KSearchBar-left {
+      color: $gray-200;
+    }
+
+    &::placeholder {
+      color: $gray-200;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid color(primary-200);
+    }
+
+    &:focus + .KSearchBar-left,
+    &:active + .KSearchBar-left {
+      color: color(primary-color);
+    }
+  }
+
+  .KSearchBar-right {
+    display: none;
+    position: absolute;
+    color: $gray-400;
+    font-weight: $bold;
+    right: 8px;
+    font-size: 24px;
+    bottom: 25%;
+    cursor: pointer;
+
+    &.KSearchBar-right--is-highlighted {
+      display: block;
+    }
+  }
+}
