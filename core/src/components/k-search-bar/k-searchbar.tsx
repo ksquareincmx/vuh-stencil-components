@@ -1,6 +1,7 @@
 import {
   Component,
   h,
+  Host,
   Prop,
   State,
   Event,
@@ -15,6 +16,7 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KSearchBar {
+  @Prop() type: 'solid' | 'outlined' = 'solid';
   @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;
   @Prop() name?: string = '';
@@ -45,8 +47,7 @@ export class KSearchBar {
   }
 
   inputChanged(ev: any) {
-    const chars = ev?.target?.value;
-    this.value = chars;
+    this.value = ev?.target?.value;
     this.valueChange.emit(this.value);
   }
 
@@ -56,29 +57,56 @@ export class KSearchBar {
 
   render() {
     return (
-      <div class="KSearchBar">
-        <input
-          ref={(el: HTMLElement) => (this.inputEl = el)}
-          class="KSearchBar-input"
-          placeholder={this.placeholder}
-          disabled={this.disabled}
-          name={this.name}
-          value={this.value}
-          onInput={this.inputChanged.bind(this)}
-        />
-        <i
-          class={clsx('KSearchBar-left vuh-search', {
-            'KSearchBar-left--is-disabled': this.disabled,
-            'KSearchBar-left--is-highlighted': this.hasText
-          })}
-        />
-        <i
-          onClick={this.handleCleanContent.bind(this)}
-          class={clsx('KSearchBar-right vuh-close', {
-            'KSearchBar-right--is-highlighted': this.hasText
-          })}
-        />
-      </div>
+      <Host>
+        {this.type === 'solid' ? (
+          <div class="KSearchBar-solid">
+            <input
+              ref={(el: HTMLElement) => (this.inputEl = el)}
+              class="KSearchBar-input"
+              placeholder={this.placeholder}
+              disabled={this.disabled}
+              name={this.name}
+              value={this.value}
+              onInput={this.inputChanged.bind(this)}
+            />
+            <i
+              class={clsx('KSearchBar-left vuh-search', {
+                'KSearchBar-left--is-disabled': this.disabled,
+                'KSearchBar-left--is-highlighted': this.hasText
+              })}
+            />
+            <i
+              onClick={this.handleCleanContent.bind(this)}
+              class={clsx('KSearchBar-right vuh-close', {
+                'KSearchBar-right--is-highlighted': this.hasText
+              })}
+            />
+          </div>
+        ) : (
+          <div class="KSearchBar-outlined">
+            <input
+              ref={(el: HTMLElement) => (this.inputEl = el)}
+              id="k-search-bar-outlined"
+              placeholder=" "
+              disabled={this.disabled}
+              type={this.type}
+              name={this.name}
+              value={this.value}
+              onInput={this.inputChanged.bind(this)}
+            />
+            <label htmlFor="k-search-bar-outlined">{this.placeholder}</label>
+
+            {!this.hasText ? (
+              <i class={clsx('KSearchBar-icon vuh-search')} />
+            ) : (
+              <i
+                onClick={this.handleCleanContent.bind(this)}
+                class={clsx('KSearchBar-icon vuh-close')}
+              />
+            )}
+          </div>
+        )}
+      </Host>
     );
   }
 }
