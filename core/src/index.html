@@ -15,7 +15,7 @@
   <body>
     <k-menu menu-key="k-menu">
       <k-menu-content>
-        <figure>
+        <figure style="width: 100px;">
           <k-img
             src="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png"
             height="32"
@@ -167,6 +167,28 @@
     <div style="margin: 0 32px;">
       <section>
         <k-typography>
+          <h1>Carousel</h1>
+        </k-typography>
+        <k-carousel style="height: 300px;">
+          <k-carousel-item>
+            <k-img style="width: 100%;" src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"></k-img>
+          </k-carousel-item>
+          <k-carousel-item>
+            <k-img src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"></k-img>
+          </k-carousel-item>
+          <k-carousel-item>
+            <k-img style="width: 100%;" src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"></k-img>
+          </k-carousel-item>
+          <k-carousel-item>
+            <k-img src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"></k-img>
+          </k-carousel-item>
+        </k-carousel>
+      </section>
+
+      <br>
+
+      <section>
+        <k-typography>
           <h1>Search Bar</h1>
         </k-typography>
         Disabled
@@ -188,6 +210,9 @@
         With Text
         <k-search-bar type="outlined" value="searching something ..."></k-search-bar>
       </section>
+
+      <br>
+
       <section>
         <k-typography>
           <h1>Input Fields</h1>
@@ -198,6 +223,8 @@
           <k-input type="tel" label="Phone Number" validation-state="error" value="00000" helper-text="Phone number should have 10 digits"></k-input>
         </k-typography>
       </section>
+
+      <br>
 
       <section>
         <k-typography>
@@ -211,6 +238,8 @@
           <k-text-field label="Biography" validation-state="error" max-length="100" helper-text="this is a text helper" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
         </k-typography>
       </section>
+
+      <br>
 
       <section>
         <k-typography>
@@ -413,6 +442,7 @@
           src="https://media-exp1.licdn.com/dms/image/C4E1BAQGOhOLNnmDazw/company-background_10000/0?e=2159024400&v=beta&t=FLPdAgxuIRlNgMSoohrTA6Meg5SzkPIuNV_qauRDP0Q"
           alt="the-ksquare-group"
           height="300"
+          fit="cover"
         ></k-img>
         <br />
         <k-img
