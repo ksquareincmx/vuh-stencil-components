@@ -22,9 +22,9 @@ export class KRadioButton {
   @Element() el: HTMLElement;
 
   @Prop() name: string = this.inputId;
-  @Prop({ reflect: true }) value: string = this.inputId;
+  @Prop({ mutable: true, reflect: true }) value: string = this.inputId;
   @Prop({ reflect: true }) disabled?: boolean = false;
-  @Prop({ reflect: true }) checked: boolean = false;
+  @Prop({ mutable: true, reflect: true }) checked: boolean = false;
 
   @Event() valueChanged: EventEmitter<{ value: any; id: String }>;
 
@@ -40,10 +40,14 @@ export class KRadioButton {
   private checkedClicked = (e: Event) => {
     e.stopPropagation();
     if (!this.disabled) {
+      this.checked = true;
       this.buttonEl.click(); // Force click on hidden input to update its checked state
       this.el.click(); // will propagate only the click for the complete element
-      this.checked = !this.checked;
     }
+  };
+
+  private inputClicked = (e: Event) => {
+    e.stopPropagation();
   };
 
   render() {
@@ -64,6 +68,7 @@ export class KRadioButton {
             value={this.value}
             checked={this.checked}
             disabled={this.disabled}
+            onClick={this.inputClicked}
           ></input>
           <span class="KRadioButton-checkmark">
             <span class="KRadioButton-dot"></span>

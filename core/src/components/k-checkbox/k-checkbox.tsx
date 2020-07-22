@@ -1,4 +1,12 @@
-import { Component, h, Prop, Event, EventEmitter } from '@stencil/core';
+import {
+  Component,
+  h,
+  Host,
+  Prop,
+  Event,
+  EventEmitter,
+  Element
+} from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -11,6 +19,8 @@ export class KCheckbox {
   @Prop({ mutable: true }) checked?: boolean = false;
   @Prop({ mutable: true }) value?: string;
 
+  @Element() el: HTMLElement;
+
   @Event() valueChange: EventEmitter;
 
   handleChange(ev) {
@@ -18,28 +28,37 @@ export class KCheckbox {
     this.checked = target?.checked;
     this.value = target?.value;
     this.valueChange.emit(this.value);
+    this.el.click();
   }
+
+  private handlePropagation = (e: Event) => {
+    e.stopPropagation();
+  };
 
   render() {
     return (
-      <label
-        class={clsx('KCheckbox', { 'KCheckbox--disabled': this.disabled })}
-      >
-        <input
-          type="checkbox"
-          class="KCheckbox-input"
-          value={this.value}
-          disabled={this.disabled}
-          checked={this.checked}
-          onInput={this.handleChange.bind(this)}
-        />
-        <span class="KCheckbox-checkmark">
-          <span class="KCheckbox-icon vuh-done"></span>
-        </span>
-        <span class="KCheckbox-label">
-          <slot>Default</slot>
-        </span>
-      </label>
+      <Host>
+        <label
+          class={clsx('KCheckbox', { 'KCheckbox--disabled': this.disabled })}
+          onClick={this.handlePropagation}
+        >
+          <input
+            type="checkbox"
+            class="KCheckbox-input"
+            value={this.value}
+            disabled={this.disabled}
+            checked={this.checked}
+            onInput={this.handleChange.bind(this)}
+            onClick={this.handlePropagation}
+          />
+          <span class="KCheckbox-checkmark">
+            <span class="KCheckbox-icon vuh-done"></span>
+          </span>
+          <span class="KCheckbox-label">
+            <slot>Default</slot>
+          </span>
+        </label>
+      </Host>
     );
   }
 }
