@@ -21,7 +21,7 @@ export class KTable {
       columns.push(Number(slottedColumns[i].attributes[0].value));
     }
     const totalColumns = String(columns.reduce((a, b) => a + b, 0));
-    this.tableWrapper.style.setProperty('--data-count', totalColumns);
+    this.tableWrapper?.style.setProperty('--data-count', totalColumns);
   }
 
   render() {
