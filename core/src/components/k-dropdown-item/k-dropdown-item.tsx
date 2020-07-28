@@ -26,7 +26,7 @@ export class KDropdownItem {
   @Event() valueChanged: EventEmitter<{
     id: any;
     value: any;
-    label: string;
+    text: string;
   }>;
   @Event() selectChanged: EventEmitter;
 
@@ -43,7 +43,7 @@ export class KDropdownItem {
     this.valueChanged.emit({
       id: this.el.attributes['k-dropdown-id'].value,
       value: this.value,
-      label: this.el.innerHTML
+      text: this.el.innerHTML
     });
     this.selectChanged.emit(e?.target?.value);
   }
@@ -66,7 +66,7 @@ export class KDropdownItem {
           disabled={this.disabled}
           onInput={this.handleChangeSelected.bind(this)}
         />
-        <span class="KDropdownItem-label">
+        <span class="KDropdownItem-text">
           <slot>Default</slot>
         </span>
       </label>

@@ -3,6 +3,189 @@
   width: 100%;
 }
 
+.KDropdown-label {
+  display: flex;
+  position: absolute;
+  bottom: -7.5px;
+  font-size: 12px;
+  font-weight: $bold;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 29.5px;
+  cursor: pointer;
+
+  &.--is-input {
+    color: $gray-200;
+
+    &.--is-disabled {
+      color: $gray-200;
+
+      &::before,
+      &::after {
+        color: $gray-100;
+      }
+    }
+  }
+
+  &.--is-table {
+    color: $primary-color;
+
+    &::before,
+    &::after {
+      color: $primary-100;
+    }
+
+    &.--is-disabled {
+      color: $gray-200;
+
+      &::before,
+      &::after {
+        color: $gray-100;
+      }
+    }
+  }
+
+  + .KDropdown-input,
+  + .KDropdown-table {
+    border-top-color: transparent;
+
+    &:disabled,
+    &.--is-valid,
+    &.--is-invalid {
+      border-top-color: transparent;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    border: 1px solid transparent;
+    border-top-color: color(gray-200);
+    margin-top: 6px;
+  }
+
+  &::before {
+    margin-right: 4px;
+    border-top-left-radius: 4px;
+    border-left-color: color(gray-200);
+    min-width: 8px;
+  }
+
+  &::after {
+    margin-left: 4px;
+    border-top-right-radius: 4px;
+    border-right-color: color(gray-200);
+    flex-grow: 1;
+  }
+
+  &.--is-active {
+    &.--is-input {
+      color: $primary-color;
+
+      &::before,
+      &::after {
+        color: $primary-100;
+      }
+    }
+
+    &.--is-table {
+      &::before,
+      &::after {
+        color: $primary-color;
+      }
+    }
+
+    + .KDropdown-input,
+    + .KDropdown-table {
+      border-top-color: transparent;
+    }
+
+    &.--is-valid {
+      color: $success-200;
+
+      &::before,
+      &::after {
+        color: $success-100;
+      }
+
+      + .KDropdown-input {
+        border-color: $success-100;
+        border-top-color: transparent;
+      }
+    }
+
+    &.--is-invalid {
+      color: $error-200;
+
+      &::before,
+      &::after {
+        color: $error-100;
+      }
+
+      + .KDropdown-input {
+        border-color: $error-100;
+        border-top-color: transparent;
+      }
+    }
+  }
+
+  &.--is-disabled {
+    color: $gray-100;
+    cursor: not-allowed;
+
+    &::before,
+    &::after {
+      border-top-color: $gray-100;
+    }
+
+    &::before {
+      border-left-color: color(gray-100);
+    }
+
+    &:after {
+      border-right-color: color(gray-100);
+    }
+
+    + .KDropdown-table {
+      border-top-color: transparent;
+    }
+  }
+
+  &.--is-valid {
+    color: $success-200;
+
+    &::before,
+    &::after {
+      border-top-color: color(success-200);
+    }
+
+    &::before {
+      border-left-color: color(success-200);
+    }
+
+    &::after {
+      border-right-color: color(success-200);
+    }
+  }
+
+  &.--is-invalid {
+    color: $error-200;
+
+    &::before,
+    &::after {
+      border-top-color: color(error-200);
+    }
+
+    &::before {
+      border-left-color: color(error-200);
+    }
+
+    &::after {
+      border-right-color: color(error-200);
+    }
+  }
+}
+
 .KDropdown-dispatcher {
   display: inline-block;
   border-radius: 4px;
@@ -19,50 +202,6 @@
   }
 }
 
-.KDropdown-input {
-  background-color: transparent;
-  border: 1px solid $gray-200;
-  color: $gray-200;
-
-  & > .KDropdown-icon {
-    color: color(primary-color);
-    font-weight: bold;
-  }
-
-  &:active {
-    border: 1px solid color(primary-color);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    background-color: $gray-50;
-    color: $gray-200;
-    box-shadow: none;
-
-    & > .KDropdown-icon {
-      color: $gray-200;
-    }
-  }
-
-  &.--is-valid {
-    border: 1px solid $success-200;
-    color: $success-100;
-
-    & > .KDropdown-icon {
-      color: $success-100;
-    }
-  }
-
-  &.--is-invalid {
-    border: 1px solid $error-200;
-    color: $error-100;
-
-    & > .KDropdown-icon {
-      color: $error-100;
-    }
-  }
-}
-
 .KDropdown-button {
   font-weight: $semi-bold;
 
@@ -71,12 +210,17 @@
     color: white;
     transition: 0.3s;
 
+    & > .KDropdown-icon {
+      color: white;
+      font-weight: $bold;
+    }
+
     &:hover {
       background-color: color(primary-300);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
     }
 
-    &:focus {
+    &.--is-active {
       background-color: color(primary-700);
       box-shadow: 3px 4px 6px rgba(0, 0, 0, $alpha: 0.3);
       outline: none;
@@ -87,6 +231,10 @@
       background-color: $gray-100;
       color: $gray-200;
       box-shadow: none;
+
+      & > .KDropdown-icon {
+        color: $gray-200;
+      }
     }
   }
 
@@ -96,12 +244,17 @@
     border: 1px solid color(primary-color);
     transition: 0.3s;
 
+    & > .KDropdown-icon {
+      color: color(primary-color);
+      font-weight: $bold;
+    }
+
     &:hover {
       background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
       color: color(primary-300);
     }
 
-    &:focus {
+    &.--is-active {
       background-color: rgba($color: color(primary-300-rgb), $alpha: 0.3);
       color: color(primary-300);
       outline: none;
@@ -113,6 +266,10 @@
       color: $gray-200;
       background-color: $gray-50;
       box-shadow: none;
+
+      & > .KDropdown-icon {
+        color: $gray-200;
+      }
     }
   }
 
@@ -121,11 +278,16 @@
     color: color(primary-800);
     transition: 0.3s;
 
+    & > .KDropdown-icon {
+      color: color(primary-800);
+      font-weight: $bold;
+    }
+
     &:hover {
       background-color: rgba($color: color(primary-100-rgb), $alpha: 0.2);
     }
 
-    &:focus {
+    &.--is-active {
       background-color: rgba($color: color(primary-300-rgb), $alpha: 0.3);
       outline: none;
     }
@@ -134,6 +296,88 @@
       cursor: not-allowed;
       color: $gray-100;
       background-color: $gray-50;
+    }
+
+    & > .KDropdown-icon {
+      color: color(gray-100);
+    }
+  }
+}
+
+.KDropdown-input {
+  background-color: transparent;
+  border: 1px solid $gray-200;
+  color: $gray-300;
+
+  & > .KDropdown-icon {
+    color: color(primary-color);
+    font-weight: bold;
+  }
+
+  &.--is-active {
+    border: 1px solid color(primary-100);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray-50;
+    border-color: $gray-100;
+    color: $gray-200;
+    box-shadow: none;
+
+    & > .KDropdown-icon {
+      color: $gray-200;
+    }
+  }
+
+  &.--is-valid {
+    border: 1px solid $success-200;
+    color: $success-200;
+
+    &.--is-active {
+      border-color: $success-100;
+    }
+
+    & > .KDropdown-icon {
+      color: $success-200;
+    }
+  }
+
+  &.--is-invalid {
+    border: 1px solid $error-200;
+    color: $error-200;
+
+    &.--is-active {
+      border-color: $error-100;
+    }
+
+    & > .KDropdown-icon {
+      color: $error-200;
+    }
+  }
+}
+
+.KDropdown-table {
+  background-color: transparent;
+  border: 1px solid $primary-100;
+
+  > .KDropdown-icon {
+    color: $primary-color;
+    font-weight: $bold;
+  }
+
+  &.--is-active {
+    border-color: $primary-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $gray-200;
+    border-color: $gray-100;
+    background-color: $gray-50;
+
+    > .KDropdown-icon {
+      color: $gray-200;
     }
   }
 }
