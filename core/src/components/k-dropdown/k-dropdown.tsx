@@ -21,15 +21,17 @@ export class KDropdown {
 
   @State() optionsEl?: HTMLElement;
   @State() value: any | null;
-  @State() label: string = 'Default';
+  @State() text: string = 'Default';
   @State() currentChecked: string = '';
+  @State() active: boolean = false;
 
   @Prop() disabled: boolean = false;
-  @Prop() type?: 'button' | 'input' = 'button';
+  @Prop() variant?: 'button' | 'input' | 'table' = 'button';
   // prop button
   @Prop() color: 'primary' | 'secondary' | 'terciary' = 'primary';
   // prop input
   @Prop() validationState?: '' | 'success' | 'error' = '';
+  @Prop() label: string;
   @Prop() helperText?: string = '';
 
   componentWillLoad() {
@@ -45,13 +47,13 @@ export class KDropdown {
     for (i; i < slottedArray.length; i++) {
       if (this.slotted[i].attributes['checked']) {
         this.value = this.slotted[i].attributes['value'].value;
-        this.label = this.slotted[i].innerHTML;
+        this.text = this.slotted[i].innerHTML;
         this.currentChecked = String(i);
         break;
       } else {
         this.slotted[0].setAttribute('checked', 'true');
         this.value = this.slotted[0].attributes['value'].value;
-        this.label = this.slotted[0].innerHTML;
+        this.text = this.slotted[0].innerHTML;
         this.currentChecked = '0';
       }
     }
@@ -59,7 +61,7 @@ export class KDropdown {
 
   @Listen('valueChanged')
   valueChangedHandler(state) {
-    const { value, label, id } = state.detail;
+    const { value, text, id } = state.detail;
     if (value) {
       const currentValue = this.value;
       const newValue = value;
@@ -68,7 +70,7 @@ export class KDropdown {
 
       if (newValue !== currentValue) {
         this.value = newValue;
-        this.label = label;
+        this.text = text;
       }
     }
     this.slotted[this.currentChecked].removeAttribute('checked');
@@ -78,17 +80,23 @@ export class KDropdown {
   toggleShowOptions() {
     if (this.optionsEl.style.display === 'block') {
       this.optionsEl.style.display = 'none';
-    } else {
+      this.active = false;
+    } else if (!this.disabled) {
       this.optionsEl.style.display = 'block';
+      this.active = true;
     }
   }
 
-  private isTypeButton = () => {
-    return this.type === 'button';
+  private isVariantButton = () => {
+    return this.variant === 'button';
   };
 
-  private isTypeInput = () => {
-    return this.type === 'input';
+  private isVariantInput = () => {
+    return this.variant === 'input';
+  };
+
+  private isVariantTable = () => {
+    return this.variant === 'table';
   };
 
   private isSuccess = () => {
@@ -102,24 +110,41 @@ export class KDropdown {
   render() {
     return (
       <Host class="KDropdown">
+        {this.label && (this.variant === 'input' || this.variant === 'table') && (
+          <label
+            class={clsx('KDropdown-label', {
+              '--is-disabled': this.disabled,
+              '--is-valid': this.isVariantInput() && this.isSuccess(),
+              '--is-invalid': this.isVariantInput() && this.isError(),
+              '--is-active': this.active,
+              '--is-input': this.isVariantInput(),
+              '--is-table': this.isVariantTable()
+            })}
+            onClick={this.toggleShowOptions.bind(this)}
+          >
+            {this.label}
+          </label>
+        )}
         <button
           class={clsx(
             'KDropdown-dispatcher',
             {
-              'KDropdown-input': this.isTypeInput(),
-              'KDropdown-button': this.isTypeButton(),
-              '--is-valid': this.isTypeInput() && this.isSuccess(),
-              '--is-invalid': this.isTypeInput() && this.isError()
+              'KDropdown-input': this.isVariantInput(),
+              'KDropdown-button': this.isVariantButton(),
+              'KDropdown-table': this.isVariantTable(),
+              '--is-valid': this.isVariantInput() && this.isSuccess(),
+              '--is-invalid': this.isVariantInput() && this.isError(),
+              '--is-active': this.active
             },
-            [this.isTypeButton() && this.color]
+            [this.isVariantButton() && this.color]
           )}
           disabled={this.disabled}
           onClick={this.toggleShowOptions.bind(this)}
         >
-          <span>{this.label}</span>
+          <span>{this.text}</span>
           <i class="KDropdown-icon vuh-keyboard-arrow-down"></i>
         </button>
-        {this.helperText && this.isTypeInput() && (
+        {this.helperText && this.isVariantInput() && (
           <span
             class={clsx('KDropdown-input-helper-text', {
               '--is-valid': this.isSuccess(),
