@@ -7,7 +7,7 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KButton {
-  @Prop() color?: string = 'primary';
+  @Prop() color?: 'primary' | 'secondary' | 'terciary' = 'primary';
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ reflect: true }) elevation?: boolean = false;
   @Prop() shape?: 'full' | 'round' | 'smooth' = 'smooth';
