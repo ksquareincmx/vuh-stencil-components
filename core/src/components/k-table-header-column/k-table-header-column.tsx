@@ -24,6 +24,7 @@ export class KTableHeaderColumn {
 
   @Prop() size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
   @Prop() disabled?: boolean = false;
+  @Prop() sortable?: boolean = true;
 
   @Prop() default: boolean = false;
 
@@ -108,17 +109,19 @@ export class KTableHeaderColumn {
           <div class="KTableHeaderColumn-text">
             <slot></slot>
           </div>
-          <div
-            class={clsx('KTableHeaderColumn-icon', [
-              this.disabled && '--is-disabled',
-              this.sortBy === 'asc' && '--is-sorted-asc',
-              this.sortBy === 'desc' && '--is-sorted-desc'
-            ])}
-            onClick={this.toggleSort}
-          >
-            <i class="vuh-swap-vert-up"></i>
-            <i class="vuh-swap-vert-down"></i>
-          </div>
+          {this.sortable && (
+            <div
+              class={clsx('KTableHeaderColumn-icon', [
+                this.disabled && '--is-disabled',
+                this.sortBy === 'asc' && '--is-sorted-asc',
+                this.sortBy === 'desc' && '--is-sorted-desc'
+              ])}
+              onClick={this.toggleSort}
+            >
+              <i class="vuh-swap-vert-up"></i>
+              <i class="vuh-swap-vert-down"></i>
+            </div>
+          )}
         </div>
         <div class="KTableHeaderColumn-floating-text">{this.el.innerHTML}</div>
       </Host>
