@@ -110,7 +110,7 @@ export class KDropdown {
   render() {
     return (
       <Host class="KDropdown">
-        {this.label && (this.variant === 'input' || this.variant === 'table') && (
+        {this.label && (this.isVariantInput() || this.isVariantTable()) && (
           <label
             class={clsx('KDropdown-label', {
               '--is-disabled': this.disabled,
