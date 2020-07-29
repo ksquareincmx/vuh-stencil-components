@@ -22,3 +22,17 @@ export default (stories) => {
     { notes }
   );
 };
+
+// example withknobs
+// import { withKnobs, select } from '@storybook/addon-knobs';
+// import notes from './readme.md';
+
+// storiesOf('Button', module)
+//   .addDecorator(withKnobs)
+//   .add('Simple', () => `
+//     <snazzy-button
+//       size="${select("size", ["small", "medium", "large"], "small")}"
+//     >
+//       Button text
+//     </snazzy-button>
+//   `, { notes });
