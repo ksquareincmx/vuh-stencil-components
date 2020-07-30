@@ -1,0 +1,84 @@
+:host(.KStepperHeaderItem) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.KStepperHeaderItem-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.KStepperHeaderItem-flip-box {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+
+  &.editable:hover .KStepperHeaderItem-flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .KStepperHeaderItem-flip-box-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transform-style: preserve-3d;
+    transition: transform 0.3s;
+    will-change: transform;
+  }
+}
+
+.KStepperHeaderItem-button {
+  background-color: $gray-200;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+
+  &.started {
+    background-color: color(primary-color);
+  }
+
+  &.ended {
+    background-color: $success-100;
+  }
+
+  &.front,
+  &.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+
+  &.back {
+    transform: rotateY(180deg);
+    background-color: $success-100;
+  }
+}
+
+.KStepperHeaderItem-label {
+  color: rgba($color: $gray-200, $alpha: 0.5);
+  font-weight: $semi-bold;
+  margin-left: 16px;
+  font-size: 1em;
+
+  &.bolder {
+    color: $gray-400;
+  }
+}
+
+.KStepperHeaderItem-line {
+  width: 10%;
+  height: 1px;
+  background-color: $gray-200;
+}
