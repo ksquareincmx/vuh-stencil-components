@@ -10,8 +10,9 @@
 | `color`           | `color`            |             | `"primary" \| "secondary" \| "terciary"` | `'primary'` |
 | `disabled`        | `disabled`         |             | `boolean`                                | `false`     |
 | `helperText`      | `helper-text`      |             | `string`                                 | `''`        |
-| `type`            | `type`             |             | `"button" \| "input"`                    | `'button'`  |
+| `label`           | `label`            |             | `string`                                 | `undefined` |
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"`             | `''`        |
+| `variant`         | `variant`          |             | `"button" \| "input" \| "table"`         | `'button'`  |
 
 
 ----------------------------------------------

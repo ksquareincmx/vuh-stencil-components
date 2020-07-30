@@ -17,10 +17,10 @@
 
 ## Events
 
-| Event           | Description | Type                                                   |
-| --------------- | ----------- | ------------------------------------------------------ |
-| `selectChanged` |             | `CustomEvent<any>`                                     |
-| `valueChanged`  |             | `CustomEvent<{ id: any; value: any; label: string; }>` |
+| Event           | Description | Type                                                  |
+| --------------- | ----------- | ----------------------------------------------------- |
+| `selectChanged` |             | `CustomEvent<any>`                                    |
+| `valueChanged`  |             | `CustomEvent<{ id: any; value: any; text: string; }>` |
 
 
 ----------------------------------------------

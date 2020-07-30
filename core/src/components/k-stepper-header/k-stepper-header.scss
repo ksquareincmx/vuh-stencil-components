@@ -1,0 +1,8 @@
+:host(.KStepperHeader)  {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: $gray-50;
+  box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 4px;
+}
