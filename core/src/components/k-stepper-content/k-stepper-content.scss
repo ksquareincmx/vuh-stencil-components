@@ -1,0 +1,12 @@
+:host(.KStepperContent) {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.KStepperContent-slide {
+  width: 100%;
+  display: flex;
+  transition: 0.6s;
+  will-change: transform;
+}
