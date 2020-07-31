@@ -97,6 +97,29 @@ function getKnobForProp(prop, knobOptions = {}) {
 }
 
 /**
+ * Generates DOM strings from states to show as code.
+ */
+function createNodesCodeString(elements, level) {
+  let str = '';
+  let tabs = '';
+  for (let i = 0; i <= level; i++) {
+    tabs += '&nbsp;';
+  }
+  if (elements && elements.length > 0) {
+    elements.forEach(({ tag, innerText, children }) => {
+      let result = createNodesCodeString(children, level + 1);
+      if (result !== '') {
+        str +=
+          '<br>' + `${tabs}&lt;${tag}&gt;${result}<br>${tabs}&lt;/${tag}&gt;`;
+      } else {
+        str += '<br>  ' + `&lt;${tag}&gt;${innerText}&lt;/${tag}&gt;`;
+      }
+    });
+  }
+  return str;
+}
+
+/**
  * Template used to render a single stencil component. To use this template
  * do something like the following code snippet:
  *
@@ -116,12 +139,7 @@ function getStencilTemplate({ title, description, tag, props, children }) {
     })
     .join(' ');
 
-  let child = '';
-  if (children) {
-    children.forEach(({ tag, innerText }) => {
-      child += `&lt;${tag}&gt;${innerText}&lt;/${tag}&gt;`;
-    });
-  }
+  let child = createNodesCodeString(children, 0);
 
   let template =
     `
@@ -133,7 +151,7 @@ function getStencilTemplate({ title, description, tag, props, children }) {
             </div>
             <div class="code-block">
                 <pre><code>` +
-    `&lt;${tag}${attrs ? ' ' + attrs : ''}&gt;${child}&lt;/${tag}&gt;` +
+    `&lt;${tag}${attrs ? ' ' + attrs : ''}&gt;${child}<br>&lt;/${tag}&gt;` +
     `</code></pre>
                 <a class="select-code">Select Code</a>
             </div>
@@ -165,6 +183,20 @@ function getPropsWithKnobValues(Component, knobOptions = {}) {
 }
 
 /**
+ * Generates DOM nodes from states to render.
+ */
+function createNodes(el, elements) {
+  if (elements && elements.length > 0) {
+    elements.forEach(({ tag, innerText, children }) => {
+      let childEl = document.createElement(tag);
+      childEl.innerHTML = innerText;
+      createNodes(childEl, children);
+      el.appendChild(childEl);
+    });
+  }
+}
+
+/**
  * Generates an interactive knobs-enabled story for a stencil Component.
  * For any additional states, a static rendering is generated with
  * the given state (see existing components for examples).
@@ -176,7 +208,12 @@ function getPropsWithKnobValues(Component, knobOptions = {}) {
  *     description: 'A description of why this state exists',
  *     props: {
  *        --- props to set on your component ---
- *     }
+ *     },
+ *     children: [{
+ *        tag: 'span',
+ *        innerText: 'Lorem ipsum',
+ *        children: []
+ *     }]
  *   }]
  *
  * Example "knobs" config:
@@ -231,12 +268,7 @@ function createStencilStory({ Component, notes, states, knobs }, stories) {
         }
 
         if (children) {
-          let childEl = document.createElement('span');
-          children.forEach(({ tag, innerText }) => {
-            childEl = document.createElement(tag);
-            childEl.innerHTML = innerText;
-            componentEl.appendChild(childEl);
-          });
+          createNodes(componentEl, children);
         }
 
         containerEl.innerHTML = getStencilTemplate({
