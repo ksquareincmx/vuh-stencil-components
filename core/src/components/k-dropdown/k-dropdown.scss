@@ -1,4 +1,8 @@
-:host(.KDropdown) {
+:host {
+  display: block;
+}
+
+.KDropdown {
   position: relative;
   width: 100%;
 }
@@ -6,12 +10,11 @@
 .KDropdown-label {
   display: flex;
   position: absolute;
-  bottom: -7.5px;
+  top: -6px;
   font-size: 12px;
   font-weight: $bold;
   width: 100%;
   max-width: 100%;
-  padding-bottom: 29.5px;
   cursor: pointer;
 
   &.--is-input {
@@ -399,8 +402,8 @@
 
 .KDropdown-options {
   display: none;
-  position: absolute;
-  top: 36px;
+  position: relative;
+  top: 8px;
   left: 0;
   right: 0;
   border-radius: 4px;
