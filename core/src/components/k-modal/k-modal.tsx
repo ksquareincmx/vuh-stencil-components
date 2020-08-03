@@ -28,7 +28,7 @@ export class KModal {
     return (
       <div
         class={clsx('KModal', {
-          '--is-showed': this.show
+          '--is-shown': this.show
         })}
       >
         <div class="KModal-content">
