@@ -1,0 +1,77 @@
+.KPaginator {
+  border: 1px solid $primary-100;
+  border-radius: 4px;
+  color: #9c9c9c;
+  font-weight: $semi-bold;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+
+  .KPaginator-contents {
+    // padding: 8px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .KPaginator-pages {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 90%;
+    }
+
+    .KPaginator-separator {
+      height: 18px;
+      width: 1px;
+      background-color: $primary-100;
+      align-self: center;
+    }
+
+    .KPaginator-left-arrow,
+    .KPaginator-right-arrow {
+      padding: 8px 6px 8px 6px;
+      flex-basis: 5%;
+
+      &:hover {
+        background-color: #7fbef533;
+        border-radius: 4px;
+      }
+    }
+
+    .KPaginator-icon {
+      display: inline-flex;
+      color: $primary-700;
+      height: 18px;
+      cursor: pointer;
+      font-size: 18px;
+      position: relative;
+      top: 1.5px;
+    }
+
+    .KPaginator-page {
+      padding: 0 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      &:hover {
+        color: $primary-700;
+        background-color: #7fbef533;
+        border-radius: 4px;
+      }
+
+      &.--is-current-page {
+        color: black;
+      }
+    }
+
+    .KPaginator-page:first-child {
+      margin-left: 4px;
+    }
+
+    .KPaginator-page:last-child {
+      margin-right: 4px;
+    }
+  }
+}
