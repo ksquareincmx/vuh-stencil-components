@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="/build/k-ui-kit.css" />
   </head>
   <body>
+    <k-modal id="k-modal">
+      <p>This is a modal</p>
+    </k-modal>
     <k-menu menu-key="k-menu">
       <k-menu-content>
         <figure style="width: 100px;">
@@ -165,6 +168,13 @@
     </k-drawer>
 
     <div style="margin: 0 32px;">
+      <section>
+        <k-typography>
+          <h1>Modal</h1>
+        </k-typography>
+
+        <k-button id="k-button">Show modal</k-button>
+      </section>
       <section>
         <k-typography>
           <h1>Snackbar</h1>
@@ -1458,4 +1468,12 @@
 
   </body>
 
+  <script>
+    const $kButton = document.getElementById('k-button');
+    const $kModal = document.getElementById('k-modal');
+
+    $kButton.addEventListener('click', () => {
+      $kModal.setAttribute('show', 'true')
+    })
+  </script>
 </html>
