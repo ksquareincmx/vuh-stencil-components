@@ -44,6 +44,10 @@ export class KModal {
             <slot></slot>
           </div>
         </div>
+        <div
+          class="KModal-background"
+          onClick={this.handleCloseModal.bind(this)}
+        ></div>
       </div>
     );
   }
