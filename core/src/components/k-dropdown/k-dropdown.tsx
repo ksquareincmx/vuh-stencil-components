@@ -109,56 +109,58 @@ export class KDropdown {
 
   render() {
     return (
-      <Host class="KDropdown">
-        {this.label && (this.isVariantInput() || this.isVariantTable()) && (
-          <label
-            class={clsx('KDropdown-label', {
-              '--is-disabled': this.disabled,
-              '--is-valid': this.isVariantInput() && this.isSuccess(),
-              '--is-invalid': this.isVariantInput() && this.isError(),
-              '--is-active': this.active,
-              '--is-input': this.isVariantInput(),
-              '--is-table': this.isVariantTable()
-            })}
+      <Host>
+        <div class="KDropdown">
+          {this.label && (this.isVariantInput() || this.isVariantTable()) && (
+            <label
+              class={clsx('KDropdown-label', {
+                '--is-disabled': this.disabled,
+                '--is-valid': this.isVariantInput() && this.isSuccess(),
+                '--is-invalid': this.isVariantInput() && this.isError(),
+                '--is-active': this.active,
+                '--is-input': this.isVariantInput(),
+                '--is-table': this.isVariantTable()
+              })}
+              onClick={this.toggleShowOptions.bind(this)}
+            >
+              {this.label}
+            </label>
+          )}
+          <button
+            class={clsx(
+              'KDropdown-dispatcher',
+              {
+                'KDropdown-input': this.isVariantInput(),
+                'KDropdown-button': this.isVariantButton(),
+                'KDropdown-table': this.isVariantTable(),
+                '--is-valid': this.isVariantInput() && this.isSuccess(),
+                '--is-invalid': this.isVariantInput() && this.isError(),
+                '--is-active': this.active
+              },
+              [this.isVariantButton() && this.color]
+            )}
+            disabled={this.disabled}
             onClick={this.toggleShowOptions.bind(this)}
           >
-            {this.label}
-          </label>
-        )}
-        <button
-          class={clsx(
-            'KDropdown-dispatcher',
-            {
-              'KDropdown-input': this.isVariantInput(),
-              'KDropdown-button': this.isVariantButton(),
-              'KDropdown-table': this.isVariantTable(),
-              '--is-valid': this.isVariantInput() && this.isSuccess(),
-              '--is-invalid': this.isVariantInput() && this.isError(),
-              '--is-active': this.active
-            },
-            [this.isVariantButton() && this.color]
+            <span>{this.text}</span>
+            <i class="KDropdown-icon vuh-keyboard-arrow-down"></i>
+          </button>
+          {this.helperText && this.isVariantInput() && (
+            <span
+              class={clsx('KDropdown-input-helper-text', {
+                '--is-valid': this.isSuccess(),
+                '--is-invalid': this.isError()
+              })}
+            >
+              {this.helperText}
+            </span>
           )}
-          disabled={this.disabled}
-          onClick={this.toggleShowOptions.bind(this)}
-        >
-          <span>{this.text}</span>
-          <i class="KDropdown-icon vuh-keyboard-arrow-down"></i>
-        </button>
-        {this.helperText && this.isVariantInput() && (
-          <span
-            class={clsx('KDropdown-input-helper-text', {
-              '--is-valid': this.isSuccess(),
-              '--is-invalid': this.isError()
-            })}
+          <div
+            ref={(el: HTMLElement) => (this.optionsEl = el)}
+            class="KDropdown-options"
           >
-            {this.helperText}
-          </span>
-        )}
-        <div
-          ref={(el: HTMLElement) => (this.optionsEl = el)}
-          class="KDropdown-options"
-        >
-          <slot></slot>
+            <slot></slot>
+          </div>
         </div>
       </Host>
     );
