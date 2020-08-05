@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                    | Default     |
-| -------- | --------- | ----------- | ----------------------- | ----------- |
-| `type`   | `type`    |             | `"default" \| "header"` | `'default'` |
+| Property | Attribute | Description | Type                                | Default     |
+| -------- | --------- | ----------- | ----------------------------------- | ----------- |
+| `type`   | `type`    |             | `"default" \| "header" \| "navbar"` | `'default'` |
+
+
+## Events
+
+| Event          | Description | Type                                      |
+| -------------- | ----------- | ----------------------------------------- |
+| `isTypeNavBar` |             | `CustomEvent<{ navBarEl: HTMLElement; }>` |
 
 
 ----------------------------------------------

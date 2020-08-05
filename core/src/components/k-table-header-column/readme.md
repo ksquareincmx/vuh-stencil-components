@@ -21,6 +21,7 @@
 | Event           | Description | Type                                                     |
 | --------------- | ----------- | -------------------------------------------------------- |
 | `activeChanged` |             | `CustomEvent<{ id: String; active: any; sortBy: any; }>` |
+| `sizeChanged`   |             | `CustomEvent<{ sizeHasChanged: boolean; }>`              |
 
 
 ----------------------------------------------
