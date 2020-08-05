@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'k-ui-kit',
+  namespace: 'vuh-stencil',
   taskQueue: 'async',
   globalStyle: 'css/global.bundle.css',
   outputTargets: [

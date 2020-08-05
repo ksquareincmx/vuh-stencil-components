@@ -1,6 +1,6 @@
 import { configure } from '@storybook/html';
 import buildStencilStories from './stories/stencil';
-import '../www/build/k-ui-kit.css';
+import '../www/build/vuh-stencil.css';
 
 // The following contexts will be used to generate stories
 // for multiple collections of components. This is particulary
