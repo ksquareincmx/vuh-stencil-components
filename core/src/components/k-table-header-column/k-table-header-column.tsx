@@ -29,12 +29,17 @@ export class KTableHeaderColumn {
   @Prop() default: boolean = false;
 
   @State() sortBy: 'asc' | 'desc' | 'none' = 'none';
+  @State() sizeHasChanged: boolean = false;
   @Prop({ mutable: true }) active?: boolean = false;
 
   @Event() activeChanged: EventEmitter<{
     id: String;
     active: any;
     sortBy: any;
+  }>;
+
+  @Event() sizeChanged: EventEmitter<{
+    sizeHasChanged: boolean;
   }>;
 
   @Watch('sortBy')
@@ -44,6 +49,15 @@ export class KTableHeaderColumn {
       active: this.active,
       sortBy: this.sortBy
     });
+  }
+
+  @Watch('size')
+  onSizeChanged() {
+    this.sizeHasChanged = true;
+    this.sizeChanged.emit({
+      sizeHasChanged: this.sizeHasChanged
+    });
+    this.sizeHasChanged = false;
   }
 
   private toggleSort = (e: Event) => {

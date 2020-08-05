@@ -5,6 +5,8 @@ import {
   State,
   Listen,
   Element,
+  Event,
+  EventEmitter,
   h
 } from '@stencil/core';
 import clsx from 'clsx';
@@ -19,9 +21,13 @@ export class KTableRow {
 
   @Element() el!: HTMLElement;
 
-  @Prop() type?: 'default' | 'header' = 'default';
+  @Prop() type?: 'default' | 'header' | 'navbar' = 'default';
 
   @State() active: any | null;
+
+  @Event() isTypeNavBar: EventEmitter<{
+    navBarEl: HTMLElement;
+  }>;
 
   // Sets the default attribute so that the DOM mutation can be observed:
 
@@ -36,6 +42,16 @@ export class KTableRow {
         this.slotted[i].setAttribute('default', '');
         break;
       }
+    }
+  }
+
+  // Emits the component upwards if its type is 'navbar', so that it can be rendered outside of the scrollable wrapper.
+
+  componentWillRender() {
+    if (this.type === 'navbar') {
+      this.isTypeNavBar.emit({
+        navBarEl: this.el
+      });
     }
   }
 
@@ -60,7 +76,8 @@ export class KTableRow {
     return (
       <Host
         class={clsx('KTableRow', {
-          'KTableRow-border': this.type === 'header'
+          'KTableRow-border': this.type === 'header',
+          'KTableRow-navbar': this.type === 'navbar'
         })}
       >
         <slot></slot>
