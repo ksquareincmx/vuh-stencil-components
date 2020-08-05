@@ -6,7 +6,7 @@
   padding-left: 8px;
   background-color: white;
 
-  @include tablet {
+  @include small-tablet {
     padding-left: 16px;
   }
 }
