@@ -194,7 +194,7 @@
             <a href="#">Link 1</a>
           </k-breadcrumb-item>
         </k-breadcrumbs>
-        
+
         <br>
 
         <k-breadcrumbs>
@@ -349,7 +349,7 @@
         <k-typography>
           <h1>Dialog</h1>
         </k-typography>
-        
+
         <k-dialog>
           <k-dialog-content>
             <k-dialog-header>Dialog Header</k-dialog-header>
@@ -1350,9 +1350,21 @@
       <section>
 
         <k-table>
-          <k-table-row>
-            <k-table-column size="8">
-              Hello.
+          <k-table-row type="navbar" style="min-height: 56px;">
+            <k-table-column size="7" style="height: 100%;">
+              <k-typography style="color: black">
+                <h4>Displaying Course Status</h4>
+              </k-typography>
+            </k-table-column>
+            <k-table-column size="1" style="height: 100%;">
+              <k-dropdown variant="table" label="Row" style="height: 100%;">
+                <k-dropdown-item name="op1" value="01">25</k-dropdown-item>
+                <k-dropdown-item name="op2" value="02">100</k-dropdown-item>
+                <k-dropdown-item name="op3" value="03">250</k-dropdown-item>
+              </k-dropdown>
+            </k-table-column>
+            <k-table-column size="3" style="height: 100%;">
+              <k-paginator current-page="1" total-pages="17"></k-paginator>
             </k-table-column>
           </k-table-row>
           <k-table-row type="header">
@@ -1454,18 +1466,18 @@
         </k-table>
       </section>
 
-      <br />
+      <k-typography style="margin: 16px 0 16px 0;">
+        <h1>Paginator</h1>
+      </k-typography>
 
-      <k-paginator current-page="1" total-pages="17"></k-paginator>
-
-      <br />
-
-      <k-paginator current-page="3" total-pages="4"></k-paginator>
-
-      <br />
+      <section>
+        <k-paginator current-page="1" total-pages="17"></k-paginator>
+        <br />
+        <k-paginator current-page="3" total-pages="4"></k-paginator>
+        <br />
+      </section>
 
     </div>
-
   </body>
 
   <script>
