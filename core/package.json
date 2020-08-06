@@ -1,7 +1,7 @@
 {
-  "name": "vuh-stencil",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "@the-ksquare-group/vuh-stencil-components",
+  "version": "1.0.1",
+  "description": "The Ksquare Group's design system, built on Stencil JS, which contains reusable web components for use in multiple front-end libraries.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -13,7 +13,8 @@
   "files": [
     "dist/",
     "loader/",
-    "css/"
+    "css/",
+    "www/"
   ],
   "scripts": {
     "start": "npm run build.css && stencil build --dev --watch --serve",
@@ -64,6 +65,18 @@
     "webpack": "^4.44.0",
     "workbox-build": "4.3.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil.git"
+  },
+  "keywords": [
+    "Stencil JS",
+    "Design system",
+    "vuh",
+    "Javascript",
+    "The ksquare group"
+  ],
+  "author": "The Ksquare Group",
   "license": "MIT",
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -71,6 +84,10 @@
       "git add"
     ]
   },
+  "bugs": {
+    "url": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil/issues"
+  },
+  "homepage": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
