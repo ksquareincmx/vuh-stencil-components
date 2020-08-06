@@ -17,7 +17,7 @@ export class KTable {
     this.slotted = this.el.children;
     let slottedColumns;
     const columns = [];
-    for (let i = 0; this.slotted.length; i++) {
+    for (let i = 0; i < this.slotted.length; i++) {
       if (
         this.slotted[i].attributes['type'] &&
         this.slotted[i].attributes['type'].value === 'header'
@@ -33,8 +33,22 @@ export class KTable {
     this.tableWrapper?.style.setProperty('--data-count', totalColumns);
   }
 
+  private renderNavbar = () => {
+    this.slotted = this.el.children;
+    for (let i = 0; i < this.slotted.length; i++) {
+      if (
+        this.slotted[i].attributes['type'] &&
+        this.slotted[i].attributes['type'].value === 'navbar'
+      ) {
+        this.slotted[i]?.setAttribute('slot', 'navbar');
+        return this.slotted[i]?.outerHTML;
+      }
+    }
+  };
+
   componentWillRender() {
     this.setDataCount();
+    this.renderNavbar();
   }
 
   @Listen('sizeChanged')
@@ -45,19 +59,12 @@ export class KTable {
     }
   }
 
-  @Listen('isTypeNavBar')
-  isTypeNavBarHandler(state) {
-    const { navBarEl } = state.detail;
-    this.navBarWrapper.appendChild(navBarEl);
-  }
-
   render() {
     return (
       <Host class="KTable">
-        <div
-          ref={(el: HTMLElement) => (this.navBarWrapper = el)}
-          class="KTable-navbar"
-        ></div>
+        <div class="KTable-navbar">
+          <slot name="navbar"></slot>
+        </div>
         <div class="KTable-container">
           <div
             ref={(el: HTMLElement) => (this.tableWrapper = el)}
