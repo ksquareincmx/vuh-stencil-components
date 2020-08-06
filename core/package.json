@@ -1,5 +1,5 @@
 {
-  "name": "k-ui-kit",
+  "name": "vuh-stencil",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/k-ui-kit/k-ui-kit.js",
+  "unpkg": "dist/vuh-stencil/vuh-stencil.js",
   "files": [
     "dist/",
     "loader/",
