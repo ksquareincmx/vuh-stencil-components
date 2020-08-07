@@ -1,0 +1,15 @@
+image: node:12.17.0 # or whatever version of node you are on
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run buld-storybook # make sure this matches your actual build script alias
+  # Required artifact for GitLab Pages
+  artifacts:
+    paths:
+      - public
