@@ -2,15 +2,16 @@ image: node:12.17.0 # or whatever version of node you are on
 
 cache:
   paths:
-    - node_modules/
+    - core/node_modules/
 
 pages:
   stage: deploy
   script:
     - cd core
     - npm install
+    - npm run build.stencil
     - npm run build-storybook # make sure this matches your actual build script alias
   # Required artifact for GitLab Pages
   artifacts:
     paths:
-      - public
+      - core/public
