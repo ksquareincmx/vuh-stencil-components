@@ -9,7 +9,7 @@ pages:
   script:
     - cd core
     - npm install
-    - npm run build.stencil
+    - npm run build
     - npm run build-storybook
   # Required artifact for GitLab Pages
   artifacts:
