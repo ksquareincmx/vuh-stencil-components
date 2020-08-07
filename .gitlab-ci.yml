@@ -9,7 +9,7 @@ pages:
   script:
     - cd core
     - npm install
-    - npm run buld-storybook # make sure this matches your actual build script alias
+    - npm run build-storybook # make sure this matches your actual build script alias
   # Required artifact for GitLab Pages
   artifacts:
     paths:
