@@ -87,7 +87,7 @@
   "bugs": {
     "url": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil/issues"
   },
-  "homepage": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil#readme",
+  "homepage": "https://ksjsgroup.gitlab.io/ksquare-internal/vuh-stencil",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
