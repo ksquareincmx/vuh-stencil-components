@@ -30,7 +30,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,json,scss}\"",
     "storybook.run": "start-storybook --port 9001",
     "storybook": "npm-run-all --parallel build.stencil storybook.run",
-    "build-storybook": "build-storybook -c ./.storybook -o public"
+    "build-storybook": "build-storybook -c ./.storybook -o ../public"
   },
   "devDependencies": {
     "@stencil/core": "1.14.0",
