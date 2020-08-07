@@ -1,6 +1,8 @@
 # k-avatar
 
+`k-avatar` is Vuh's web component for avatars/profile pictures.
 
+It is suggested to use Vuh's `k-img` component as its child.
 
 <!-- Auto Generated Below -->
 

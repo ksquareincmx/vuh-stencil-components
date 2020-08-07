@@ -2,11 +2,11 @@ import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
-  tag: 'k-breadcrumb-item',
-  styleUrl: 'k-breadcrumb-item.scss',
+  tag: 'k-breadcrumbs-item',
+  styleUrl: 'k-breadcrumbs-item.scss',
   shadow: true
 })
-export class KBreadcrumbItem {
+export class KBreadcrumbsItem {
   @Element() el: HTMLElement;
   @State() isTheLast: boolean;
 
@@ -18,17 +18,17 @@ export class KBreadcrumbItem {
 
   render() {
     return (
-      <Host class="KBreadcrumbItem">
+      <Host class="KBreadcrumbsItem">
         <div
-          class={clsx('KBreadcrumbItem-link', {
-            'KBreadcrumbItem-current': this.current,
-            'KBreadcrumbItem-normal': !this.current
+          class={clsx('KBreadcrumbsItem-link', {
+            'KBreadcrumbsItem-current': this.current,
+            'KBreadcrumbsItem-normal': !this.current
           })}
         >
           <slot></slot>
         </div>
         {!this.isTheLast && (
-          <i class="KBreadcrumbItem-icon vuh-keyboard-arrow-right"></i>
+          <i class="KBreadcrumbsItem-icon vuh-keyboard-arrow-right"></i>
         )}
       </Host>
     );

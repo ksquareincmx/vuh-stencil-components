@@ -1,6 +1,8 @@
 # k-switch
 
+`k-switch` is Vuh's web component for a switch.
 
+It receives no children, as its appearence is determined by props.
 
 <!-- Auto Generated Below -->
 

@@ -1,6 +1,10 @@
 # k-menu
 
+**_`k-menu` is a part of the `k-menu` family of components._**
 
+`k-menu` is Vuh's web component for a menu.
+
+It can receive `k-menu-content` and `k-menu-nav` as its children.
 
 <!-- Auto Generated Below -->
 

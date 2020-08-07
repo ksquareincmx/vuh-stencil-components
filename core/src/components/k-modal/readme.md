@@ -1,6 +1,8 @@
 # k-modal
 
+`k-modal` is Vuh's web component for a modal.
 
+It can receive any element it might need to populate its content.
 
 <!-- Auto Generated Below -->
 

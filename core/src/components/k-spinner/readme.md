@@ -1,6 +1,8 @@
 # k-spinner
 
+`k-spinner` is Vuh's web component for a spinner.
 
+It receives no children.
 
 <!-- Auto Generated Below -->
 

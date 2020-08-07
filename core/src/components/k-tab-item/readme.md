@@ -1,6 +1,10 @@
 # k-tab-item
 
+**_`k-tab-item` is a part of the `k-tab` family of components._**
 
+`k-tab-item` is Vuh's web component for a tab item.
+
+It must only be used as a child of `k-tab`.
 
 <!-- Auto Generated Below -->
 

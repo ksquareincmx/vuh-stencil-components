@@ -1,6 +1,10 @@
 # k-table-header-column
 
+**_`k-table-header-column` is a part of the `k-table` family of components._**
 
+`k-table-header-column` is Vuh's web component for a table header's column.
+
+It should only be used as a child to an instance of `k-table-row` whose type is `header`.
 
 <!-- Auto Generated Below -->
 

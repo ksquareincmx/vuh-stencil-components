@@ -1,6 +1,10 @@
 # k-table-column
 
+**_`k-table-column` is a part of the `k-table` family of components._**
 
+`k-table-column` is Vuh's web component for a table's regular column.
+
+It should only be used as a child to instances `k-table-row` whose type are not `header`.
 
 <!-- Auto Generated Below -->
 

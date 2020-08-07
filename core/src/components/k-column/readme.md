@@ -1,6 +1,10 @@
 # k-column
 
+**_`k-column` is a part of the `k-grid` family of components._**
 
+`k-column` is Vuh's web component for a column in a grid system.
+
+It must exclusively be used as children to `k-row`.
 
 <!-- Auto Generated Below -->
 
