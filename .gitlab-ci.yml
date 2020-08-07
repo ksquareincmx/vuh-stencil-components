@@ -14,4 +14,4 @@ pages:
   # Required artifact for GitLab Pages
   artifacts:
     paths:
-      - core/public
+      - public
