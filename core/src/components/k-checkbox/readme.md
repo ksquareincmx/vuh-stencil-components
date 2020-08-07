@@ -10,6 +10,7 @@ On Vue, it must use `@input` to work.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description | Type      | Default     |
@@ -18,12 +19,14 @@ On Vue, it must use `@input` to work.
 | `disabled` | `disabled` |             | `boolean` | `false`     |
 | `value`    | `value`    |             | `string`  | `undefined` |
 
+
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `valueChange` |             | `CustomEvent<any>` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

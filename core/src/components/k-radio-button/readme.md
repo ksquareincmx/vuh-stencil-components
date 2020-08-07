@@ -12,6 +12,7 @@ On Vue, it must use `@input` to work.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description | Type      | Default        |
@@ -21,12 +22,14 @@ On Vue, it must use `@input` to work.
 | `name`     | `name`     |             | `string`  | `this.inputId` |
 | `value`    | `value`    |             | `string`  | `this.inputId` |
 
+
 ## Events
 
 | Event          | Description | Type                                       |
 | -------------- | ----------- | ------------------------------------------ |
 | `valueChanged` |             | `CustomEvent<{ value: any; id: String; }>` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
