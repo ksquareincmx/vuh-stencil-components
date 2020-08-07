@@ -1,6 +1,10 @@
 # k-carousel
 
+**_`k-carousel` is a part of the `k-carousel` family of components._**
 
+`k-carousel` is Vuh's web component for carousels.
+
+It must contain instances of `k-carousel-item` for it to work properly.
 
 <!-- Auto Generated Below -->
 

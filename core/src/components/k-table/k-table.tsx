@@ -40,8 +40,8 @@ export class KTable {
         this.slotted[i].attributes['type'] &&
         this.slotted[i].attributes['type'].value === 'navbar'
       ) {
-        this.slotted[i]?.setAttribute('slot', 'navbar');
-        return this.slotted[i]?.outerHTML;
+        this.slotted[i].setAttribute('slot', 'navbar');
+        return this.slotted[i].outerHTML;
       }
     }
   };

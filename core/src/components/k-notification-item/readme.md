@@ -1,6 +1,10 @@
 # k-notification-item
 
+**_`k-notification-item` is a part of the `k-notification` family of components._**
 
+`k-notification-item` is Vuh's web component for a notification item.
+
+It must exclusively be used as a child to `k-notification-group`.
 
 <!-- Auto Generated Below -->
 

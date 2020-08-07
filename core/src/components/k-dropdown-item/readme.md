@@ -1,9 +1,14 @@
 # k-dropdown-item
 
+**_`k-dropdown-item` is a part of the `k-dropdown` family of components._**
 
+`k-dropdown-item` is Vuh's web component for a dropdown's item/option.
+
+It must exclusively be used as a children to `k-dropdown`.
+
+On Vue, it must use `@input` to work.
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,7 +19,6 @@
 | `name`     | `name`     |             | `string`  | `''`    |
 | `value`    | `value`    |             | `string`  | `''`    |
 
-
 ## Events
 
 | Event           | Description | Type                                                  |
@@ -22,7 +26,6 @@
 | `selectChanged` |             | `CustomEvent<any>`                                    |
 | `valueChanged`  |             | `CustomEvent<{ id: any; value: any; text: string; }>` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

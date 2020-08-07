@@ -1,19 +1,19 @@
-:host(.KBreadcrumbItem) {
+:host(.KBreadcrumbsItem) {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.KBreadcrumbItem-link {
+.KBreadcrumbsItem-link {
   color: rgba($color: #000000, $alpha: 0.7);
   font-size: 14px;
 
-  &.KBreadcrumbItem-current {
+  &.KBreadcrumbsItem-current {
     font-weight: $semi-bold;
     color: color(primary-color);
   }
 
-  &.KBreadcrumbItem-normal {
+  &.KBreadcrumbsItem-normal {
     &:hover {
       text-decoration: underline;
     }
@@ -26,7 +26,7 @@
   font-size: inherit;
 }
 
-.KBreadcrumbItem-icon {
+.KBreadcrumbsItem-icon {
   font-size: 24px;
   color: color(primary-100);
 }

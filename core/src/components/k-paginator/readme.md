@@ -1,6 +1,8 @@
 # k-paginator
 
+`k-paginator` is Vuh's web component for a paginator.
 
+It receives no children, as its content is determined by props.
 
 <!-- Auto Generated Below -->
 

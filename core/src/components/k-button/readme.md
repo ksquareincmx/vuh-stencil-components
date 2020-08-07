@@ -1,5 +1,9 @@
 # k-button
 
+`k-button` is Vuh's web component for buttons.
+
+It must receive text as its child for the button not to be empty.
+
 <!-- Auto Generated Below -->
 
 

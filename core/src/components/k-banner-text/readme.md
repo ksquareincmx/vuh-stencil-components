@@ -1,6 +1,10 @@
 # k-banner-text
 
-This component was created to use only inside a k-banner, using it independently may no work as described in here.
+**_`k-banner-text` is a part of the `k-banner` family of components._**
+
+`k-banner-text`is Vuh's web component for text inside of banners.
+
+It should be exclusively used as a child to `k-banner`, lest it may not work as described here.
 
 <!-- Auto Generated Below -->
 

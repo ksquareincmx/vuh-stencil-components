@@ -1,5 +1,9 @@
 # k-img
 
+`k-img` is Vuh's web component for an image element.
+
+It should receive no children, as its content is determined by a prop.
+
 <!-- Auto Generated Below -->
 
 

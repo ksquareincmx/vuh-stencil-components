@@ -1,6 +1,10 @@
 # k-notification
 
+**_`k-notification` is a part of the `k-notification` family of components._**
 
+`k-notification` is Vuh's web component for notifications' main container. It displays all notifications upon being hovered upon.
+
+It must receive `k-notification-group` as its child.
 
 <!-- Auto Generated Below -->
 

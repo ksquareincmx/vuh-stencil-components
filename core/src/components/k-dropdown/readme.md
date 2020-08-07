@@ -1,5 +1,11 @@
 # k-dropdown
 
+**_`k-dropdown` is a part of the `k-dropdown` family of components._**
+
+`k-dropdown` is Vuh's web component for a dropdown.
+
+It receives instances of `k-dropdown-item` as its children, which are then displayed when the component is clicked.
+
 <!-- Auto Generated Below -->
 
 

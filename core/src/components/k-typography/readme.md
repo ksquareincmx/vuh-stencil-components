@@ -1,5 +1,9 @@
 # k-typography
 
+`k-typography` is Vuh's web component for many different kinds of texts. Its look is determined by prop.
+
+It can either receive plain text as its child, and have its child's appearence determined by the component's `variant` and `color` props, or receive one of the many text html tags as its children, rendering the use of the `variant` prop unnecessary.
+
 <!-- Auto Generated Below -->
 
 

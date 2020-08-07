@@ -1,7 +1,12 @@
 # k-text-field
 
-<!-- Auto Generated Below -->
+`k-text-field` is Vuh's web component for a text field.
 
+It receives no children, as its content is determined by its props.
+
+On React, it must use the `onInput` event to work.
+
+<!-- Auto Generated Below -->
 
 ## Properties
 
@@ -15,14 +20,12 @@
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |
 
-
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `valueChange` |             | `CustomEvent<any>` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
