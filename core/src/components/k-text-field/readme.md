@@ -8,6 +8,7 @@ On React, it must use the `onInput` event to work.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property          | Attribute          | Description | Type                         | Default     |
@@ -20,12 +21,14 @@ On React, it must use the `onInput` event to work.
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |
 
+
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `valueChange` |             | `CustomEvent<any>` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

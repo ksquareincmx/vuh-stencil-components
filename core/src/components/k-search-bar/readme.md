@@ -8,6 +8,7 @@ On React, it must use the `onInput` event to work.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute     | Description | Type                    | Default    |
@@ -18,12 +19,14 @@ On React, it must use the `onInput` event to work.
 | `type`        | `type`        |             | `"outlined" \| "solid"` | `'solid'`  |
 | `value`       | `value`       |             | `string`                | `''`       |
 
+
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `valueChange` |             | `CustomEvent<any>` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

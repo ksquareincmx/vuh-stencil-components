@@ -9,6 +9,7 @@ On Vue, it must use `@input` to work.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property          | Attribute          | Description | Type                         | Default     |
@@ -22,11 +23,13 @@ On Vue, it must use `@input` to work.
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |
 
+
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `valueChange` |             | `CustomEvent<any>` |
+
 
 ## Dependencies
 
@@ -35,13 +38,12 @@ On Vue, it must use `@input` to work.
 - [k-icon](../k-icon)
 
 ### Graph
-
 ```mermaid
 graph TD;
   k-input --> k-icon
   style k-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

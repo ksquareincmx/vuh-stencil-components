@@ -8,6 +8,7 @@ As its name implies, it should only receive instances of `k-radio-button` as its
 
 <!-- Auto Generated Below -->
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
