@@ -1,5 +1,5 @@
 import path from 'path';
-import Case from 'case';
+import Case, { kebab } from 'case';
 import { storiesOf } from '@storybook/html';
 import * as KNOBS from '@storybook/addon-knobs';
 
@@ -70,10 +70,14 @@ function getKnobForProp(prop, knobOptions = {}) {
   if (prop.defaultValue) {
     try {
       let defaultVal = prop.defaultValue;
+
       if (typeof defaultVal === 'string') {
-        defaultVal = /('\w?')/g.test(defaultVal)
-          ? defaultVal.replace(/'/gi, '')
-          : JSON.parse(defaultVal);
+        defaultVal =
+          /('\w+')/g.test(defaultVal) || /('')/g.test(defaultVal)
+            ? /('')/g.test(defaultVal)
+              ? 'Example Label'
+              : defaultVal.replace(/'/gi, '')
+            : JSON.parse(defaultVal);
       }
 
       if (type !== 'select') {
@@ -179,7 +183,7 @@ function getPropsWithKnobValues(Component, knobOptions = {}) {
     }
 
     if (property.hasOwnProperty('attribute')) {
-      obj[key] = getKnobForProp(property, knobOptions);
+      obj[Case.kebab(key)] = getKnobForProp(property, knobOptions);
     }
 
     return obj;
