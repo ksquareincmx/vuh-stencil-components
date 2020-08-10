@@ -31,7 +31,9 @@ module.exports = async ({ config, mode }) => {
   const babelPresets = jsRule.use.find((l) => l.loader === 'babel-loader')
     .options.presets;
   const minifyPreset = babelPresets[1];
-  minifyPreset[1].simplifyComparisons = false;
+  if (minifyPreset) {
+    minifyPreset[1].simplifyComparisons = false;
+  }
 
   return config;
 };

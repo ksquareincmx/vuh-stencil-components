@@ -69,9 +69,13 @@ function getKnobForProp(prop, knobOptions = {}) {
 
   if (prop.defaultValue) {
     try {
-      const defaultVal = /('\w+')/g.test(prop.defaultValue)
-        ? prop.defaultValue.replace(/'/gi, '')
-        : JSON.parse(prop.defaultValue);
+      let defaultVal = prop.defaultValue;
+      if (typeof defaultVal === 'string') {
+        defaultVal = /('\w?')/g.test(defaultVal)
+          ? defaultVal.replace(/'/gi, '')
+          : JSON.parse(defaultVal);
+      }
+
       if (type !== 'select') {
         args[1] = defaultVal;
       } else {
