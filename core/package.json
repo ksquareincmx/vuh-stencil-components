@@ -1,6 +1,6 @@
 {
   "name": "@the-ksquare-group/vuh-stencil-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Ksquare Group's design system, built on Stencil JS, which contains reusable web components for use in multiple front-end libraries.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -87,7 +87,7 @@
   "bugs": {
     "url": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil/issues"
   },
-  "homepage": "https://gitlab.com/ksjsgroup/ksquare-internal/vuh-stencil#readme",
+  "homepage": "https://ksjsgroup.gitlab.io/ksquare-internal/vuh-stencil",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
