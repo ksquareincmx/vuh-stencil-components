@@ -6,7 +6,7 @@ export default {
    * tab for your component. It is recommended to use the generated readme,
    * however any string should suffice. This supports markdown.
    */
-  notes: readme,
+  notes: readme
 
   /**
    * The knobs object lets you configure different knobs for
@@ -27,6 +27,7 @@ export default {
   //   // knobs.number('b-number', 46, { range: true, min: 46, max: 47, step: 1 });
   //   color: {
   //     type: 'string',
+  //     default: 'primary',
   //     args: ['primary']
   //   },
 
@@ -34,32 +35,14 @@ export default {
   //   // knobs.color('poorly-named-prop', 'rgba(000, 111, 222, 1)');
   //   poorlyNamedProp: {
   //     type: 'color',
+  //     default: 'rgba(000, 111, 222, 1)',
   //     args: ['rgba(000, 111, 222, 1)']
   //   }
-  // },
+  // }
 
   /**
    * The states array is a list of additional states to display your
    * component. This is kind of a lightweight version of the "chapters".
    * Each state can have a title, description, and props.
    */
-  states: [
-    {
-      title: 'Here it is in a different state',
-      description:
-        ' Note, the knobs only affect the "default" state at the top.',
-      props: {
-        simpleText: 'skyscrapers!!!'
-      }
-    },
-    {
-      title: 'This is yet another state',
-      description:
-        'Note, the knobs only affect the "default" state at the top.',
-      props: {
-        backgroundColor: 'green',
-        poorlyNamedProp: 'red'
-      }
-    }
-  ]
 };

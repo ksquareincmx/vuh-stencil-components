@@ -147,7 +147,7 @@ function getStencilTemplate({ title, description, tag, props, children }) {
             <h2>${title}</h2>
             ${description ? '<p>' + description + '</p>' : ''}
             <div class="placeholder">
-            <!-- the component will be inserted here -->
+              <!-- the component will be inserted here -->
             </div>
             <div class="code-block">
                 <pre><code>` +
@@ -259,11 +259,15 @@ function createStencilStory({ Component, notes, states, knobs }, stories) {
       // "chapters" addon only works with react :/
       states.forEach(({ title, description, props, children }) => {
         const containerEl = document.createElement('div');
-        const componentEl = document.createElement(tag);
+        const componentEl = document.createElement(String(tag));
 
         if (props) {
           Object.keys(props).forEach((prop) => {
-            componentEl[prop] = props[prop];
+            if (props[prop]) {
+              componentEl.setAttribute(prop, props[prop]);
+            } else {
+              componentEl.removeAttribute(prop, 'false');
+            }
           });
         }
 

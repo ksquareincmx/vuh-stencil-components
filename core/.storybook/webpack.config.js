@@ -7,6 +7,7 @@ module.exports = async ({ config, mode }) => {
   // 'PRODUCTION' is used when building the static version of storybook.
   config.entry.push('webpack-hot-middleware/client.js?reload=true');
   config.mode = process.env.NODE_ENV || 'development';
+
   config.devServer = {
     watchContentBase: true,
     contentBase: path.join(__dirname, 'src'),
@@ -25,6 +26,12 @@ module.exports = async ({ config, mode }) => {
   config.resolve.alias = {
     '@src': path.resolve(__dirname, '../dist/collection')
   };
+
+  const jsRule = config.module.rules[0];
+  const babelPresets = jsRule.use.find((l) => l.loader === 'babel-loader')
+    .options.presets;
+  const minifyPreset = babelPresets[1];
+  minifyPreset[1].simplifyComparisons = false;
 
   return config;
 };
