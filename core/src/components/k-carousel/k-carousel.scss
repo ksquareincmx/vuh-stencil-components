@@ -1,6 +1,6 @@
 :host(.KCarousel)  {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 
@@ -16,7 +16,7 @@
 
 .KCarousel-arrow {
   position: absolute;
-  top: 50%;
+  top: 45%;
   text-decoration: none;
   color: color(primary-color);
   background-color: red;
