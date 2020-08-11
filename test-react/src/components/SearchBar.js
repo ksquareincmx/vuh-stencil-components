@@ -15,6 +15,7 @@ const SearchBar = () => {
         value={inputValue}
         onInput={handlInputChange}
       ></k-search-bar>
+      <p>{inputValue}</p>
       <br />
       Disabled
       <k-search-bar disabled></k-search-bar>

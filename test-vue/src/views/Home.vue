@@ -6,13 +6,22 @@
       <p>Paragraph through KContent</p>
     </k-content>
 
+    <section>
+      <k-typography>
+        <h1>Searchbar</h1>
+      </k-typography>
+      <k-search-bar @input="setSearch($event)" :value="search"></k-search-bar>
+      <p>{{ search }}</p>
+    </section>
+
     <k-stepper>
       <k-stepper-item
         v-for="step of steps"
         :key="step.id"
         :status="step.status"
         @click="setCurrentStep"
-      >{{ step.label }}</k-stepper-item>
+        >{{ step.label }}</k-stepper-item
+      >
     </k-stepper>
 
     <section>
@@ -43,15 +52,23 @@
           <k-table-header-column size="3" default>
             <k-button @click="doAnAction()">My button</k-button>
           </k-table-header-column>
-          <k-table-header-column size="1" sortable="false">Hello there.</k-table-header-column>
+          <k-table-header-column size="1" sortable="false"
+            >Hello there.</k-table-header-column
+          >
           <k-table-header-column size="1">Hello there.</k-table-header-column>
           <k-table-header-column size="1">Hello there.</k-table-header-column>
           <k-table-header-column size="1">Hello there.</k-table-header-column>
           <k-table-header-column size="1">Hello there.</k-table-header-column>
           <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1" disabled>Hello there.</k-table-header-column>
-          <k-table-header-column size="1" disabled>Hello there.</k-table-header-column>
-          <k-table-header-column size="1" disabled>Hello there.</k-table-header-column>
+          <k-table-header-column size="1" disabled
+            >Hello there.</k-table-header-column
+          >
+          <k-table-header-column size="1" disabled
+            >Hello there.</k-table-header-column
+          >
+          <k-table-header-column size="1" disabled
+            >Hello there.</k-table-header-column
+          >
         </k-table-row>
         <k-table-row>
           <k-table-column size="3">
@@ -86,35 +103,39 @@
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   data() {
     return {
+      search: '',
       steps: [
         {
           id: 1,
-          status: "complete",
-          label: "Step 1",
+          status: 'complete',
+          label: 'Step 1'
         },
         {
           id: 2,
-          status: "incomplete",
-          label: "Step 2",
+          status: 'incomplete',
+          label: 'Step 2'
         },
         {
           id: 3,
-          status: "none",
-          label: "Step 3",
-        },
-      ],
+          status: 'none',
+          label: 'Step 3'
+        }
+      ]
     };
   },
   methods: {
     setCurrentStep: function () {
-      console.log("step", this.steps);
+      console.log('step', this.steps);
     },
     doAnAction: function () {
       console.log("I'm doing an action");
     },
-  },
+    setSearch: function (ev) {
+      this.search = ev?.target?.value;
+    }
+  }
 };
 </script>
