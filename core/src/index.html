@@ -117,7 +117,6 @@
               </k-notification-item>
             </k-notification-group>
           </k-notification>
-          </k-notification>
           <k-avatar style="margin: 16px;">
             <k-img
               alt="Abraham Berzunza"
@@ -180,7 +179,9 @@
           <h1>Snackbar</h1>
         </k-typography>
 
-        <k-snackbar text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.">
+        <k-snackbar
+          text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        >
           <k-button color="terciary">Dismiss</k-button>
         </k-snackbar>
       </section>
@@ -190,27 +191,27 @@
         </k-typography>
 
         <k-breadcrumbs>
-          <k-breadcrumbs-item current>
+          <k-breadcrumb-item current>
             <a href="#">Link 1</a>
-          </k-breadcrumbs-item>
+          </k-breadcrumb-item>
         </k-breadcrumbs>
 
-        <br>
+        <br />
 
         <k-breadcrumbs>
-          <k-breadcrumbs-item>
+          <k-breadcrumb-item>
             <a href="#">Link 1</a>
-          </k-breadcrumbs-item>
-          <k-breadcrumbs-item>
+          </k-breadcrumb-item>
+          <k-breadcrumb-item>
             <a href="#">Link 2</a>
-          </k-breadcrumbs-item>
-          <k-breadcrumbs-item current>
+          </k-breadcrumb-item>
+          <k-breadcrumb-item current>
             <a href="#">Link 3</a>
-          </k-breadcrumbs-item>
+          </k-breadcrumb-item>
         </k-breadcrumbs>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -231,7 +232,7 @@
         </k-stepper>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -239,21 +240,31 @@
         </k-typography>
         <k-carousel style="height: 300px;">
           <k-carousel-item>
-            <k-img style="width: 100%;" src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"></k-img>
+            <k-img
+              style="width: 100%;"
+              src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"
+            ></k-img>
           </k-carousel-item>
           <k-carousel-item>
-            <k-img src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"></k-img>
+            <k-img
+              src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"
+            ></k-img>
           </k-carousel-item>
           <k-carousel-item>
-            <k-img style="width: 100%;" src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"></k-img>
+            <k-img
+              style="width: 100%;"
+              src="https://cdn.pixabay.com/photo/2019/11/03/01/56/landscape-4597742_1280.jpg"
+            ></k-img>
           </k-carousel-item>
           <k-carousel-item>
-            <k-img src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"></k-img>
+            <k-img
+              src="https://cdn.pixabay.com/photo/2020/07/09/10/31/sea-5386810_1280.jpg"
+            ></k-img>
           </k-carousel-item>
         </k-carousel>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -261,25 +272,28 @@
         </k-typography>
         Disabled
         <k-search-bar disabled></k-search-bar>
-        <br>
+        <br />
         Normal
         <k-search-bar></k-search-bar>
-        <br>
+        <br />
         With Text
         <k-search-bar value="searching something ..."></k-search-bar>
-        <br>
-        <br>
+        <br />
+        <br />
         Disabled
         <k-search-bar type="outlined" disabled></k-search-bar>
-        <br>
+        <br />
         Normal
         <k-search-bar type="outlined"></k-search-bar>
-        <br>
+        <br />
         With Text
-        <k-search-bar type="outlined" value="searching something ..."></k-search-bar>
+        <k-search-bar
+          type="outlined"
+          value="searching something ..."
+        ></k-search-bar>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -287,64 +301,111 @@
           <k-input label="Name"></k-input>
           <k-input label="Last Name" disabled value="Berzunza"></k-input>
           <k-input label="Second Last Name" disabled></k-input>
-          <k-input type="email" label="Email Address" validation-state="success" value="jesus.berzunza@ksquareinc.com"></k-input>
-          <k-input type="tel" label="Phone Number" validation-state="error" value="00000" helper-text="Phone number should have 10 digits"></k-input>
+          <k-input
+            type="email"
+            label="Email Address"
+            validation-state="success"
+            value="jesus.berzunza@ksquareinc.com"
+          ></k-input>
+          <k-input
+            type="tel"
+            label="Phone Number"
+            validation-state="error"
+            value="00000"
+            helper-text="Phone number should have 10 digits"
+          ></k-input>
         </k-typography>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
           <h1>Text Fields</h1>
           <div style="display: flex; justify-content: space-between;">
-            <k-text-field style="width: 48%; height: 300px;" max-length="30" label="Description" helper-text="This is a helper text"></k-text-field>
-            <k-text-field style="width: 48%;" label="Biography" disabled value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
+            <k-text-field
+              style="width: 48%; height: 300px;"
+              max-length="30"
+              label="Description"
+              helper-text="This is a helper text"
+            ></k-text-field>
+            <k-text-field
+              style="width: 48%;"
+              label="Biography"
+              disabled
+              value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ></k-text-field>
           </div>
           <k-text-field label="Biography" disabled></k-text-field>
-          <k-text-field label="Biography" validation-state="success" max-length="100" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
-          <k-text-field label="Biography" validation-state="error" max-length="100" helper-text="this is a text helper" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></k-text-field>
+          <k-text-field
+            label="Biography"
+            validation-state="success"
+            max-length="100"
+            value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          ></k-text-field>
+          <k-text-field
+            label="Biography"
+            validation-state="error"
+            max-length="100"
+            helper-text="this is a text helper"
+            value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          ></k-text-field>
         </k-typography>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
           <h1>Banner</h1>
         </k-typography>
         <k-banner type="success">
-          <k-banner-text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.</k-banner-text>
+          <k-banner-text
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis
+            nat.</k-banner-text
+          >
           <k-button color="terciary">Dismiss</k-button>
         </k-banner>
         <k-banner type="error">
-          <k-banner-text>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.</k-banner-text>
+          <k-banner-text
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis
+            nat.</k-banner-text
+          >
         </k-banner>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
           <h1>Card</h1>
         </k-typography>
-        <div style="display: flex; justify-content: space-between">
+        <div style="display: flex; justify-content: space-between;">
           <k-card style="flex-basis: 40%;">
-            <k-img src="https://cdn.pixabay.com/photo/2017/08/10/08/47/code-2620118_1280.jpg"></k-img>
+            <k-img
+              src="https://cdn.pixabay.com/photo/2017/08/10/08/47/code-2620118_1280.jpg"
+            ></k-img>
             <div style="padding: 16px;">
               <h1>Card Title</h1>
             </div>
           </k-card>
           <k-card style="flex-basis: 40%; align-self: flex-start;">
             <div style="display: flex;">
-              <k-img src="https://cdn.pixabay.com/photo/2017/08/10/08/47/code-2620118_1280.jpg"></k-img>
-              <p style="padding: 16px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.</p>
+              <k-img
+                src="https://cdn.pixabay.com/photo/2017/08/10/08/47/code-2620118_1280.jpg"
+              ></k-img>
+              <p style="padding: 16px;">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis nat.
+              </p>
             </div>
           </k-card>
         </div>
       </section>
 
-      <br>
+      <br />
       <section>
         <k-typography>
           <h1>Dialog</h1>
@@ -353,19 +414,21 @@
         <k-dialog>
           <k-dialog-content>
             <k-dialog-header>Dialog Header</k-dialog-header>
-            <k-dialog-body style="width: 300px">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            <k-dialog-body style="width: 300px;">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa.
             </k-dialog-body>
           </k-dialog-content>
           <k-dialog-actions>
-            <k-button style="margin-right: 16px;" color="terciary">Cancel</k-button>
+            <k-button style="margin-right: 16px;" color="terciary"
+              >Cancel</k-button
+            >
             <k-button color="terciary">Discard</k-button>
           </k-dialog-actions>
         </k-dialog>
-
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -391,7 +454,7 @@
         </k-collapse-menu>
       </section>
 
-      <br>
+      <br />
 
       <section>
         <k-typography>
@@ -559,7 +622,6 @@
         <k-typography>
           <h1>Profile Picture</h1>
         </k-typography>
-        <br />
         <div style="display: flex;">
           <k-avatar>
             <k-img
@@ -700,7 +762,9 @@
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown button</h1>
           <k-dropdown variant="button">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -709,7 +773,9 @@
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown button disabled</h1>
           <k-dropdown variant="button" disabled>
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -718,7 +784,9 @@
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input</h1>
           <k-dropdown variant="input" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -726,8 +794,14 @@
         </section>
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input with label</h1>
-          <k-dropdown variant="input" label="Label" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+          <k-dropdown
+            variant="input"
+            label="Label"
+            helper-text="This is a helper text."
+          >
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -735,8 +809,14 @@
         </section>
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input success</h1>
-          <k-dropdown variant="input" validation-state="success" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+          <k-dropdown
+            variant="input"
+            validation-state="success"
+            helper-text="This is a helper text."
+          >
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -744,8 +824,15 @@
         </section>
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input success with label</h1>
-          <k-dropdown variant="input" label="Label" validation-state="success" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+          <k-dropdown
+            variant="input"
+            label="Label"
+            validation-state="success"
+            helper-text="This is a helper text."
+          >
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -753,8 +840,14 @@
         </section>
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input error</h1>
-          <k-dropdown variant="input" validation-state="error" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+          <k-dropdown
+            variant="input"
+            validation-state="error"
+            helper-text="This is a helper text."
+          >
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -762,8 +855,15 @@
         </section>
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input error with label</h1>
-          <k-dropdown variant="input" label="Label" validation-state="error" helper-text="This is a helper text.">
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+          <k-dropdown
+            variant="input"
+            label="Label"
+            validation-state="error"
+            helper-text="This is a helper text."
+          >
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -772,7 +872,9 @@
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input disabled</h1>
           <k-dropdown variant="input" disabled>
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -781,7 +883,9 @@
         <section style="margin: 24px; width: 100%;">
           <h1>Dropdown input disabled with label</h1>
           <k-dropdown variant="input" label="Label" disabled>
-            <k-dropdown-item name="op0" value="00">Select your option</k-dropdown-item>
+            <k-dropdown-item name="op0" value="00"
+              >Select your option</k-dropdown-item
+            >
             <k-dropdown-item name="op1" value="01">Option 1</k-dropdown-item>
             <k-dropdown-item name="op2" value="02">Option 2</k-dropdown-item>
             <k-dropdown-item name="op3" value="03">Option 3</k-dropdown-item>
@@ -875,7 +979,9 @@
             </k-button>
           </k-tooltip>
           <k-tooltip text="KTooltip example text" position="left">
-            <k-button style="margin-right: 16px; display: block;">Left</k-button>
+            <k-button style="margin-right: 16px; display: block;"
+              >Left</k-button
+            >
           </k-tooltip>
           <k-tooltip text="KTooltip example text" position="right">
             <k-button>Right</k-button>
@@ -900,8 +1006,16 @@
         </k-typography>
         <div style="display: flex; align-items: center;">
           <k-spinner style="margin-right: 24px;"></k-spinner>
-          <k-spinner size="24" strong="4" style="margin-right: 24px;"></k-spinner>
-          <k-spinner size="12" strong="2" style="margin-right: 24px;"></k-spinner>
+          <k-spinner
+            size="24"
+            strong="4"
+            style="margin-right: 24px;"
+          ></k-spinner>
+          <k-spinner
+            size="12"
+            strong="2"
+            style="margin-right: 24px;"
+          ></k-spinner>
           <k-spinner style="margin-right: 24px;" color="success200"></k-spinner>
           <k-spinner
             size="24"
@@ -1349,11 +1463,10 @@
       </k-typography>
 
       <section>
-
         <k-table>
           <k-table-row type="navbar" style="min-height: 56px;">
             <k-table-column size="7" style="height: 100%;">
-              <k-typography style="color: black">
+              <k-typography style="color: black;">
                 <h4>Displaying Course Status</h4>
               </k-typography>
             </k-table-column>
@@ -1477,7 +1590,6 @@
         <k-paginator current-page="3" total-pages="4"></k-paginator>
         <br />
       </section>
-
     </div>
   </body>
 

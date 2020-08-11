@@ -44,11 +44,13 @@ export default {
             {
               tag: 'k-button',
               innerText: 'Cancel',
+              props: { color: 'terciary' },
               children: []
             },
             {
               tag: 'k-button',
               innerText: 'Discard',
+              props: { color: 'terciary' },
               children: []
             }
           ]
