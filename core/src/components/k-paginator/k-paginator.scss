@@ -28,7 +28,6 @@
 
     .KPaginator-left-arrow,
     .KPaginator-right-arrow {
-      padding: 8px 6px 8px 6px;
       flex-basis: 5%;
       display: flex;
       justify-content: center;
@@ -41,11 +40,14 @@
     }
 
     .KPaginator-icon {
-      display: inline-flex;
+      display: flex;
+      justify-content: center;
       color: $primary-700;
-      height: 18px;
+      height: 100%;
+      width: 100%;
       cursor: pointer;
       font-size: 18px;
+      padding: 8px 6px 8px 6px;
     }
 
     .KPaginator-page {
