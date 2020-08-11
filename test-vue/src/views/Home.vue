@@ -1,5 +1,19 @@
 <template>
   <div class="home">
+    <section>
+      <k-paginator
+        @click="setPageChanged($event)"
+        current-page="1"
+        total-pages="17"
+      ></k-paginator>
+      <br />
+      <k-paginator
+        @click="setPageChanged($event)"
+        current-page="3"
+        total-pages="4"
+      ></k-paginator>
+      <br />
+    </section>
     <k-content>
       <h1>Heading 1 through KContent</h1>
       <h3>Heading 3 through KContent</h3>
@@ -135,6 +149,10 @@ export default {
     },
     setSearch: function (ev) {
       this.search = ev?.target?.value;
+    },
+    setPageChanged: function (ev) {
+      console.log(ev?.target?.value);
+      alert('current page ' + ev?.target?.value);
     }
   }
 };

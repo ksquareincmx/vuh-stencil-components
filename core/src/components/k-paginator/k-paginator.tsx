@@ -63,6 +63,7 @@ export class KPaginator {
     const target = e.target || e.srcElement;
     this.currentPage = target['innerHTML'].replace(/[^0-9]+/, '');
     this.el.value = String(this.currentPage);
+    this.el.click();
   };
 
   private onLeftArrowClick = (e: Event) => {
@@ -71,6 +72,7 @@ export class KPaginator {
       this.currentPage--;
     }
     this.el.value = String(this.currentPage);
+    this.el.click();
   };
 
   private onRightArrowClick = (e: Event) => {
@@ -79,6 +81,7 @@ export class KPaginator {
       this.currentPage++;
     }
     this.el.value = String(this.currentPage);
+    this.el.click();
   };
 
   render() {
