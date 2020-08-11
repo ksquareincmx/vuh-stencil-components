@@ -14,8 +14,8 @@ export class KStepper {
   }
 
   componentDidRender() {
-    this.children.namedItem('KStepperHeader').setAttribute('slot', 'header');
-    this.children.namedItem('KStepperContent').setAttribute('slot', 'content');
+    this.children.namedItem('KStepperHeader')?.setAttribute('slot', 'header');
+    this.children.namedItem('KStepperContent')?.setAttribute('slot', 'content');
   }
 
   render() {

@@ -53,6 +53,13 @@ export class KSearchBar {
 
   handleCleanContent() {
     this.value = '';
+    const ev = new window.InputEvent('input', {
+      bubbles: true,
+      cancelable: true,
+      inputType: 'deleteSoftLineBackward',
+      composed: true
+    });
+    this.inputEl.dispatchEvent(ev);
   }
 
   render() {
