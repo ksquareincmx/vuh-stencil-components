@@ -114,13 +114,22 @@ function createNodesCodeString(elements, level) {
     tabs += '&nbsp;';
   }
   if (elements && elements.length > 0) {
-    elements.forEach(({ tag, innerText, children }) => {
+    elements.forEach(({ tag, innerText, props, children }) => {
       let result = createNodesCodeString(children, level + 1);
+      const attrs = Object.keys(props || {})
+        .filter((prop) => props[prop] != null)
+        .map((prop) => {
+          return `${Case.kebab(prop)}="${props[prop]}"`;
+        })
+        .join(' ');
       if (result !== '') {
-        str +=
-          '<br>' + `${tabs}&lt;${tag}&gt;${result}<br>${tabs}&lt;/${tag}&gt;`;
+        str += `<br>${tabs}&lt;${tag}${
+          attrs ? ' ' + attrs : ''
+        }&gt;${result}<br>${tabs}&lt;/${tag}&gt;`;
       } else {
-        str += '<br>  ' + `&lt;${tag}&gt;${innerText}&lt;/${tag}&gt;`;
+        str += `<br>  &lt;${tag}${
+          attrs ? ' ' + attrs : ''
+        }&gt;${innerText}&lt;/${tag}&gt;`;
       }
     });
   }
@@ -195,9 +204,18 @@ function getPropsWithKnobValues(Component, knobOptions = {}) {
  */
 function createNodes(el, elements) {
   if (elements && elements.length > 0) {
-    elements.forEach(({ tag, innerText, children }) => {
+    elements.forEach(({ tag, innerText, props, children }) => {
       let childEl = document.createElement(tag);
       childEl.innerHTML = innerText;
+      if (props) {
+        Object.keys(props).forEach((prop) => {
+          if (props[prop]) {
+            childEl.setAttribute(prop, props[prop]);
+          } else {
+            childEl.removeAttribute(prop);
+          }
+        });
+      }
       createNodes(childEl, children);
       el.appendChild(childEl);
     });
@@ -274,7 +292,7 @@ function createStencilStory({ Component, notes, states, knobs }, stories) {
             if (props[prop]) {
               componentEl.setAttribute(prop, props[prop]);
             } else {
-              componentEl.removeAttribute(prop, 'false');
+              componentEl.removeAttribute(prop);
             }
           });
         }
