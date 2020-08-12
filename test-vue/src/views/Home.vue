@@ -1,17 +1,9 @@
 <template>
   <div class="home">
     <section>
-      <k-paginator
-        @click="setPageChanged($event)"
-        current-page="1"
-        total-pages="17"
-      ></k-paginator>
+      <k-paginator @click="setPageChanged($event)" current-page="1" total-pages="17"></k-paginator>
       <br />
-      <k-paginator
-        @click="setPageChanged($event)"
-        current-page="3"
-        total-pages="4"
-      ></k-paginator>
+      <k-paginator @click="setPageChanged($event)" current-page="3" total-pages="4"></k-paginator>
       <br />
     </section>
     <k-content>
@@ -34,8 +26,7 @@
         :key="step.id"
         :status="step.status"
         @click="setCurrentStep"
-        >{{ step.label }}</k-stepper-item
-      >
+      >{{ step.label }}</k-stepper-item>
     </k-stepper>
 
     <section>
@@ -63,26 +54,18 @@
           </k-table-column>
         </k-table-row>
         <k-table-row type="header">
-          <k-table-header-column size="3" default>
+          <k-table-header-column @click="setSort($event)" size="3" default>
             <k-button @click="doAnAction()">My button</k-button>
           </k-table-header-column>
-          <k-table-header-column size="1" sortable="false"
-            >Hello there.</k-table-header-column
-          >
-          <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1">Hello there.</k-table-header-column>
-          <k-table-header-column size="1" disabled
-            >Hello there.</k-table-header-column
-          >
-          <k-table-header-column size="1" disabled
-            >Hello there.</k-table-header-column
-          >
-          <k-table-header-column size="1" disabled
-            >Hello there.</k-table-header-column
-          >
+          <k-table-header-column @click="setSort($event)" size="1" sortable="false">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1">Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1" disabled>Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1" disabled>Hello there.</k-table-header-column>
+          <k-table-header-column @click="setSort($event)" size="1" disabled>Hello there.</k-table-header-column>
         </k-table-row>
         <k-table-row>
           <k-table-column size="3">
@@ -117,32 +100,32 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
   data() {
     return {
-      search: '',
+      search: "",
       steps: [
         {
           id: 1,
-          status: 'complete',
-          label: 'Step 1'
+          status: "complete",
+          label: "Step 1",
         },
         {
           id: 2,
-          status: 'incomplete',
-          label: 'Step 2'
+          status: "incomplete",
+          label: "Step 2",
         },
         {
           id: 3,
-          status: 'none',
-          label: 'Step 3'
-        }
-      ]
+          status: "none",
+          label: "Step 3",
+        },
+      ],
     };
   },
   methods: {
     setCurrentStep: function () {
-      console.log('step', this.steps);
+      console.log("step", this.steps);
     },
     doAnAction: function () {
       console.log("I'm doing an action");
@@ -152,8 +135,11 @@ export default {
     },
     setPageChanged: function (ev) {
       console.log(ev?.target?.value);
-      alert('current page ' + ev?.target?.value);
-    }
-  }
+      alert("current page " + ev?.target?.value);
+    },
+    setSort: function (ev) {
+      console.log(ev?.target?.value);
+    },
+  },
 };
 </script>
