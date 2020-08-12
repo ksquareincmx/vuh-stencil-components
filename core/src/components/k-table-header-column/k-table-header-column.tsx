@@ -20,7 +20,7 @@ export class KTableHeaderColumn {
   private headerColumnId = `hc-${tableHeaderColumnIds++}`;
   private observer;
 
-  @Element() el: HTMLElement;
+  @Element() el: HTMLInputElement;
 
   @Prop() size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
   @Prop() disabled?: boolean = false;
@@ -66,11 +66,17 @@ export class KTableHeaderColumn {
       if (this.sortBy === 'none') {
         this.active = true;
         this.sortBy = 'asc';
+        this.el.value = this.sortBy;
+        this.el.click();
       } else if (this.sortBy === 'asc') {
         this.sortBy = 'desc';
+        this.el.value = this.sortBy;
+        this.el.click();
       } else {
         this.active = false;
         this.sortBy = 'none';
+        this.el.value = this.sortBy;
+        this.el.click();
       }
     }
   };
