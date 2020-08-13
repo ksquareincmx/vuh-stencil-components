@@ -45,7 +45,7 @@ export class KTypography {
   render() {
     return (
       <Host class={`${this.variant ?? ''} ${this.color ?? ''}`}>
-        <slot />
+        <slot></slot>
       </Host>
     );
   }
