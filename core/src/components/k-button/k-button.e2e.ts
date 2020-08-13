@@ -13,8 +13,7 @@ describe('k-button', () => {
     const page = await newE2EPage();
 
     await page.setContent('<k-button></k-button>');
-    const component = await page.find('k-button');
-    const element = await component.find('slot');
-    expect(element.textContent).toEqual(`Default`);
+    const component = await page.find('k-button >>> slot');
+    expect(component.textContent).toBe('Default');
   });
 });

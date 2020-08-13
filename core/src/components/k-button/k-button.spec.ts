@@ -10,7 +10,7 @@ describe('k-button', () => {
     expect(root).toEqualHtml(`
       <k-button>
         <mock:shadow-root>
-          <button>
+          <button class="KButton primary smooth medium">
             <slot>
               Default
             </slot>
@@ -26,15 +26,16 @@ describe('k-button', () => {
       html: '<k-button>Accept</k-button>'
     });
     expect(root).toEqualHtml(`
-      <k-button>
-        <mock:shadow-root>
-          <button>
-            <slot>
-              Accept
-            </slot>
-          </button>
-        </mock:shadow-root>
-      </k-button>
-    `);
+          <k-button >
+            <mock:shadow-root>
+              <button class="KButton primary smooth medium">
+                <slot>
+                  Default
+                </slot>
+              </button>
+            </mock:shadow-root>
+            Accept
+          </k-button>
+        `);
   });
 });
