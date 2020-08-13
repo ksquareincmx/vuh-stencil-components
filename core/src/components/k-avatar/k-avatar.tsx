@@ -11,7 +11,7 @@ export class KAvatar {
   render() {
     return (
       <div class={`KAvatar ${this.size}`}>
-        <slot />
+        <slot></slot>
       </div>
     );
   }
