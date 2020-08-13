@@ -11,7 +11,7 @@ describe('k-typography', () => {
     expect(root).toEqualHtml(`
       <k-typography>
         <mock:shadow-root>
-          <slot />
+          <slot></slot>
         </mock:shadow-root>
       </k-typography>
     `);
