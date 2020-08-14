@@ -62,12 +62,12 @@ describe('k-button', () => {
     const { root } = await newSpecPage({
       components: [KButton],
       html:
-        '<k-button color="secondary" shape="round" size="large">text</k-button>'
+        '<k-button elevation color="secondary" shape="round" size="large">text</k-button>'
     });
     expect(root).toEqualHtml(`
-      <k-button color="secondary" shape="round" size="large">
+      <k-button elevation color="secondary" shape="round" size="large">
         <mock:shadow-root>
-          <button class="KButton secondary round large">
+          <button class="KButton secondary round large elevation">
             <slot>
               Default
             </slot>
