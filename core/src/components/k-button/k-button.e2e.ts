@@ -16,4 +16,24 @@ describe('k-button', () => {
     const component = await page.find('k-button >>> slot');
     expect(component.textContent).toBe('Default');
   });
+
+  it('should be clicked', async () => {
+    const page = await newE2EPage();
+    const mockFn = jest.fn();
+
+    await page.setContent(`
+      <k-button id="button"></k-button>
+
+      <script>
+        const $btn = document.getElementById('button');
+        $btn.addEventListener('click', () => {
+          ${mockFn()}
+        });
+      </script>
+    `);
+    const button = await page.find('k-button');
+    await button.click();
+
+    expect(mockFn.mock.calls.length).toBe(1);
+  });
 });
