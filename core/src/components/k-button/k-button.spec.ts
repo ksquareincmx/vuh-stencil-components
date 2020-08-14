@@ -10,7 +10,7 @@ describe('k-button', () => {
     expect(root).toEqualHtml(`
       <k-button>
         <mock:shadow-root>
-          <button>
+          <button class="KButton primary smooth medium">
             <slot>
               Default
             </slot>
@@ -26,14 +26,54 @@ describe('k-button', () => {
       html: '<k-button>Accept</k-button>'
     });
     expect(root).toEqualHtml(`
-      <k-button>
+          <k-button>
+            <mock:shadow-root>
+              <button class="KButton primary smooth medium">
+                <slot>
+                  Default
+                </slot>
+              </button>
+            </mock:shadow-root>
+            Accept
+          </k-button>
+        `);
+  });
+
+  it('should be disabled', async () => {
+    const { root } = await newSpecPage({
+      components: [KButton],
+      html: '<k-button disabled>text</k-button>'
+    });
+    expect(root).toEqualHtml(`
+      <k-button disabled>
         <mock:shadow-root>
-          <button>
+          <button class="KButton primary smooth medium" disabled>
             <slot>
-              Accept
+              Default
             </slot>
           </button>
         </mock:shadow-root>
+        text
+      </k-button>
+    `);
+  });
+
+  it('should render with props', async () => {
+    const { root } = await newSpecPage({
+      components: [KButton],
+      html:
+        '<k-button elevation color="secondary" shape="round" size="large">text</k-button>'
+    });
+    expect(root).toEqualHtml(`
+      <k-button elevation color="secondary" shape="round" size="large">
+        <mock:shadow-root>
+          <button class="KButton secondary round large elevation">
+            <slot>
+              Default
+            </slot>
+          </button>
+        </mock:shadow-root>
+        text
       </k-button>
     `);
   });
