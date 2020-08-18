@@ -402,8 +402,8 @@
 
 .KDropdown-options {
   display: none;
-  position: relative;
-  top: 8px;
+  position: absolute;
+  top: 43px;
   left: 0;
   right: 0;
   border-radius: 4px;
@@ -414,9 +414,4 @@
   border-radius: 4px;
   box-shadow: 0px 3px 6px #00000029;
   background-color: $gray-50;
-
-  &.KDropdown-table-options {
-    position: absolute;
-    top: 43px;
-  }
 }

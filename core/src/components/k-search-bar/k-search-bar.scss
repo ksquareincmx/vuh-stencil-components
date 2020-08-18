@@ -20,7 +20,7 @@
 
   .KSearchBar-input {
     width: 100%;
-    border: none;
+    border: 1px solid transparent;
     padding: 16px 40px;
     border-radius: 4px;
     background-color: rgba($color: color(primary-100-rgb), $alpha: 0.1);
@@ -36,7 +36,7 @@
 
     &:disabled:active,
     &:disabled:focus {
-      border: none;
+      border: 1px solid transparent;
     }
 
     &:disabled:active + .KSearchBar-left,

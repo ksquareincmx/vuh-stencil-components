@@ -16,7 +16,7 @@ export class KGrid {
           'KGrid--fluid': this.fluid
         })}
       >
-        <slot />
+        <slot></slot>
       </Host>
     );
   }

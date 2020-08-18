@@ -13,7 +13,7 @@ export class KRow {
       <Host
         class={`KRow ${this.spacing ? 'KRow--spacing-' + this.spacing : ''} `}
       >
-        <slot />
+        <slot></slot>
       </Host>
     );
   }

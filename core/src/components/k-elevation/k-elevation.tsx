@@ -11,7 +11,7 @@ export class KElevation {
   render() {
     return (
       <div class="KElevation" style={{ borderRadius: this.radius }}>
-        <slot />
+        <slot></slot>
       </div>
     );
   }
