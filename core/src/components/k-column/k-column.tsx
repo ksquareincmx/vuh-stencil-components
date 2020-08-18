@@ -93,7 +93,7 @@ export class KColumn {
         )}
       >
         <div class={`KColumn-content`}>
-          <slot />
+          <slot></slot>
         </div>
       </Host>
     );
