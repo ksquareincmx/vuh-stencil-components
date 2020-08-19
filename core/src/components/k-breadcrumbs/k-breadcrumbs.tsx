@@ -10,7 +10,7 @@ export class KBreadcrumbs {
 
   componentWillRender() {
     const elCount = this.el.children.length;
-    this.el.children[elCount - 1].setAttribute('last', 'true');
+    elCount > 0 && this.el.children[elCount - 1].setAttribute('last', 'true');
   }
 
   render() {
