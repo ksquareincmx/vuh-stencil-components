@@ -5,7 +5,6 @@ import {
   Watch,
   Event,
   EventEmitter,
-  State,
   Host
 } from '@stencil/core';
 import clsx from 'clsx';
@@ -16,11 +15,11 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KTabItem {
+  private el?: HTMLElement;
+
   @Prop() current: boolean = false;
   @Prop() disabled: boolean = false;
   @Event() valueChanged: EventEmitter<{ value: boolean; id: String }>;
-
-  @State() el?: HTMLElement;
 
   @Watch('current')
   currentChanged() {

@@ -7,7 +7,7 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KNotification {
-  @State() bell?: HTMLElement;
+  private bell?: HTMLElement;
   @State() showNotificationList: boolean = false;
   @Prop() notificationCount: number = 0;
 

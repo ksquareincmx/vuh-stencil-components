@@ -6,8 +6,8 @@ import { Component, h, Prop, State, Host } from '@stencil/core';
   shadow: true
 })
 export class KImg {
+  private refEl: HTMLElement;
   @State() show: boolean = false;
-  @State() refEl: HTMLElement;
 
   @Prop() src: string;
   @Prop() alt?: string;
