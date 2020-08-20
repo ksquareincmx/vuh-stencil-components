@@ -14,8 +14,12 @@ export class KStepper {
   }
 
   componentDidRender() {
-    this.children.namedItem('KStepperHeader')?.setAttribute('slot', 'header');
-    this.children.namedItem('KStepperContent')?.setAttribute('slot', 'content');
+    if (this.children.length > 0) {
+      this.children.namedItem('KStepperHeader')?.setAttribute('slot', 'header');
+      this.children
+        .namedItem('KStepperContent')
+        ?.setAttribute('slot', 'content');
+    }
   }
 
   render() {

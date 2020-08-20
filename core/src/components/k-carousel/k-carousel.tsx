@@ -14,13 +14,14 @@ export class KCarousel {
 
   private MAX_STEPS_PERCENTAGE = 100;
 
+  private slidesContainer?: HTMLElement;
+
   @Element() el: HTMLElement;
   @Prop() showDots: boolean = true;
   @Prop() steps: number = 1;
   @Prop() transitionDuration: number = 600;
 
   @State() currentSlide: number = 0;
-  @State() slidesContainer?: HTMLElement;
   @State() distance = this.MAX_STEPS_PERCENTAGE / this.steps;
 
   changeSlide(direction) {
