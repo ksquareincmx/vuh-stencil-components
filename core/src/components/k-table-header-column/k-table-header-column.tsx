@@ -28,9 +28,9 @@ export class KTableHeaderColumn {
 
   @Prop() default: boolean = false;
 
+  @Prop({ mutable: true }) active?: boolean = false;
   @State() sortBy: 'asc' | 'desc' | 'none' = 'none';
   @State() sizeHasChanged: boolean = false;
-  @Prop({ mutable: true }) active?: boolean = false;
 
   @Event() activeChanged: EventEmitter<{
     id: String;
