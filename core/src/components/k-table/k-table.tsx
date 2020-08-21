@@ -1,4 +1,4 @@
-import { Component, h, Host, State, Listen, Element } from '@stencil/core';
+import { Component, h, State, Host, Listen, Element } from '@stencil/core';
 
 @Component({
   tag: 'k-table',
@@ -9,9 +9,7 @@ export class KTable {
   private slotted: HTMLCollection;
 
   @Element() el?: HTMLElement;
-  @State() maxRows?: '25' | '50' | '100' | '250' = '25';
   @State() tableWrapper?: HTMLElement;
-  @State() navBarWrapper?: HTMLElement;
 
   private setDataCount() {
     this.slotted = this.el.children;

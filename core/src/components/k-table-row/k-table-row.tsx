@@ -76,8 +76,7 @@ export class KTableRow {
     return (
       <Host
         class={clsx('KTableRow', {
-          'KTableRow-border': this.type === 'header',
-          'KTableRow-navbar': this.type === 'navbar'
+          'KTableRow-border': this.type === 'header'
         })}
       >
         <slot></slot>
