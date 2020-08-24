@@ -15,6 +15,8 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KTextField {
+  private textAreaEl: HTMLElement;
+
   @Prop() label: string = 'Default';
   @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;
@@ -24,7 +26,6 @@ export class KTextField {
   @Prop() maxLength?: number = 0;
 
   @State() typingCount: number = 0;
-  @State() textAreaEl: HTMLElement;
   @Event() valueChange: EventEmitter;
 
   private isSuccess = () => {

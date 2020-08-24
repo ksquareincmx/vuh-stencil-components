@@ -19,20 +19,24 @@ export class KBanner {
   };
 
   private renderP = () => {
-    if (this.el.children.item(0)?.tagName === 'K-BANNER-TEXT') {
-      return this.el.children.item(0)?.innerHTML;
-    } else {
-      return this.el.children.item(1)?.innerHTML;
+    if (this.el.children.length > 0) {
+      if (this.el.children.item(0)?.tagName === 'K-BANNER-TEXT') {
+        return this.el.children.item(0)?.innerHTML;
+      } else {
+        return this.el.children.item(1)?.innerHTML;
+      }
     }
   };
 
   private renderButton = () => {
-    if (this.el.children.item(0)?.tagName === 'K-BUTTON') {
-      this.el.children.item(0)?.setAttribute('slot', 'button');
-      return this.el.children.item(0)?.outerHTML;
-    } else {
-      this.el.children.item(1)?.setAttribute('slot', 'button');
-      return this.el.children.item(1)?.outerHTML;
+    if (this.el.children.length > 0) {
+      if (this.el.children.item(0)?.tagName === 'K-BUTTON') {
+        this.el.children.item(0)?.setAttribute('slot', 'button');
+        return this.el.children.item(0)?.outerHTML;
+      } else {
+        this.el.children.item(1)?.setAttribute('slot', 'button');
+        return this.el.children.item(1)?.outerHTML;
+      }
     }
   };
 
