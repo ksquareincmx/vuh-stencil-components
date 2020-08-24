@@ -9,13 +9,15 @@ export class KDialog {
   @Element() el: HTMLElement;
 
   componentDidRender() {
-    this.el.children
-      .namedItem('KDialogContent')
-      .setAttribute('slot', 'content');
+    if (this.el.children.length > 0) {
+      this.el.children
+        .namedItem('KDialogContent')
+        .setAttribute('slot', 'content');
 
-    this.el.children
-      .namedItem('KDialogActions')
-      .setAttribute('slot', 'actions');
+      this.el.children
+        .namedItem('KDialogActions')
+        .setAttribute('slot', 'actions');
+    }
   }
 
   render() {
