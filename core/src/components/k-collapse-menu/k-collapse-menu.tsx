@@ -7,23 +7,19 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KCollapseMenu {
+  private menuEl?: HTMLElement;
+
   @Element() el?: HTMLElement;
   @State() children?: any;
-  @State() menuEl?: HTMLElement;
-  @State() hasContent: boolean = false;
   @State() showMenuList: boolean = false;
   @State() isOpenByClick: boolean = false;
 
   @Prop() position: 'right' | 'left' = 'right';
 
-  componentWillRender() {
-    this.children = this.el.children;
-  }
-
   componentDidRender() {
-    this.hasContent =
-      this.children.namedItem('kCollapseParent') !== null &&
-      this.children.namedItem('kCollapseList') !== null;
+    if (this.el.children.length > 0) {
+      this.children = this.el.children;
+    }
 
     this.menuEl.addEventListener('mouseover', () => {
       this.showMenuList = true;
@@ -46,7 +42,7 @@ export class KCollapseMenu {
       <div
         onClick={this.handleOpenMenu.bind(this)}
         class="KCollapseMenu-parent"
-        innerHTML={this.children.namedItem('kCollapseParent')?.innerHTML}
+        innerHTML={this.children?.namedItem('kCollapseParent')?.innerHTML}
       ></div>
     );
   }
@@ -58,7 +54,7 @@ export class KCollapseMenu {
           'KCollapseMenu-list--is-opened':
             this.showMenuList || this.isOpenByClick
         })}
-        innerHTML={this.children.namedItem('kCollapseList')?.innerHTML}
+        innerHTML={this.children?.namedItem('kCollapseList')?.innerHTML}
       ></div>
     );
   }
@@ -74,12 +70,9 @@ export class KCollapseMenu {
 
   render() {
     return (
-      <Host
-        ref={(el) => (this.menuEl = el)}
-        class={clsx('KCollapseMenu', [!this.hasContent])}
-      >
-        {this.renderParent()}
-        {this.renderList()}
+      <Host ref={(el) => (this.menuEl = el)} class="KCollapseMenu">
+        {this.el.children.length > 0 && this.renderParent()}
+        {this.el.children.length > 0 && this.renderList()}
       </Host>
     );
   }
