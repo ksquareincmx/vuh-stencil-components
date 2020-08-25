@@ -7,7 +7,10 @@ import { Component, h, Host, State, Element, Listen } from '@stencil/core';
 })
 export class KTab {
   @Element() host: HTMLElement;
-  @State() childrenData: any = {};
+  @State() childrenData = {
+    selectedChild: -1,
+    numberOfChildren: 0
+  };
 
   @Listen('valueChanged')
   valueChangedHandler(state) {
