@@ -11,15 +11,15 @@ It can receive `k-menu-content` and `k-menu-nav` as its children.
 
 ## Properties
 
-| Property        | Attribute        | Description | Type      | Default |
-| --------------- | ---------------- | ----------- | --------- | ------- |
-| `disableDrawer` | `disable-drawer` |             | `boolean` | `false` |
-| `hideDrawerLg`  | `hide-drawer-lg` |             | `boolean` | `false` |
-| `hideDrawerMd`  | `hide-drawer-md` |             | `boolean` | `false` |
-| `hideDrawerSm`  | `hide-drawer-sm` |             | `boolean` | `false` |
-| `hideDrawerXl`  | `hide-drawer-xl` |             | `boolean` | `false` |
-| `hideDrawerXs`  | `hide-drawer-xs` |             | `boolean` | `false` |
-| `menuKey`       | `menu-key`       |             | `string`  | `''`    |
+| Property        | Attribute        | Description | Type      | Default         |
+| --------------- | ---------------- | ----------- | --------- | --------------- |
+| `disableDrawer` | `disable-drawer` |             | `boolean` | `false`         |
+| `hideDrawerLg`  | `hide-drawer-lg` |             | `boolean` | `false`         |
+| `hideDrawerMd`  | `hide-drawer-md` |             | `boolean` | `false`         |
+| `hideDrawerSm`  | `hide-drawer-sm` |             | `boolean` | `false`         |
+| `hideDrawerXl`  | `hide-drawer-xl` |             | `boolean` | `false`         |
+| `hideDrawerXs`  | `hide-drawer-xs` |             | `boolean` | `false`         |
+| `menuKey`       | `menu-key`       |             | `string`  | `'default-key'` |
 
 
 ## Events

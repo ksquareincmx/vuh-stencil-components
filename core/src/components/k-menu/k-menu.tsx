@@ -17,20 +17,15 @@ import clsx from 'clsx';
 })
 export class KMenu {
   @Element() host: HTMLElement;
-  @State() hasChildren?: boolean;
   @State() children?: any;
 
-  @Prop() menuKey: string = '';
+  @Prop() menuKey: string = 'default-key';
   @Prop() hideDrawerXs: boolean = false;
   @Prop() hideDrawerSm: boolean = false;
   @Prop() hideDrawerMd: boolean = false;
   @Prop() hideDrawerLg: boolean = false;
   @Prop() hideDrawerXl: boolean = false;
   @Prop() disableDrawer: boolean = false;
-
-  componentWillRender() {
-    this.children = this.host.children;
-  }
 
   @Event() toggleMenu: EventEmitter<{
     id: string;
@@ -52,14 +47,16 @@ export class KMenu {
   }
 
   componentDidRender() {
-    this.hasChildren = this.children.namedItem('kMenuNav') !== null;
+    if (this.host.children.length > 0) {
+      this.children = this.host.children;
+    }
   }
 
   renderMenuContent() {
     return (
       <div
         class="KMenuContent"
-        innerHTML={this.children.namedItem('kMenuContent')?.innerHTML}
+        innerHTML={this.children?.namedItem('kMenuContent')?.innerHTML}
       ></div>
     );
   }
@@ -68,7 +65,7 @@ export class KMenu {
     return (
       <div
         class="KMenuNav"
-        innerHTML={this.children.namedItem('kMenuNav')?.innerHTML}
+        innerHTML={this.children?.namedItem('kMenuNav')?.innerHTML}
       ></div>
     );
   }
@@ -78,7 +75,7 @@ export class KMenu {
       <Host class="KMenu">
         <div
           class={clsx('KMenu-toolbar', {
-            'KMenu--is-shadowed': !this.hasChildren
+            'KMenu--is-shadowed': this.children?.length === 0
           })}
         >
           <button
@@ -95,9 +92,9 @@ export class KMenu {
           >
             <k-icon name="menu" size="medium"></k-icon>
           </button>
-          {this.renderMenuContent()}
+          {this.children?.length > 0 && this.renderMenuContent()}
         </div>
-        {this.renderMenuNav()}
+        {this.children?.length > 0 && this.renderMenuNav()}
       </Host>
     );
   }

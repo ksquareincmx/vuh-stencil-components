@@ -12,7 +12,7 @@ export class KDrawer {
   @State() showSidenav: boolean = false;
   @State() drawer: any = {};
 
-  @Prop() forKey: string = 'key-menu';
+  @Prop() forKey: string = 'default-key';
 
   componentWillRender() {
     this.body = document.querySelector('body');

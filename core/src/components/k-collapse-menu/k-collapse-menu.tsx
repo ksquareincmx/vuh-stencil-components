@@ -71,8 +71,8 @@ export class KCollapseMenu {
   render() {
     return (
       <Host ref={(el) => (this.menuEl = el)} class="KCollapseMenu">
-        {this.el.children.length > 0 && this.renderParent()}
-        {this.el.children.length > 0 && this.renderList()}
+        {this.children?.length > 0 && this.renderParent()}
+        {this.children?.length > 0 && this.renderList()}
       </Host>
     );
   }
