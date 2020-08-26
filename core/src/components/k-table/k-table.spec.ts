@@ -8,13 +8,13 @@ describe('k-table', () => {
       html: '<k-table></k-table>'
     });
     expect(root).toEqualHtml(`
-      <k-table>
+      <k-table class="KTable">
         <mock:shadow-root>
           <div class="KTable-navbar">
             <slot name="navbar"></slot>
           </div>
           <div class="KTable-container">
-            <div class="KTable-wrapper">
+            <div class="KTable-wrapper" style="--data-count: 0;">
                 <slot></slot>
             </div>
           </div>

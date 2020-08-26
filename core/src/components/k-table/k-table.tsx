@@ -24,7 +24,7 @@ export class KTable {
         break;
       }
     }
-    for (let l = 0; l < slottedColumns.length; l++) {
+    for (let l = 0; l < slottedColumns?.length; l++) {
       columns.push(Number(slottedColumns[l].attributes['size'].value));
     }
     const totalColumns = String(columns.reduce((a, b) => a + b, 0));

@@ -8,11 +8,9 @@ describe('k-table-row', () => {
       html: '<k-table-row></k-table-row>'
     });
     expect(root).toEqualHtml(`
-      <k-table-row>
+      <k-table-row class="KTableRow">
         <mock:shadow-root>
-          <slot>
-            Default
-          </slot>
+          <slot></slot>
         </mock:shadow-root>
       </k-table-row>
     `);
@@ -21,14 +19,12 @@ describe('k-table-row', () => {
   it('should be type header', async () => {
     const { root } = await newSpecPage({
       components: [KTableRow],
-      html: '<k-table-row></k-table-row>'
+      html: '<k-table-row type="header"></k-table-row>'
     });
     expect(root).toEqualHtml(`
-      <k-table-row type="header" class="KTableRow KTableRow-border">
+      <k-table-row class="KTableRow KTableRow-border" type="header">
         <mock:shadow-root>
-          <slot>
-            Default
-          </slot>
+          <slot></slot>
         </mock:shadow-root>
       </k-table-row>
     `);
@@ -37,14 +33,12 @@ describe('k-table-row', () => {
   it('should be type navbar', async () => {
     const { root } = await newSpecPage({
       components: [KTableRow],
-      html: '<k-table-row></k-table-row>'
+      html: '<k-table-row type="navbar"></k-table-row>'
     });
     expect(root).toEqualHtml(`
-      <k-table-row type="navbar" slot="navbar" class="KTableRow">
+      <k-table-row class="KTableRow" type="navbar">
         <mock:shadow-root>
-          <slot>
-            Default
-          </slot>
+          <slot></slot>
         </mock:shadow-root>
       </k-table-row>
     `);

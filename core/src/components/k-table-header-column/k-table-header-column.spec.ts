@@ -8,15 +8,15 @@ describe('k-table-header-column', () => {
       html: '<k-table-header-column></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-header-column>
+      <k-table-header-column class="KTableHeaderColumn" id="hc-0" sortby="none">
         <mock:shadow-root>
-          <div class="KTableColumn-content">
+          <div class="KTableHeaderColumn-content">
             <div class="KTableHeaderColumn-text">
               <slot></slot>
             </div>
             <div class="KTableHeaderColumn-icon">
               <i class="vuh-swap-vert-up"></i>
-              <i class="vuh-swarp-vert-down"></i>
+              <i class="vuh-swap-vert-down"></i>
             </div>
           </div>
           <div class="KTableHeaderColumn-floating-text">
@@ -32,15 +32,15 @@ describe('k-table-header-column', () => {
       html: '<k-table-header-column disabled></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-header-column disabled>
+      <k-table-header-column class="KTableHeaderColumn" id="hc-1" sortby="none" disabled>
         <mock:shadow-root>
-          <div class="KTableColumn-content">
+          <div class="KTableHeaderColumn-content">
             <div class="KTableHeaderColumn-text">
               <slot></slot>
             </div>
-            <div class="KTableHeaderColumn-icon">
+            <div class="KTableHeaderColumn-icon --is-disabled">
               <i class="vuh-swap-vert-up"></i>
-              <i class="vuh-swarp-vert-down"></i>
+              <i class="vuh-swap-vert-down"></i>
             </div>
           </div>
           <div class="KTableHeaderColumn-floating-text">
@@ -56,9 +56,9 @@ describe('k-table-header-column', () => {
       html: '<k-table-header-column sortable="false"></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-header-column sortable="false">
+      <k-table-header-column sortable="false" class="KTableHeaderColumn" id="hc-2" sortby="none">
         <mock:shadow-root>
-          <div class="KTableColumn-content">
+          <div class="KTableHeaderColumn-content">
             <div class="KTableHeaderColumn-text">
               <slot></slot>
             </div>
@@ -76,15 +76,15 @@ describe('k-table-header-column', () => {
       html: '<k-table-header-column active></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-header-column active>
+      <k-table-header-column active class="KTableHeaderColumn" id="hc-3" sortby="none">
         <mock:shadow-root>
-          <div class="KTableColumn-content">
+          <div class="KTableHeaderColumn-content">
             <div class="KTableHeaderColumn-text">
               <slot></slot>
             </div>
             <div class="KTableHeaderColumn-icon">
               <i class="vuh-swap-vert-up"></i>
-              <i class="vuh-swarp-vert-down"></i>
+              <i class="vuh-swap-vert-down"></i>
             </div>
           </div>
           <div class="KTableHeaderColumn-floating-text">
@@ -100,15 +100,15 @@ describe('k-table-header-column', () => {
       html: '<k-table-header-column default></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-header-column default>
+      <k-table-header-column default class="KTableHeaderColumn" id="hc-4" sortby="none">
         <mock:shadow-root>
-          <div class="KTableColumn-content">
+          <div class="KTableHeaderColumn-content">
             <div class="KTableHeaderColumn-text">
               <slot></slot>
             </div>
             <div class="KTableHeaderColumn-icon">
               <i class="vuh-swap-vert-up"></i>
-              <i class="vuh-swarp-vert-down"></i>
+              <i class="vuh-swap-vert-down"></i>
             </div>
           </div>
           <div class="KTableHeaderColumn-floating-text">

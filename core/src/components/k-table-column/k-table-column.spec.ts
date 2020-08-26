@@ -8,7 +8,7 @@ describe('k-table-column', () => {
       html: '<k-table-column></k-table-column>'
     });
     expect(root).toEqualHtml(`
-      <k-table-column>
+      <k-table-column class="KTableColumn">
         <mock:shadow-root>
           <div class="KTableColumn-content">
             <slot></slot>

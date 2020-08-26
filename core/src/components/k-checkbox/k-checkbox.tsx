@@ -16,7 +16,7 @@ import clsx from 'clsx';
 })
 export class KCheckbox {
   @Prop({ reflect: true }) disabled?: boolean = false;
-  @Prop({ mutable: true }) checked?: boolean = false;
+  @Prop({ reflect: true, mutable: true }) checked?: boolean = false;
   @Prop({ mutable: true }) value?: string;
 
   @Element() el: HTMLElement;
@@ -55,7 +55,7 @@ export class KCheckbox {
             <span class="KCheckbox-icon vuh-done"></span>
           </span>
           <span class="KCheckbox-label">
-            <slot>Default</slot>
+            <slot></slot>
           </span>
         </label>
       </Host>
