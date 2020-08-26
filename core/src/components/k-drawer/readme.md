@@ -9,9 +9,9 @@ It can receive whichever element it might need to display, as the component work
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default      |
-| -------- | --------- | ----------- | -------- | ------------ |
-| `forKey` | `for-key` |             | `string` | `'key-menu'` |
+| Property | Attribute | Description | Type     | Default         |
+| -------- | --------- | ----------- | -------- | --------------- |
+| `forKey` | `for-key` |             | `string` | `'default-key'` |
 
 
 ----------------------------------------------
