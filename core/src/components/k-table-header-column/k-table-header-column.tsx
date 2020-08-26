@@ -84,29 +84,31 @@ export class KTableHeaderColumn {
   // Updates the default column's state to match the DOM:
 
   componentDidLoad() {
-    this.observer = new MutationObserver((mutationsList) => {
-      // Use traditional 'for loops' for IE 11
-      for (let mutation of mutationsList) {
-        if (mutation.attributeName === 'default') {
-          this.default = true;
-          this.active = true;
-          this.sortBy = 'asc';
-        }
-
-        if (mutation.attributeName === 'active') {
-          if (mutation.target['active']) {
+    if ('MutationObserver' in window) {
+      this.observer = new window.MutationObserver((mutationsList) => {
+        // Use traditional 'for loops' for IE 11
+        for (let mutation of mutationsList) {
+          if (mutation.attributeName === 'default') {
+            this.default = true;
             this.active = true;
             this.sortBy = 'asc';
-          } else {
-            this.active = false;
-            this.sortBy = 'none';
+          }
+
+          if (mutation.attributeName === 'active') {
+            if (mutation.target['active']) {
+              this.active = true;
+              this.sortBy = 'asc';
+            } else {
+              this.active = false;
+              this.sortBy = 'none';
+            }
           }
         }
-      }
-    });
+      });
 
-    // Start observing the target node for configured mutations
-    this.observer.observe(this.el, { attributes: true });
+      // Start observing the target node for configured mutations
+      this.observer.observe(this.el, { attributes: true });
+    }
   }
 
   disconnectedCallback() {
