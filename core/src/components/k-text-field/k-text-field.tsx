@@ -24,6 +24,7 @@ export class KTextField {
   @Prop() name?: string = '';
   @Prop() helperText?: string = '';
   @Prop() maxLength?: number = 0;
+  @Prop() minLength?: number = 0;
 
   @State() typingCount: number = 0;
   @Event() valueChange: EventEmitter;
@@ -65,6 +66,7 @@ export class KTextField {
           name={this.name}
           disabled={this.disabled}
           maxLength={this.maxLength > 0 ? this.maxLength : null}
+          minLength={this.minLength > 0 ? this.minLength : null}
           value={this.value}
           onInput={(event) => this.handleChange(event)}
         ></textarea>

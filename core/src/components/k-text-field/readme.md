@@ -17,6 +17,7 @@ On React, it must use the `onInput` event to work.
 | `helperText`      | `helper-text`      |             | `string`                     | `''`        |
 | `label`           | `label`            |             | `string`                     | `'Default'` |
 | `maxLength`       | `max-length`       |             | `number`                     | `0`         |
+| `minLength`       | `min-length`       |             | `number`                     | `0`         |
 | `name`            | `name`             |             | `string`                     | `''`        |
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"` | `''`        |
 | `value`           | `value`            |             | `string`                     | `''`        |

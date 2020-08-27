@@ -208,4 +208,24 @@ describe('k-input', () => {
       </k-input>
     `);
   });
+
+  it('should have a minimum length', async () => {
+    const { root } = await newSpecPage({
+      components: [KInput],
+      html: '<k-input min-length="5"></k-input>'
+    });
+    expect(root).toEqualHtml(`
+      <k-input min-length="5">
+        <mock:shadow-root>
+            <div class="KInput">
+                <input id="k-input" placeholder=" " minlength="5" type="text" value="">
+                <label htmlfor="k-input">
+                    Default
+                </label>
+                <div class="KInput-icon"></div>
+            </div>
+        </mock:shadow-root>
+      </k-input>
+    `);
+  });
 });

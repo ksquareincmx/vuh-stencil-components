@@ -14,6 +14,8 @@ On React, it must use the `onInput` event to work.
 | Property      | Attribute     | Description | Type                    | Default    |
 | ------------- | ------------- | ----------- | ----------------------- | ---------- |
 | `disabled`    | `disabled`    |             | `boolean`               | `false`    |
+| `maxLength`   | `max-length`  |             | `number`                | `0`        |
+| `minLength`   | `min-length`  |             | `number`                | `0`        |
 | `name`        | `name`        |             | `string`                | `''`       |
 | `placeholder` | `placeholder` |             | `string`                | `'Search'` |
 | `type`        | `type`        |             | `"outlined" \| "solid"` | `'solid'`  |

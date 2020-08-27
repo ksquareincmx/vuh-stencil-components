@@ -23,6 +23,7 @@ export class KInput {
   @Prop() name?: string = '';
   @Prop() helperText?: string = '';
   @Prop() maxLength?: number = 0;
+  @Prop() minLength?: number = 0;
 
   @State() inputEl: HTMLElement;
   @Event() valueChange: EventEmitter;
@@ -63,6 +64,7 @@ export class KInput {
           type={this.type}
           name={this.name}
           maxLength={this.maxLength > 0 ? this.maxLength : null}
+          minLength={this.minLength > 0 ? this.minLength : null}
           value={this.value}
           onInput={this.inputChanged.bind(this)}
         />

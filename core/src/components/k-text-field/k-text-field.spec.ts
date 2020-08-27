@@ -121,4 +121,23 @@ describe('k-text-field', () => {
       </k-text-field>
     `);
   });
+
+  it('k-text-field should have 30 chars as min length', async () => {
+    const { root } = await newSpecPage({
+      components: [KTextField],
+      html: '<k-text-field min-length="30"></k-text-field>'
+    });
+
+    expect(root).toEqualHtml(`
+      <k-text-field min-length="30">
+        <mock:shadow-root>
+          <div class="KTextField">
+            <textarea id="k-text-field" placeholder=" " value="" minLength="30"></textarea>
+            <label htmlfor="k-text-field">Default</label>
+            <div class="KTextField-footer"></div>
+          </div>
+        </mock:shadow-root>
+      </k-text-field>
+    `);
+  });
 });
