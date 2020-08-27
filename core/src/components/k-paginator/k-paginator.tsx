@@ -87,43 +87,47 @@ export class KPaginator {
   render() {
     return (
       <div class="KPaginator">
-        <div class="KPaginator-contents">
-          <div class="KPaginator-left-arrow">
-            <i
-              onClick={this.onLeftArrowClick}
-              class="KPaginator-icon vuh-keyboard-arrow-left"
-            ></i>
-          </div>
-          <div class="KPaginator-separator"></div>
-          <div class="KPaginator-pages">
-            <div
-              class={clsx('KPaginator-page', {
-                '--is-current-page': 1 === this.currentPage
-              })}
-              onClick={this.onPageClick}
-            >
-              {this.currentPage > 4 && this.totalPages > 7 ? `${1} ...` : 1}
+        {this.totalPages && (
+          <div class="KPaginator-contents">
+            <div class="KPaginator-left-arrow">
+              <i
+                onClick={this.onLeftArrowClick}
+                class="KPaginator-icon vuh-keyboard-arrow-left"
+              ></i>
             </div>
-            {this.renderPages()}
-            <div
-              class={clsx('KPaginator-page', {
-                '--is-current-page': this.totalPages === this.currentPage
-              })}
-              onClick={this.onPageClick}
-            >
-              {this.currentPage < this.totalPages - 3 && this.totalPages > 7
-                ? `... ${this.totalPages}`
-                : this.totalPages}
+            <div class="KPaginator-separator"></div>
+            <div class="KPaginator-pages">
+              {this.totalPages > 1 && (
+                <div
+                  class={clsx('KPaginator-page', {
+                    '--is-current-page': 1 === this.currentPage
+                  })}
+                  onClick={this.onPageClick}
+                >
+                  {this.currentPage > 4 && this.totalPages > 7 ? `${1} ...` : 1}
+                </div>
+              )}
+              {this.renderPages()}
+              <div
+                class={clsx('KPaginator-page', {
+                  '--is-current-page': this.totalPages === this.currentPage
+                })}
+                onClick={this.onPageClick}
+              >
+                {this.currentPage < this.totalPages - 3 && this.totalPages > 7
+                  ? `... ${this.totalPages}`
+                  : this.totalPages}
+              </div>
+            </div>
+            <div class="KPaginator-separator"></div>
+            <div class="KPaginator-right-arrow">
+              <i
+                onClick={this.onRightArrowClick}
+                class="KPaginator-icon vuh-keyboard-arrow-right"
+              ></i>
             </div>
           </div>
-          <div class="KPaginator-separator"></div>
-          <div class="KPaginator-right-arrow">
-            <i
-              onClick={this.onRightArrowClick}
-              class="KPaginator-icon vuh-keyboard-arrow-right"
-            ></i>
-          </div>
-        </div>
+        )}
       </div>
     );
   }

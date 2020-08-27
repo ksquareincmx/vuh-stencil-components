@@ -7,7 +7,8 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KTableColumn {
-  @Prop() size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+  @Prop() size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' =
+    '1';
 
   render() {
     return (
