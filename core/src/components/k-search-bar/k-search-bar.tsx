@@ -21,6 +21,8 @@ export class KSearchBar {
   @Prop() disabled?: boolean = false;
   @Prop() name?: string = '';
   @Prop() placeholder?: string = 'Search';
+  @Prop() maxLength?: number = 0;
+  @Prop() minLength?: number = 0;
 
   @State() inputEl: HTMLElement;
   @Event() valueChange: EventEmitter;
@@ -75,6 +77,8 @@ export class KSearchBar {
               name={this.name}
               value={this.value}
               onInput={this.inputChanged.bind(this)}
+              maxLength={this.maxLength > 0 ? this.maxLength : null}
+              minLength={this.minLength > 0 ? this.minLength : null}
             />
             <i
               class={clsx('KSearchBar-left vuh-search', {

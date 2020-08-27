@@ -18,6 +18,7 @@ On Vue, it must use `@input` to work.
 | `helperText`      | `helper-text`      |             | `string`                                            | `''`        |
 | `label`           | `label`            |             | `string`                                            | `'Default'` |
 | `maxLength`       | `max-length`       |             | `number`                                            | `0`         |
+| `minLength`       | `min-length`       |             | `number`                                            | `0`         |
 | `name`            | `name`             |             | `string`                                            | `''`        |
 | `type`            | `type`             |             | `"email" \| "password" \| "tel" \| "text" \| "url"` | `'text'`    |
 | `validationState` | `validation-state` |             | `"" \| "error" \| "success"`                        | `''`        |
