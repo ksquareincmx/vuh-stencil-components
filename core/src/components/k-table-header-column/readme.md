@@ -11,13 +11,13 @@ It should only be used as a child to an instance of `k-table-row` whose type is 
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                                                                  | Default     |
-| ---------- | ---------- | ----------- | --------------------------------------------------------------------- | ----------- |
-| `active`   | `active`   |             | `boolean`                                                             | `false`     |
-| `default`  | `default`  |             | `boolean`                                                             | `false`     |
-| `disabled` | `disabled` |             | `boolean`                                                             | `false`     |
-| `size`     | `size`     |             | `"1" \| "10" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"` | `undefined` |
-| `sortable` | `sortable` |             | `boolean`                                                             | `true`      |
+| Property   | Attribute  | Description | Type                                                                  | Default |
+| ---------- | ---------- | ----------- | --------------------------------------------------------------------- | ------- |
+| `active`   | `active`   |             | `boolean`                                                             | `false` |
+| `default`  | `default`  |             | `boolean`                                                             | `false` |
+| `disabled` | `disabled` |             | `boolean`                                                             | `false` |
+| `size`     | `size`     |             | `"1" \| "10" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9"` | `'1'`   |
+| `sortable` | `sortable` |             | `boolean`                                                             | `true`  |
 
 
 ## Events

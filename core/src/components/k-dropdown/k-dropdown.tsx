@@ -157,9 +157,7 @@ export class KDropdown {
           )}
           <div
             ref={(el: HTMLElement) => (this.optionsEl = el)}
-            class={clsx('KDropdown-options', {
-              'KDropdown-table-options': this.isVariantTable()
-            })}
+            class="KDropdown-options"
           >
             <slot></slot>
           </div>
