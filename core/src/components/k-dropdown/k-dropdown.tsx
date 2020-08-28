@@ -20,7 +20,7 @@ export class KDropdown {
   @Element() el!: HTMLElement;
 
   @State() optionsEl?: HTMLElement;
-  @State() value: any | null;
+  @State() value: any | null = null;
   @State() text: string = 'Default';
   @State() currentChecked: string = '';
   @State() active: boolean = false;
@@ -34,28 +34,32 @@ export class KDropdown {
   @Prop() label: string;
   @Prop() helperText?: string = '';
 
-  componentWillLoad() {
+  componentWillRender() {
+    let nothingIsChecked = true;
     this.slotted = this.el.children;
     // set checked option by default
     const slottedArray = Array.from(this.slotted);
 
-    slottedArray.forEach((slotEl, index) =>
-      slotEl.setAttribute('k-dropdown-id', String(index))
-    );
+    slottedArray.forEach((slotEl, index) => {
+      slotEl.setAttribute('k-dropdown-id', String(index));
+    });
 
     let i = 0;
     for (i; i < slottedArray.length; i++) {
       if (this.slotted[i].attributes['checked']) {
+        nothingIsChecked = false;
         this.value = this.slotted[i].attributes['value'].value;
         this.text = this.slotted[i].innerHTML;
         this.currentChecked = String(i);
         break;
-      } else {
-        this.slotted[0].setAttribute('checked', 'true');
-        this.value = this.slotted[0].attributes['value'].value;
-        this.text = this.slotted[0].innerHTML;
-        this.currentChecked = '0';
       }
+    }
+
+    if (nothingIsChecked) {
+      this.slotted[0].setAttribute('checked', 'true');
+      this.value = this.slotted[0].attributes['value'].value;
+      this.text = this.slotted[0].innerHTML;
+      this.currentChecked = '0';
     }
   }
 
