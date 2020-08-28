@@ -15,7 +15,8 @@ import clsx from 'clsx';
   shadow: true
 })
 export class KInput {
-  @Prop() type: 'text' | 'password' | 'email' | 'tel' | 'url' = 'text';
+  @Prop() type: 'text' | 'password' | 'email' | 'tel' | 'url' | 'number' =
+    'text';
   @Prop() label: string = 'Default';
   @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;
