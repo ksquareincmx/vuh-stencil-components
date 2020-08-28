@@ -1,6 +1,6 @@
 {
   "name": "@the-ksquare-group/vuh-stencil-components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The Ksquare Group's design system, built on Stencil JS, which contains reusable web components for use in multiple front-end libraries.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

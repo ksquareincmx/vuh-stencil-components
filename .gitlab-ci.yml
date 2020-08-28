@@ -6,7 +6,7 @@ cache:
 
 workflow:
   rules:
-    - if: "$CI_COMMIT_BRANCH"
+    - if: '$CI_COMMIT_BRANCH'
 
 pages:
   stage: deploy
@@ -20,4 +20,4 @@ pages:
     paths:
       - public
   rules:
-    - if: '$CI_COMMIT_BRANCH == "develop"'
+    - if: '$CI_COMMIT_BRANCH == "master"'
