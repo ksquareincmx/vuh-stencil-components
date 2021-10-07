@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-button.scss',
   shadow: true
 })
-export class KButton {
+export class Button {
   @Prop() color?: 'primary' | 'secondary' | 'terciary' = 'primary';
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ reflect: true }) elevation?: boolean = false;

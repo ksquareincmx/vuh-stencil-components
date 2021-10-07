@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-tag.scss',
   shadow: true
 })
-export class KTag {
+export class Tag {
   render() {
     return (
       <Host class="KTag">

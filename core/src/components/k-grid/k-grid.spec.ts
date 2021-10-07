@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KGrid } from './k-grid';
+import { Grid } from './k-grid';
 
 describe('k-grid', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KGrid],
+      components: [Grid],
       html: '<k-grid></k-grid>'
     });
     expect(root).toEqualHtml(`
@@ -18,7 +18,7 @@ describe('k-grid', () => {
 
   it('should be fluid', async () => {
     const { root } = await newSpecPage({
-      components: [KGrid],
+      components: [Grid],
       html: '<k-grid fluid="true"></k-grid>'
     });
     expect(root).toEqualHtml(`

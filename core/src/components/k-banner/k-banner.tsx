@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-banner.scss',
   shadow: true
 })
-export class KBanner {
+export class Banner {
   @Element() el: HTMLElement;
   @Prop() type: 'success' | 'error' = 'success';
 

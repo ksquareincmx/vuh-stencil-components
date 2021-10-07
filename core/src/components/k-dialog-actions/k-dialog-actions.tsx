@@ -5,7 +5,7 @@ import { Component, Host, h } from '@stencil/core';
   styleUrl: 'k-dialog-actions.scss',
   shadow: true
 })
-export class KDialogActions {
+export class DialogActions {
   render() {
     return (
       <Host id="KDialogActions" class="KDialogActions">

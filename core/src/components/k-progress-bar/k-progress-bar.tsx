@@ -5,7 +5,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
   styleUrl: 'k-progress-bar.scss',
   shadow: true
 })
-export class KProgressBar {
+export class ProgressBar {
   @Prop() value: number = 0;
 
   render() {

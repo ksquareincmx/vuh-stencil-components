@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTag } from './k-tag';
+import { Tag } from './k-tag';
 
 describe('k-tag', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KTag],
+      components: [Tag],
       html: '<k-tag></k-tag>'
     });
 

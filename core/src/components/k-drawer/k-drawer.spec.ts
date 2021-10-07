@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDrawer } from './k-drawer';
+import { Drawer } from './k-drawer';
 
 describe('k-drawer', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KDrawer],
+      components: [Drawer],
       html: '<k-drawer></k-drawer>'
     });
 
@@ -23,7 +23,7 @@ describe('k-drawer', () => {
 
   it('k-drawer should receive for-key prop', async () => {
     const { root } = await newSpecPage({
-      components: [KDrawer],
+      components: [Drawer],
       html: '<k-drawer for-key="k-drawer-key"></k-drawer>'
     });
 

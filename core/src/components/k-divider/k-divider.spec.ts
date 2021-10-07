@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDivider } from './k-divider';
+import { Divider } from './k-divider';
 
 describe('k-divider', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KDivider],
+      components: [Divider],
       html: '<k-divider></k-divider>'
     });
 

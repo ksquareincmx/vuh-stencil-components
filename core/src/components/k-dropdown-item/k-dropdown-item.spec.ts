@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDropdownItem } from './k-dropdown-item';
+import { DropdownItem } from './k-dropdown-item';
 
 describe('k-dropdown-item', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdownItem],
+      components: [DropdownItem],
       html: '<k-dropdown-item></k-dropdown-item>'
     });
     expect(root).toEqualHtml(`
@@ -23,7 +23,7 @@ describe('k-dropdown-item', () => {
 
   it('should have an specified value', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdownItem],
+      components: [DropdownItem],
       html: '<k-dropdown-item value="hello"></k-dropdown-item>'
     });
     expect(root).toEqualHtml(`
@@ -42,7 +42,7 @@ describe('k-dropdown-item', () => {
 
   it('should have an specified name', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdownItem],
+      components: [DropdownItem],
       html: '<k-dropdown-item name="hello"></k-dropdown-item>'
     });
     expect(root).toEqualHtml(`
@@ -61,7 +61,7 @@ describe('k-dropdown-item', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdownItem],
+      components: [DropdownItem],
       html: '<k-dropdown-item disabled></k-dropdown-item>'
     });
     expect(root).toEqualHtml(`
@@ -80,7 +80,7 @@ describe('k-dropdown-item', () => {
 
   it('should be checked', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdownItem],
+      components: [DropdownItem],
       html: '<k-dropdown-item checked></k-dropdown-item>'
     });
     expect(root).toEqualHtml(`

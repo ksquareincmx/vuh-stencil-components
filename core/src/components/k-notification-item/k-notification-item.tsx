@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-notification-item.scss',
   shadow: true
 })
-export class KNotificationItem {
+export class NotificationItem {
   @Prop() alertColor: string = '';
   @Prop() label: string = '';
   @Prop() time?: string = '';

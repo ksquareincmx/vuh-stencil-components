@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-grid.scss',
   shadow: true
 })
-export class KGrid {
+export class Grid {
   @Prop() fluid?: boolean = false;
 
   render() {

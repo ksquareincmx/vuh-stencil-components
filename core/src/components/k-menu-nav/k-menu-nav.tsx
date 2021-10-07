@@ -5,7 +5,7 @@ import { Component, Host, h } from '@stencil/core';
   styleUrl: 'k-menu-nav.scss',
   shadow: true
 })
-export class KMenuNav {
+export class MenuNav {
   render() {
     return (
       <Host id="kMenuNav">

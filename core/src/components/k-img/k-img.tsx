@@ -5,7 +5,7 @@ import { Component, h, Prop, State, Host } from '@stencil/core';
   styleUrl: 'k-img.scss',
   shadow: true
 })
-export class KImg {
+export class Img {
   private refEl: HTMLElement;
   @State() show: boolean = false;
 

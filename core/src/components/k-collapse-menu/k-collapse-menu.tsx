@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-collapse-menu.scss',
   shadow: true
 })
-export class KCollapseMenu {
+export class CollapseMenu {
   private menuEl?: HTMLElement;
 
   @Element() el?: HTMLElement;

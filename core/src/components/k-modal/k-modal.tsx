@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-modal.scss',
   shadow: true
 })
-export class KModal {
+export class Modal {
   @Prop({ mutable: true }) show: boolean = false;
   @Prop() hideCloseButton: boolean = false;
   @State() body?: HTMLElement;

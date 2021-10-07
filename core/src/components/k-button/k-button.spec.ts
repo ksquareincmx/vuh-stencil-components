@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KButton } from './k-button';
+import { Button } from './k-button';
 
 describe('k-button', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KButton],
+      components: [Button],
       html: '<k-button></k-button>'
     });
     expect(root).toEqualHtml(`
@@ -22,7 +22,7 @@ describe('k-button', () => {
 
   it('should render with changed default text', async () => {
     const { root } = await newSpecPage({
-      components: [KButton],
+      components: [Button],
       html: '<k-button>Accept</k-button>'
     });
     expect(root).toEqualHtml(`
@@ -41,7 +41,7 @@ describe('k-button', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KButton],
+      components: [Button],
       html: '<k-button disabled>text</k-button>'
     });
     expect(root).toEqualHtml(`
@@ -60,9 +60,8 @@ describe('k-button', () => {
 
   it('should render with props', async () => {
     const { root } = await newSpecPage({
-      components: [KButton],
-      html:
-        '<k-button elevation color="secondary" shape="round" size="large">text</k-button>'
+      components: [Button],
+      html: '<k-button elevation color="secondary" shape="round" size="large">text</k-button>'
     });
     expect(root).toEqualHtml(`
       <k-button elevation color="secondary" shape="round" size="large">

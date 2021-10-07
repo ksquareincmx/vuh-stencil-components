@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCarousel } from './k-carousel';
+import { Carousel } from './k-carousel';
 
 describe('k-carousel', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCarousel],
+      components: [Carousel],
       html: '<k-carousel></k-carousel>'
     });
 
@@ -24,7 +24,7 @@ describe('k-carousel', () => {
 
   it('dots should be hidden', async () => {
     const { root } = await newSpecPage({
-      components: [KCarousel],
+      components: [Carousel],
       html: '<k-carousel show-dots="false"></k-carousel>'
     });
 
@@ -43,7 +43,7 @@ describe('k-carousel', () => {
 
   it('transition should be 1000', async () => {
     const { root } = await newSpecPage({
-      components: [KCarousel],
+      components: [Carousel],
       html: '<k-carousel transition-duration="1000"></k-carousel>'
     });
 

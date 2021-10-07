@@ -15,7 +15,7 @@ import clsx from 'clsx';
   styleUrl: 'k-menu.scss',
   shadow: true
 })
-export class KMenu {
+export class Menu {
   @Element() host: HTMLElement;
   @State() children?: any;
 

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTabItem } from './k-tab-item';
+import { TabItem } from './k-tab-item';
 
 describe('k-tab-item', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KTabItem],
+      components: [TabItem],
       html: '<k-tab-item></k-tab-item>'
     });
 
@@ -21,7 +21,7 @@ describe('k-tab-item', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KTabItem],
+      components: [TabItem],
       html: '<k-tab-item disabled></k-tab-item>'
     });
 
@@ -38,7 +38,7 @@ describe('k-tab-item', () => {
 
   it('should be current', async () => {
     const { root } = await newSpecPage({
-      components: [KTabItem],
+      components: [TabItem],
       html: '<k-tab-item current></k-tab-item>'
     });
 

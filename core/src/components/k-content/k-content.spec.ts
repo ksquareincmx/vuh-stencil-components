@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KContent } from './k-content';
+import { Content } from './k-content';
 
 describe('k-content', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KContent],
+      components: [Content],
       html: '<k-content></k-content>'
     });
 

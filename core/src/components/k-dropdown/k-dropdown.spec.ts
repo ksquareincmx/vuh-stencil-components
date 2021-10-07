@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDropdown } from './k-dropdown';
+import { Dropdown } from './k-dropdown';
 
 describe('k-dropdown', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -26,7 +26,7 @@ describe('k-dropdown', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown disabled></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -48,7 +48,7 @@ describe('k-dropdown', () => {
 
   it('should be variant input', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown variant="input"></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -70,7 +70,7 @@ describe('k-dropdown', () => {
 
   it('should be variant table', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown variant="table"></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -92,7 +92,7 @@ describe('k-dropdown', () => {
 
   it('should have an specified color', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown color="secondary"></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -114,9 +114,8 @@ describe('k-dropdown', () => {
 
   it('should have a validation state if it is variant input', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
-      html:
-        '<k-dropdown variant="input" validation-state="success"></k-dropdown>'
+      components: [Dropdown],
+      html: '<k-dropdown variant="input" validation-state="success"></k-dropdown>'
     });
     expect(root).toEqualHtml(`
       <k-dropdown variant="input" validation-state="success">
@@ -137,7 +136,7 @@ describe('k-dropdown', () => {
 
   it('should have a label if it is variant input or table', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown variant="input" label="Hello"></k-dropdown>'
     });
     expect(root).toEqualHtml(`
@@ -162,7 +161,7 @@ describe('k-dropdown', () => {
 
   it('should have a helper text if it is variant input', async () => {
     const { root } = await newSpecPage({
-      components: [KDropdown],
+      components: [Dropdown],
       html: '<k-dropdown variant="input" helper-text="Hello"></k-dropdown>'
     });
     expect(root).toEqualHtml(`

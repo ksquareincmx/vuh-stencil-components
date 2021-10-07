@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KSpinner } from './k-spinner';
+import { Spinner } from './k-spinner';
 
 describe('k-spinner', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KSpinner],
+      components: [Spinner],
       html: '<k-spinner></k-spinner>'
     });
 
@@ -22,7 +22,7 @@ describe('k-spinner', () => {
 
   it('size should be "60"', async () => {
     const { root } = await newSpecPage({
-      components: [KSpinner],
+      components: [Spinner],
       html: '<k-spinner size="60"></k-spinner>'
     });
 
@@ -40,7 +40,7 @@ describe('k-spinner', () => {
 
   it('strong should be "8"', async () => {
     const { root } = await newSpecPage({
-      components: [KSpinner],
+      components: [Spinner],
       html: '<k-spinner strong="8"></k-spinner>'
     });
 
@@ -58,7 +58,7 @@ describe('k-spinner', () => {
 
   it('color should be "primary"', async () => {
     const { root } = await newSpecPage({
-      components: [KSpinner],
+      components: [Spinner],
       html: '<k-spinner color="primary"></k-spinner>'
     });
 

@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-paginator.scss',
   shadow: true
 })
-export class KPaginator {
+export class Paginator {
   @Element() el: HTMLInputElement;
 
   @Prop() totalPages: number;

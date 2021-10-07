@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-notification.scss',
   shadow: true
 })
-export class KNotification {
+export class Notification {
   private bell?: HTMLElement;
   @State() showNotificationList: boolean = false;
   @Prop() notificationCount: number = 0;

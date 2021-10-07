@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTab } from './k-tab';
+import { Tab } from './k-tab';
 
 describe('k-tab', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KTab],
+      components: [Tab],
       html: '<k-tab></k-tab>'
     });
 

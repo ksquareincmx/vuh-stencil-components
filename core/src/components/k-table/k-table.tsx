@@ -5,7 +5,7 @@ import { Component, h, State, Host, Listen, Element } from '@stencil/core';
   styleUrl: 'k-table.scss',
   shadow: true
 })
-export class KTable {
+export class Table {
   private slotted: HTMLCollection;
 
   @Element() el?: HTMLElement;

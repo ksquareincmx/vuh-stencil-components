@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KSearchBar } from './k-search-bar';
+import { SearchBar } from './k-search-bar';
 
 describe('k-search-bar', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -22,7 +22,7 @@ describe('k-search-bar', () => {
 
   it('should be type outlined', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar type="outlined"></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -42,7 +42,7 @@ describe('k-search-bar', () => {
 
   it('should have a predefined value', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar value="hello"></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -60,7 +60,7 @@ describe('k-search-bar', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar disabled></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -78,7 +78,7 @@ describe('k-search-bar', () => {
 
   it('should have a name', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar name="hello"></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -96,7 +96,7 @@ describe('k-search-bar', () => {
 
   it('should have placeholder text', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar placeholder="Hello"></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -114,7 +114,7 @@ describe('k-search-bar', () => {
 
   it('should have a max length of 30 characters', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar max-length="30"></k-search-bar>'
     });
     expect(root).toEqualHtml(`
@@ -132,7 +132,7 @@ describe('k-search-bar', () => {
 
   it('should have a min length of 30 characters', async () => {
     const { root } = await newSpecPage({
-      components: [KSearchBar],
+      components: [SearchBar],
       html: '<k-search-bar min-length="30"></k-search-bar>'
     });
     expect(root).toEqualHtml(`

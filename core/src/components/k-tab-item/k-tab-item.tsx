@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-tab-item.scss',
   shadow: true
 })
-export class KTabItem {
+export class TabItem {
   private el?: HTMLElement;
 
   @Prop() current: boolean = false;

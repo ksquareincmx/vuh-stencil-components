@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KAvatar } from './k-avatar';
+import { Avatar } from './k-avatar';
 
 describe('k-typography', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KAvatar],
+      components: [Avatar],
       html: '<k-avatar></k-avatar>'
     });
 
@@ -21,7 +21,7 @@ describe('k-typography', () => {
 
   it('renders with props', async () => {
     const { root } = await newSpecPage({
-      components: [KAvatar],
+      components: [Avatar],
       html: `<k-avatar size="medium"></k-avatar>`
     });
     expect(root).toEqualHtml(`

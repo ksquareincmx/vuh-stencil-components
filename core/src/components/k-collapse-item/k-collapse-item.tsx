@@ -5,7 +5,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
   styleUrl: 'k-collapse-item.scss',
   shadow: true
 })
-export class KCollapseItem {
+export class CollapseItem {
   @Prop() disabled: boolean = false;
 
   render() {

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KInput } from './k-input';
+import { Input } from './k-input';
 
 describe('k-input', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -24,7 +24,7 @@ describe('k-input', () => {
 
   it('should a have a given type other than text', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input type="password"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -44,7 +44,7 @@ describe('k-input', () => {
 
   it('should have a given label', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input label="Hello"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -64,7 +64,7 @@ describe('k-input', () => {
 
   it('should have a predefined value', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input value="hello"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -84,7 +84,7 @@ describe('k-input', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input disabled></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -104,7 +104,7 @@ describe('k-input', () => {
 
   it('should have a successful validation state', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input validation-state="success"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -126,7 +126,7 @@ describe('k-input', () => {
 
   it('should have an unsuccessful validation state', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input validation-state="error"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -148,7 +148,7 @@ describe('k-input', () => {
 
   it('should have a given name', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input name="hello"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -168,7 +168,7 @@ describe('k-input', () => {
 
   it('should have a helper text', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input helper-text="Hello."></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -191,7 +191,7 @@ describe('k-input', () => {
 
   it('should have a maximum length', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input max-length="5"></k-input>'
     });
     expect(root).toEqualHtml(`
@@ -211,7 +211,7 @@ describe('k-input', () => {
 
   it('should have a minimum length', async () => {
     const { root } = await newSpecPage({
-      components: [KInput],
+      components: [Input],
       html: '<k-input min-length="5"></k-input>'
     });
     expect(root).toEqualHtml(`

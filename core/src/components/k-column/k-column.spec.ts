@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KColumn } from './k-column';
+import { Column } from './k-column';
 
 describe('k-column', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KColumn],
+      components: [Column],
       html: '<k-column></k-column>'
     });
     expect(root).toEqualHtml(`
@@ -20,7 +20,7 @@ describe('k-column', () => {
 
   it('should have an specified size', async () => {
     const { root } = await newSpecPage({
-      components: [KColumn],
+      components: [Column],
       html: '<k-column size="1"></k-column>'
     });
     expect(root).toEqualHtml(`
@@ -36,7 +36,7 @@ describe('k-column', () => {
 
   it('should have at least two specified sizes', async () => {
     const { root } = await newSpecPage({
-      components: [KColumn],
+      components: [Column],
       html: '<k-column size="1" sizeMd="5"></k-column>'
     });
     expect(root).toEqualHtml(`

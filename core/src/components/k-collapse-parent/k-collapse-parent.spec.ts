@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCollapseParent } from './k-collapse-parent';
+import { CollapseParent } from './k-collapse-parent';
 
 describe('k-collapse-parent', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCollapseParent],
+      components: [CollapseParent],
       html: '<k-collapse-parent></k-collapse-parent>'
     });
     expect(root).toEqualHtml(`

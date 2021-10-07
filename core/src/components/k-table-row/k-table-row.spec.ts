@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTableRow } from './k-table-row';
+import { TableRow } from './k-table-row';
 
 describe('k-table-row', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KTableRow],
+      components: [TableRow],
       html: '<k-table-row></k-table-row>'
     });
     expect(root).toEqualHtml(`
@@ -18,7 +18,7 @@ describe('k-table-row', () => {
 
   it('should be type header', async () => {
     const { root } = await newSpecPage({
-      components: [KTableRow],
+      components: [TableRow],
       html: '<k-table-row type="header"></k-table-row>'
     });
     expect(root).toEqualHtml(`
@@ -32,7 +32,7 @@ describe('k-table-row', () => {
 
   it('should be type navbar', async () => {
     const { root } = await newSpecPage({
-      components: [KTableRow],
+      components: [TableRow],
       html: '<k-table-row type="navbar"></k-table-row>'
     });
     expect(root).toEqualHtml(`

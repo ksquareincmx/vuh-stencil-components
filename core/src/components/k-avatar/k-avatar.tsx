@@ -5,7 +5,7 @@ import { Component, h, Prop } from '@stencil/core';
   styleUrl: 'k-avatar.scss',
   shadow: true
 })
-export class KAvatar {
+export class Avatar {
   @Prop() size?: 'small' | 'medium' | 'large' = 'small';
 
   render() {

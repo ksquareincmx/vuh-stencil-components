@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-dropdown-item.scss',
   shadow: true
 })
-export class KDropdownItem {
+export class DropdownItem {
   @Element() el: HTMLElement;
   @State() inputEl: HTMLElement;
 

@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-icon.scss',
   shadow: true
 })
-export class KIcon {
+export class Icon {
   @Prop() size?: 'small' | 'medium' | 'large' | 'extra-large' = 'small';
   @Prop() name:
     | 'alert-circle'

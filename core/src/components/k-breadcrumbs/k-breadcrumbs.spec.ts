@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KBreadcrumbs } from './k-breadcrumbs';
+import { Breadcrumbs } from './k-breadcrumbs';
 
 describe('k-breadcrumbs', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KBreadcrumbs],
+      components: [Breadcrumbs],
       html: '<k-breadcrumbs></k-breadcrumbs>'
     });
 

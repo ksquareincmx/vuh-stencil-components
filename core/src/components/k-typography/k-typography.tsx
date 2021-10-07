@@ -5,7 +5,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
   styleUrl: 'k-typography.scss',
   shadow: true
 })
-export class KTypography {
+export class Typography {
   @Prop() variant?:
     | 'h1'
     | 'h2'

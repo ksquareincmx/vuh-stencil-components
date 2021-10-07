@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KNotificationItem } from './k-notification-item';
+import { NotificationItem } from './k-notification-item';
 
 describe('k-notification-item', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationItem],
+      components: [NotificationItem],
       html: '<k-notification-item></k-notification-item>'
     });
 
@@ -44,7 +44,7 @@ describe('k-notification-item', () => {
 
   it('alert color should be "red"', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationItem],
+      components: [NotificationItem],
       html: '<k-notification-item alert-color="red"></k-notification-item>'
     });
 
@@ -85,7 +85,7 @@ describe('k-notification-item', () => {
 
   it('label should be "hello"', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationItem],
+      components: [NotificationItem],
       html: '<k-notification-item label="hello"></k-notification-item>'
     });
 
@@ -125,7 +125,7 @@ describe('k-notification-item', () => {
 
   it('time should be "30 min"', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationItem],
+      components: [NotificationItem],
       html: '<k-notification-item time="30 min"></k-notification-item>'
     });
 
@@ -165,7 +165,7 @@ describe('k-notification-item', () => {
 
   it('notification should be "read"', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationItem],
+      components: [NotificationItem],
       html: '<k-notification-item is-read></k-notification-item>'
     });
 

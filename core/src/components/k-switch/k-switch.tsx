@@ -5,7 +5,7 @@ import { Component, h, Host, Prop, Element } from '@stencil/core';
   styleUrl: 'k-switch.scss',
   shadow: true
 })
-export class KSwitch {
+export class Switch {
   private checkEl: HTMLElement;
 
   @Element() el: HTMLElement;

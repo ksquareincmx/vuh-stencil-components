@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KImg } from './k-img';
+import { Img } from './k-img';
 
 describe('k-img', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KImg],
+      components: [Img],
       html: '<k-img src=""></k-img>'
     });
 
@@ -18,7 +18,7 @@ describe('k-img', () => {
 
   it('should be rendered with props', async () => {
     const { root } = await newSpecPage({
-      components: [KImg],
+      components: [Img],
       html: '<k-img src="" alt="" height="10" width="10" fit="fill"></k-img>'
     });
 

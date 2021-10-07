@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTable } from './k-table';
+import { Table } from './k-table';
 
 describe('k-table', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KTable],
+      components: [Table],
       html: '<k-table></k-table>'
     });
     expect(root).toEqualHtml(`

@@ -16,7 +16,7 @@ import clsx from 'clsx';
   styleUrl: 'k-table-header-column.scss',
   shadow: true
 })
-export class KTableHeaderColumn {
+export class TableHeaderColumn {
   private headerColumnId = `hc-${tableHeaderColumnIds++}`;
   private observer;
 

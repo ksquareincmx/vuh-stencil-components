@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KNotification } from './k-notification';
+import { Notification } from './k-notification';
 
 describe('k-notification', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KNotification],
+      components: [Notification],
       html: '<k-notification></k-notification>'
     });
 
@@ -30,7 +30,7 @@ describe('k-notification', () => {
 
   it('should be rendered with props', async () => {
     const { root } = await newSpecPage({
-      components: [KNotification],
+      components: [Notification],
       html: '<k-notification notification-count="3"></k-notification>'
     });
 

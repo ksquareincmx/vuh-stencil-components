@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KElevation } from './k-elevation';
+import { Elevation } from './k-elevation';
 
 describe('k-elevation', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KElevation],
+      components: [Elevation],
       html: '<k-elevation></k-elevation>'
     });
 
@@ -21,7 +21,7 @@ describe('k-elevation', () => {
 
   it('should render with border radius', async () => {
     const { root } = await newSpecPage({
-      components: [KElevation],
+      components: [Elevation],
       html: '<k-elevation radius="50%"></k-elevation>'
     });
 

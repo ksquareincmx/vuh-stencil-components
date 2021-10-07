@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTooltip } from './k-tooltip';
+import { Tooltip } from './k-tooltip';
 
 describe('k-tooltip', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KTooltip],
+      components: [Tooltip],
       html: '<k-tooltip></k-tooltip>'
     });
 
@@ -22,7 +22,7 @@ describe('k-tooltip', () => {
 
   it('renders with props', async () => {
     const { root } = await newSpecPage({
-      components: [KTooltip],
+      components: [Tooltip],
       html: `<k-tooltip text="tooltip" position="top"></k-tooltip>`
     });
     expect(root).toEqualHtml(`

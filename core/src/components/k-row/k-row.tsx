@@ -5,7 +5,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
   styleUrl: 'k-row.scss',
   shadow: true
 })
-export class KRow {
+export class Row {
   @Prop() spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
   render() {

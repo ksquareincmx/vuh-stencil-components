@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KBanner } from './k-banner';
+import { Banner } from './k-banner';
 
 describe('k-banner', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KBanner],
+      components: [Banner],
       html: '<k-banner></k-banner>'
     });
 
@@ -23,7 +23,7 @@ describe('k-banner', () => {
 
   it('k-banner should be type error', async () => {
     const { root } = await newSpecPage({
-      components: [KBanner],
+      components: [Banner],
       html: '<k-banner type="error"></k-banner>'
     });
 

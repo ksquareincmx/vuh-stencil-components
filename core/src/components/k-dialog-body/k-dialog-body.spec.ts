@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDialogBody } from './k-dialog-body';
+import { DialogBody } from './k-dialog-body';
 
 describe('k-dialog-body', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KDialogBody],
+      components: [DialogBody],
       html: '<k-dialog-body></k-dialog-body>'
     });
 

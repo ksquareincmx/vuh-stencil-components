@@ -5,7 +5,7 @@ import { Component, Host, h, Element } from '@stencil/core';
   styleUrl: 'k-stepper-header.scss',
   shadow: true
 })
-export class KStepperHeader {
+export class StepperHeader {
   @Element() el: HTMLElement;
 
   componentWillRender() {

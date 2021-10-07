@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KPaginator } from './k-paginator';
+import { Paginator } from './k-paginator';
 
 describe('k-paginator', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KPaginator],
+      components: [Paginator],
       html: '<k-paginator></k-paginator>'
     });
     expect(root).toEqualHtml(`
@@ -19,7 +19,7 @@ describe('k-paginator', () => {
 
   it('should have an specified total number of pages', async () => {
     const { root } = await newSpecPage({
-      components: [KPaginator],
+      components: [Paginator],
       html: '<k-paginator total-pages="3"></k-paginator>'
     });
     expect(root).toEqualHtml(`
@@ -55,7 +55,7 @@ describe('k-paginator', () => {
 
   it('should be empty if an specific current-page is given, but no total amount of pages is given', async () => {
     const { root } = await newSpecPage({
-      components: [KPaginator],
+      components: [Paginator],
       html: '<k-paginator current-page="2"></k-paginator>'
     });
     expect(root).toEqualHtml(`
@@ -70,7 +70,7 @@ describe('k-paginator', () => {
 
   it('should have an specified current page that is no greater than the total amount of pages', async () => {
     const { root } = await newSpecPage({
-      components: [KPaginator],
+      components: [Paginator],
       html: '<k-paginator current-page="2" total-pages="3"></k-paginator>'
     });
     expect(root).toEqualHtml(`
@@ -106,7 +106,7 @@ describe('k-paginator', () => {
 
   it('should have its current page set to 1 if the given current page is greater than the given total amount of pages', async () => {
     const { root } = await newSpecPage({
-      components: [KPaginator],
+      components: [Paginator],
       html: '<k-paginator current-page="4" total-pages="3"></k-paginator>'
     });
     expect(root).toEqualHtml(`

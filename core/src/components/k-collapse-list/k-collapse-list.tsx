@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-collapse-list.scss',
   shadow: true
 })
-export class KCollapseList {
+export class CollapseList {
   render() {
     return (
       <Host id="kCollapseList" class="KCollapseList">

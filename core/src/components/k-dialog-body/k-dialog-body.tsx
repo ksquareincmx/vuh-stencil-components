@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-dialog-body.scss',
   shadow: true
 })
-export class KDialogBody {
+export class DialogBody {
   render() {
     return (
       <Host class="KDialogBody">

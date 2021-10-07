@@ -5,7 +5,7 @@ import { Component, Host, h, Element } from '@stencil/core';
   styleUrl: 'k-breadcrumbs.scss',
   shadow: true
 })
-export class KBreadcrumbs {
+export class Breadcrumbs {
   @Element() el: HTMLElement;
 
   componentWillRender() {

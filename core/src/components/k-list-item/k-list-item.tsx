@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'k-list-item.scss',
   shadow: true
 })
-export class KListItem {
+export class ListItem {
   render() {
     return (
       <li class="KListItem">

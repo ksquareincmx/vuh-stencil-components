@@ -16,7 +16,7 @@ import clsx from 'clsx';
   styleUrl: 'k-table-row.scss',
   shadow: true
 })
-export class KTableRow {
+export class TableRow {
   private slotted: HTMLCollection;
 
   @Element() el!: HTMLElement;

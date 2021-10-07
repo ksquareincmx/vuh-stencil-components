@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-column.scss',
   shadow: true
 })
-export class KColumn {
+export class Column {
   @Prop() fluid?: boolean = false;
 
   @Prop() size?:
