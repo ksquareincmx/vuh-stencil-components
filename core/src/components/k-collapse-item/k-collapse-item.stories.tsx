@@ -15,7 +15,7 @@ const Template = (props) => (
     <div className="story-description">
       <p>
         This component was made to be used
-        on <a href="/?path=/story/components-collapsable--collapse-list">
+        on <a href="/vuh-stencil-components/?path=/story/components-collapsable--collapse-list">
           collapse list
         </a> component.
       </p>

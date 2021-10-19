@@ -25,7 +25,7 @@ const Template = (props) => (
     <div className="story-description">
       <p>
         This component must be accompanied
-        with a <a href="/?path=/story/components-menu--menu">
+        with a <a href="/vuh-stencil-components/?path=/story/components-menu--menu">
           menu
         </a> component.
       </p>

@@ -15,10 +15,10 @@ const Template = () => (
     <div className="story-description">
       <p>
         This component was made to be used
-        on <a href="/?path=/story/components-dialog--dialog-content">
+        on <a href="/vuh-stencil-components/?path=/story/components-dialog--dialog-content">
           dialog content
         </a> component
-        inside of <a href="/?path=/story/components-dialog--dialog">
+        inside of <a href="/vuh-stencil-components/?path=/story/components-dialog--dialog">
           dialog
         </a> component.
       </p>

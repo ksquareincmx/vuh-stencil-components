@@ -15,10 +15,10 @@ const Template = (props) => (
     <div className="story-description">
       <p>
         This component was made to be used
-        on <a href="/?path=/story/components-table--table-row">
+        on <a href="/vuh-stencil-components/?path=/story/components-table--table-row">
           table row
         </a> component
-        inside of <a href="/?path=/story/components-table--table">
+        inside of <a href="/vuh-stencil-components/?path=/story/components-table--table">
           table
         </a> component.
       </p>

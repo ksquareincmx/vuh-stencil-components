@@ -15,7 +15,7 @@ const Template = (props) => (
     <div className="story-description">
       <p>
         This component was made to be used
-        on <a href="/?path=/story/components-radiobutton--radio-button-group">
+        on <a href="/vuh-stencil-components/?path=/story/components-radiobutton--radio-button-group">
          radio group
         </a> component.
       </p>

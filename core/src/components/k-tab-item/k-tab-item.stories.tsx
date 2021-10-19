@@ -15,7 +15,7 @@ const Template = (props) => (
     <div className="story-description">
       <p>
         This component was made to be used
-        on <a href="/?path=/story/components-tab--tab">
+        on <a href="/vuh-stencil-components/?path=/story/components-tab--tab">
           tab
         </a> component.
       </p>
