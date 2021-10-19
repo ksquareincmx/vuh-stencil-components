@@ -1,0 +1,8 @@
+k-column p {
+  padding: .5em;
+  background-color: #c8c8c8;
+  background-image: radial-gradient(circle at 1px 1px, rgb(178 178 178) 1px, transparent 0);
+  background-size: 8px 8px;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px #002260;
+}

@@ -76,17 +76,30 @@
     }
   }
 
+  .KNotification-container {
+    position: absolute;
+  }
+
   .KNotification-content {
     position: absolute;
     display: none;
     min-width: 350px;
-    width: 100%;
     z-index: $z-index-medium;
-    right: 0;
+    width: 100%;
+    padding-top: .25em;
+    /*right: 0;*/
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: -40px;
+    }
 
     @include small-tablet {
       width: 30%;
-      right: 2%;
+      /*right: 2%;*/
     }
 
     &.KNotification-content--is-open {

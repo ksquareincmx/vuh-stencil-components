@@ -23,13 +23,13 @@
   }
 }
 
-.KBanner-text {
+.KBanner-content {
   color: $gray-500;
   font-weight: $semi-bold;
   flex-basis: 90%;
 
   @include desktop {
-    flex-basis: 80%;
+    flex-basis: 90%;
   }
 }
 
