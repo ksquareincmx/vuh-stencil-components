@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCollapseList } from './k-collapse-list';
+import { CollapseList } from './k-collapse-list';
 
 describe('k-collapse-list', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCollapseList],
+      components: [CollapseList],
       html: '<k-collapse-list></k-collapse-list>'
     });
 

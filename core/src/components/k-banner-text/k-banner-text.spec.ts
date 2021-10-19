@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KBannerText } from './k-banner-text';
+import { BannerText } from './k-banner-text';
 
 describe('k-banner-text', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KBannerText],
+      components: [BannerText],
       html: '<k-banner-text></k-banner-text>'
     });
 

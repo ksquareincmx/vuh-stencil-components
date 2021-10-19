@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KMenu } from './k-menu';
+import { Menu } from './k-menu';
 
 describe('k-menu', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu></k-menu>'
     });
 
@@ -23,7 +23,7 @@ describe('k-menu', () => {
 
   it('burger menu should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu disable-drawer></k-menu>'
     });
 
@@ -42,7 +42,7 @@ describe('k-menu', () => {
 
   it('burger menu should be hidden on xs', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu hide-drawer-xs></k-menu>'
     });
 
@@ -61,7 +61,7 @@ describe('k-menu', () => {
 
   it('burger menu should be hidden on sm', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu hide-drawer-sm></k-menu>'
     });
 
@@ -80,7 +80,7 @@ describe('k-menu', () => {
 
   it('burger menu should be hidden on md', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu hide-drawer-md></k-menu>'
     });
 
@@ -99,7 +99,7 @@ describe('k-menu', () => {
 
   it('burger menu should be hidden on lg', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu hide-drawer-lg></k-menu>'
     });
 
@@ -118,7 +118,7 @@ describe('k-menu', () => {
 
   it('burger menu should be hidden on xl', async () => {
     const { root } = await newSpecPage({
-      components: [KMenu],
+      components: [Menu],
       html: '<k-menu hide-drawer-xl></k-menu>'
     });
 

@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-checkbox.scss',
   shadow: true
 })
-export class KCheckbox {
+export class Checkbox {
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop({ reflect: true, mutable: true }) checked?: boolean = false;
   @Prop({ mutable: true }) value?: string;

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTextField } from './k-text-field';
+import { TextField } from './k-text-field';
 
 describe('k-text-field', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field></k-text-field>'
     });
 
@@ -23,7 +23,7 @@ describe('k-text-field', () => {
 
   it('label should be "Name"', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field label="Name"></k-text-field>'
     });
 
@@ -42,7 +42,7 @@ describe('k-text-field', () => {
 
   it('k-text-field should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field disabled></k-text-field>'
     });
 
@@ -61,7 +61,7 @@ describe('k-text-field', () => {
 
   it('k-text-field validation should be success', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field validation-state="success"></k-text-field>'
     });
 
@@ -80,7 +80,7 @@ describe('k-text-field', () => {
 
   it('k-text-field should include "fill this field" as helper text', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field helper-text="fill this field"></k-text-field>'
     });
 
@@ -101,7 +101,7 @@ describe('k-text-field', () => {
 
   it('k-text-field should have 30 chars as max length', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field max-length="30"></k-text-field>'
     });
 
@@ -124,7 +124,7 @@ describe('k-text-field', () => {
 
   it('k-text-field should have 30 chars as min length', async () => {
     const { root } = await newSpecPage({
-      components: [KTextField],
+      components: [TextField],
       html: '<k-text-field min-length="30"></k-text-field>'
     });
 

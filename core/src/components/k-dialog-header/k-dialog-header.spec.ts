@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KDialogHeader } from './k-dialog-header';
+import { DialogHeader } from './k-dialog-header';
 
 describe('k-dialog-header', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KDialogHeader],
+      components: [DialogHeader],
       html: '<k-dialog-header></k-dialog-header>'
     });
     expect(root).toEqualHtml(`

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTypography } from './k-typography';
+import { Typography } from './k-typography';
 
 describe('k-typography', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KTypography],
+      components: [Typography],
       html: '<k-typography></k-typography>'
     });
 
@@ -19,7 +19,7 @@ describe('k-typography', () => {
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [KTypography],
+      components: [Typography],
       html: `<k-typography variant="h1" color="primary"></k-typography>`
     });
     expect(root).toEqualHtml(`

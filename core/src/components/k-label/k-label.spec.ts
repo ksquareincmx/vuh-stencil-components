@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KLabel } from './k-label';
+import { Label } from './k-label';
 
 describe('k-label', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KLabel],
+      components: [Label],
       html: '<k-label></k-label>'
     });
 

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCheckbox } from './k-checkbox';
+import { Checkbox } from './k-checkbox';
 
 describe('k-checkbox', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KCheckbox],
+      components: [Checkbox],
       html: '<k-checkbox></k-checkbox>'
     });
     expect(root).toEqualHtml(`
@@ -26,7 +26,7 @@ describe('k-checkbox', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KCheckbox],
+      components: [Checkbox],
       html: '<k-checkbox disabled></k-checkbox>'
     });
     expect(root).toEqualHtml(`
@@ -48,7 +48,7 @@ describe('k-checkbox', () => {
 
   it('should be checked', async () => {
     const { root } = await newSpecPage({
-      components: [KCheckbox],
+      components: [Checkbox],
       html: '<k-checkbox checked></k-checkbox>'
     });
     expect(root).toEqualHtml(`
@@ -70,7 +70,7 @@ describe('k-checkbox', () => {
 
   it('should have the "value" prop', async () => {
     const { root } = await newSpecPage({
-      components: [KCheckbox],
+      components: [Checkbox],
       html: '<k-checkbox value></k-checkbox>'
     });
     expect(root).toEqualHtml(`

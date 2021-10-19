@@ -6,10 +6,11 @@ import clsx from 'clsx';
   styleUrl: 'k-notification.scss',
   shadow: true
 })
-export class KNotification {
+export class Notification {
   private bell?: HTMLElement;
   @State() showNotificationList: boolean = false;
   @Prop() notificationCount: number = 0;
+  @Prop() listStart?: 'left' | 'right' = 'right';
 
   @Watch('notificationCount')
   notificationHandler(newValue: number, oldValue: number) {
@@ -50,12 +51,14 @@ export class KNotification {
             class="KNotification-bell"
           ></k-icon>
         </button>
-        <div
-          class={clsx('KNotification-content', {
-            'KNotification-content--is-open': this.showNotificationList
-          })}
-        >
-          <slot></slot>
+        <div class="KNotification-container">
+          <div
+            class={clsx('KNotification-content', this.listStart,  {
+              'KNotification-content--is-open': this.showNotificationList
+            })}
+          >
+            <slot></slot>
+          </div>
         </div>
       </div>
     );

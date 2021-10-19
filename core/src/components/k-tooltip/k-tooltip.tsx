@@ -5,7 +5,7 @@ import { Component, h, Prop } from '@stencil/core';
   styleUrl: 'k-tooltip.scss',
   shadow: true
 })
-export class KTooltip {
+export class Tooltip {
   @Prop() text: string = '';
   @Prop() position: 'top' | 'left' | 'right' | 'bottom' = 'bottom';
 

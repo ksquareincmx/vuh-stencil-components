@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KMenuNav } from './k-menu-nav';
+import { MenuNav } from './k-menu-nav';
 
 describe('k-menu-nav', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KMenuNav],
+      components: [MenuNav],
       html: '<k-menu-nav></k-menu-nav>'
     });
 

@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-input.scss',
   shadow: true
 })
-export class KInput {
+export class Input {
   @Prop() type: 'text' | 'password' | 'email' | 'tel' | 'url' | 'number' =
     'text';
   @Prop() label: string = 'Default';

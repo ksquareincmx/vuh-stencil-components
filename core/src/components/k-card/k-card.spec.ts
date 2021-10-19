@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCard } from './k-card';
+import { Card } from './k-card';
 
 describe('k-card', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCard],
+      components: [Card],
       html: '<k-card></k-card>'
     });
 

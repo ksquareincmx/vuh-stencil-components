@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KStepper } from './k-stepper';
+import { Stepper } from './k-stepper';
 
 describe('k-stepper', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KStepper],
+      components: [Stepper],
       html: '<k-stepper></k-stepper>'
     });
 

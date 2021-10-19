@@ -15,7 +15,7 @@ import clsx from 'clsx';
   styleUrl: 'k-radio-button.scss',
   shadow: true
 })
-export class KRadioButton {
+export class RadioButton {
   private buttonEl: HTMLElement;
   private inputId = `rb-${radioButtonIds++}`; // we need an identifier for each radio button
 

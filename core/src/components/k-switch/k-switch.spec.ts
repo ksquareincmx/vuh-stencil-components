@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KSwitch } from './k-switch';
+import { Switch } from './k-switch';
 
 describe('k-switch', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KSwitch],
+      components: [Switch],
       html: '<k-switch></k-switch>'
     });
 
@@ -24,7 +24,7 @@ describe('k-switch', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KSwitch],
+      components: [Switch],
       html: '<k-switch disabled></k-switch>'
     });
 
@@ -45,7 +45,7 @@ describe('k-switch', () => {
 
   it('label should be "check"', async () => {
     const { root } = await newSpecPage({
-      components: [KSwitch],
+      components: [Switch],
       html: '<k-switch label="check"></k-switch>'
     });
 
@@ -66,7 +66,7 @@ describe('k-switch', () => {
 
   it('should be checked', async () => {
     const { root } = await newSpecPage({
-      components: [KSwitch],
+      components: [Switch],
       html: '<k-switch checked></k-switch>'
     });
 

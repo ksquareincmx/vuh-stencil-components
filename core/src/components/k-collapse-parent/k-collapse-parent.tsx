@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-collapse-parent.scss',
   shadow: true
 })
-export class KCollapseParent {
+export class CollapseParent {
   render() {
     return (
       <Host id="kCollapseParent">

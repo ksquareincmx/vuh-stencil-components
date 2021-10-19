@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KRadioButtonGroup } from './k-radio-button-group';
+import { RadioButtonGroup } from './k-radio-button-group';
 
 describe('k-radio-button-group', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KRadioButtonGroup],
+      components: [RadioButtonGroup],
       html: '<k-radio-button-group></k-radio-button-group>'
     });
 

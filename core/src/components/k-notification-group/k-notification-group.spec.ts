@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KNotificationGroup } from './k-notification-group';
+import { NotificationGroup } from './k-notification-group';
 
 describe('k-notification-group', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KNotificationGroup],
+      components: [NotificationGroup],
       html: '<k-notification-group></k-notification-group>'
     });
 

@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-banner.scss',
   shadow: true
 })
-export class KBanner {
+export class Banner {
   @Element() el: HTMLElement;
   @Prop() type: 'success' | 'error' = 'success';
 
@@ -17,32 +17,6 @@ export class KBanner {
   private isError = () => {
     return this.type === 'error';
   };
-
-  private renderP = () => {
-    if (this.el.children.length > 0) {
-      if (this.el.children.item(0)?.tagName === 'K-BANNER-TEXT') {
-        return this.el.children.item(0)?.innerHTML;
-      } else {
-        return this.el.children.item(1)?.innerHTML;
-      }
-    }
-  };
-
-  private renderButton = () => {
-    if (this.el.children.length > 0) {
-      if (this.el.children.item(0)?.tagName === 'K-BUTTON') {
-        this.el.children.item(0)?.setAttribute('slot', 'button');
-        return this.el.children.item(0)?.outerHTML;
-      } else {
-        this.el.children.item(1)?.setAttribute('slot', 'button');
-        return this.el.children.item(1)?.outerHTML;
-      }
-    }
-  };
-
-  componentWillRender() {
-    this.renderButton();
-  }
 
   render() {
     return (
@@ -55,9 +29,8 @@ export class KBanner {
             '--is-error': this.isError()
           })}
         ></i>
-        <label class="KBanner-text">{this.renderP()}</label>
-        <div class="KBanner-action">
-          <slot name="button"></slot>
+        <div class="KBanner-content">
+          <slot></slot>
         </div>
       </Host>
     );

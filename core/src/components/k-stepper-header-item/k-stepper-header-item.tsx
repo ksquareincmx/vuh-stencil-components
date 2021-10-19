@@ -16,7 +16,7 @@ import clsx from 'clsx';
   styleUrl: 'k-stepper-header-item.scss',
   shadow: true
 })
-export class KStepperHeaderItem {
+export class StepperHeaderItem {
   private STATUS_STEP = {
     NONE: Symbol('none'),
     START: Symbol('start'),

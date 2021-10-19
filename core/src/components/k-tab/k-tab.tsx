@@ -5,7 +5,7 @@ import { Component, h, Host, State, Element, Listen } from '@stencil/core';
   styleUrl: 'k-tab.scss',
   shadow: true
 })
-export class KTab {
+export class Tab {
   @Element() host: HTMLElement;
   @State() childrenData = {
     selectedChild: -1,

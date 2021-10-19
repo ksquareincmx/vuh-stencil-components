@@ -5,7 +5,7 @@ import { Component, Host, h, Listen, State } from '@stencil/core';
   styleUrl: 'k-stepper-content.scss',
   shadow: true
 })
-export class KStepperContent {
+export class StepperContent {
   @State() translate: number = 0;
 
   @Listen('stepClicked', { target: 'window' })

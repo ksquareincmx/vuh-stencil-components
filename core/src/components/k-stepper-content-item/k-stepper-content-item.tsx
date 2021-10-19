@@ -5,7 +5,7 @@ import { Component, Host, h } from '@stencil/core';
   styleUrl: 'k-stepper-content-item.scss',
   shadow: true
 })
-export class KStepperContentItem {
+export class StepperContentItem {
   render() {
     return (
       <Host id="KStepperContentItem" class="KStepperContentItem">

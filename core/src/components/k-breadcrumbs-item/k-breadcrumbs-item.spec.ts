@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KBreadcrumbsItem } from './k-breadcrumbs-item';
+import { BreadcrumbsItem } from './k-breadcrumbs-item';
 
 describe('k-breadcrumbs-item', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [KBreadcrumbsItem],
+      components: [BreadcrumbsItem],
       html: '<k-breadcrumbs-item></k-breadcrumbs-item>'
     });
 
@@ -22,7 +22,7 @@ describe('k-breadcrumbs-item', () => {
 
   it('should be rendered with props', async () => {
     const { root } = await newSpecPage({
-      components: [KBreadcrumbsItem],
+      components: [BreadcrumbsItem],
       html: '<k-breadcrumbs-item current></k-breadcrumbs-item>'
     });
 

@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-drawer.scss',
   shadow: true
 })
-export class KDrawer {
+export class Drawer {
   @State() body?: HTMLElement;
   @State() isOpen: boolean = false;
   @State() showSidenav: boolean = false;

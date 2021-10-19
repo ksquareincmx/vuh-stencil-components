@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-table-column.scss',
   shadow: true
 })
-export class KTableColumn {
+export class TableColumn {
   @Prop() size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' =
     '1';
 

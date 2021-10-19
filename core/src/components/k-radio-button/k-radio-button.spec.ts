@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KRadioButton } from './k-radio-button';
+import { RadioButton } from './k-radio-button';
 
 describe('k-radio-button', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KRadioButton],
+      components: [RadioButton],
       html: '<k-radio-button></k-radio-button>'
     });
 
@@ -32,7 +32,7 @@ describe('k-radio-button', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KRadioButton],
+      components: [RadioButton],
       html: '<k-radio-button disabled></k-radio-button>'
     });
 
@@ -61,7 +61,7 @@ describe('k-radio-button', () => {
 
   it('should be checked', async () => {
     const { root } = await newSpecPage({
-      components: [KRadioButton],
+      components: [RadioButton],
       html: '<k-radio-button checked></k-radio-button>'
     });
 
@@ -90,7 +90,7 @@ describe('k-radio-button', () => {
 
   it('value should be "init"', async () => {
     const { root } = await newSpecPage({
-      components: [KRadioButton],
+      components: [RadioButton],
       html: '<k-radio-button value="init"></k-radio-button>'
     });
 

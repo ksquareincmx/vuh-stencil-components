@@ -5,7 +5,7 @@ import { Component, h, Host, Element } from '@stencil/core';
   styleUrl: 'k-dialog.scss',
   shadow: true
 })
-export class KDialog {
+export class Dialog {
   @Element() el: HTMLElement;
 
   componentDidRender() {

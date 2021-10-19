@@ -5,7 +5,7 @@ import { Component, h, Host, Listen, Element, State } from '@stencil/core';
   styleUrl: 'k-radio-button-group.scss',
   shadow: true
 })
-export class KRadioButtonGroup {
+export class RadioButtonGroup {
   private slotted: HTMLCollection;
 
   @Element() el!: HTMLElement;

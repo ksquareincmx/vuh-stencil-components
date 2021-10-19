@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCollapseItem } from './k-collapse-item';
+import { CollapseItem } from './k-collapse-item';
 
 describe('k-collapse-item', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCollapseItem],
+      components: [CollapseItem],
       html: '<k-collapse-item></k-collapse-item>'
     });
 
@@ -21,7 +21,7 @@ describe('k-collapse-item', () => {
 
   it('item should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KCollapseItem],
+      components: [CollapseItem],
       html: '<k-collapse-item disabled></k-collapse-item>'
     });
 

@@ -1,0 +1,134 @@
+.sbdocs.sbdocs-wrapper {
+  display: block;
+}
+
+h2 {
+  color: #333333 !important;
+}
+
+.container-desktop-full,
+.container-desktop,
+.container-tablet,
+.container-tablet-small,
+.container-mobile,
+.container-mobile-small {
+  display: flex;
+  justify-content: center;
+  background-color: #dfdfdf;
+  /*background-image: radial-gradient(circle at 1px 1px, rgb(179, 179, 179) 1px, transparent 0);
+  background-size: 20px 20px;*/
+  background-image: radial-gradient(circle at 1px 1px, rgb(197, 197, 197) 1px, transparent 0);
+  background-size: 8px 8px;
+  border-radius: 4px;
+}
+
+.column {
+  background-color: rgba(180, 201, 255, 0.207);
+  height: 62px;
+  border-radius: 4px;
+  border: 2px solid #94b7f8;
+}
+
+/* - - - - - - - */
+
+.container-desktop-full {
+  width: 1376px;
+}
+
+.container-desktop-full .column {
+  margin: 0 16px;
+  width: 80px;
+}
+
+.container-desktop {
+  margin: 1em 0 !important;
+  width: 1024px;
+}
+
+.container-desktop .column {
+  margin: 0 14px;
+  width: 55px;
+}
+
+.container-tablet {
+  margin: 1em 0 !important;
+  width: 900px;
+}
+
+.container-tablet .column {
+  margin: 0 14px;
+  width: 81px;
+}
+
+.container-tablet-small {
+  margin: 1em 0 !important;
+  width: 768px;
+}
+
+.container-tablet-small .column {
+  margin: 0 12px;
+  width: 69px;
+}
+
+.container-mobile {
+  margin: 1em 0 !important;
+  width: 600px;
+}
+
+.container-mobile .column {
+  margin: 0 12px;
+  width: 120px;
+}
+
+.container-mobile-small {
+  margin: 1em 0 !important;
+  width: 320px;
+}
+
+.container-mobile-small .column {
+  margin: 0 8px;
+  width: 60px;
+}
+
+/* - - - - - - - - */
+
+.margin-padding-container {
+  display: flex;
+  height: 300px;
+}
+
+.margin-padding-container .content {
+  flex: 1;
+  display: flex;
+  margin: 1em;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.margin-padding-container .content .margin {
+  width: calc(40px + 1em);
+  background-color: rgb(240, 173, 173);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+
+.margin-padding-container .content .child {
+  background-color: rgb(233, 233, 233);
+  background-image: radial-gradient(circle at 1px 1px, rgb(213, 213, 213) 1px, transparent 0);
+  background-size: 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .margin-padding-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    max-width: 400px;
+  }
+}

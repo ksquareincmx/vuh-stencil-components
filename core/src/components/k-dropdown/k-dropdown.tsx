@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-dropdown.scss',
   shadow: true
 })
-export class KDropdown {
+export class Dropdown {
   private slotted: HTMLCollection;
 
   @Element() el!: HTMLElement;

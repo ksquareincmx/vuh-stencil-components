@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KStepperHeaderItem } from './k-stepper-header-item';
+import { StepperHeaderItem } from './k-stepper-header-item';
 
 describe('k-stepper-header-item', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KStepperHeaderItem],
+      components: [StepperHeaderItem],
       html: '<k-stepper-header-item></k-stepper-header-item>'
     });
     expect(root).toEqualHtml(`
@@ -34,7 +34,7 @@ describe('k-stepper-header-item', () => {
 
   it('should be done', async () => {
     const { root } = await newSpecPage({
-      components: [KStepperHeaderItem],
+      components: [StepperHeaderItem],
       html: '<k-stepper-header-item done></k-stepper-header-item>'
     });
     expect(root).toEqualHtml(`
@@ -64,7 +64,7 @@ describe('k-stepper-header-item', () => {
 
   it('should be started', async () => {
     const { root } = await newSpecPage({
-      components: [KStepperHeaderItem],
+      components: [StepperHeaderItem],
       html: '<k-stepper-header-item started></k-stepper-header-item>'
     });
     expect(root).toEqualHtml(`

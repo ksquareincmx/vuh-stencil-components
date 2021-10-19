@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-notification-group.scss',
   shadow: true
 })
-export class KNotificationGroup {
+export class NotificationGroup {
   render() {
     return (
       <Host class="KNotificationGroup">

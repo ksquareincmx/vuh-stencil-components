@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'k-list-group.scss',
   shadow: true
 })
-export class KListGroup {
+export class ListGroup {
   render() {
     return (
       <ul class="KListGroup">

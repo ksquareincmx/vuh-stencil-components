@@ -5,7 +5,7 @@ import { Component, h, Host } from '@stencil/core';
   styleUrl: 'k-carousel-item.scss',
   shadow: true
 })
-export class KCarouselItem {
+export class CarouselItem {
   render() {
     return (
       <Host>

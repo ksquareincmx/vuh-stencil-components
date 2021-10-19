@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-breadcrumbs-item.scss',
   shadow: true
 })
-export class KBreadcrumbsItem {
+export class BreadcrumbsItem {
   @Element() el: HTMLElement;
   @State() isTheLast: boolean;
 

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KIcon } from './k-icon';
+import { Icon } from './k-icon';
 
 describe('k-icon', () => {
   it('should render alert-circle icon', async () => {
     const { root } = await newSpecPage({
-      components: [KIcon],
+      components: [Icon],
       html: '<k-icon name="alert-circle"></k-icon>'
     });
 
@@ -19,7 +19,7 @@ describe('k-icon', () => {
 
   it('should be medium size', async () => {
     const { root } = await newSpecPage({
-      components: [KIcon],
+      components: [Icon],
       html: '<k-icon name="alert-circle" size="medium"></k-icon>'
     });
 

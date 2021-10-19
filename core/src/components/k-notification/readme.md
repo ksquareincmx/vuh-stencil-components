@@ -11,9 +11,10 @@ It must receive `k-notification-group` as its child.
 
 ## Properties
 
-| Property            | Attribute            | Description | Type     | Default |
-| ------------------- | -------------------- | ----------- | -------- | ------- |
-| `notificationCount` | `notification-count` |             | `number` | `0`     |
+| Property            | Attribute            | Description | Type                | Default   |
+| ------------------- | -------------------- | ----------- | ------------------- | --------- |
+| `listStart`         | `list-start`         |             | `"left" \| "right"` | `'right'` |
+| `notificationCount` | `notification-count` |             | `number`            | `0`       |
 
 
 ## Dependencies

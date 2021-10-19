@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KCarouselItem } from './k-carousel-item';
+import { CarouselItem } from './k-carousel-item';
 
 describe('k-carousel-item', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KCarouselItem],
+      components: [CarouselItem],
       html: '<k-carousel-item></k-carousel-item>'
     });
 

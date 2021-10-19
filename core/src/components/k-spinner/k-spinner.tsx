@@ -5,7 +5,7 @@ import { Component, h, Prop, State } from '@stencil/core';
   styleUrl: 'k-spinner.scss',
   shadow: true
 })
-export class KSpinner {
+export class Spinner {
   @State() htmlEl: HTMLElement;
 
   @Prop() size?: number = 50;

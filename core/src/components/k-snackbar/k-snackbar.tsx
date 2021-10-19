@@ -5,7 +5,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
   styleUrl: 'k-snackbar.scss',
   shadow: true
 })
-export class KSnackbar {
+export class Snackbar {
   @Prop() text: string = '';
   render() {
     return (

@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KSnackbar } from './k-snackbar';
+import { Snackbar } from './k-snackbar';
 
 describe('k-snackbar', () => {
   it('render', async () => {
     const { root } = await newSpecPage({
-      components: [KSnackbar],
+      components: [Snackbar],
       html: '<k-snackbar></k-snackbar>'
     });
 
@@ -20,7 +20,7 @@ describe('k-snackbar', () => {
 
   it('text should be "something was done"', async () => {
     const { root } = await newSpecPage({
-      components: [KSnackbar],
+      components: [Snackbar],
       html: '<k-snackbar text="something was done"></k-snackbar>'
     });
 

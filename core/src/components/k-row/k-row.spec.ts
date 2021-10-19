@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KRow } from './k-row';
+import { Row } from './k-row';
 
 describe('k-row', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KRow],
+      components: [Row],
       html: '<k-row></k-row>'
     });
     expect(root).toEqualHtml(`
@@ -18,7 +18,7 @@ describe('k-row', () => {
 
   it('should have an specified spacing', async () => {
     const { root } = await newSpecPage({
-      components: [KRow],
+      components: [Row],
       html: '<k-row spacing="xs"></k-row>'
     });
     expect(root).toEqualHtml(`

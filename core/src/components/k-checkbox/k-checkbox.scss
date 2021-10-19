@@ -32,10 +32,6 @@
       }
 
       &:disabled {
-        & ~  .KCheckbox-checkmark {
-          border-color: $gray-100;
-          background-color: $gray-50;
-        }
         &:checked {
           & ~  .KCheckbox-checkmark {
             background-color: $gray-100;
@@ -88,5 +84,6 @@
 
   .KCheckbox--disabled {
     cursor: not-allowed;
+    opacity: 50%;
   }
 }

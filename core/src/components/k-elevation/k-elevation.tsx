@@ -5,7 +5,7 @@ import { Component, h, Prop } from '@stencil/core';
   styleUrl: 'k-elevation.scss',
   shadow: true
 })
-export class KElevation {
+export class Elevation {
   @Prop() radius?: string;
 
   render() {

@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'k-label.scss',
   shadow: true
 })
-export class KLabel {
+export class Label {
   render() {
     return (
       <label class="KLabel">

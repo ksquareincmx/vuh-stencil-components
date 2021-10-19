@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KTableHeaderColumn } from './k-table-header-column';
+import { TableHeaderColumn } from './k-table-header-column';
 
 describe('k-table-header-column', () => {
   it('should render', async () => {
     const { root } = await newSpecPage({
-      components: [KTableHeaderColumn],
+      components: [TableHeaderColumn],
       html: '<k-table-header-column></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
@@ -28,7 +28,7 @@ describe('k-table-header-column', () => {
 
   it('should be disabled', async () => {
     const { root } = await newSpecPage({
-      components: [KTableHeaderColumn],
+      components: [TableHeaderColumn],
       html: '<k-table-header-column disabled></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
@@ -52,7 +52,7 @@ describe('k-table-header-column', () => {
 
   it('should not be sortable', async () => {
     const { root } = await newSpecPage({
-      components: [KTableHeaderColumn],
+      components: [TableHeaderColumn],
       html: '<k-table-header-column sortable="false"></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
@@ -72,7 +72,7 @@ describe('k-table-header-column', () => {
 
   it('should be active', async () => {
     const { root } = await newSpecPage({
-      components: [KTableHeaderColumn],
+      components: [TableHeaderColumn],
       html: '<k-table-header-column active></k-table-header-column>'
     });
     expect(root).toEqualHtml(`
@@ -96,7 +96,7 @@ describe('k-table-header-column', () => {
 
   it('should be the default column', async () => {
     const { root } = await newSpecPage({
-      components: [KTableHeaderColumn],
+      components: [TableHeaderColumn],
       html: '<k-table-header-column default></k-table-header-column>'
     });
     expect(root).toEqualHtml(`

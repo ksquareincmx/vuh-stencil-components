@@ -14,7 +14,7 @@ import clsx from 'clsx';
   styleUrl: 'k-text-field.scss',
   shadow: true
 })
-export class KTextField {
+export class TextField {
   private textAreaEl: HTMLElement;
 
   @Prop() label: string = 'Default';

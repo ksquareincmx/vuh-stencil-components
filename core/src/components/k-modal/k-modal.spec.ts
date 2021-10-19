@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KModal } from './k-modal';
+import { Modal } from './k-modal';
 
 describe('k-modal', () => {
   it('k-modal', async () => {
     const { root } = await newSpecPage({
-      components: [KModal],
+      components: [Modal],
       html: '<k-modal></k-modal>'
     });
 
@@ -29,7 +29,7 @@ describe('k-modal', () => {
 
   it('k-modal should be opened', async () => {
     const { root } = await newSpecPage({
-      components: [KModal],
+      components: [Modal],
       html: '<k-modal show></k-modal>'
     });
 
@@ -54,7 +54,7 @@ describe('k-modal', () => {
 
   it('k-modal should have close button hidden', async () => {
     const { root } = await newSpecPage({
-      components: [KModal],
+      components: [Modal],
       html: '<k-modal hide-close-button="true"></k-modal>'
     });
 

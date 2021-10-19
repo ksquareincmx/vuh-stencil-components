@@ -6,7 +6,7 @@ import clsx from 'clsx';
   styleUrl: 'k-carousel.scss',
   shadow: true
 })
-export class KCarousel {
+export class Carousel {
   private DIRECTION = {
     LEFT: Symbol('LEFT'),
     RIGHT: Symbol('RIGHT')

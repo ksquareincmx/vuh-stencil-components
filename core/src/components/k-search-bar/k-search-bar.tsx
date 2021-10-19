@@ -15,7 +15,7 @@ import clsx from 'clsx';
   styleUrl: 'k-search-bar.scss',
   shadow: true
 })
-export class KSearchBar {
+export class SearchBar {
   @Prop() type: 'solid' | 'outlined' = 'solid';
   @Prop({ mutable: true }) value?: string = '';
   @Prop() disabled?: boolean = false;

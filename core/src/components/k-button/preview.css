@@ -1,0 +1,34 @@
+.button-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.buttons-container p {
+  color: #0a0a0a;
+}
+
+.buttons-container .buttons table td {
+  text-align: center;
+}
+
+.buttons table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.buttons td p {
+  color: #0a0a0a;
+}
+
+.buttons td k-button {
+  margin: .5em;
+  max-width: 300px;
+}
+
+.buttons hr {
+  border: 0;
+  background: linear-gradient(to right, #0000004f 33%, #fff 0%) top/10px 1px repeat-x;
+  height: 1px;
+  margin-bottom: 1em;
+}

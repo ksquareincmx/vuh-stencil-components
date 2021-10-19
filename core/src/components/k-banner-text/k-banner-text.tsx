@@ -5,7 +5,7 @@ import { Component, Host, h } from '@stencil/core';
   styleUrl: 'k-banner-text.scss',
   shadow: true
 })
-export class KBannerText {
+export class BannerText {
   render() {
     return (
       <Host>
