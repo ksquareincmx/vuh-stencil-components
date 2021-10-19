@@ -55,6 +55,7 @@ export const compareStoryPaths = (order, path1, path2) => {
 };
 
 const storiesOrder = {
+  'introduction': null,
   'style guide': null,
   'components': {
     'avatar': {
