@@ -1,0 +1,10 @@
+.k-playground textarea{
+  background-color: #312c2a !important;
+  -webkit-text-fill-color: #c4bdb8 !important;
+  overflow-y: scroll !important;
+}
+
+.k-playground:first-child div {
+  height: 250px !important;
+  margin: 1em !important;
+}
