@@ -17,7 +17,7 @@ const Template = () => (
     <hr />
     <KCollapseMenu>
       <KCollapseParent>
-        See options
+        Hover me!
       </KCollapseParent>
       <KCollapseList>
         <KCollapseItem>
@@ -38,9 +38,7 @@ const Template = () => (
       {`
   <k-collapse-menu>
     <k-collapse-parent>
-      <k-avatar>
-        <k-img alt="Abraham Berzunza" src="https://assets.gitlab-static.net/uploads/-/system/user/avatar/4533028/avatar.png?width=23"></k-img>
-      </k-avatar>
+      Hover me!
     </k-collapse-parent>
     <k-collapse-list>
       <k-collapse-item>Option 1</k-collapse-item>
