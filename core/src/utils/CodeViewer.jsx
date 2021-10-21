@@ -7,9 +7,9 @@ const textOptions = {
   hide: 'Hide Code'
 }
 
-const componentName = ({children}) => {
+const componentName = ({children, keepCode = false}) => {
 
-  const [textOption, setTextOption] = useState(-1);
+  const [textOption, setTextOption] = useState(keepCode ? 0 : -1);
 
   const codeButtonHanlder = () => {
     if(textOption) {
@@ -23,9 +23,9 @@ const componentName = ({children}) => {
 
   return (
     <div className="code-container">
-      <button onClick={codeButtonHanlder}>
+      {!keepCode && <button onClick={codeButtonHanlder}>
         {textOption || textOption === -1 ? textOptions.show : textOptions.hide}
-      </button>
+      </button>}
       <pre className={textOption === -1 ? '' : (textOption ? 'hide' : 'show')}>
       <code>
         <div dangerouslySetInnerHTML={{ __html: html }} />

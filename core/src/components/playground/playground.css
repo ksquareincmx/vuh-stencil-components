@@ -1,10 +1,46 @@
 .k-playground textarea{
   background-color: #312c2a !important;
-  -webkit-text-fill-color: #c4bdb8 !important;
+  -webkit-text-fill-color: #c4bdb800 !important;
   overflow-y: scroll !important;
+  /*position: absolute;*/
+  margin-top: 0em !important;
+}
+
+.k-playground .writer {
+  width: calc(100% - 4em);
+  height: 250px;
+  padding: 1em;
+  margin: 1em;
+  /*font-family: monospace;*/
+  font-family: "Nunito Sans";
+  background-color: #537dbb00 !important;
+  z-index: 9999;
+  position: relative;
+  font-weight: bold;
 }
 
 .k-playground:first-child div {
   height: 250px !important;
   margin: 1em !important;
+  overflow: unset;
+}
+
+.k-playground pre {
+  padding: 0 !important;
+  margin: 0;
+} 
+
+.k-playground .code-container {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 6em);
+}
+
+.k-playground #live-editor {
+  margin: 0 !important;
+}
+
+.k-playground #live-editor > div {
+  height: 0 !important;
+  margin: 0 !important;
 }
