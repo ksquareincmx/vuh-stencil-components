@@ -32,6 +32,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        A component that display a list of notifications when is hover.
       </p>
     </div>
     <KNotification {...props}>

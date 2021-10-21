@@ -14,6 +14,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        A switch functions similar to a checkbox but explicitly represents boolean <b>on</b> and <b>off</b> states.
       </p>
     </div>
     <KSwitch {...props}/>

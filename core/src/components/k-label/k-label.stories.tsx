@@ -15,6 +15,11 @@ const Template = () => (
   <div className="story-container">
     <h1>Label</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        Simple label component to use instead of regular label tag.
+      </p>
+    </div>
     <KLabel>
       Text example
     </KLabel>

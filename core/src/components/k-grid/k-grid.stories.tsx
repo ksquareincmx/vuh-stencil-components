@@ -18,7 +18,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
-        
+        This is an example of grid distribution using rows and columns
       </p>
     </div>
     <KGrid {...props}>

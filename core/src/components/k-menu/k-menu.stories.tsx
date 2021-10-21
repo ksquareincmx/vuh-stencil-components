@@ -21,7 +21,7 @@ export default {
 };
 
 const imgFigureProps = {
-  src: "https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png",
+  src: "https://avatars.githubusercontent.com/u/38014179?s=200&v=4",
   height: 32
 }
 
@@ -51,6 +51,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        This component can be used as a navbar implementation. It can contain other components to display diferent content and features.
       </p>
     </div>
     <KDrawer forKey='k-menu'/>
@@ -107,7 +108,7 @@ const Template = (props) => (
   >
     <k-menu-content>
       <figure>
-        <k.img src="https://www.ksquareinc.com/wp-content/uploads/2019/10/Logo.png" height="32"></k.img>
+        <k.img src="https://avatars.githubusercontent.com/u/38014179?s=200&v=4" height="32"></k.img>
       </figure>
       <div style="display: flex; align-items: center;">
         <k-notification notification-count="2">

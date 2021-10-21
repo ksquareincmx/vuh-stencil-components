@@ -25,6 +25,11 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Image</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        Simple image component with properties that made easy to fit on other components.
+      </p>
+    </div>
     <KImg {...props} />
     <CodeViewer>
       {`

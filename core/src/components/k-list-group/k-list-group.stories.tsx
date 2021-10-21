@@ -17,6 +17,7 @@ const Template = () => (
     <hr />
     <div className="story-description">
       <p>
+        Contains a list of items to represent options that can be links and more.
       </p>
     </div>
     <KListGroup>

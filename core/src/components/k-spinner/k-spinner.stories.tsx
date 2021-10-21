@@ -14,6 +14,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        Spinner can be used when loading elements or information.
       </p>
     </div>
     <KSpinner {...props}/>

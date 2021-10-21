@@ -14,6 +14,12 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Elevation</h1>
     <hr />
+    <div className="story-description" style={{marginBottom: '2em'}}>
+      <p>
+        Elevation is the relative depth, or distance, between two surfaces along the z-axis.
+      </p>
+      <p>It can be used as a parent container.</p>
+    </div>
     <KElevation {...props}>
       <div>
         Elevation

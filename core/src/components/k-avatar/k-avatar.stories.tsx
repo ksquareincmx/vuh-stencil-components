@@ -38,6 +38,11 @@ const TemplateAll = () => (
   <div className="story-container">
     <h1>Avatar</h1>
     <hr />
+    <div className="story-description">
+      <p>
+      Here we have an example of the three types of avatar sizes: <b><i>small, medium</i></b> & <b><i>large</i></b>
+      </p>
+    </div>
     <div className="container">
       <div className="component">
         <KAvatar size="small">
@@ -91,6 +96,11 @@ const TemplateSmall = (props) => (
   <div className="story-container">
     <h1>Avatar: small</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <KAvatar {...props}>
       <KImg {...defImgSmall}></KImg>
     </KAvatar>
@@ -112,6 +122,11 @@ const TemplateMedium = (props) => (
   <div className="story-container">
     <h1>Avatar: medium</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <KAvatar {...props}>
       <KImg {...defImgMedium}></KImg>
     </KAvatar>
@@ -133,6 +148,11 @@ const TemplateLarge = (props) => (
   <div className="story-container">
     <h1>Avatar: large</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <KAvatar {...props}>
       <KImg {...defImgLarge}></KImg>
     </KAvatar>
