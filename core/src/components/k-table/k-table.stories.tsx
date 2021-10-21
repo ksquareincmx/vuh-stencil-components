@@ -26,6 +26,7 @@ const Template = () => (
     <hr />
     <div className="story-description">
       <p>
+        Tables allows to arrange data into rows and columns.
       </p>
     </div>
     <KTable>

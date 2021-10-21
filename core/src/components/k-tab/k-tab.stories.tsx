@@ -17,6 +17,7 @@ const Template = () => (
     <hr />
     <div className="story-description">
       <p>
+        It can be used in conjunction with another component to display different content
       </p>
     </div>
     <KTab>

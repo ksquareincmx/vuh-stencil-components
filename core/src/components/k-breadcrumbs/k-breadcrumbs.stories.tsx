@@ -15,6 +15,11 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Breadcrumbs</h1>
     <hr />
+    <div className="story-description">
+      <p>
+      This control element can be used as a navigational aid.
+      </p>
+    </div>
     <KBreadcrumbs >
       <KBreadcrumbsItem>
         Link 1

@@ -12,6 +12,14 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Dropdown</h1>
     <hr />
+    <div className="story-description" style={{marginBottom: '2em'}}>
+      <p>
+        A dropdown allows a user to select a value from a series of options
+      </p>
+      <p>
+        <i>"Dropdowns are toggleable, contextual overlays for displaying lists of links and more."</i>
+      </p>
+    </div>
     <KDropdown {...props}>
       <KDropdownItem name="op0" value="00">
         Select yout option

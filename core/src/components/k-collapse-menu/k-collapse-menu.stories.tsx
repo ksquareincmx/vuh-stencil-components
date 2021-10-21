@@ -15,6 +15,11 @@ const Template = () => (
   <div className="story-container">
     <h1>Collapse Menu</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        It is composed by a component parent, which when is hover it show a list of options.
+      </p>
+    </div>
     <KCollapseMenu>
       <KCollapseParent>
         Hover me!

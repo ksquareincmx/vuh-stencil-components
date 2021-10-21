@@ -60,6 +60,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        Typography can be used instead of text tags.
       </p>
     </div>
     <KTypography {...props}>
@@ -73,7 +74,11 @@ const Template = (props) => (
   </k-typography>
       `}
     </CodeViewer>
-
+    <div className="story-description">
+      <p>
+        Here we have some examples of the typography component types.
+      </p>
+    </div>
     <h2>H1</h2>
     <hr />
     <KTypography color="gray500" variant="h1">

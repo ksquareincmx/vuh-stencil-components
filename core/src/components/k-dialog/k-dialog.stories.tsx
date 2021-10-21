@@ -33,8 +33,8 @@ const Template = () => (
         </KDialogBody>
       </KDialogContent>
       <KDialogActions>
+        <KButton color='terciary'>Accept</KButton>
         <KButton color='terciary'>Cancel</KButton>
-        <KButton color='terciary'>Discard</KButton>
       </KDialogActions>
     </KDialog>
     <CodeViewer>
@@ -45,8 +45,8 @@ const Template = () => (
       <k-dialog-body>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</k-dialog-body>
     </k-dialog-content>
     <k-dialog-actions>
+      <k-button color="terciary">Accept</k-button>
       <k-button color="terciary">Cancel</k-button>
-      <k-button color="terciary">Discard</k-button>
     </k-dialog-actions>
   </k-dialog>
       `}

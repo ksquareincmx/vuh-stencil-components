@@ -14,6 +14,9 @@ const Template = () => (
     <hr />
     <div className="story-description">
       <p>
+        Contains a list of items that represent options.
+      </p>
+      <p>
         This component was made to be used
         on <a href="/vuh-stencil-components/?path=/story/components-collapsable--collapse-menu">
           collapse menu

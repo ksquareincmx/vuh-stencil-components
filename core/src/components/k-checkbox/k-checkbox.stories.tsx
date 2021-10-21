@@ -13,6 +13,14 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Checkbox</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        The checkbox is shown as a square box that is ticked (checked) when activated.
+      </p>
+      <p>
+      You can also activate it by clicking on the label corresponding to the checkbox
+      </p>
+    </div>
     <KCheckbox {...props}>
       Option
     </KCheckbox>

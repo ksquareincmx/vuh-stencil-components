@@ -21,14 +21,14 @@ const Template = () => (
       </p>
     </div>
     <KDialogActions>
+      <KButton color='terciary'>Accept</KButton>
       <KButton color='terciary'>Cancel</KButton>
-      <KButton color='terciary'>Discard</KButton>
     </KDialogActions>
     <CodeViewer>
       {`
   <k-dialog-actions>
+    <k-button color="terciary">Accept</k-button>
     <k-button color="terciary">Cancel</k-button>
-    <k-button color="terciary">Discard</k-button>
   </k-dialog-actions>
       `}
     </CodeViewer>

@@ -12,6 +12,11 @@ const Template = (props) => (
   <div className="story-container">
     <h1>Modal</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        The modal component provides a solid foundation for creating dialogs, popovers, lightboxes, or whatever else.
+      </p>
+    </div>
     <KModal {...props}>
       <p style={{color: '#0a0a0a', margin: '1.5em'}}>
         Hello world!

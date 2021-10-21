@@ -14,6 +14,7 @@ const Template = (props) => (
     <hr />
     <div className="story-description">
       <p>
+        Simple progress bar that receives a property to show the percentage of progress.
       </p>
     </div>
     <KProgressBar {...props}/>

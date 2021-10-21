@@ -17,6 +17,7 @@ const Template = () => (
     <hr />
     <div className="story-description" style={{marginBottom: '2em'}}>
       <p>
+        Consist on a horizontal line that can be ideal for separating paragraphs and content blocks.
       </p>
     </div>
     <KDivider />

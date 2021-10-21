@@ -23,6 +23,14 @@ const Template = () => (
   <div className="story-container">
     <h1>Carousel Item</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        This component was made to be used
+        on <a href="/vuh-stencil-components/?path=/story/components-carousel--carousel">
+          carousel
+        </a> component.
+      </p>
+    </div>
     <KCarouselItem>
       <KImg {...imgProps} />
     </KCarouselItem>

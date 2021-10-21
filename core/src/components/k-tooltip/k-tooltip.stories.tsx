@@ -16,7 +16,7 @@ export default {
 
 const Template = (props) => (
   <div className="story-container">
-    <h1>Dialog Header</h1>
+    <h1>Tooltip</h1>
     <hr />
     <div className="story-description">
       <p>

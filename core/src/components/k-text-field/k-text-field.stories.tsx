@@ -5,15 +5,22 @@ import '../../styles/stories.css';
 
 export default {
   title: 'Components/Text Field',
-  component: 'k-text-field'
+  component: 'k-text-field',
+  argTypes: {
+    validationState: {
+      options: ['success' , 'error'],
+      control: { type: 'select' }
+    }
+  }
 };
 
 const Template = (props) => (
   <div className="story-container">
-    <h1>Dialog Header</h1>
+    <h1>Text Field</h1>
     <hr />
     <div className="story-description">
       <p>
+        Can be used to replace <b><i>textarea</i></b> tag. Using the component properties help having an easier control of the behaviour.
       </p>
     </div>
     <KTextField {...props}>

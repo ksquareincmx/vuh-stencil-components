@@ -194,6 +194,11 @@ const TemplateDef = () => (
   <div className="story-container">
     <h1>Default Button</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        This is the default style for a button without passing props.
+      </p>
+    </div>
     <div className="button-container">
       <KButton>
       </KButton>
@@ -212,6 +217,14 @@ const TemplateP = (props) => (
   <div className="story-container">
     <h1>Primary Button</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        This is the style for a button with type of color <b><i>primary</i></b>.
+      </p>
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <div className="button-container">
       <KButton {...props}>
         Primary
@@ -231,6 +244,14 @@ const TemplateS = (props) => (
   <div className="story-container">
     <h1>Secondary Button</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        This is the style for a button with type of color <b><i>secondary</i></b>.
+      </p>
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <div className="button-container">
       <KButton {...props}>
       </KButton>
@@ -249,6 +270,14 @@ const TemplateT = (props) => (
   <div className="story-container">
     <h1>Terciary Button</h1>
     <hr />
+    <div className="story-description">
+      <p>
+        This is the style for a button with type of color <b><i>terciary</i></b>.
+      </p>
+      <p>
+        Size can be changed with <b>size</b> prop.
+      </p>
+    </div>
     <div className="button-container">
       <KButton {...props}>
       </KButton>
