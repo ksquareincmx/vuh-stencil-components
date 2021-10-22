@@ -45,28 +45,49 @@ const Template = () => {
   }
 
   return (
-  <div className="story-container k-playground">
-    <CodeViewer keepCode={true}>
-      {code}
-    </CodeViewer>
-
-    <div id="live-editor">
-      <LiveProvider code={code}>
-        <LiveEditor />
-        <LiveError />
-        <LivePreview />
-      </LiveProvider>
+  <div className="story-container">
+    <h1>Playground</h1>
+    <hr />
+    <div className="story-description">
+      <p>
+        Here you can write code to test vuh components.
+      </p>
+      <ul>
+        <li>
+          <p>
+            For inline styles you should do <i>{`<example`}<b>{` style={{fontSize: '16px', color: 'red'}}`}</b>{`></example>`}</i>
+          </p>
+        </li>
+        <li>
+          <p>
+            Keep all the code wrapped in empty tags <i>{'<> ... </>'}</i>
+          </p>
+        </li>
+      </ul>
     </div>
+    <div className="k-playground">
+      <CodeViewer keepCode={true}>
+        {code}
+      </CodeViewer>
 
-    <textarea
-      className="writer"
-      name=""
-      ref={ref}
-      rows={4}
-      value={code}
-      onChange={handleChange}
-      spellCheck={false}
-    ></textarea>
+      <div id="live-editor">
+        <LiveProvider code={code}>
+          <LiveEditor />
+          <LiveError />
+          <LivePreview />
+        </LiveProvider>
+      </div>
+
+      <textarea
+        className="writer"
+        name=""
+        ref={ref}
+        rows={4}
+        value={code}
+        onChange={handleChange}
+        spellCheck={false}
+      ></textarea>
+    </div>
   </div>
   )
 };
