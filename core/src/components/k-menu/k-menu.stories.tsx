@@ -108,7 +108,7 @@ const Template = (props) => (
   >
     <k-menu-content>
       <figure>
-        <k.img src="https://avatars.githubusercontent.com/u/38014179?s=200&v=4" height="32"></k.img>
+        <k-img src="https://avatars.githubusercontent.com/u/38014179?s=200&v=4" height="32"></k-img>
       </figure>
       <div style="display: flex; align-items: center;">
         <k-notification notification-count="2">
