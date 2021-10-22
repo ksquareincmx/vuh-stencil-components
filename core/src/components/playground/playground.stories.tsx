@@ -10,7 +10,10 @@ import {
 import '../../styles/stories.css';
 
 export default {
-  title: 'Playground'
+  title: 'Playground',
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  }
 }
 
 const initialCode = 
