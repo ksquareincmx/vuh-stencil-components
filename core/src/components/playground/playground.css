@@ -1,3 +1,7 @@
+.k-playground p {
+  color: #0a0a0a;
+}
+
 .k-playground textarea{
   background-color: #312c2a !important;
   -webkit-text-fill-color: #c4bdb800 !important;
