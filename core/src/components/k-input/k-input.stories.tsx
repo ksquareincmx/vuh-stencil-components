@@ -45,7 +45,7 @@ const Template = (props) => (
     label="${props.label}"
     value="${props.value}"
     disabled="${props.disabled}"
-    validation-state="${props.validationState}
+    validation-state="${props.validationState}"
     name="${props.name}"
     helper-text="${props.helperText}"
     max-length="${props.maxLength}"
