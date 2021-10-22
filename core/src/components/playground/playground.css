@@ -1,0 +1,61 @@
+.k-playground textarea{
+  background-color: #312c2a !important;
+  -webkit-text-fill-color: #c4bdb800 !important;
+  overflow-y: scroll !important;
+  /*position: absolute;*/
+  margin-top: 0em !important;
+}
+
+.k-playground .writer {
+  background-color: #00000000 !important;
+  -webkit-text-fill-color: #99572800 !important;
+  overflow: hidden !important;
+  display: block;
+  border: 0;
+  resize: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  margin: 2em !important;
+  margin-left: calc(2em + 1px) !important;
+  width: calc(100% - 8em);
+  font-family: monospace, monospace !important;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .5px !important;
+  outline: none;
+  caret-color: #fafafa;
+}
+
+.k-playground .code-container,
+.k-playground #live-editor
+ {
+  overflow: unset;
+}
+
+.k-playground pre {
+  padding: 1em !important;
+  margin: 0;
+  letter-spacing: .5px !important;
+}
+
+.k-playground .code-container {
+  margin: 0 1em !important;
+  top: 0;
+  width: calc(100% - 4em);
+}
+
+.k-playground .code-container code > div {
+  font-family: monospace, monospace !important;
+  font-style: normal;
+}
+
+.k-playground #live-editor {
+  margin: 1em !important;
+}
+
+.k-playground #live-editor > div {
+  height: 0 !important;
+  margin: 0 !important;
+}
