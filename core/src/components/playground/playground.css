@@ -47,6 +47,8 @@
   padding: 1em !important;
   margin: 0;
   letter-spacing: .5px !important;
+  opacity: 1;
+  height: auto;
 }
 
 .k-playground .code-container {

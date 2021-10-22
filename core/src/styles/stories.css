@@ -136,36 +136,6 @@
   font-style: oblique;
 }
 
-/*
-- - 1 - -
-
-.code-container code .token {
-  font-family: monospace, monospace;
-  font-style: normal;
-}
-
-.code-container code .token.tag {
-  color: #c07c6c;
-}
-
-.code-container code .token.punctuation {
-  color: #ae928d;
-}
-
-.code-container code .token.attr-name {
-  color: #dcaea4;
-}
-
-.code-container code .token.attr-value {
-  color: #b66654;
-}
-
-
-
-
-*/
-
-
 /* - - - - Animations - - - - */
 
 @keyframes fadein {
